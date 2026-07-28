@@ -194,6 +194,40 @@ html, body {
   padding: 0 2px;
 }
 
+.passage-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 16px;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+.passage-title {
+  font-weight: 700;
+  color: var(--accent-dark);
+  margin-bottom: 10px;
+}
+
+.passage-para {
+  font-family: Georgia, "Times New Roman", Cambria, serif;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+.passage-para:last-child {
+  margin-bottom: 0;
+}
+
+.reading-question {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  text-align: left;
+}
+
 .math-topic {
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -206,6 +240,13 @@ html, body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 1.7rem;
+}
+
+.phrase-text.social-prompt {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  text-align: left;
 }
 
 .choices {
@@ -324,6 +365,10 @@ html, body {
   font-weight: 700;
   color: var(--incorrect);
   text-transform: capitalize;
+}
+
+.missed-list .missed-prompt {
+  text-transform: none;
 }
 
 .missed-list .missed-meaning {

@@ -1,6 +1,15 @@
 // Minimal offline cache for the app shell so it works after the first load.
-var CACHE_NAME = "iowa-vocab-v8";
-var ASSETS = ["./", "./index.html", "./style.css", "./words.js", "./math.js", "./app.js"];
+var CACHE_NAME = "iowa-vocab-v10";
+var ASSETS = [
+  "./",
+  "./index.html",
+  "./style.css",
+  "./words.js",
+  "./math.js",
+  "./reading.js",
+  "./social.js",
+  "./app.js"
+];
 
 self.addEventListener("install", function (event) {
   event.waitUntil(

@@ -103,6 +103,40 @@
     return Array.from(set).slice(0, 3);
   }
 
+  function formatCents(cents) {
+    return (cents / 100).toFixed(2);
+  }
+
+  function generateDecimalAddition() {
+    var aCents = randInt(100, 9999);
+    var bCents = randInt(100, 9999);
+    var correctCents = aCents + bCents;
+    var scale = Math.max(50, Math.round(correctCents * 0.08));
+    var distractors = numericDistractors(correctCents, scale, 3);
+    return {
+      type: "math",
+      topic: "Decimal Addition",
+      prompt: formatCents(aCents) + " + " + formatCents(bCents),
+      choices: [formatCents(correctCents)].concat(distractors.map(formatCents)),
+      answerIndex: 0
+    };
+  }
+
+  function generateDecimalSubtraction() {
+    var aCents = randInt(200, 9999);
+    var bCents = randInt(100, aCents - 1);
+    var correctCents = aCents - bCents;
+    var scale = Math.max(50, Math.round(correctCents * 0.08));
+    var distractors = numericDistractors(correctCents, scale, 3);
+    return {
+      type: "math",
+      topic: "Decimal Subtraction",
+      prompt: formatCents(aCents) + " − " + formatCents(bCents),
+      choices: [formatCents(correctCents)].concat(distractors.map(formatCents)),
+      answerIndex: 0
+    };
+  }
+
   function generateMultiplication() {
     var a = randInt(100, 999);
     var b = randInt(10, 99);
@@ -231,6 +265,8 @@
   }
 
   window.MATH_PROBLEM_TYPES = [
+    { id: "decAdd", name: "Decimal Addition", generate: generateDecimalAddition },
+    { id: "decSub", name: "Decimal Subtraction", generate: generateDecimalSubtraction },
     { id: "mult3x2", name: "3-digit × 2-digit Multiplication", generate: generateMultiplication },
     { id: "fracMult", name: "Fraction Multiplication", generate: generateFractionMultiplication },
     { id: "fracDiv", name: "Fraction Division", generate: generateFractionDivision },

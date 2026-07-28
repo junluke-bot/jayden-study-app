@@ -23,15 +23,18 @@
   function loadProgress() {
     try {
       var raw = localStorage.getItem(STORAGE_KEY);
-      if (!raw) return { missedWords: {}, missedMath: {}, history: [] };
+      if (!raw)
+        return { missedWords: {}, missedMath: {}, missedReading: {}, missedSocial: {}, history: [] };
       var parsed = JSON.parse(raw);
       return {
         missedWords: parsed.missedWords || {},
         missedMath: parsed.missedMath || {},
+        missedReading: parsed.missedReading || {},
+        missedSocial: parsed.missedSocial || {},
         history: parsed.history || []
       };
     } catch (e) {
-      return { missedWords: {}, missedMath: {}, history: [] };
+      return { missedWords: {}, missedMath: {}, missedReading: {}, missedSocial: {}, history: [] };
     }
   }
 
@@ -72,9 +75,20 @@
     return entry.mode === "math" || entry.mode === "mathReview";
   }
 
+  function isReadingEntry(entry) {
+    return entry.mode === "reading" || entry.mode === "readingReview";
+  }
+
+  function isSocialEntry(entry) {
+    return entry.mode === "social" || entry.mode === "socialReview";
+  }
+
   function historyForTab(history, tab) {
     return history.filter(function (entry) {
-      return tab === "math" ? isMathEntry(entry) : !isMathEntry(entry);
+      if (tab === "math") return isMathEntry(entry);
+      if (tab === "reading") return isReadingEntry(entry);
+      if (tab === "social") return isSocialEntry(entry);
+      return !isMathEntry(entry) && !isReadingEntry(entry) && !isSocialEntry(entry);
     });
   }
 
@@ -82,6 +96,20 @@
     if (entry.mode === "math") return "Daily Math Practice";
     if (entry.mode === "mathReview") return "Review Missed Math";
     if (entry.mode === "review") return "Review Missed Words";
+    if (entry.mode === "readingReview") return "Review Missed Reading";
+    if (entry.mode === "socialReview") return "Review Missed Social Studies";
+    if (entry.mode === "reading") {
+      var passage = window.READING_PASSAGES.filter(function (p) {
+        return p.id === entry.setId;
+      })[0];
+      return passage ? passage.title : "Reading Passage";
+    }
+    if (entry.mode === "social") {
+      var socialSet = window.SOCIAL_STUDIES_SETS.filter(function (s) {
+        return s.id === entry.setId;
+      })[0];
+      return socialSet ? socialSet.name : "Social Studies";
+    }
     var set = window.WORD_SETS.filter(function (s) {
       return s.id === entry.setId;
     })[0];
@@ -106,6 +134,8 @@
     var progress = loadProgress();
     var missedList = Object.keys(progress.missedWords);
     var missedMathList = Object.keys(progress.missedMath);
+    var missedReadingList = Object.keys(progress.missedReading);
+    var missedSocialList = Object.keys(progress.missedSocial);
 
     clearChildren(homeScreen);
 
@@ -114,7 +144,9 @@
 
     [
       { id: "words", label: "Words" },
-      { id: "math", label: "Math" }
+      { id: "math", label: "Math" },
+      { id: "reading", label: "Reading" },
+      { id: "social", label: "Social" }
     ].forEach(function (tab) {
       var tabBtn = document.createElement("button");
       tabBtn.className = "tab-btn" + (activeHomeTab === tab.id ? " active" : "");
@@ -184,7 +216,7 @@
       }
 
       homeScreen.appendChild(reviewWrap);
-    } else {
+    } else if (activeHomeTab === "math") {
       var mathLabel = document.createElement("div");
       mathLabel.className = "section-label";
       mathLabel.textContent = "Math Practice";
@@ -221,14 +253,140 @@
       }
 
       homeScreen.appendChild(mathWrap);
+    } else if (activeHomeTab === "reading") {
+      var readingLabel = document.createElement("div");
+      readingLabel.className = "section-label";
+      readingLabel.textContent = "Passages";
+      homeScreen.appendChild(readingLabel);
+
+      var readingList = document.createElement("div");
+      readingList.className = "set-list";
+
+      window.READING_PASSAGES.forEach(function (passage) {
+        var btn = document.createElement("button");
+        btn.className = "set-card";
+        btn.innerHTML =
+          '<span><span class="set-name">' +
+          passage.title +
+          '</span><span class="set-meta">' +
+          passage.questions.length +
+          " questions</span></span>";
+        btn.addEventListener("click", function () {
+          startReadingQuiz(passage);
+        });
+        readingList.appendChild(btn);
+      });
+
+      homeScreen.appendChild(readingList);
+
+      var readingReviewLabel = document.createElement("div");
+      readingReviewLabel.className = "section-label";
+      readingReviewLabel.textContent = "Practice";
+      homeScreen.appendChild(readingReviewLabel);
+
+      var readingReviewWrap = document.createElement("div");
+      readingReviewWrap.className = "home-actions";
+
+      if (missedReadingList.length === 0) {
+        var readingNote = document.createElement("div");
+        readingNote.className = "empty-note";
+        readingNote.textContent =
+          "No missed questions yet. Questions you miss will show up here to review.";
+        readingReviewWrap.appendChild(readingNote);
+      } else {
+        var readingReviewBtn = document.createElement("button");
+        readingReviewBtn.className = "set-card review-card";
+        readingReviewBtn.innerHTML =
+          '<span><span class="set-name">Review Missed Reading</span>' +
+          '<span class="set-meta">' +
+          missedReadingList.length +
+          (missedReadingList.length === 1 ? " question" : " questions") +
+          "</span></span>";
+        readingReviewBtn.addEventListener("click", function () {
+          startReadingReview(progress);
+        });
+        readingReviewWrap.appendChild(readingReviewBtn);
+      }
+
+      homeScreen.appendChild(readingReviewWrap);
+    } else {
+      var socialLabel = document.createElement("div");
+      socialLabel.className = "section-label";
+      socialLabel.textContent = "Social Studies Sets";
+      homeScreen.appendChild(socialLabel);
+
+      var socialList = document.createElement("div");
+      socialList.className = "set-list";
+
+      window.SOCIAL_STUDIES_SETS.forEach(function (set) {
+        var btn = document.createElement("button");
+        btn.className = "set-card";
+        btn.innerHTML =
+          '<span><span class="set-name">' +
+          set.name +
+          '</span><span class="set-meta">' +
+          set.questions.length +
+          " questions</span></span>";
+        btn.addEventListener("click", function () {
+          startSocialQuiz(set);
+        });
+        socialList.appendChild(btn);
+      });
+
+      homeScreen.appendChild(socialList);
+
+      var socialReviewLabel = document.createElement("div");
+      socialReviewLabel.className = "section-label";
+      socialReviewLabel.textContent = "Practice";
+      homeScreen.appendChild(socialReviewLabel);
+
+      var socialReviewWrap = document.createElement("div");
+      socialReviewWrap.className = "home-actions";
+
+      if (missedSocialList.length === 0) {
+        var socialNote = document.createElement("div");
+        socialNote.className = "empty-note";
+        socialNote.textContent =
+          "No missed questions yet. Questions you miss will show up here to review.";
+        socialReviewWrap.appendChild(socialNote);
+      } else {
+        var socialReviewBtn = document.createElement("button");
+        socialReviewBtn.className = "set-card review-card";
+        socialReviewBtn.innerHTML =
+          '<span><span class="set-name">Review Missed Social Studies</span>' +
+          '<span class="set-meta">' +
+          missedSocialList.length +
+          (missedSocialList.length === 1 ? " question" : " questions") +
+          "</span></span>";
+        socialReviewBtn.addEventListener("click", function () {
+          startSocialReview(progress);
+        });
+        socialReviewWrap.appendChild(socialReviewBtn);
+      }
+
+      homeScreen.appendChild(socialReviewWrap);
     }
 
     var tabHistory = historyForTab(progress.history, activeHomeTab);
-    var tabNoun = activeHomeTab === "math" ? "math" : "word";
+    var tabNoun =
+      activeHomeTab === "math"
+        ? "math"
+        : activeHomeTab === "reading"
+        ? "reading"
+        : activeHomeTab === "social"
+        ? "social studies"
+        : "word";
 
     var progressLabel = document.createElement("div");
     progressLabel.className = "section-label";
-    progressLabel.textContent = activeHomeTab === "math" ? "Math Progress" : "Word Progress";
+    progressLabel.textContent =
+      activeHomeTab === "math"
+        ? "Math Progress"
+        : activeHomeTab === "reading"
+        ? "Reading Progress"
+        : activeHomeTab === "social"
+        ? "Social Studies Progress"
+        : "Word Progress";
     homeScreen.appendChild(progressLabel);
 
     var progressWrap = document.createElement("div");
@@ -272,7 +430,14 @@
 
     var label = document.createElement("div");
     label.className = "section-label";
-    label.textContent = tab === "math" ? "Math Score History" : "Word Score History";
+    label.textContent =
+      tab === "math"
+        ? "Math Score History"
+        : tab === "reading"
+        ? "Reading Score History"
+        : tab === "social"
+        ? "Social Studies Score History"
+        : "Word Score History";
     historyScreen.appendChild(label);
 
     var recent = tabHistory
@@ -376,6 +541,91 @@
     showScreen(quizScreen);
   }
 
+  function readingQuestions(passage) {
+    return passage.questions.map(function (q) {
+      return {
+        type: "reading",
+        passageId: passage.id,
+        passageTitle: passage.title,
+        passageText: passage.text,
+        prompt: q.prompt,
+        choices: q.choices,
+        answerIndex: q.answerIndex
+      };
+    });
+  }
+
+  function startReadingQuiz(passage) {
+    quizState = {
+      setId: passage.id,
+      mode: "reading",
+      questions: shuffle(readingQuestions(passage)),
+      index: 0,
+      score: 0,
+      missedThisRound: []
+    };
+    renderQuestion();
+    showScreen(quizScreen);
+  }
+
+  function startReadingReview(progress) {
+    var questions = Object.keys(progress.missedReading).map(function (key) {
+      return progress.missedReading[key].data;
+    });
+    quizState = {
+      setId: null,
+      mode: "readingReview",
+      questions: shuffle(questions),
+      index: 0,
+      score: 0,
+      missedThisRound: []
+    };
+    renderQuestion();
+    showScreen(quizScreen);
+  }
+
+  function socialQuestions(set) {
+    return set.questions.map(function (q) {
+      return {
+        type: "social",
+        setId: set.id,
+        topic: set.name,
+        prompt: q.prompt,
+        choices: q.choices,
+        answerIndex: q.answerIndex
+      };
+    });
+  }
+
+  function startSocialQuiz(set) {
+    quizState = {
+      setId: set.id,
+      mode: "social",
+      questions: shuffle(socialQuestions(set)),
+      index: 0,
+      score: 0,
+      missedThisRound: []
+    };
+    renderQuestion();
+    showScreen(quizScreen);
+  }
+
+  function startSocialReview(progress) {
+    var questions = Object.keys(progress.missedSocial).map(function (key) {
+      return progress.missedSocial[key].data;
+    });
+    quizState = {
+      setId: null,
+      mode: "socialReview",
+      questions: shuffle(questions),
+      index: 0,
+      score: 0,
+      missedThisRound: []
+    };
+    renderQuestion();
+    showScreen(quizScreen);
+  }
+
   function renderQuestion() {
     var q = quizState.questions[quizState.index];
     var options = shuffle(
@@ -401,26 +651,56 @@
       "Question " + (quizState.index + 1) + " of " + quizState.questions.length;
     quizScreen.appendChild(progressEl);
 
-    var card = document.createElement("div");
-    card.className = "phrase-card";
+    if (q.type === "reading") {
+      var passageCard = document.createElement("div");
+      passageCard.className = "passage-card";
 
-    if (q.type === "math") {
-      var topicEl = document.createElement("div");
-      topicEl.className = "math-topic";
-      topicEl.textContent = q.topic;
-      card.appendChild(topicEl);
-    }
+      var passageTitleEl = document.createElement("div");
+      passageTitleEl.className = "passage-title";
+      passageTitleEl.textContent = q.passageTitle;
+      passageCard.appendChild(passageTitleEl);
 
-    var phraseEl = document.createElement("p");
-    phraseEl.className = "phrase-text";
-    if (q.type === "math") {
-      phraseEl.classList.add("math-prompt");
-      phraseEl.textContent = q.prompt;
+      q.passageText.split("\n\n").forEach(function (para) {
+        var p = document.createElement("p");
+        p.className = "passage-para";
+        p.textContent = para;
+        passageCard.appendChild(p);
+      });
+
+      quizScreen.appendChild(passageCard);
+
+      var questionCard = document.createElement("div");
+      questionCard.className = "phrase-card";
+      var questionEl = document.createElement("p");
+      questionEl.className = "phrase-text reading-question";
+      questionEl.textContent = q.prompt;
+      questionCard.appendChild(questionEl);
+      quizScreen.appendChild(questionCard);
     } else {
-      phraseEl.innerHTML = highlightWord(q.phrase, q.word);
+      var card = document.createElement("div");
+      card.className = "phrase-card";
+
+      if (q.type === "math" || q.type === "social") {
+        var topicEl = document.createElement("div");
+        topicEl.className = "math-topic";
+        topicEl.textContent = q.topic;
+        card.appendChild(topicEl);
+      }
+
+      var phraseEl = document.createElement("p");
+      phraseEl.className = "phrase-text";
+      if (q.type === "math") {
+        phraseEl.classList.add("math-prompt");
+        phraseEl.textContent = q.prompt;
+      } else if (q.type === "social") {
+        phraseEl.classList.add("social-prompt");
+        phraseEl.textContent = q.prompt;
+      } else {
+        phraseEl.innerHTML = highlightWord(q.phrase, q.word);
+      }
+      card.appendChild(phraseEl);
+      quizScreen.appendChild(card);
     }
-    card.appendChild(phraseEl);
-    quizScreen.appendChild(card);
 
     var choicesEl = document.createElement("div");
     choicesEl.className = "choices";
@@ -468,6 +748,10 @@
     }
     if (quizState.mode === "math" || quizState.mode === "mathReview") {
       updateMathProgressForAnswer(q, isCorrect);
+    } else if (quizState.mode === "reading" || quizState.mode === "readingReview") {
+      updateReadingProgressForAnswer(q, isCorrect);
+    } else if (quizState.mode === "social" || quizState.mode === "socialReview") {
+      updateSocialProgressForAnswer(q, isCorrect);
     } else {
       updateProgressForAnswer(q, isCorrect);
     }
@@ -523,6 +807,42 @@
     saveProgress(progress);
   }
 
+  function updateReadingProgressForAnswer(question, isCorrect) {
+    var progress = loadProgress();
+    var key = question.passageId + "::" + question.prompt;
+
+    if (isCorrect) {
+      if (progress.missedReading[key]) {
+        progress.missedReading[key].streak++;
+        if (progress.missedReading[key].streak >= STREAK_TO_CLEAR) {
+          delete progress.missedReading[key];
+        }
+      }
+    } else {
+      progress.missedReading[key] = { streak: 0, data: question };
+    }
+
+    saveProgress(progress);
+  }
+
+  function updateSocialProgressForAnswer(question, isCorrect) {
+    var progress = loadProgress();
+    var key = question.setId + "::" + question.prompt;
+
+    if (isCorrect) {
+      if (progress.missedSocial[key]) {
+        progress.missedSocial[key].streak++;
+        if (progress.missedSocial[key].streak >= STREAK_TO_CLEAR) {
+          delete progress.missedSocial[key];
+        }
+      }
+    } else {
+      progress.missedSocial[key] = { streak: 0, data: question };
+    }
+
+    saveProgress(progress);
+  }
+
   function finishQuiz() {
     var progress = loadProgress();
     progress.history.push({
@@ -568,20 +888,27 @@
     endScreen.appendChild(scoreBox);
 
     var isMath = mode === "math" || mode === "mathReview";
+    var isReading = mode === "reading" || mode === "readingReview";
+    var isSocial = mode === "social" || mode === "socialReview";
+    var usesPrompt = isMath || isReading || isSocial;
 
     if (missed.length > 0) {
       var label = document.createElement("div");
       label.className = "section-label";
-      label.textContent = isMath ? "Problems to Review" : "Words to Review";
+      label.textContent = isMath
+        ? "Problems to Review"
+        : isReading || isSocial
+        ? "Questions to Review"
+        : "Words to Review";
       endScreen.appendChild(label);
 
       var list = document.createElement("ul");
       list.className = "missed-list";
       missed.forEach(function (item) {
         var li = document.createElement("li");
-        if (isMath) {
+        if (usesPrompt) {
           li.innerHTML =
-            '<span class="missed-word">' +
+            '<span class="missed-word missed-prompt">' +
             item.prompt +
             '</span><span class="missed-meaning">Answer: ' +
             item.choices[item.answerIndex] +

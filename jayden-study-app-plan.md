@@ -53,7 +53,7 @@ Requirements:
 Start with one word set using these words: evade, courteous, perish,
 immense, astound, feeble, withdraw, industrious, saunter, sluggish,
 exasperate, obsolete, deprive, nonchalant, exult, sparse, taunt,
-hearty, suspend, solitary.
+hearty, suspend, solitary, thrifty, vivid.
 ```
 
 ## Good follow-up prompts (after the MVP works)
