@@ -1029,5 +1029,881 @@ window.WORD_SETS = [
         meaning: "a wild, natural area with no people"
       }
     ]
+  },
+  {
+    id: "set8",
+    name: "Word Set 8",
+    words: [
+      {
+        word: "adequate",
+        phrase: "her grades were adequate",
+        choices: ["sufficient", "excellent", "poor", "impossible"],
+        answerIndex: 0,
+        meaning: "sufficient; acceptable"
+      },
+      {
+        word: "adorn",
+        phrase: "he adorned his room with posters",
+        choices: ["decorate", "empty", "clean", "damage"],
+        answerIndex: 0,
+        meaning: "to decorate"
+      },
+      {
+        word: "adversity",
+        phrase: "her childhood was full of adversity",
+        choices: ["hardship", "luxury", "fun", "boredom"],
+        answerIndex: 0,
+        meaning: "misfortune; challenging circumstances"
+      },
+      {
+        word: "aesthetic",
+        phrase: "the shoes have little aesthetic value",
+        choices: ["artistic", "financial", "medical", "legal"],
+        answerIndex: 0,
+        meaning: "relating to art or beauty"
+      },
+      {
+        word: "aggravate",
+        phrase: "passing notes aggravated their teacher",
+        choices: ["annoy", "please", "calm", "help"],
+        answerIndex: 0,
+        meaning: "annoy; make worse"
+      },
+      {
+        word: "alleviate",
+        phrase: "ways to alleviate stress",
+        choices: ["ease", "worsen", "cause", "ignore"],
+        answerIndex: 0,
+        meaning: "make less severe"
+      },
+      {
+        word: "amateur",
+        phrase: "an amateur photographer",
+        choices: ["unskilled", "professional", "famous", "expert"],
+        answerIndex: 0,
+        meaning: "nonprofessional; unskilled"
+      },
+      {
+        word: "ambiance",
+        phrase: "a luxurious ambiance",
+        choices: ["atmosphere", "recipe", "melody", "invoice"],
+        answerIndex: 0,
+        meaning: "the atmosphere or mood of a place"
+      },
+      {
+        word: "ambiguous",
+        phrase: "the painting's ambiguous smile",
+        choices: ["unclear", "obvious", "cheerful", "angry"],
+        answerIndex: 0,
+        meaning: "unclear; uncertain"
+      },
+      {
+        word: "animosity",
+        phrase: "animosity between the director and the actor",
+        choices: ["hostility", "friendship", "curiosity", "respect"],
+        answerIndex: 0,
+        meaning: "intense hostility"
+      },
+      {
+        word: "anomaly",
+        phrase: "an anomaly in the blood test results",
+        choices: ["abnormality", "normal result", "improvement", "routine check"],
+        answerIndex: 0,
+        meaning: "something abnormal"
+      },
+      {
+        word: "arid",
+        phrase: "the desert is so arid",
+        choices: ["dry", "humid", "fertile", "cold"],
+        answerIndex: 0,
+        meaning: "dry; barren"
+      },
+      {
+        word: "articulate",
+        phrase: "how articulate the student was",
+        choices: ["well-spoken", "confused", "silent", "rude"],
+        answerIndex: 0,
+        meaning: "able to speak fluently and logically"
+      },
+      {
+        word: "authentic",
+        phrase: "an authentic designer bag",
+        choices: ["genuine", "fake", "cheap", "borrowed"],
+        answerIndex: 0,
+        meaning: "genuine"
+      },
+      {
+        word: "bemuse",
+        phrase: "bemused by the confusing evidence",
+        choices: ["confuse", "clarify", "delight", "bore"],
+        answerIndex: 0,
+        meaning: "confuse, bewilder"
+      },
+      {
+        word: "bewilder",
+        phrase: "bewildered by Shakespeare's language",
+        choices: ["confuse", "amuse", "reassure", "convince"],
+        answerIndex: 0,
+        meaning: "confuse severely"
+      },
+      {
+        word: "blend",
+        phrase: "blend the ingredients completely",
+        choices: ["mix", "separate", "burn", "measure"],
+        answerIndex: 0,
+        meaning: "mix together"
+      },
+      {
+        word: "bliss",
+        phrase: "a cozy chair and a good book is bliss",
+        choices: ["joy", "misery", "boredom", "anger"],
+        answerIndex: 0,
+        meaning: "total happiness"
+      },
+      {
+        word: "boisterous",
+        phrase: "his boisterous laughter",
+        choices: ["loud", "quiet", "gentle", "shy"],
+        answerIndex: 0,
+        meaning: "energetic; noisy"
+      },
+      {
+        word: "brandish",
+        phrase: "she brandished her sword",
+        choices: ["wave threateningly", "hide", "drop", "polish"],
+        answerIndex: 0,
+        meaning: "wave something in anger or excitement"
+      }
+    ]
+  },
+  {
+    id: "set9",
+    name: "Word Set 9",
+    words: [
+      {
+        word: "capitulate",
+        phrase: "her parents would not capitulate to her demands",
+        choices: ["give in", "fight back", "forget", "celebrate"],
+        answerIndex: 0,
+        meaning: "surrender; to give in"
+      },
+      {
+        word: "chasm",
+        phrase: "a chasm hundreds of feet deep",
+        choices: ["gap", "hill", "bridge", "puddle"],
+        answerIndex: 0,
+        meaning: "a deep divide"
+      },
+      {
+        word: "chronological",
+        phrase: "read the books in chronological order",
+        choices: ["time order", "alphabetical order", "random order", "reverse order"],
+        answerIndex: 0,
+        meaning: "in the order in which events occurred"
+      },
+      {
+        word: "circumvent",
+        phrase: "circumvent the dangerous terrain",
+        choices: ["avoid", "confront", "map", "worsen"],
+        answerIndex: 0,
+        meaning: "find a way around"
+      },
+      {
+        word: "collaborate",
+        phrase: "fun to collaborate with others",
+        choices: ["cooperate", "compete", "argue", "isolate"],
+        answerIndex: 0,
+        meaning: "work together"
+      },
+      {
+        word: "colleague",
+        phrase: "her friendly colleagues",
+        choices: ["coworker", "boss", "customer", "stranger"],
+        answerIndex: 0,
+        meaning: "someone a person works with"
+      },
+      {
+        word: "comprehend",
+        phrase: "couldn't comprehend why",
+        choices: ["understand", "ignore", "forget", "doubt"],
+        answerIndex: 0,
+        meaning: "understand"
+      },
+      {
+        word: "conjecture",
+        phrase: "based on conjecture, not evidence",
+        choices: ["guess", "proof", "law", "fact"],
+        answerIndex: 0,
+        meaning: "idea or opinion without evidence"
+      },
+      {
+        word: "conservative",
+        phrase: "his conservative style of dressing",
+        choices: ["traditional", "bold", "flashy", "careless"],
+        answerIndex: 0,
+        meaning: "traditional; cautious"
+      },
+      {
+        word: "contend",
+        phrase: "Leticia contended she was the best choice",
+        choices: ["argue", "agree", "deny", "apologize"],
+        answerIndex: 0,
+        meaning: "argue; assert"
+      },
+      {
+        word: "courtesy",
+        phrase: "had the courtesy to tell him",
+        choices: ["politeness", "rudeness", "silence", "confusion"],
+        answerIndex: 0,
+        meaning: "respect, politeness"
+      },
+      {
+        word: "creed",
+        phrase: "practice their creed freely",
+        choices: ["belief system", "punishment", "law", "recipe"],
+        answerIndex: 0,
+        meaning: "system of beliefs"
+      },
+      {
+        word: "custom",
+        phrase: "a common custom in Europe",
+        choices: ["tradition", "crime", "accident", "mistake"],
+        answerIndex: 0,
+        meaning: "traditional behavior"
+      },
+      {
+        word: "dearth",
+        phrase: "the dearth of information",
+        choices: ["shortage", "abundance", "excess", "surplus"],
+        answerIndex: 0,
+        meaning: "lack"
+      },
+      {
+        word: "debacle",
+        phrase: "a major debacle for the restaurant",
+        choices: ["disaster", "success", "profit", "celebration"],
+        answerIndex: 0,
+        meaning: "disaster"
+      },
+      {
+        word: "deduct",
+        phrase: "deducted $500 from her paycheck",
+        choices: ["subtract", "add", "double", "multiply"],
+        answerIndex: 0,
+        meaning: "take away; subtract"
+      },
+      {
+        word: "defective",
+        phrase: "returned the defective computer",
+        choices: ["broken", "working", "new", "expensive"],
+        answerIndex: 0,
+        meaning: "not functioning"
+      },
+      {
+        word: "delight",
+        phrase: "it delighted Norah to hear the news",
+        choices: ["please", "upset", "bore", "worry"],
+        answerIndex: 0,
+        meaning: "please; pleasure"
+      },
+      {
+        word: "demolish",
+        phrase: "demolished the old mansion",
+        choices: ["tear down", "build", "repair", "paint"],
+        answerIndex: 0,
+        meaning: "destroy"
+      },
+      {
+        word: "deteriorate",
+        phrase: "the abandoned warehouse deteriorated quickly",
+        choices: ["worsen", "improve", "rebuild", "shine"],
+        answerIndex: 0,
+        meaning: "fall apart"
+      }
+    ]
+  },
+  {
+    id: "set10",
+    name: "Word Set 10",
+    words: [
+      {
+        word: "disperse",
+        phrase: "the antelopes dispersed",
+        choices: ["scatter", "gather", "sleep", "attack"],
+        answerIndex: 0,
+        meaning: "scatter"
+      },
+      {
+        word: "durable",
+        phrase: "the durable sedan",
+        choices: ["long-lasting", "fragile", "expensive", "colorful"],
+        answerIndex: 0,
+        meaning: "long-lasting"
+      },
+      {
+        word: "efface",
+        phrase: "the rain effaced the footsteps",
+        choices: ["erase", "reveal", "highlight", "photograph"],
+        answerIndex: 0,
+        meaning: "erase"
+      },
+      {
+        word: "elation",
+        phrase: "he felt an elation he had never experienced",
+        choices: ["joy", "sorrow", "fear", "anger"],
+        answerIndex: 0,
+        meaning: "intense joy"
+      },
+      {
+        word: "embrace",
+        phrase: "Jillian embraced the idea of a break",
+        choices: ["welcome", "reject", "ignore", "postpone"],
+        answerIndex: 0,
+        meaning: "accept enthusiastically"
+      },
+      {
+        word: "enigma",
+        phrase: "remained an enigma to her",
+        choices: ["mystery", "solution", "fact", "habit"],
+        answerIndex: 0,
+        meaning: "puzzle"
+      },
+      {
+        word: "erratic",
+        phrase: "New York's erratic weather",
+        choices: ["unpredictable", "steady", "boring", "mild"],
+        answerIndex: 0,
+        meaning: "unpredictable"
+      },
+      {
+        word: "exalt",
+        phrase: "Neil Armstrong was exalted as a hero",
+        choices: ["praise", "criticize", "ignore", "forget"],
+        answerIndex: 0,
+        meaning: "praise"
+      },
+      {
+        word: "exonerate",
+        phrase: "the defendant was exonerated",
+        choices: ["clear of blame", "convicted", "arrested", "questioned"],
+        answerIndex: 0,
+        meaning: "remove guilt or blame"
+      },
+      {
+        word: "expel",
+        phrase: "expelled from the school",
+        choices: ["kick out", "welcome", "promote", "hire"],
+        answerIndex: 0,
+        meaning: "remove by force"
+      },
+      {
+        word: "extravagant",
+        phrase: "the diamond chandelier was too extravagant",
+        choices: ["lavish", "plain", "cheap", "simple"],
+        answerIndex: 0,
+        meaning: "unnecessarily fancy"
+      },
+      {
+        word: "ferocity",
+        phrase: "the mother bear's ferocity",
+        choices: ["fierceness", "gentleness", "shyness", "calmness"],
+        answerIndex: 0,
+        meaning: "fierceness"
+      },
+      {
+        word: "fiasco",
+        phrase: "a financial fiasco",
+        choices: ["disaster", "triumph", "bargain", "plan"],
+        answerIndex: 0,
+        meaning: "failure, disaster"
+      },
+      {
+        word: "flamboyant",
+        phrase: "flamboyant clothing",
+        choices: ["showy", "plain", "dull", "modest"],
+        answerIndex: 0,
+        meaning: "attention-grabbing"
+      },
+      {
+        word: "gaffe",
+        phrase: "the actor's gaffe",
+        choices: ["blunder", "achievement", "compliment", "award"],
+        answerIndex: 0,
+        meaning: "an embarrassing mistake"
+      },
+      {
+        word: "glitch",
+        phrase: "a computer glitch",
+        choices: ["malfunction", "upgrade", "success", "feature"],
+        answerIndex: 0,
+        meaning: "minor malfunction"
+      },
+      {
+        word: "hoax",
+        phrase: "hoaxes on April Fools' Day",
+        choices: ["trick", "truth", "gift", "reward"],
+        answerIndex: 0,
+        meaning: "trick, deception"
+      },
+      {
+        word: "idiosyncrasy",
+        phrase: "a few idiosyncrasies",
+        choices: ["quirk", "strength", "rule", "talent"],
+        answerIndex: 0,
+        meaning: "eccentricity, quirk"
+      },
+      {
+        word: "impeccable",
+        phrase: "his impeccable manners",
+        choices: ["flawless", "sloppy", "rude", "average"],
+        answerIndex: 0,
+        meaning: "faultless, perfect"
+      },
+      {
+        word: "impertinent",
+        phrase: "impertinent comments",
+        choices: ["rude", "polite", "shy", "kind"],
+        answerIndex: 0,
+        meaning: "irrelevant; insolent, disrespectful"
+      }
+    ]
+  },
+  {
+    id: "set11",
+    name: "Word Set 11",
+    words: [
+      {
+        word: "innovation",
+        phrase: "her most recent innovation",
+        choices: ["new idea", "old habit", "mistake", "rule"],
+        answerIndex: 0,
+        meaning: "a novel idea or thing"
+      },
+      {
+        word: "instigate",
+        phrase: "instigated heated arguments",
+        choices: ["provoke", "prevent", "solve", "ignore"],
+        answerIndex: 0,
+        meaning: "initiate; provoke"
+      },
+      {
+        word: "investigate",
+        phrase: "investigated the claims",
+        choices: ["examine", "ignore", "believe blindly", "forget"],
+        answerIndex: 0,
+        meaning: "thoroughly examine"
+      },
+      {
+        word: "ironic",
+        phrase: "it was ironic that the medicine made him worse",
+        choices: ["unexpected", "predictable", "boring", "obvious"],
+        answerIndex: 0,
+        meaning: "different from what is expected; sarcastic"
+      },
+      {
+        word: "laborious",
+        phrase: "years of laborious training",
+        choices: ["difficult", "easy", "quick", "lazy"],
+        answerIndex: 0,
+        meaning: "labor-intensive, arduous, effortful"
+      },
+      {
+        word: "laud",
+        phrase: "should laud her achievements",
+        choices: ["praise", "criticize", "ignore", "mock"],
+        answerIndex: 0,
+        meaning: "praise"
+      },
+      {
+        word: "livid",
+        phrase: "the news left her livid",
+        choices: ["furious", "calm", "happy", "sleepy"],
+        answerIndex: 0,
+        meaning: "furious"
+      },
+      {
+        word: "lore",
+        phrase: "part of our town's lore",
+        choices: ["legend", "law", "recipe", "invoice"],
+        answerIndex: 0,
+        meaning: "mythology, stories, body of traditions"
+      },
+      {
+        word: "loquacious",
+        phrase: "so loquacious and charming",
+        choices: ["talkative", "silent", "shy", "serious"],
+        answerIndex: 0,
+        meaning: "talkative"
+      },
+      {
+        word: "malice",
+        phrase: "his review was motivated by malice",
+        choices: ["spite", "kindness", "curiosity", "joy"],
+        answerIndex: 0,
+        meaning: "ill will, spite"
+      },
+      {
+        word: "medley",
+        phrase: "a medley of snacks",
+        choices: ["mixture", "single item", "recipe", "shortage"],
+        answerIndex: 0,
+        meaning: "assortment, mixture, miscellany"
+      },
+      {
+        word: "merit",
+        phrase: "judged on the merits of their arguments",
+        choices: ["value", "appearance", "cost", "length"],
+        answerIndex: 0,
+        meaning: "worthiness, value"
+      },
+      {
+        word: "mock",
+        phrase: "mock her brother's short stature",
+        choices: ["ridicule", "praise", "ignore", "protect"],
+        answerIndex: 0,
+        meaning: "make fun of"
+      },
+      {
+        word: "modify",
+        phrase: "modified her curriculum",
+        choices: ["change", "keep the same", "delete entirely", "copy"],
+        answerIndex: 0,
+        meaning: "alter; change"
+      },
+      {
+        word: "narrative",
+        phrase: "Aaron's inconsistent narrative",
+        choices: ["story", "silence", "question", "law"],
+        answerIndex: 0,
+        meaning: "story"
+      },
+      {
+        word: "nemesis",
+        phrase: "defeat his nemesis",
+        choices: ["rival", "friend", "teacher", "sibling"],
+        answerIndex: 0,
+        meaning: "enemy"
+      },
+      {
+        word: "nimble",
+        phrase: "the soccer player's nimble moves",
+        choices: ["agile", "clumsy", "slow", "tired"],
+        answerIndex: 0,
+        meaning: "quick; agile"
+      },
+      {
+        word: "obstinate",
+        phrase: "the obstinate boy would not follow instructions",
+        choices: ["stubborn", "obedient", "flexible", "curious"],
+        answerIndex: 0,
+        meaning: "stubborn"
+      },
+      {
+        word: "opponent",
+        phrase: "her opponent Jeffrey",
+        choices: ["rival", "teammate", "coach", "fan"],
+        answerIndex: 0,
+        meaning: "person or group competing against another"
+      },
+      {
+        word: "overt",
+        phrase: "his overt flirtation",
+        choices: ["obvious", "hidden", "secret", "subtle"],
+        answerIndex: 0,
+        meaning: "obvious"
+      }
+    ]
+  },
+  {
+    id: "set12",
+    name: "Word Set 12",
+    words: [
+      {
+        word: "pact",
+        phrase: "made a pact not to play catch in the house",
+        choices: ["agreement", "argument", "punishment", "mistake"],
+        answerIndex: 0,
+        meaning: "agreement"
+      },
+      {
+        word: "painstaking",
+        phrase: "painstaking attention to detail",
+        choices: ["careful", "careless", "quick", "lazy"],
+        answerIndex: 0,
+        meaning: "difficult; with great effort"
+      },
+      {
+        word: "paradox",
+        phrase: "it seemed like a paradox",
+        choices: ["contradiction", "fact", "routine", "solution"],
+        answerIndex: 0,
+        meaning: "something that does not follow"
+      },
+      {
+        word: "peril",
+        phrase: "knew she was in peril",
+        choices: ["danger", "safety", "comfort", "boredom"],
+        answerIndex: 0,
+        meaning: "danger"
+      },
+      {
+        word: "pester",
+        phrase: "would constantly pester his sister",
+        choices: ["annoy", "help", "comfort", "ignore"],
+        answerIndex: 0,
+        meaning: "annoy"
+      },
+      {
+        word: "practical",
+        phrase: "the guide was not very practical",
+        choices: ["useful", "useless", "expensive", "beautiful"],
+        answerIndex: 0,
+        meaning: "useful, logical"
+      },
+      {
+        word: "precocious",
+        phrase: "the precocious child",
+        choices: ["advanced", "delayed", "average", "clumsy"],
+        answerIndex: 0,
+        meaning: "advanced at a young age"
+      },
+      {
+        word: "prominent",
+        phrase: "the prominent guest at her party",
+        choices: ["notable", "unknown", "boring", "shy"],
+        answerIndex: 0,
+        meaning: "well-known, important"
+      },
+      {
+        word: "prototype",
+        phrase: "the prototype of the computer",
+        choices: ["first model", "final product", "broken copy", "advertisement"],
+        answerIndex: 0,
+        meaning: "original model"
+      },
+      {
+        word: "query",
+        phrase: "various queries for the teacher",
+        choices: ["question", "answer", "complaint", "apology"],
+        answerIndex: 0,
+        meaning: "question, request"
+      },
+      {
+        word: "rapid",
+        phrase: "the most rapid land animal",
+        choices: ["fast", "slow", "quiet", "heavy"],
+        answerIndex: 0,
+        meaning: "fast"
+      },
+      {
+        word: "raze",
+        phrase: "the historic mansion was razed",
+        choices: ["demolish", "build", "restore", "paint"],
+        answerIndex: 0,
+        meaning: "destroy"
+      },
+      {
+        word: "redundant",
+        phrase: "her attempts to clarify were redundant",
+        choices: ["unnecessary", "essential", "clear", "brief"],
+        answerIndex: 0,
+        meaning: "extra, unnecessary, duplicated"
+      },
+      {
+        word: "remedy",
+        phrase: "no known remedy to the common cold",
+        choices: ["cure", "cause", "symptom", "disease"],
+        answerIndex: 0,
+        meaning: "cure"
+      },
+      {
+        word: "reprimand",
+        phrase: "severely reprimanded by his parents",
+        choices: ["scold", "reward", "praise", "excuse"],
+        answerIndex: 0,
+        meaning: "criticize, condemn"
+      },
+      {
+        word: "retort",
+        phrase: "Jane retorted with a stern critique",
+        choices: ["respond sharply", "stay silent", "agree quietly", "laugh"],
+        answerIndex: 0,
+        meaning: "respond in a forceful manner"
+      },
+      {
+        word: "rural",
+        phrase: "a rural area surrounded by fields",
+        choices: ["countryside", "urban", "industrial", "coastal"],
+        answerIndex: 0,
+        meaning: "characteristic of the countryside"
+      },
+      {
+        word: "sage",
+        phrase: "the sage's poignant answer",
+        choices: ["wise person", "fool", "child", "stranger"],
+        answerIndex: 0,
+        meaning: "wise individual"
+      },
+      {
+        word: "sarcastic",
+        phrase: "he was being sarcastic about the burnt cookies",
+        choices: ["mocking", "sincere", "gentle", "shy"],
+        answerIndex: 0,
+        meaning: "ironically mocking"
+      },
+      {
+        word: "scoff",
+        phrase: "Jessica scoffed at the idea",
+        choices: ["mock", "agree", "cry", "smile warmly"],
+        answerIndex: 0,
+        meaning: "mock or ridicule"
+      }
+    ]
+  },
+  {
+    id: "set13",
+    name: "Word Set 13",
+    words: [
+      {
+        word: "secure",
+        phrase: "made him feel secure",
+        choices: ["safe", "unsafe", "nervous", "lost"],
+        answerIndex: 0,
+        meaning: "safe from harm; firmly attached"
+      },
+      {
+        word: "serene",
+        phrase: "Angie felt serene by the stream",
+        choices: ["calm", "anxious", "angry", "confused"],
+        answerIndex: 0,
+        meaning: "completely calm; clear"
+      },
+      {
+        word: "skeptic",
+        phrase: "a well-known skeptic",
+        choices: ["doubter", "believer", "expert", "fan"],
+        answerIndex: 0,
+        meaning: "someone who doubts"
+      },
+      {
+        word: "sloth",
+        phrase: "the cold weather inclined her towards sloth",
+        choices: ["laziness", "energy", "excitement", "hunger"],
+        answerIndex: 0,
+        meaning: "inactivity, laziness"
+      },
+      {
+        word: "sly",
+        phrase: "a sly bite of cake",
+        choices: ["sneaky", "honest", "clumsy", "loud"],
+        answerIndex: 0,
+        meaning: "sneaky or mischievous"
+      },
+      {
+        word: "sporadic",
+        phrase: "the desert rainfall was sporadic",
+        choices: ["irregular", "constant", "daily", "predictable"],
+        answerIndex: 0,
+        meaning: "occurring at irregular intervals"
+      },
+      {
+        word: "stifle",
+        phrase: "made her best effort to stifle her cough",
+        choices: ["suppress", "release", "encourage", "amplify"],
+        answerIndex: 0,
+        meaning: "suppress or stop"
+      },
+      {
+        word: "subtle",
+        phrase: "only subtle differences between the twins",
+        choices: ["faint", "obvious", "loud", "huge"],
+        answerIndex: 0,
+        meaning: "difficult to notice or describe"
+      },
+      {
+        word: "sympathize",
+        phrase: "not difficult to sympathize with the flood victims",
+        choices: ["feel compassion for", "envy", "ignore", "blame"],
+        answerIndex: 0,
+        meaning: "feel sorry for"
+      },
+      {
+        word: "tact",
+        phrase: "presented his argument with such tact",
+        choices: ["diplomacy", "rudeness", "anger", "confusion"],
+        answerIndex: 0,
+        meaning: "the ability to act or speak without offending others"
+      },
+      {
+        word: "tentative",
+        phrase: "made tentative plans with Jessica",
+        choices: ["uncertain", "definite", "final", "confident"],
+        answerIndex: 0,
+        meaning: "not certain"
+      },
+      {
+        word: "timid",
+        phrase: "very timid in approaching his teacher",
+        choices: ["shy", "bold", "confident", "loud"],
+        answerIndex: 0,
+        meaning: "shy"
+      },
+      {
+        word: "tolerance",
+        phrase: "a high tolerance for variations in temperature",
+        choices: ["endurance", "sensitivity", "weakness", "fear"],
+        answerIndex: 0,
+        meaning: "open-mindedness; endurance"
+      },
+      {
+        word: "unconventional",
+        phrase: "unconventional hair colors",
+        choices: ["unusual", "typical", "boring", "traditional"],
+        answerIndex: 0,
+        meaning: "out of the ordinary"
+      },
+      {
+        word: "uniform",
+        phrase: "a uniform width",
+        choices: ["consistent", "varied", "random", "uneven"],
+        answerIndex: 0,
+        meaning: "the same"
+      },
+      {
+        word: "universal",
+        phrase: "a universal rule at the school",
+        choices: ["all-encompassing", "optional", "local", "rare"],
+        answerIndex: 0,
+        meaning: "the same for all cases"
+      },
+      {
+        word: "vendetta",
+        phrase: "a vendetta against the Jones family",
+        choices: ["grudge", "friendship", "alliance", "gift"],
+        answerIndex: 0,
+        meaning: "grudge"
+      },
+      {
+        word: "vital",
+        phrase: "water is such a vital resource",
+        choices: ["essential", "unimportant", "rare", "expensive"],
+        answerIndex: 0,
+        meaning: "extremely important; energetic"
+      },
+      {
+        word: "vulnerable",
+        phrase: "one of the most vulnerable parts of the body",
+        choices: ["exposed", "protected", "strong", "hidden"],
+        answerIndex: 0,
+        meaning: "open to attack or harm"
+      },
+      {
+        word: "wicked",
+        phrase: "the wicked witch cast spells",
+        choices: ["evil", "kind", "gentle", "fair"],
+        answerIndex: 0,
+        meaning: "evil or wrong"
+      }
+    ]
   }
 ];
