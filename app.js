@@ -174,6 +174,48 @@
 
   // ---------- Home screen ----------
 
+  function renderMissedInventory(missedMap, kind) {
+    var keys = Object.keys(missedMap);
+    if (keys.length === 0) return null;
+
+    var list = document.createElement("ul");
+    list.className = "missed-list";
+
+    keys.forEach(function (key) {
+      var item = missedMap[key].data;
+      var li = document.createElement("li");
+      if (kind === "word") {
+        li.innerHTML =
+          '<span class="missed-word">' +
+          item.word +
+          '</span><span class="missed-meaning">' +
+          item.meaning +
+          "</span>";
+      } else {
+        li.innerHTML =
+          '<span class="missed-word missed-prompt">' +
+          item.prompt +
+          '</span><span class="missed-meaning">Answer: ' +
+          item.choices[item.answerIndex] +
+          "</span>";
+      }
+      list.appendChild(li);
+    });
+
+    return list;
+  }
+
+  function appendMissedInventory(labelText, missedMap, kind) {
+    var list = renderMissedInventory(missedMap, kind);
+    if (!list) return;
+
+    var label = document.createElement("div");
+    label.className = "section-label";
+    label.textContent = labelText;
+    homeScreen.appendChild(label);
+    homeScreen.appendChild(list);
+  }
+
   function renderHome() {
     var progress = loadProgress();
     var missedList = Object.keys(progress.missedWords);
@@ -264,6 +306,7 @@
       }
 
       homeScreen.appendChild(reviewWrap);
+      appendMissedInventory("Missed Words Inventory", progress.missedWords, "word");
     } else if (activeHomeTab === "math") {
       var mathLabel = document.createElement("div");
       mathLabel.className = "section-label";
@@ -301,6 +344,7 @@
       }
 
       homeScreen.appendChild(mathWrap);
+      appendMissedInventory("Missed Math Inventory", progress.missedMath, "prompt");
     } else if (activeHomeTab === "math2") {
       var math2Label = document.createElement("div");
       math2Label.className = "section-label";
@@ -338,6 +382,7 @@
       }
 
       homeScreen.appendChild(math2Wrap);
+      appendMissedInventory("Missed Math 2 Inventory", progress.missedMath2, "prompt");
     } else if (activeHomeTab === "reading") {
       var readingLabel = document.createElement("div");
       readingLabel.className = "section-label";
@@ -394,6 +439,7 @@
       }
 
       homeScreen.appendChild(readingReviewWrap);
+      appendMissedInventory("Missed Reading Inventory", progress.missedReading, "prompt");
     } else if (activeHomeTab === "social") {
       var socialLabel = document.createElement("div");
       socialLabel.className = "section-label";
@@ -450,6 +496,7 @@
       }
 
       homeScreen.appendChild(socialReviewWrap);
+      appendMissedInventory("Missed Social Studies Inventory", progress.missedSocial, "prompt");
     } else {
       var scienceLabel = document.createElement("div");
       scienceLabel.className = "section-label";
@@ -506,6 +553,7 @@
       }
 
       homeScreen.appendChild(scienceReviewWrap);
+      appendMissedInventory("Missed Science Inventory", progress.missedScience, "prompt");
     }
 
     var tabHistory = historyForTab(progress.history, activeHomeTab);
