@@ -27,10 +27,11 @@ To verify changes actually render (not just parse), drive the page with a headle
 | `reading.js` | `window.READING_PASSAGES` | passages with `{ title, text, questions: [{prompt, choices, answerIndex}] }` |
 | `social.js` | `window.SOCIAL_STUDIES_SETS` | sets of `{ prompt, choices, answerIndex }`, grouped by topic (Civics, U.S. History, Economics) |
 | `science.js` | `window.SCIENCE_SETS` | sets of `{ prompt, choices, answerIndex }`, grouped by topic (Ecology, Energy, States of Matter, Forces & Motion, Earth & the Universe, Scientific Method & Tools) |
+| `dol.js` | `window.DOL_SETS` | sets of `{ prompt, choices, answerIndex }`, grouped by day (Monday-Thursday grammar/language drills) |
 
 Convention across all data files: `choices[0]` is always the correct answer; `app.js` shuffles choice order at render time (never shuffle in the data files themselves).
 
-**One quiz engine, many content modes.** `app.js` doesn't have separate code paths per subject — one `renderQuestion()`/`handleAnswer()` pair drives Words, Math, Reading, Social Studies, and Science, discriminated by `q.type` (`"math"`, `"math2"`, `"reading"`, `"social"`, `"science"`, or absent for word questions) and by `quizState.mode` (`"normal"`, `"review"`, `"math"`, `"mathReview"`, `"math2"`, `"math2Review"`, `"reading"`, `"readingReview"`, `"social"`, `"socialReview"`, `"science"`, `"scienceReview"`). When adding a new subject, follow this pattern rather than branching the UI separately:
+**One quiz engine, many content modes.** `app.js` doesn't have separate code paths per subject — one `renderQuestion()`/`handleAnswer()` pair drives Words, Math, Reading, Social Studies, Science, and DOL, discriminated by `q.type` (`"math"`, `"math2"`, `"reading"`, `"social"`, `"science"`, `"dol"`, or absent for word questions) and by `quizState.mode` (`"normal"`, `"review"`, `"math"`, `"mathReview"`, `"math2"`, `"math2Review"`, `"reading"`, `"readingReview"`, `"social"`, `"socialReview"`, `"science"`, `"scienceReview"`, `"dol"`, `"dolReview"`). When adding a new subject, follow this pattern rather than branching the UI separately:
 - a `start<Subject>Quiz()` / `start<Subject>Review()` pair that builds `quizState`
 - a case in `renderQuestion()`'s type branch for how the prompt card renders
 - a `update<Subject>ProgressForAnswer()` for the missed-item tracking
@@ -38,6 +39,6 @@ Convention across all data files: `choices[0]` is always the correct answer; `ap
 
 **Screens are hand-rendered, not routed.** Four `<section class="screen">` elements (`home-screen`, `quiz-screen`, `end-screen`, `history-screen`) are shown/hidden via `showScreen()`; each render function clears and rebuilds its section's DOM from scratch (`clearChildren` + `createElement`/`innerHTML`) rather than diffing.
 
-**Persistence.** Everything lives in one `localStorage` key (`iowaVocabProgress`), shaped as `{ missedWords, missedMath, missedMath2, missedReading, missedSocial, missedScience, history }`. Each `missed*` map is a spaced-repetition deck: missing a question adds it with `streak: 0`; a correct review answer increments the streak; hitting `STREAK_TO_CLEAR` (2) removes it. `history` is an append-only log of `{ setId, mode, score, total, date }` used for the per-tab score history screen.
+**Persistence.** Everything lives in one `localStorage` key (`iowaVocabProgress`), shaped as `{ missedWords, missedMath, missedMath2, missedReading, missedSocial, missedScience, missedDol, history }`. Each `missed*` map is a spaced-repetition deck: missing a question adds it with `streak: 0`; a correct review answer increments the streak; hitting `STREAK_TO_CLEAR` (2) removes it. `history` is an append-only log of `{ setId, mode, score, total, date }` used for the per-tab score history screen.
 
 **Offline cache.** `sw.js` precaches an explicit `ASSETS` list under `CACHE_NAME`. When adding a new top-level script/asset file, add it to `ASSETS` *and* bump `CACHE_NAME` (e.g. `iowa-vocab-v10` → `v11`) — otherwise existing installs keep serving the old cached set and never pick up the new file.
