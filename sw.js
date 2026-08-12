@@ -1,5 +1,5 @@
 // Minimal offline cache for the app shell so it works after the first load.
-var CACHE_NAME = "iowa-vocab-v13";
+var CACHE_NAME = "iowa-vocab-v15";
 var ASSETS = [
   "./",
   "./index.html",
@@ -11,6 +11,7 @@ var ASSETS = [
   "./social.js",
   "./science.js",
   "./dol.js",
+  "./spelling.js",
   "./app.js"
 ];
 
