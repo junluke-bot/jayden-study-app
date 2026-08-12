@@ -1905,5 +1905,1049 @@ window.WORD_SETS = [
         meaning: "evil or wrong"
       }
     ]
+  },
+  {
+    id: "wonders-u1",
+    name: "Wonders Unit 1",
+    words: [
+      {
+        word: "debris",
+        phrase: "debris scattered across the yard",
+        choices: ["wreckage", "treasure", "blueprint", "harvest"],
+        answerIndex: 0,
+        meaning: "scattered pieces left after something breaks or is destroyed"
+      },
+      {
+        word: "emphasis",
+        phrase: "put emphasis on the last word",
+        choices: ["importance", "boredom", "silence", "mistake"],
+        answerIndex: 0,
+        meaning: "special importance or attention given to something"
+      },
+      {
+        word: "encounter",
+        phrase: "to encounter a bear on the trail",
+        choices: ["meet unexpectedly", "avoid completely", "plan carefully", "forget entirely"],
+        answerIndex: 0,
+        meaning: "to meet or come across unexpectedly"
+      },
+      {
+        word: "generations",
+        phrase: "three generations at the reunion",
+        choices: ["age groups", "single day", "tiny amount", "empty rooms"],
+        answerIndex: 0,
+        meaning: "groups of people born around the same period of time"
+      },
+      {
+        word: "indicated",
+        phrase: "she indicated the correct answer",
+        choices: ["showed", "hid", "denied", "forgot"],
+        answerIndex: 0,
+        meaning: "showed, pointed out, or gave a sign of something"
+      },
+      {
+        word: "naturalist",
+        phrase: "the naturalist studied the birds",
+        choices: ["nature expert", "city planner", "math teacher", "movie director"],
+        answerIndex: 0,
+        meaning: "a person who studies plants, animals, and nature"
+      },
+      {
+        word: "sheer",
+        phrase: "a sheer cliff",
+        choices: ["steep", "gentle", "muddy", "colorful"],
+        answerIndex: 0,
+        meaning: "very steep, sudden, or complete"
+      },
+      {
+        word: "spectacular",
+        phrase: "a spectacular fireworks show",
+        choices: ["amazing", "dull", "quiet", "forgettable"],
+        answerIndex: 0,
+        meaning: "very impressive or exciting to see"
+      },
+      {
+        word: "afford",
+        phrase: "to afford a new bike",
+        choices: ["pay for", "give away", "forget about", "break"],
+        answerIndex: 0,
+        meaning: "to have enough money or resources for something"
+      },
+      {
+        word: "loan",
+        phrase: "took out a loan for the car",
+        choices: ["borrowed money", "free gift", "lost item", "extra chore"],
+        answerIndex: 0,
+        meaning: "money or something else borrowed and expected to be returned"
+      },
+      {
+        word: "profit",
+        phrase: "the shop's profit grew",
+        choices: ["earnings", "expenses", "debt", "waste"],
+        answerIndex: 0,
+        meaning: "money left after the costs of doing business are paid"
+      },
+      {
+        word: "prosper",
+        phrase: "the business began to prosper",
+        choices: ["succeed", "fail", "shrink", "vanish"],
+        answerIndex: 0,
+        meaning: "to do well or become successful"
+      },
+      {
+        word: "risk",
+        phrase: "the risk of getting hurt",
+        choices: ["danger", "safety", "comfort", "reward"],
+        answerIndex: 0,
+        meaning: "the chance that something harmful or unwanted may happen"
+      },
+      {
+        word: "savings",
+        phrase: "spent years building her savings",
+        choices: ["saved money", "quick spending", "borrowed cash", "lost coins"],
+        answerIndex: 0,
+        meaning: "money that is kept instead of spent"
+      },
+      {
+        word: "scarce",
+        phrase: "clean water was scarce",
+        choices: ["limited", "plentiful", "cheap", "useless"],
+        answerIndex: 0,
+        meaning: "hard to find because there is not much available"
+      },
+      {
+        word: "wages",
+        phrase: "earned fair wages",
+        choices: ["pay", "debt", "tax", "gift"],
+        answerIndex: 0,
+        meaning: "money paid to a worker for work performed"
+      },
+      {
+        word: "access",
+        phrase: "access to the library",
+        choices: ["entry", "exit", "silence", "delay"],
+        answerIndex: 0,
+        meaning: "the ability or right to enter, use, or obtain something"
+      },
+      {
+        word: "advance",
+        phrase: "to advance to the next round",
+        choices: ["move forward", "fall behind", "stop completely", "repeat"],
+        answerIndex: 0,
+        meaning: "to move forward or make progress"
+      },
+      {
+        word: "analysis",
+        phrase: "a careful analysis of the data",
+        choices: ["examination", "guess", "celebration", "argument"],
+        answerIndex: 0,
+        meaning: "a careful study of something to understand it better"
+      },
+      {
+        word: "cite",
+        phrase: "In his report, Jayden should cite evidence from the article.",
+        choices: ["quote as a source", "ignore completely", "invent randomly", "erase entirely"],
+        answerIndex: 0,
+        meaning: "to mention evidence or a source to support an idea"
+      },
+      {
+        word: "counterpoint",
+        phrase: "offered a counterpoint to the argument",
+        choices: ["opposing point", "matching point", "final decision", "personal secret"],
+        answerIndex: 0,
+        meaning: "an opposing or contrasting point in an argument"
+      },
+      {
+        word: "data",
+        phrase: "The class recorded data from the science experiment.",
+        choices: ["information", "opinions", "rumors", "artwork"],
+        answerIndex: 0,
+        meaning: "facts or information collected for study"
+      },
+      {
+        word: "drawbacks",
+        phrase: "weighed the drawbacks of the plan",
+        choices: ["disadvantages", "benefits", "prizes", "rules"],
+        answerIndex: 0,
+        meaning: "disadvantages or negative parts of something"
+      },
+      {
+        word: "reasoning",
+        phrase: "explained her reasoning",
+        choices: ["logic", "confusion", "silence", "apology"],
+        answerIndex: 0,
+        meaning: "the thinking used to reach a conclusion"
+      }
+    ]
+  },
+  {
+    id: "wonders-u2",
+    name: "Wonders Unit 2",
+    words: [
+      {
+        word: "committees",
+        phrase: "formed several committees",
+        choices: ["groups assigned to tasks", "single leader", "empty rooms", "silent protests"],
+        answerIndex: 0,
+        meaning: "groups chosen to work on particular tasks"
+      },
+      {
+        word: "convention",
+        phrase: "attended a teachers' convention",
+        choices: ["formal meeting", "quiet nap", "private letter", "secret code"],
+        answerIndex: 0,
+        meaning: "a formal meeting of people with a shared purpose"
+      },
+      {
+        word: "debate",
+        phrase: "a class debate",
+        choices: ["discussion of opposing views", "agreement", "song", "silence"],
+        answerIndex: 0,
+        meaning: "a discussion in which different sides present arguments"
+      },
+      {
+        word: "proposal",
+        phrase: "submitted a proposal",
+        choices: ["suggested plan", "final decision", "complaint", "apology"],
+        answerIndex: 0,
+        meaning: "a plan or suggestion offered for consideration"
+      },
+      {
+        word: "representatives",
+        phrase: "elected representatives",
+        choices: ["people chosen to speak for others", "random strangers", "silent observers", "rule breakers"],
+        answerIndex: 0,
+        meaning: "people chosen to speak or act for others"
+      },
+      {
+        word: "resolve",
+        phrase: "to resolve the conflict",
+        choices: ["settle", "worsen", "ignore", "hide"],
+        answerIndex: 0,
+        meaning: "to solve a problem or settle a disagreement"
+      },
+      {
+        word: "situation",
+        phrase: "a tricky situation",
+        choices: ["circumstance", "celebration", "melody", "song"],
+        answerIndex: 0,
+        meaning: "the set of conditions happening at a certain time"
+      },
+      {
+        word: "union",
+        phrase: "a union of workers",
+        choices: ["alliance", "rivalry", "silence", "distance"],
+        answerIndex: 0,
+        meaning: "a joining together of people, groups, or things"
+      },
+      {
+        word: "assuring",
+        phrase: "an assuring smile",
+        choices: ["reassuring", "frightening", "confusing", "boring"],
+        answerIndex: 0,
+        meaning: "making someone feel certain or confident"
+      },
+      {
+        word: "detected",
+        phrase: "detected a strange smell",
+        choices: ["discovered", "ignored", "created", "hid"],
+        answerIndex: 0,
+        meaning: "noticed or discovered something that was not obvious"
+      },
+      {
+        word: "emerging",
+        phrase: "the sun emerging from the clouds",
+        choices: ["appearing", "disappearing", "freezing", "shrinking"],
+        answerIndex: 0,
+        meaning: "coming into view or beginning to develop"
+      },
+      {
+        word: "gratitude",
+        phrase: "expressed her gratitude",
+        choices: ["thankfulness", "anger", "jealousy", "boredom"],
+        answerIndex: 0,
+        meaning: "a feeling of thankfulness"
+      },
+      {
+        word: "guidance",
+        phrase: "sought her teacher's guidance",
+        choices: ["advice", "punishment", "silence", "competition"],
+        answerIndex: 0,
+        meaning: "help or advice that shows what to do"
+      },
+      {
+        word: "outcome",
+        phrase: "the outcome of the game",
+        choices: ["result", "beginning", "rule", "question"],
+        answerIndex: 0,
+        meaning: "the final result of an action or event"
+      },
+      {
+        word: "previous",
+        phrase: "the previous chapter",
+        choices: ["earlier", "upcoming", "final", "missing"],
+        answerIndex: 0,
+        meaning: "happening or existing before the present one"
+      },
+      {
+        word: "pursuit",
+        phrase: "the pursuit of a dream",
+        choices: ["quest", "surrender", "delay", "refusal"],
+        answerIndex: 0,
+        meaning: "an effort to achieve, find, or follow something"
+      },
+      {
+        word: "ambitious",
+        phrase: "an ambitious goal",
+        choices: ["determined to achieve something big", "easily satisfied", "careless", "forgetful"],
+        answerIndex: 0,
+        meaning: "having a strong desire to achieve something difficult"
+      },
+      {
+        word: "memorized",
+        phrase: "memorized the poem",
+        choices: ["learned by heart", "forgot completely", "invented", "misspelled"],
+        answerIndex: 0,
+        meaning: "learned something so it can be remembered exactly"
+      },
+      {
+        word: "satisfaction",
+        phrase: "felt satisfaction after finishing",
+        choices: ["contentment", "frustration", "confusion", "fear"],
+        answerIndex: 0,
+        meaning: "a pleased feeling from achieving or receiving something"
+      },
+      {
+        word: "shuddered",
+        phrase: "shuddered at the scary movie",
+        choices: ["trembled", "laughed loudly", "cheered", "yawned"],
+        answerIndex: 0,
+        meaning: "shook suddenly, often from fear, cold, or disgust"
+      },
+      {
+        word: "narrative",
+        phrase: "wrote a personal narrative",
+        choices: ["story", "recipe", "math problem", "map"],
+        answerIndex: 0,
+        meaning: "a story or an account of events"
+      },
+      {
+        word: "repetition",
+        phrase: "used repetition for emphasis",
+        choices: ["repeating something", "avoiding something", "hiding something", "measuring something"],
+        answerIndex: 0,
+        meaning: "the use of something again and again"
+      },
+      {
+        word: "free verse",
+        phrase: "The poet wrote free verse without a regular rhyme pattern.",
+        choices: ["poetry without regular rhyme or meter", "a rhymed sonnet", "a math equation", "a short story"],
+        answerIndex: 0,
+        meaning: "poetry without a regular rhyme or meter pattern"
+      },
+      {
+        word: "rhyme",
+        phrase: "“Light” and “night” rhyme.",
+        choices: ["matching end sounds", "opposite meanings", "silent letters", "capital letters"],
+        answerIndex: 0,
+        meaning: "matching or similar sounds, often at the ends of words"
+      }
+    ]
+  },
+  {
+    id: "wonders-u3",
+    name: "Wonders Unit 3",
+    words: [
+      {
+        word: "appreciation",
+        phrase: "showed appreciation for the gift",
+        choices: ["gratitude", "anger", "confusion", "boredom"],
+        answerIndex: 0,
+        meaning: "understanding the value of something and feeling thankful for it"
+      },
+      {
+        word: "blurted",
+        phrase: "blurted out the answer",
+        choices: ["said suddenly without thinking", "whispered carefully", "wrote neatly", "sang softly"],
+        answerIndex: 0,
+        meaning: "said something suddenly without thinking first"
+      },
+      {
+        word: "complimenting",
+        phrase: "complimenting her artwork",
+        choices: ["praising", "insulting", "ignoring", "copying"],
+        answerIndex: 0,
+        meaning: "saying something kind or admiring about someone"
+      },
+      {
+        word: "congratulate",
+        phrase: "stopped to congratulate the winner",
+        choices: ["praise someone's success", "criticize someone", "ignore someone", "compete with someone"],
+        answerIndex: 0,
+        meaning: "to tell someone you are pleased about their success"
+      },
+      {
+        word: "contradicted",
+        phrase: "contradicted his own story",
+        choices: ["said the opposite", "agreed completely", "repeated exactly", "forgot entirely"],
+        answerIndex: 0,
+        meaning: "said the opposite of what someone else said"
+      },
+      {
+        word: "critical",
+        phrase: "a critical decision",
+        choices: ["very important", "unimportant", "funny", "quick"],
+        answerIndex: 0,
+        meaning: "very important, or involving careful judgment"
+      },
+      {
+        word: "cultural",
+        phrase: "a cultural festival",
+        choices: ["related to customs and traditions", "related to math", "related to weather", "related to sports only"],
+        answerIndex: 0,
+        meaning: "related to the customs, beliefs, arts, or way of life of a group"
+      },
+      {
+        word: "misunderstanding",
+        phrase: "cleared up the misunderstanding",
+        choices: ["confusion", "agreement", "celebration", "silence"],
+        answerIndex: 0,
+        meaning: "a failure to understand something correctly"
+      },
+      {
+        word: "artificial",
+        phrase: "artificial flowers",
+        choices: ["man-made", "natural", "wild", "ancient"],
+        answerIndex: 0,
+        meaning: "made by people rather than occurring naturally"
+      },
+      {
+        word: "collaborate",
+        phrase: "The students collaborate to finish the group project.",
+        choices: ["work together", "compete against each other", "ignore each other", "argue constantly"],
+        answerIndex: 0,
+        meaning: "to work together on a shared task"
+      },
+      {
+        word: "dedicated",
+        phrase: "a dedicated volunteer",
+        choices: ["devoted", "careless", "lazy", "distracted"],
+        answerIndex: 0,
+        meaning: "strongly committed to a purpose or task"
+      },
+      {
+        word: "flexible",
+        phrase: "a flexible schedule",
+        choices: ["adaptable", "rigid", "broken", "expensive"],
+        answerIndex: 0,
+        meaning: "able to bend, change, or adjust easily"
+      },
+      {
+        word: "function",
+        phrase: "the function of the heart",
+        choices: ["purpose", "size", "color", "cost"],
+        answerIndex: 0,
+        meaning: "the purpose or job of something"
+      },
+      {
+        word: "mimic",
+        phrase: "the parrot can mimic sounds",
+        choices: ["imitate", "invent", "ignore", "silence"],
+        answerIndex: 0,
+        meaning: "to copy the actions, appearance, or sounds of something"
+      },
+      {
+        word: "obstacle",
+        phrase: "overcame every obstacle",
+        choices: ["barrier", "shortcut", "reward", "gift"],
+        answerIndex: 0,
+        meaning: "something that blocks progress or makes a task difficult"
+      },
+      {
+        word: "techniques",
+        phrase: "learned new painting techniques",
+        choices: ["methods", "mistakes", "opinions", "rules only"],
+        answerIndex: 0,
+        meaning: "special methods used to do something skillfully"
+      },
+      {
+        word: "archaeologist",
+        phrase: "An archaeologist carefully examined the ancient pottery.",
+        choices: ["scientist who studies the past", "teacher of math", "pilot of a plane", "chef at a restaurant"],
+        answerIndex: 0,
+        meaning: "a scientist who studies past people through objects and sites they left behind"
+      },
+      {
+        word: "era",
+        phrase: "the era of dinosaurs",
+        choices: ["period of time", "single second", "short nap", "tiny space"],
+        answerIndex: 0,
+        meaning: "a long period of time known for particular events or features"
+      },
+      {
+        word: "fragments",
+        phrase: "fragments of an old vase",
+        choices: ["small broken pieces", "whole objects", "brand new items", "giant boulders"],
+        answerIndex: 0,
+        meaning: "small broken pieces of something larger"
+      },
+      {
+        word: "historian",
+        phrase: "the historian wrote a book about the war",
+        choices: ["person who studies the past", "person who predicts weather", "person who repairs cars", "person who bakes bread"],
+        answerIndex: 0,
+        meaning: "a person who studies and writes about the past"
+      },
+      {
+        word: "intact",
+        phrase: "the package arrived intact",
+        choices: ["undamaged", "broken", "missing", "stolen"],
+        answerIndex: 0,
+        meaning: "whole and not damaged or missing parts"
+      },
+      {
+        word: "preserved",
+        phrase: "preserved the old photographs",
+        choices: ["protected from damage", "destroyed on purpose", "sold quickly", "hidden forever"],
+        answerIndex: 0,
+        meaning: "kept safe from damage, decay, or change"
+      },
+      {
+        word: "reconstruct",
+        phrase: "reconstruct the ancient temple",
+        choices: ["rebuild", "demolish", "paint", "ignore"],
+        answerIndex: 0,
+        meaning: "to build or form again, often from evidence or pieces"
+      },
+      {
+        word: "remnants",
+        phrase: "remnants of the old castle",
+        choices: ["remaining small parts", "entire structure", "brand-new addition", "empty field"],
+        answerIndex: 0,
+        meaning: "small parts that remain after most of something is gone"
+      }
+    ]
+  },
+  {
+    id: "wonders-u4",
+    name: "Wonders Unit 4",
+    words: [
+      {
+        word: "anticipation",
+        phrase: "waited with anticipation",
+        choices: ["excited expectation", "complete boredom", "sudden anger", "calm sleep"],
+        answerIndex: 0,
+        meaning: "a feeling of excitement or expectation about what will happen"
+      },
+      {
+        word: "defy",
+        phrase: "to defy the rules",
+        choices: ["refuse to obey", "follow closely", "ignore quietly", "forget completely"],
+        answerIndex: 0,
+        meaning: "to refuse to obey or to resist boldly"
+      },
+      {
+        word: "entitled",
+        phrase: "entitled to a refund",
+        choices: ["having a right to something", "forbidden from something", "unaware of something", "tired of something"],
+        answerIndex: 0,
+        meaning: "having a right to something"
+      },
+      {
+        word: "neutral",
+        phrase: "stayed neutral during the argument",
+        choices: ["not taking sides", "strongly biased", "very angry", "extremely loud"],
+        answerIndex: 0,
+        meaning: "not supporting either side in a disagreement"
+      },
+      {
+        word: "outspoken",
+        phrase: "an outspoken critic",
+        choices: ["willing to state opinions boldly", "shy and silent", "confused and unsure", "quiet and reserved"],
+        answerIndex: 0,
+        meaning: "willing to state opinions openly and strongly"
+      },
+      {
+        word: "reserved",
+        phrase: "a reserved personality",
+        choices: ["quiet and not showing feelings easily", "loud and dramatic", "silly and playful", "angry and shouting"],
+        answerIndex: 0,
+        meaning: "quiet and not quick to show feelings"
+      },
+      {
+        word: "sought",
+        phrase: "sought help from a teacher",
+        choices: ["looked for", "avoided", "forgot", "refused"],
+        answerIndex: 0,
+        meaning: "looked for or tried to obtain"
+      },
+      {
+        word: "unequal",
+        phrase: "an unequal division of chores",
+        choices: ["not the same in size or amount", "perfectly balanced", "extremely fair", "exactly identical"],
+        answerIndex: 0,
+        meaning: "not the same in amount, size, value, or treatment"
+      },
+      {
+        word: "astounded",
+        phrase: "astounded by the magic trick",
+        choices: ["amazed", "bored", "angered", "relaxed"],
+        answerIndex: 0,
+        meaning: "very surprised or amazed"
+      },
+      {
+        word: "concealed",
+        phrase: "concealed the gift",
+        choices: ["hidden", "revealed", "destroyed", "sold"],
+        answerIndex: 0,
+        meaning: "hidden from sight or kept secret"
+      },
+      {
+        word: "inquisitive",
+        phrase: "an inquisitive student",
+        choices: ["curious and eager to learn", "uninterested and bored", "angry and rude", "tired and sleepy"],
+        answerIndex: 0,
+        meaning: "curious and eager to learn or ask questions"
+      },
+      {
+        word: "interpret",
+        phrase: "Readers interpret clues to understand the character's feelings.",
+        choices: ["explain the meaning of", "ignore completely", "memorize exactly", "erase entirely"],
+        answerIndex: 0,
+        meaning: "to explain or decide the meaning of something"
+      },
+      {
+        word: "perplexed",
+        phrase: "perplexed by the riddle",
+        choices: ["confused", "delighted", "bored", "relaxed"],
+        answerIndex: 0,
+        meaning: "confused because something is difficult to understand"
+      },
+      {
+        word: "precise",
+        phrase: "precise measurements",
+        choices: ["exact", "vague", "careless", "random"],
+        answerIndex: 0,
+        meaning: "exact, accurate, and carefully stated"
+      },
+      {
+        word: "reconsider",
+        phrase: "asked him to reconsider",
+        choices: ["think about again", "decide immediately", "forget entirely", "refuse politely"],
+        answerIndex: 0,
+        meaning: "to think about something again before deciding"
+      },
+      {
+        word: "suspicious",
+        phrase: "felt suspicious of the stranger",
+        choices: ["distrustful", "confident", "cheerful", "calm"],
+        answerIndex: 0,
+        meaning: "feeling that something may be wrong or dishonest"
+      },
+      {
+        word: "barren",
+        phrase: "a barren desert",
+        choices: ["empty and lifeless", "lush and green", "crowded and busy", "colorful and bright"],
+        answerIndex: 0,
+        meaning: "unable to produce much plant life; empty and bare"
+      },
+      {
+        word: "expression",
+        phrase: "a surprised facial expression",
+        choices: ["a way of showing feeling", "a math equation", "a type of food", "a musical instrument"],
+        answerIndex: 0,
+        meaning: "a way of showing an idea, feeling, or thought"
+      },
+      {
+        word: "meaningful",
+        phrase: "a meaningful gift",
+        choices: ["important and special", "worthless and cheap", "ordinary and dull", "temporary and forgettable"],
+        answerIndex: 0,
+        meaning: "having an important purpose or special meaning"
+      },
+      {
+        word: "plumes",
+        phrase: "the peacock's colorful plumes",
+        choices: ["showy feathers", "sharp claws", "tiny wings", "heavy bones"],
+        answerIndex: 0,
+        meaning: "large, showy feathers or feather-like shapes"
+      },
+      {
+        word: "lyric",
+        phrase: "wrote a lyric about the sea",
+        choices: ["poem expressing personal feelings", "a math formula", "a news report", "a grocery list"],
+        answerIndex: 0,
+        meaning: "a type of poem that expresses personal feelings or thoughts"
+      },
+      {
+        word: "alliteration",
+        phrase: "“Wild winds whistle” uses alliteration.",
+        choices: ["repeated beginning sounds", "repeated numbers", "repeated colors", "repeated shapes"],
+        answerIndex: 0,
+        meaning: "repetition of beginning consonant sounds in nearby words"
+      },
+      {
+        word: "meter",
+        phrase: "The poem's meter gives it a steady beat.",
+        choices: ["pattern of stressed and unstressed beats", "number of pages", "title of a poem", "author's name"],
+        answerIndex: 0,
+        meaning: "the regular pattern of stressed and unstressed beats in poetry"
+      },
+      {
+        word: "stanza",
+        phrase: "The poem has four lines in its first stanza.",
+        choices: ["group of lines in a poem", "single word in a poem", "title of a book", "ending punctuation"],
+        answerIndex: 0,
+        meaning: "a group of lines in a poem, similar to a paragraph"
+      }
+    ]
+  },
+  {
+    id: "wonders-u5",
+    name: "Wonders Unit 5",
+    words: [
+      {
+        word: "approximately",
+        phrase: "approximately ten miles away",
+        choices: ["about", "exactly", "never", "always"],
+        answerIndex: 0,
+        meaning: "close to an exact amount but not exactly"
+      },
+      {
+        word: "astronomical",
+        phrase: "an astronomical price",
+        choices: ["extremely large", "extremely small", "average", "cheap"],
+        answerIndex: 0,
+        meaning: "related to space and stars, or extremely large"
+      },
+      {
+        word: "calculation",
+        phrase: "double-checked her calculation",
+        choices: ["math computation", "guess", "opinion", "story"],
+        answerIndex: 0,
+        meaning: "the process or result of working out a number"
+      },
+      {
+        word: "criteria",
+        phrase: "met all the criteria",
+        choices: ["standards for judging something", "random guesses", "personal secrets", "old memories"],
+        answerIndex: 0,
+        meaning: "standards used to judge or decide something"
+      },
+      {
+        word: "diameter",
+        phrase: "We measured the diameter across the center of the circle.",
+        choices: ["line across a circle's center", "edge of a square", "corner of a triangle", "height of a building"],
+        answerIndex: 0,
+        meaning: "a straight line across a circle through its center"
+      },
+      {
+        word: "evaluate",
+        phrase: "evaluate the results",
+        choices: ["judge the value of", "ignore completely", "copy exactly", "hide from view"],
+        answerIndex: 0,
+        meaning: "to judge the quality, value, or importance of something"
+      },
+      {
+        word: "orbit",
+        phrase: "the moon's orbit around Earth",
+        choices: ["curved path around another object", "straight line to nowhere", "sudden stop", "random bounce"],
+        answerIndex: 0,
+        meaning: "the curved path one object follows around another in space"
+      },
+      {
+        word: "spheres",
+        phrase: "the planets are spheres",
+        choices: ["round three-dimensional shapes", "flat squares", "sharp triangles", "thin lines"],
+        answerIndex: 0,
+        meaning: "round three-dimensional shapes like balls"
+      },
+      {
+        word: "assume",
+        phrase: "assume he was right",
+        choices: ["suppose without proof", "prove with facts", "deny completely", "forget entirely"],
+        answerIndex: 0,
+        meaning: "to accept something as true without being certain"
+      },
+      {
+        word: "guarantee",
+        phrase: "a money-back guarantee",
+        choices: ["a firm promise", "a small hope", "a passing rumor", "a quiet wish"],
+        answerIndex: 0,
+        meaning: "a promise that something will happen or work as stated"
+      },
+      {
+        word: "nominate",
+        phrase: "nominate a class president",
+        choices: ["formally suggest for a position", "quietly ignore", "harshly criticize", "secretly avoid"],
+        answerIndex: 0,
+        meaning: "to formally suggest someone for a position or award"
+      },
+      {
+        word: "obviously",
+        phrase: "obviously the answer was wrong",
+        choices: ["clearly", "rarely", "secretly", "never"],
+        answerIndex: 0,
+        meaning: "in a way that is easy to see or understand"
+      },
+      {
+        word: "rely",
+        phrase: "rely on a friend",
+        choices: ["depend on", "avoid", "forget", "distrust"],
+        answerIndex: 0,
+        meaning: "to depend on someone or something"
+      },
+      {
+        word: "supportive",
+        phrase: "a supportive coach",
+        choices: ["encouraging and helpful", "harsh and critical", "distant and cold", "careless and lazy"],
+        answerIndex: 0,
+        meaning: "giving help, encouragement, or approval"
+      },
+      {
+        word: "sympathy",
+        phrase: "showed sympathy for her loss",
+        choices: ["compassion", "jealousy", "anger", "pride"],
+        answerIndex: 0,
+        meaning: "care or sadness for someone else's trouble"
+      },
+      {
+        word: "weakling",
+        phrase: "teased for being a weakling",
+        choices: ["a physically weak person", "a strong athlete", "a wise leader", "a fast runner"],
+        answerIndex: 0,
+        meaning: "a person or creature considered physically weak"
+      },
+      {
+        word: "agricultural",
+        phrase: "agricultural land",
+        choices: ["related to farming", "related to fishing", "related to mining", "related to building"],
+        answerIndex: 0,
+        meaning: "related to farming, crops, or raising animals"
+      },
+      {
+        word: "declined",
+        phrase: "sales declined last year",
+        choices: ["became fewer or smaller", "grew larger", "stayed the same", "disappeared instantly"],
+        answerIndex: 0,
+        meaning: "became smaller, weaker, or fewer; or politely refused"
+      },
+      {
+        word: "disorder",
+        phrase: "the room was in disorder",
+        choices: ["a lack of order", "perfect neatness", "quiet calm", "bright light"],
+        answerIndex: 0,
+        meaning: "a lack of order or an unhealthy condition"
+      },
+      {
+        word: "identify",
+        phrase: "identify the bird by its song",
+        choices: ["recognize and name", "forget completely", "hide from", "replace entirely"],
+        answerIndex: 0,
+        meaning: "to recognize and name someone or something"
+      },
+      {
+        word: "probable",
+        phrase: "a probable outcome",
+        choices: ["likely to happen", "impossible", "forbidden", "accidental"],
+        answerIndex: 0,
+        meaning: "likely to happen or be true"
+      },
+      {
+        word: "thrive",
+        phrase: "plants thrive in sunlight",
+        choices: ["grow well", "wither away", "stay hidden", "freeze completely"],
+        answerIndex: 0,
+        meaning: "to grow well, stay healthy, or succeed"
+      },
+      {
+        word: "unexpected",
+        phrase: "an unexpected visitor",
+        choices: ["not predicted", "planned carefully", "boring and dull", "familiar and routine"],
+        answerIndex: 0,
+        meaning: "not predicted or planned"
+      },
+      {
+        word: "widespread",
+        phrase: "widespread flooding",
+        choices: ["happening over a large area", "limited to one spot", "brief and rare", "imaginary"],
+        answerIndex: 0,
+        meaning: "existing or happening over a large area or among many people"
+      }
+    ]
+  },
+  {
+    id: "wonders-u6",
+    name: "Wonders Unit 6",
+    words: [
+      {
+        word: "bulletin",
+        phrase: "posted a bulletin on the board",
+        choices: ["short public notice", "private diary", "secret code", "long novel"],
+        answerIndex: 0,
+        meaning: "a short public notice or news report"
+      },
+      {
+        word: "contributions",
+        phrase: "made generous contributions",
+        choices: ["things given to help a cause", "things taken away", "things hidden", "things destroyed"],
+        answerIndex: 0,
+        meaning: "things given or done to help a person, group, or cause"
+      },
+      {
+        word: "diversity",
+        phrase: "celebrated the diversity of the class",
+        choices: ["presence of many different kinds", "sameness in everything", "absence of people", "single type of thing"],
+        answerIndex: 0,
+        meaning: "the presence of many different kinds of people or things"
+      },
+      {
+        word: "enlisted",
+        phrase: "enlisted in the navy",
+        choices: ["joined a group or cause", "quit a group", "avoided a group", "led a group"],
+        answerIndex: 0,
+        meaning: "joined the armed forces or signed up for a cause"
+      },
+      {
+        word: "intercept",
+        phrase: "intercept the pass",
+        choices: ["stop before it arrives", "deliver safely", "ignore completely", "watch quietly"],
+        answerIndex: 0,
+        meaning: "to stop or catch something before it reaches its destination"
+      },
+      {
+        word: "operations",
+        phrase: "military operations",
+        choices: ["organized activities for a purpose", "random accidents", "quiet naps", "empty rooms"],
+        answerIndex: 0,
+        meaning: "organized activities carried out for a purpose"
+      },
+      {
+        word: "recruits",
+        phrase: "trained the new recruits",
+        choices: ["newly joined members", "retired veterans", "visiting guests", "former enemies"],
+        answerIndex: 0,
+        meaning: "new members who have recently joined a group"
+      },
+      {
+        word: "survival",
+        phrase: "wilderness survival skills",
+        choices: ["continuing to live despite hardship", "quick surrender", "total defeat", "careless waste"],
+        answerIndex: 0,
+        meaning: "the act of continuing to live or exist despite difficulty"
+      },
+      {
+        word: "adaptation",
+        phrase: "an adaptation for desert life",
+        choices: ["a change that helps survival", "a permanent illness", "a random accident", "a broken tool"],
+        answerIndex: 0,
+        meaning: "a feature or change that helps a living thing survive"
+      },
+      {
+        word: "agile",
+        phrase: "an agile gymnast",
+        choices: ["able to move quickly and easily", "slow and clumsy", "heavy and stiff", "tired and weak"],
+        answerIndex: 0,
+        meaning: "able to move quickly and easily"
+      },
+      {
+        word: "cache",
+        phrase: "found a cache of supplies",
+        choices: ["a hidden stored supply", "an empty box", "a public announcement", "a broken machine"],
+        answerIndex: 0,
+        meaning: "a hidden or stored supply of useful things"
+      },
+      {
+        word: "dormant",
+        phrase: "a dormant volcano",
+        choices: ["temporarily inactive", "constantly erupting", "completely destroyed", "brand new"],
+        answerIndex: 0,
+        meaning: "temporarily inactive or not growing"
+      },
+      {
+        word: "forage",
+        phrase: "forage for berries",
+        choices: ["search widely for food", "plant seeds carefully", "cook a meal", "store extra food"],
+        answerIndex: 0,
+        meaning: "to search widely for food or supplies"
+      },
+      {
+        word: "frigid",
+        phrase: "frigid winter air",
+        choices: ["extremely cold", "extremely hot", "mildly warm", "slightly cool"],
+        answerIndex: 0,
+        meaning: "extremely cold"
+      },
+      {
+        word: "hibernate",
+        phrase: "Some animals hibernate when winter becomes very cold.",
+        choices: ["spend winter in a deep sleep", "migrate south quickly", "build a new nest", "gather food all winter"],
+        answerIndex: 0,
+        meaning: "to spend winter in a deeply inactive state"
+      },
+      {
+        word: "insulates",
+        phrase: "fur insulates the animal from cold",
+        choices: ["protects by slowing heat loss", "spreads heat quickly", "removes all warmth", "creates loud noise"],
+        answerIndex: 0,
+        meaning: "protects by slowing the movement of heat, sound, or electricity"
+      },
+      {
+        word: "blares",
+        phrase: "the alarm blares",
+        choices: ["makes a loud harsh sound", "stays completely silent", "whispers softly", "hums quietly"],
+        answerIndex: 0,
+        meaning: "makes a very loud, harsh sound"
+      },
+      {
+        word: "connection",
+        phrase: "a strong connection between friends",
+        choices: ["a link or relationship", "a total separation", "a hidden secret", "a broken promise"],
+        answerIndex: 0,
+        meaning: "a link or relationship between people, things, or ideas"
+      },
+      {
+        word: "errand",
+        phrase: "ran an errand for her mom",
+        choices: ["a short trip to complete a task", "a long vacation", "a school test", "a birthday party"],
+        answerIndex: 0,
+        meaning: "a short trip made to complete a task"
+      },
+      {
+        word: "exchange",
+        phrase: "exchange seats with a friend",
+        choices: ["trade one thing for another", "keep everything the same", "lose something forever", "hide something away"],
+        answerIndex: 0,
+        meaning: "to give one thing and receive another in return"
+      },
+      {
+        word: "personification",
+        phrase: "“The wind whispered” is an example of personification.",
+        choices: ["giving human qualities to non-human things", "comparing two unlike things using like or as", "repeating the same sound", "describing the sound of a word"],
+        answerIndex: 0,
+        meaning: "giving human qualities to animals, objects, or ideas"
+      },
+      {
+        word: "assonance",
+        phrase: "The poet used assonance to create a repeated vowel sound.",
+        choices: ["repetition of vowel sounds", "repetition of consonant sounds", "a rhyming couplet", "a type of rhythm"],
+        answerIndex: 0,
+        meaning: "repetition of vowel sounds in nearby words"
+      },
+      {
+        word: "consonance",
+        phrase: "The repeated ending sounds create consonance in the line.",
+        choices: ["repetition of consonant sounds", "repetition of vowel sounds", "a type of rhyme scheme", "a poem's title"],
+        answerIndex: 0,
+        meaning: "repetition of consonant sounds in nearby words"
+      },
+      {
+        word: "imagery",
+        phrase: "vivid imagery filled the poem",
+        choices: ["descriptive language that helps readers picture something", "a list of facts", "a math diagram", "a musical note"],
+        answerIndex: 0,
+        meaning: "descriptive language that helps readers picture or sense something"
+      }
+    ]
   }
 ];

@@ -33,6 +33,7 @@
           missedSocial: {},
           missedScience: {},
           missedDol: {},
+          missedSpelling: {},
           history: []
         };
       var parsed = JSON.parse(raw);
@@ -44,6 +45,7 @@
         missedSocial: parsed.missedSocial || {},
         missedScience: parsed.missedScience || {},
         missedDol: parsed.missedDol || {},
+        missedSpelling: parsed.missedSpelling || {},
         history: parsed.history || []
       };
     } catch (e) {
@@ -55,6 +57,7 @@
         missedSocial: {},
         missedScience: {},
         missedDol: {},
+        missedSpelling: {},
         history: []
       };
     }
@@ -117,6 +120,10 @@
     return entry.mode === "dol" || entry.mode === "dolReview";
   }
 
+  function isSpellingEntry(entry) {
+    return entry.mode === "spelling" || entry.mode === "spellingReview";
+  }
+
   function historyForTab(history, tab) {
     return history.filter(function (entry) {
       if (tab === "math") return isMathEntry(entry);
@@ -125,13 +132,15 @@
       if (tab === "social") return isSocialEntry(entry);
       if (tab === "science") return isScienceEntry(entry);
       if (tab === "dol") return isDolEntry(entry);
+      if (tab === "spelling") return isSpellingEntry(entry);
       return (
         !isMathEntry(entry) &&
         !isMath2Entry(entry) &&
         !isReadingEntry(entry) &&
         !isSocialEntry(entry) &&
         !isScienceEntry(entry) &&
-        !isDolEntry(entry)
+        !isDolEntry(entry) &&
+        !isSpellingEntry(entry)
       );
     });
   }
@@ -146,6 +155,7 @@
     if (entry.mode === "socialReview") return "Review Missed Social Studies";
     if (entry.mode === "scienceReview") return "Review Missed Science";
     if (entry.mode === "dolReview") return "Review Missed DOL";
+    if (entry.mode === "spellingReview") return "Review Missed Spelling";
     if (entry.mode === "reading") {
       var passage = window.READING_PASSAGES.filter(function (p) {
         return p.id === entry.setId;
@@ -169,6 +179,12 @@
         return s.id === entry.setId;
       })[0];
       return dolSet ? dolSet.name : "DOL";
+    }
+    if (entry.mode === "spelling") {
+      var spellingSet = window.SPELLING_SETS.filter(function (s) {
+        return s.id === entry.setId;
+      })[0];
+      return spellingSet ? spellingSet.name : "Spelling";
     }
     var set = window.WORD_SETS.filter(function (s) {
       return s.id === entry.setId;
@@ -241,6 +257,7 @@
     var missedSocialList = Object.keys(progress.missedSocial);
     var missedScienceList = Object.keys(progress.missedScience);
     var missedDolList = Object.keys(progress.missedDol);
+    var missedSpellingList = Object.keys(progress.missedSpelling);
 
     clearChildren(homeScreen);
 
@@ -254,7 +271,8 @@
       { id: "reading", label: "Reading" },
       { id: "social", label: "Social" },
       { id: "science", label: "Science" },
-      { id: "dol", label: "DOL" }
+      { id: "dol", label: "DOL" },
+      { id: "spelling", label: "Spelling" }
     ].forEach(function (tab) {
       var tabBtn = document.createElement("button");
       tabBtn.className = "tab-btn" + (activeHomeTab === tab.id ? " active" : "");
@@ -572,7 +590,7 @@
 
       homeScreen.appendChild(scienceReviewWrap);
       appendMissedInventory("Missed Science Inventory", progress.missedScience, "prompt");
-    } else {
+    } else if (activeHomeTab === "dol") {
       var dolLabel = document.createElement("div");
       dolLabel.className = "section-label";
       dolLabel.textContent = "DOL Sets";
@@ -629,6 +647,63 @@
 
       homeScreen.appendChild(dolReviewWrap);
       appendMissedInventory("Missed DOL Inventory", progress.missedDol, "prompt");
+    } else {
+      var spellingLabel = document.createElement("div");
+      spellingLabel.className = "section-label";
+      spellingLabel.textContent = "Spelling Sets";
+      homeScreen.appendChild(spellingLabel);
+
+      var spellingList = document.createElement("div");
+      spellingList.className = "set-list";
+
+      window.SPELLING_SETS.forEach(function (set) {
+        var btn = document.createElement("button");
+        btn.className = "set-card";
+        btn.innerHTML =
+          '<span><span class="set-name">' +
+          set.name +
+          '</span><span class="set-meta">' +
+          set.questions.length +
+          " questions</span></span>";
+        btn.addEventListener("click", function () {
+          startSpellingQuiz(set);
+        });
+        spellingList.appendChild(btn);
+      });
+
+      homeScreen.appendChild(spellingList);
+
+      var spellingReviewLabel = document.createElement("div");
+      spellingReviewLabel.className = "section-label";
+      spellingReviewLabel.textContent = "Practice";
+      homeScreen.appendChild(spellingReviewLabel);
+
+      var spellingReviewWrap = document.createElement("div");
+      spellingReviewWrap.className = "home-actions";
+
+      if (missedSpellingList.length === 0) {
+        var spellingNote = document.createElement("div");
+        spellingNote.className = "empty-note";
+        spellingNote.textContent =
+          "No missed words yet. Words you miss will show up here to review.";
+        spellingReviewWrap.appendChild(spellingNote);
+      } else {
+        var spellingReviewBtn = document.createElement("button");
+        spellingReviewBtn.className = "set-card review-card";
+        spellingReviewBtn.innerHTML =
+          '<span><span class="set-name">Review Missed Spelling</span>' +
+          '<span class="set-meta">' +
+          missedSpellingList.length +
+          (missedSpellingList.length === 1 ? " word" : " words") +
+          "</span></span>";
+        spellingReviewBtn.addEventListener("click", function () {
+          startSpellingReview(progress);
+        });
+        spellingReviewWrap.appendChild(spellingReviewBtn);
+      }
+
+      homeScreen.appendChild(spellingReviewWrap);
+      appendMissedInventory("Missed Spelling Inventory", progress.missedSpelling, "prompt");
     }
 
     var tabHistory = historyForTab(progress.history, activeHomeTab);
@@ -645,6 +720,8 @@
         ? "science"
         : activeHomeTab === "dol"
         ? "DOL"
+        : activeHomeTab === "spelling"
+        ? "spelling"
         : "word";
 
     var progressLabel = document.createElement("div");
@@ -662,6 +739,8 @@
         ? "Science Progress"
         : activeHomeTab === "dol"
         ? "DOL Progress"
+        : activeHomeTab === "spelling"
+        ? "Spelling Progress"
         : "Word Progress";
     homeScreen.appendChild(progressLabel);
 
@@ -719,6 +798,8 @@
         ? "Science Score History"
         : tab === "dol"
         ? "DOL Score History"
+        : tab === "spelling"
+        ? "Spelling Score History"
         : "Word Score History";
     historyScreen.appendChild(label);
 
@@ -1032,6 +1113,48 @@
     showScreen(quizScreen);
   }
 
+  function spellingQuestions(set) {
+    return set.questions.map(function (q) {
+      return {
+        type: "spelling",
+        setId: set.id,
+        topic: set.name,
+        prompt: q.prompt,
+        choices: q.choices,
+        answerIndex: q.answerIndex
+      };
+    });
+  }
+
+  function startSpellingQuiz(set) {
+    quizState = {
+      setId: set.id,
+      mode: "spelling",
+      questions: shuffle(spellingQuestions(set)),
+      index: 0,
+      score: 0,
+      missedThisRound: []
+    };
+    renderQuestion();
+    showScreen(quizScreen);
+  }
+
+  function startSpellingReview(progress) {
+    var questions = Object.keys(progress.missedSpelling).map(function (key) {
+      return progress.missedSpelling[key].data;
+    });
+    quizState = {
+      setId: null,
+      mode: "spellingReview",
+      questions: shuffle(questions),
+      index: 0,
+      score: 0,
+      missedThisRound: []
+    };
+    renderQuestion();
+    showScreen(quizScreen);
+  }
+
   function renderQuestion() {
     var q = quizState.questions[quizState.index];
     var options = shuffle(
@@ -1086,7 +1209,7 @@
       var card = document.createElement("div");
       card.className = "phrase-card";
 
-      if (q.type === "math" || q.type === "social" || q.type === "math2" || q.type === "science" || q.type === "dol") {
+      if (q.type === "math" || q.type === "social" || q.type === "math2" || q.type === "science" || q.type === "dol" || q.type === "spelling") {
         var topicEl = document.createElement("div");
         topicEl.className = "math-topic";
         topicEl.textContent = q.topic;
@@ -1098,7 +1221,7 @@
       if (q.type === "math") {
         phraseEl.classList.add("math-prompt");
         phraseEl.textContent = q.prompt;
-      } else if (q.type === "social" || q.type === "math2" || q.type === "science" || q.type === "dol") {
+      } else if (q.type === "social" || q.type === "math2" || q.type === "science" || q.type === "dol" || q.type === "spelling") {
         phraseEl.classList.add("text-prompt");
         phraseEl.textContent = q.prompt;
       } else {
@@ -1164,6 +1287,8 @@
       updateScienceProgressForAnswer(q, isCorrect);
     } else if (quizState.mode === "dol" || quizState.mode === "dolReview") {
       updateDolProgressForAnswer(q, isCorrect);
+    } else if (quizState.mode === "spelling" || quizState.mode === "spellingReview") {
+      updateSpellingProgressForAnswer(q, isCorrect);
     } else {
       updateProgressForAnswer(q, isCorrect);
     }
@@ -1309,6 +1434,24 @@
     saveProgress(progress);
   }
 
+  function updateSpellingProgressForAnswer(question, isCorrect) {
+    var progress = loadProgress();
+    var key = question.setId + "::" + question.prompt;
+
+    if (isCorrect) {
+      if (progress.missedSpelling[key]) {
+        progress.missedSpelling[key].streak++;
+        if (progress.missedSpelling[key].streak >= STREAK_TO_CLEAR) {
+          delete progress.missedSpelling[key];
+        }
+      }
+    } else {
+      progress.missedSpelling[key] = { streak: 0, data: question };
+    }
+
+    saveProgress(progress);
+  }
+
   function finishQuiz() {
     var progress = loadProgress();
     progress.history.push({
@@ -1358,14 +1501,15 @@
     var isSocial = mode === "social" || mode === "socialReview";
     var isScience = mode === "science" || mode === "scienceReview";
     var isDol = mode === "dol" || mode === "dolReview";
-    var usesPrompt = isMath || isReading || isSocial || isScience || isDol;
+    var isSpelling = mode === "spelling" || mode === "spellingReview";
+    var usesPrompt = isMath || isReading || isSocial || isScience || isDol || isSpelling;
 
     if (missed.length > 0) {
       var label = document.createElement("div");
       label.className = "section-label";
       label.textContent = isMath
         ? "Problems to Review"
-        : isReading || isSocial || isScience || isDol
+        : isReading || isSocial || isScience || isDol || isSpelling
         ? "Questions to Review"
         : "Words to Review";
       endScreen.appendChild(label);
