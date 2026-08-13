@@ -2142,5 +2142,111 @@ window.SPELLING_SETS = [
         answerIndex: 0
       }
     ]
+  },
+  {
+    id: "spelling-phonics1",
+    name: "Phonics & Word Study 1",
+    questions: [
+      {
+        prompt: "What is the vowel in the word \"snap\"?",
+        choices: ["a", "s", "n", "p"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What are the vowels in the word \"huddle\"?",
+        choices: ["u and e", "u and d", "h and e", "u and l"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Does the vowel E in the word \"wet\" make a long or short sound?",
+        choices: ["Short vowel sound", "Long vowel sound"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Does the vowel U in the word \"cute\" make a long or short sound?",
+        choices: ["Long vowel sound", "Short vowel sound"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Does the vowel A in the word \"magic\" make a long or short sound?",
+        choices: ["Short vowel sound", "Long vowel sound"],
+        answerIndex: 0
+      },
+      {
+        prompt: "How many consonants are in the word \"trip\"?",
+        choices: ["Three", "One", "Two", "Four"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which letters are the consonants in the word \"grade\"?",
+        choices: ["g, r, d", "g, r, a", "r, a, d", "g, a, d"],
+        answerIndex: 0
+      },
+      {
+        prompt: "How many syllables are in the word \"holiday\"?",
+        choices: ["3", "2", "4", "1"],
+        answerIndex: 0
+      },
+      {
+        prompt: "How many syllables are in the word \"cake\"?",
+        choices: ["1", "2", "3", "4"],
+        answerIndex: 0
+      },
+      {
+        prompt: "How many syllables are in the word \"playful\"?",
+        choices: ["2", "1", "3", "4"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Is /ch/ a phoneme or a phonogram?",
+        choices: ["Phoneme", "Phonogram"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Is the letter H a phoneme or a phonogram?",
+        choices: ["Phonogram", "Phoneme"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is a phoneme?",
+        choices: ["A sound", "A symbol that represents a sound", "A syllable", "A prefix"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is a phonogram?",
+        choices: ["A symbol that represents a sound", "A sound", "A base word", "A suffix"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the base word of \"renewable\"?",
+        choices: ["new", "renew", "able", "wable"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the base word of \"unexpected\"?",
+        choices: ["expect", "expected", "unexpect", "expectun"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the prefix in \"dishonest\"?",
+        choices: ["dis-", "honest", "-est", "un-"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the suffix in \"helped\"?",
+        choices: ["-ed", "help", "-ing", "-er"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the prefix in \"pretreatment\"?",
+        choices: ["pre-", "treat", "-ment", "post-"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the suffix in \"pretreatment\"?",
+        choices: ["-ment", "pre-", "treat", "-tion"],
+        answerIndex: 0
+      }
+    ]
   }
 ];
