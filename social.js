@@ -89,6 +89,141 @@ window.SOCIAL_STUDIES_SETS = [
     ]
   },
   {
+    id: "constitution",
+    name: "Constitution & Amendments",
+    questions: [
+      {
+        prompt: "Which of the following is a responsibility of a U.S. citizen?",
+        choices: [
+          "Serving on a jury when called",
+          "Voting in another country's elections",
+          "Refusing to pay taxes",
+          "Ignoring local laws"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Marcus is 18 and just registered to vote for the first time. Which citizen responsibility is he fulfilling?",
+        choices: [
+          "Participating in the democratic process",
+          "Serving in a government office",
+          "Paying property taxes",
+          "Running for president"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is \"due process of law\"?",
+        choices: [
+          "The government must follow fair procedures before taking away a person's life, liberty, or property",
+          "A law that only applies to government officials",
+          "The process of writing a new law",
+          "A citizen's right to skip a court hearing"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Police officers arrest a man for a crime. Before he can be sent to prison, he is given a fair trial where he can defend himself. What constitutional protection does this show?",
+        choices: [
+          "Due process of law",
+          "Freedom of speech",
+          "The amendment process",
+          "The right to bear arms"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "How can an amendment be proposed to the U.S. Constitution?",
+        choices: [
+          "By a two-thirds vote in both houses of Congress",
+          "By a majority vote of U.S. governors only",
+          "By a unanimous vote of the Supreme Court",
+          "By a public poll of all U.S. citizens"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "After an amendment is proposed, what must happen for it to become part of the Constitution?",
+        choices: [
+          "Three-fourths of the states must ratify (approve) it",
+          "The President must personally rewrite it",
+          "It must be approved by a foreign government",
+          "It automatically becomes law after one year"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the main purpose of the amendment process?",
+        choices: [
+          "To allow the Constitution to be changed as the country's needs change over time",
+          "To make the Constitution impossible to change",
+          "To let the President change laws without Congress",
+          "To remove rights from citizens when needed"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Why did the writers of the Constitution make the amendment process difficult, requiring broad agreement?",
+        choices: [
+          "So that changes reflect wide, lasting support rather than a temporary majority",
+          "So that only the President could change the Constitution",
+          "So that no amendment could ever be passed",
+          "So that states would never have to agree with each other"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which amendment gave African American men the right to vote?",
+        choices: ["15th Amendment", "19th Amendment", "23rd Amendment", "26th Amendment"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which amendment gave women the right to vote?",
+        choices: ["19th Amendment", "15th Amendment", "24th Amendment", "26th Amendment"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which amendment gave residents of Washington, D.C. the right to vote in presidential elections?",
+        choices: ["23rd Amendment", "15th Amendment", "19th Amendment", "26th Amendment"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which amendment made poll taxes illegal, so people couldn't be charged money to vote?",
+        choices: ["24th Amendment", "15th Amendment", "19th Amendment", "26th Amendment"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which amendment lowered the voting age to 18?",
+        choices: ["26th Amendment", "15th Amendment", "19th Amendment", "23rd Amendment"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Before the 19th Amendment was passed, women in most states were not allowed to vote. What did the 19th Amendment change?",
+        choices: [
+          "It gave women the right to vote in all U.S. elections",
+          "It gave women the right to run for governor only",
+          "It gave women the right to serve on juries",
+          "It gave women the right to own property"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A group of amendments (the 15th, 19th, 23rd, 24th, and 26th) all deal with the same basic idea. What do they have in common?",
+        choices: [
+          "They each expanded who is allowed to vote",
+          "They each created a new branch of government",
+          "They each raised taxes",
+          "They each changed the amendment process itself"
+        ],
+        answerIndex: 0
+      }
+    ]
+  },
+  {
     id: "history",
     name: "U.S. History",
     questions: [
