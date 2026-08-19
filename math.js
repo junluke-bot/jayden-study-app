@@ -195,6 +195,78 @@
     };
   }
 
+  function generateFractionAddition() {
+    var d1 = randInt(2, 9);
+    var d2 = randInt(2, 9);
+    while (d2 === d1) {
+      d2 = randInt(2, 9);
+    }
+    var n1 = randInt(1, d1 - 1);
+    var n2 = randInt(1, d2 - 1);
+
+    var rawNum = n1 * d2 + n2 * d1;
+    var rawDen = d1 * d2;
+    var reduced = reduceFraction(rawNum, rawDen);
+    var correctText = toMixedText(rawNum, rawDen);
+
+    var rawPairs = [
+      [n1 + n2, d1 + d2], // added numerators and denominators straight across
+      [n1 * d2 + n2 * d1, d1], // only converted one fraction to the common denominator
+      [n1 + n2, d1] // added numerators but kept just one denominator
+    ];
+
+    var distractors = mixedDistractors(correctText, reduced[0], reduced[1], rawPairs, []);
+
+    return {
+      type: "math",
+      topic: "Fraction Addition (Unlike Denominators)",
+      prompt: fractionText(n1, d1) + " + " + fractionText(n2, d2),
+      choices: [correctText].concat(distractors),
+      answerIndex: 0
+    };
+  }
+
+  function generateFractionSubtraction() {
+    var d1 = randInt(2, 9);
+    var d2 = randInt(2, 9);
+    while (d2 === d1) {
+      d2 = randInt(2, 9);
+    }
+    var n1 = randInt(1, d1 - 1);
+    var n2 = randInt(1, d2 - 1);
+
+    // Ensure n1/d1 > n2/d2 so the result is positive.
+    if (n1 * d2 <= n2 * d1) {
+      var tn = n1, td = d1;
+      n1 = n2; d1 = d2;
+      n2 = tn; d2 = td;
+    }
+    if (n1 * d2 === n2 * d1) {
+      n1 = Math.min(d1 - 1, n1 + 1);
+    }
+
+    var rawNum = n1 * d2 - n2 * d1;
+    var rawDen = d1 * d2;
+    var reduced = reduceFraction(rawNum, rawDen);
+    var correctText = toMixedText(rawNum, rawDen);
+
+    var rawPairs = [
+      [Math.abs(n1 - n2), Math.abs(d1 - d2)], // subtracted numerators and denominators straight across
+      [Math.abs(n1 * d2 - n2 * d1), d1], // only converted one fraction to the common denominator
+      [Math.abs(n1 - n2), d1] // subtracted numerators but kept just one denominator
+    ];
+
+    var distractors = mixedDistractors(correctText, reduced[0], reduced[1], rawPairs, []);
+
+    return {
+      type: "math",
+      topic: "Fraction Subtraction (Unlike Denominators)",
+      prompt: fractionText(n1, d1) + " − " + fractionText(n2, d2),
+      choices: [correctText].concat(distractors),
+      answerIndex: 0
+    };
+  }
+
   function generateMixedFractionMultiplication() {
     var whole = randInt(1, 5);
     var d1 = randInt(2, 9);
@@ -270,6 +342,8 @@
     { id: "mult3x2", name: "3-digit × 2-digit Multiplication", generate: generateMultiplication },
     { id: "fracMult", name: "Fraction Multiplication", generate: generateFractionMultiplication },
     { id: "fracDiv", name: "Fraction Division", generate: generateFractionDivision },
+    { id: "fracAdd", name: "Fraction Addition (Unlike Denominators)", generate: generateFractionAddition },
+    { id: "fracSub", name: "Fraction Subtraction (Unlike Denominators)", generate: generateFractionSubtraction },
     { id: "mixedFracMult", name: "Mixed Number × Fraction", generate: generateMixedFractionMultiplication },
     { id: "mixedFracDiv", name: "Mixed Number ÷ Fraction", generate: generateMixedFractionDivision }
   ];
