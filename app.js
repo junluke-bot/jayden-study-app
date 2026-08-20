@@ -906,7 +906,7 @@
     quizState = {
       setId: set.id,
       mode: "math",
-      questions: shuffle(mathQuestions(set)),
+      questions: mathQuestions(set),
       index: 0,
       score: 0,
       missedThisRound: []
