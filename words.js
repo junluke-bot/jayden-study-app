@@ -2949,5 +2949,270 @@ window.WORD_SETS = [
         meaning: "descriptive language that helps readers picture or sense something"
       }
     ]
+  },
+  {
+    id: "set14",
+    name: "Word Set 14",
+    words: [
+      {
+        word: "mock",
+        phrase: "a mock assignment",
+        choices: ["make-believe", "structured", "difficult", "real"],
+        answerIndex: 0,
+        meaning: "not real; fake or pretend"
+      },
+      {
+        word: "peculiar",
+        phrase: "a peculiar way",
+        choices: ["distinct", "common", "usual", "vague"],
+        answerIndex: 0,
+        meaning: "strange or unusual"
+      },
+      {
+        word: "queasy",
+        phrase: "a queasy feeling",
+        choices: ["anxious", "comfortable", "happy", "content"],
+        answerIndex: 0,
+        meaning: "feeling nauseated or uneasy"
+      },
+      {
+        word: "sturdy",
+        phrase: "a sturdy table",
+        choices: ["strong", "weak", "uneven", "even"],
+        answerIndex: 0,
+        meaning: "strongly and solidly built"
+      },
+      {
+        word: "sole",
+        phrase: "the sole survivor",
+        choices: ["one and only", "shared", "common", "living"],
+        answerIndex: 0,
+        meaning: "being the only one"
+      },
+      {
+        word: "typical",
+        phrase: "a typical reaction",
+        choices: ["common", "abnormal", "rare", "unorthodox"],
+        answerIndex: 0,
+        meaning: "usual or ordinary"
+      },
+      {
+        word: "valiant",
+        phrase: "a valiant effort",
+        choices: ["fearless", "timid", "timely", "weak"],
+        answerIndex: 0,
+        meaning: "showing courage or bravery"
+      },
+      {
+        word: "vast",
+        phrase: "the vast universe",
+        choices: ["endless", "expand", "long", "interesting"],
+        answerIndex: 0,
+        meaning: "extremely large in area or extent"
+      },
+      {
+        word: "abused",
+        phrase: "an abused dog",
+        choices: ["mistreated", "well liked", "defended", "protected"],
+        answerIndex: 0,
+        meaning: "treated cruelly or harmfully"
+      },
+      {
+        word: "composed",
+        phrase: "composed music",
+        choices: ["constructed", "played", "listened", "liked"],
+        answerIndex: 0,
+        meaning: "created or written, as a piece of music"
+      },
+      {
+        word: "edible",
+        phrase: "edible berries",
+        choices: ["eatable", "poisonous", "suitable", "harmful"],
+        answerIndex: 0,
+        meaning: "safe to eat"
+      },
+      {
+        word: "portable",
+        phrase: "a portable table",
+        choices: ["easy to move", "lightweight", "inconvenient", "awkward"],
+        answerIndex: 0,
+        meaning: "able to be carried or moved easily"
+      },
+      {
+        word: "realistic",
+        phrase: "realistic expectations",
+        choices: ["down-to-earth", "unusual", "impractical", "unique"],
+        answerIndex: 0,
+        meaning: "practical and sensible; based on what's actually possible"
+      },
+      {
+        word: "summit",
+        phrase: "a mountain summit",
+        choices: ["peak", "camp site", "base", "lake"],
+        answerIndex: 0,
+        meaning: "the highest point of a mountain"
+      },
+      {
+        word: "obsolete",
+        phrase: "an obsolete machine",
+        choices: ["out-of-date", "hard to use", "up-to-date", "useful"],
+        answerIndex: 0,
+        meaning: "no longer used; outdated"
+      },
+      {
+        word: "myth",
+        phrase: "an ancient myth",
+        choices: ["legend", "time", "reality", "classic"],
+        answerIndex: 0,
+        meaning: "a traditional story, often about gods or heroes"
+      },
+      {
+        word: "immense",
+        phrase: "an immense collection",
+        choices: ["massive", "envious", "beautiful", "limited"],
+        answerIndex: 0,
+        meaning: "extremely large"
+      },
+      {
+        word: "escalated",
+        phrase: "an escalated order",
+        choices: ["raised", "reduced", "lost", "fulfilled"],
+        answerIndex: 0,
+        meaning: "increased quickly"
+      },
+      {
+        word: "comply",
+        phrase: "comply with the law",
+        choices: ["obey", "ignore", "understand", "appeal"],
+        answerIndex: 0,
+        meaning: "to act in agreement with a rule or request"
+      },
+      {
+        word: "intercepted",
+        phrase: "he was intercepted",
+        choices: ["cut off", "released", "encouraged", "occupied"],
+        answerIndex: 0,
+        meaning: "stopped or caught before reaching a destination"
+      },
+      {
+        word: "identical",
+        phrase: "identical shirts",
+        choices: ["the same", "distinct", "different", "common"],
+        answerIndex: 0,
+        meaning: "exactly alike"
+      },
+      {
+        word: "excavate",
+        phrase: "excavate the building",
+        choices: ["uncover", "leave", "sketch", "hold"],
+        answerIndex: 0,
+        meaning: "to dig out or expose by digging"
+      },
+      {
+        word: "frigid",
+        phrase: "a frigid day",
+        choices: ["chilly", "warm", "dark", "bright"],
+        answerIndex: 0,
+        meaning: "very cold"
+      },
+      {
+        word: "preserve",
+        phrase: "preserve water",
+        choices: ["conserve", "drank", "gave up", "found"],
+        answerIndex: 0,
+        meaning: "to keep safe or protect from loss"
+      },
+      {
+        word: "reassure",
+        phrase: "to reassure",
+        choices: ["comfort", "supply", "deny", "sleep"],
+        answerIndex: 0,
+        meaning: "to restore confidence; to ease someone's worries"
+      },
+      {
+        word: "exerted",
+        phrase: "exerted his strength",
+        choices: ["applied", "ignored", "concealed", "rested"],
+        answerIndex: 0,
+        meaning: "used effort or strength for something"
+      },
+      {
+        word: "mischief",
+        phrase: "create mischief",
+        choices: ["trouble", "happiness", "obedience", "fairness"],
+        answerIndex: 0,
+        meaning: "playful troublemaking"
+      },
+      {
+        word: "petrified",
+        phrase: "petrified rocks",
+        choices: ["fossilized", "softened", "darkened", "sticky"],
+        answerIndex: 0,
+        meaning: "turned into stone over a long time"
+      },
+      {
+        word: "pasture",
+        phrase: "across the pasture",
+        choices: ["meadow", "road", "track", "park"],
+        answerIndex: 0,
+        meaning: "a grassy field used for grazing animals"
+      },
+      {
+        word: "revert",
+        phrase: "to revert",
+        choices: ["go back", "stay put", "push through", "halt"],
+        answerIndex: 0,
+        meaning: "to return to a previous state or condition"
+      },
+      {
+        word: "ruined",
+        phrase: "ruined the job",
+        choices: ["messed up", "fixed", "managed", "wrote"],
+        answerIndex: 0,
+        meaning: "spoiled or damaged"
+      },
+      {
+        word: "companion",
+        phrase: "his companion",
+        choices: ["partner", "champion", "dog", "enemy"],
+        answerIndex: 0,
+        meaning: "a person who accompanies or spends time with another"
+      },
+      {
+        word: "dedicate",
+        phrase: "dedicate yourself",
+        choices: ["devote", "strengthen", "beautify", "withhold"],
+        answerIndex: 0,
+        meaning: "to give one's time or effort to a purpose"
+      },
+      {
+        word: "industrious",
+        phrase: "an industrious attitude",
+        choices: ["hardworking", "lazy", "conscious", "lackadaisical"],
+        answerIndex: 0,
+        meaning: "hardworking and diligent"
+      },
+      {
+        word: "exasperated",
+        phrase: "he was exasperated",
+        choices: ["irritated", "tired", "happy", "lonely"],
+        answerIndex: 0,
+        meaning: "very annoyed or frustrated"
+      },
+      {
+        word: "apathetic",
+        phrase: "acted apathetic",
+        choices: ["unconcerned", "caring", "upset", "frightened"],
+        answerIndex: 0,
+        meaning: "showing little interest or concern"
+      },
+      {
+        word: "sparse",
+        phrase: "sparse vegetation",
+        choices: ["lacking", "abundant", "colorful", "ornate"],
+        answerIndex: 0,
+        meaning: "thinly scattered or not dense"
+      }
+    ]
   }
 ];
