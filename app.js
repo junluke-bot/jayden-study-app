@@ -33,6 +33,7 @@
           missedScience: {},
           missedDol: {},
           missedSpelling: {},
+          missedWordStudy: {},
           history: []
         };
       var parsed = JSON.parse(raw);
@@ -45,6 +46,7 @@
         missedScience: parsed.missedScience || {},
         missedDol: parsed.missedDol || {},
         missedSpelling: parsed.missedSpelling || {},
+        missedWordStudy: parsed.missedWordStudy || {},
         history: parsed.history || []
       };
     } catch (e) {
@@ -57,6 +59,7 @@
         missedScience: {},
         missedDol: {},
         missedSpelling: {},
+        missedWordStudy: {},
         history: []
       };
     }
@@ -313,6 +316,90 @@
     return svg;
   }
 
+  function buildCompositeBlocksDiagram(spec) {
+    var s = 30;
+    var isoX = 20;
+    var isoY = 14;
+    var pad = 18;
+
+    var blocks = spec.blocks;
+    var maxX = 0, maxY = 0, maxD = 0;
+    blocks.forEach(function (b) {
+      maxX = Math.max(maxX, b.x + b.w);
+      maxY = Math.max(maxY, b.y + b.h);
+      maxD = Math.max(maxD, b.z + b.d);
+    });
+
+    var totalW = maxX * s + maxD * isoX + pad * 2;
+    var totalH = maxY * s + maxD * isoY + pad * 2;
+
+    var originX = pad + maxD * isoX;
+    var originY = totalH - pad;
+
+    function proj(cx, cy, cz) {
+      return [originX + cx * s + cz * isoX, originY - cy * s - cz * isoY];
+    }
+    function pts(list) {
+      return list.map(function (p) { return p[0] + "," + p[1]; }).join(" ");
+    }
+
+    var svg = svgEl("svg", { viewBox: "0 0 " + totalW + " " + totalH, class: "diagram-svg" });
+
+    var ordered = blocks.slice().sort(function (a, b) {
+      return (a.z - b.z) || (a.y - b.y);
+    });
+
+    ordered.forEach(function (b) {
+      var x0 = b.x, x1 = b.x + b.w, y0 = b.y, y1 = b.y + b.h, z0 = b.z, z1 = b.z + b.d;
+
+      var fbl = proj(x0, y0, z0), fbr = proj(x1, y0, z0), ftr = proj(x1, y1, z0), ftl = proj(x0, y1, z0);
+      var bbr = proj(x1, y0, z1), btr = proj(x1, y1, z1), btl = proj(x0, y1, z1);
+
+      svg.appendChild(
+        svgEl("polygon", {
+          points: pts([ftl, ftr, btr, btl]),
+          fill: "var(--accent)", "fill-opacity": 0.18, stroke: "var(--accent-dark)", "stroke-width": 2.2
+        })
+      );
+      svg.appendChild(
+        svgEl("polygon", {
+          points: pts([fbr, ftr, btr, bbr]),
+          fill: "var(--accent)", "fill-opacity": 0.85, stroke: "var(--accent-dark)", "stroke-width": 2.2
+        })
+      );
+      svg.appendChild(
+        svgEl("polygon", {
+          points: pts([fbl, fbr, ftr, ftl]),
+          fill: "var(--accent)", "fill-opacity": 0.5, stroke: "var(--accent-dark)", "stroke-width": 2.2
+        })
+      );
+
+      var gridColor = "var(--accent-dark)";
+      var cx, cy, cz, a, c, ta, tb, e, f, ra, rb, g, h2, rt, rbm;
+
+      for (cx = x0 + 1; cx < x1; cx++) {
+        a = proj(cx, y0, z0); c = proj(cx, y1, z0);
+        svg.appendChild(svgEl("line", { x1: a[0], y1: a[1], x2: c[0], y2: c[1], stroke: gridColor, "stroke-width": 1.3, "stroke-opacity": 0.8 }));
+        ta = proj(cx, y1, z0); tb = proj(cx, y1, z1);
+        svg.appendChild(svgEl("line", { x1: ta[0], y1: ta[1], x2: tb[0], y2: tb[1], stroke: gridColor, "stroke-width": 1.3, "stroke-opacity": 0.8 }));
+      }
+      for (cy = y0 + 1; cy < y1; cy++) {
+        e = proj(x0, cy, z0); f = proj(x1, cy, z0);
+        svg.appendChild(svgEl("line", { x1: e[0], y1: e[1], x2: f[0], y2: f[1], stroke: gridColor, "stroke-width": 1.3, "stroke-opacity": 0.8 }));
+        ra = proj(x1, cy, z0); rb = proj(x1, cy, z1);
+        svg.appendChild(svgEl("line", { x1: ra[0], y1: ra[1], x2: rb[0], y2: rb[1], stroke: gridColor, "stroke-width": 1.3, "stroke-opacity": 0.8 }));
+      }
+      for (cz = z0 + 1; cz < z1; cz++) {
+        g = proj(x0, y1, cz); h2 = proj(x1, y1, cz);
+        svg.appendChild(svgEl("line", { x1: g[0], y1: g[1], x2: h2[0], y2: h2[1], stroke: gridColor, "stroke-width": 1.3, "stroke-opacity": 0.8 }));
+        rt = proj(x1, y1, cz); rbm = proj(x1, y0, cz);
+        svg.appendChild(svgEl("line", { x1: rt[0], y1: rt[1], x2: rbm[0], y2: rbm[1], stroke: gridColor, "stroke-width": 1.3, "stroke-opacity": 0.8 }));
+      }
+    });
+
+    return svg;
+  }
+
   function buildRhombusDiagram() {
     var svg = svgEl("svg", { viewBox: "0 0 200 140", class: "diagram-svg" });
     svg.appendChild(
@@ -328,6 +415,7 @@
     if (diagram.type === "coordGrid") return buildCoordGridDiagram(diagram);
     if (diagram.type === "linePlot") return buildLinePlotDiagram(diagram);
     if (diagram.type === "cubeBlock") return buildCubeBlockDiagram(diagram);
+    if (diagram.type === "compositeBlocks") return buildCompositeBlocksDiagram(diagram);
     if (diagram.type === "rhombus") return buildRhombusDiagram();
     return null;
   }
@@ -371,6 +459,10 @@
     return entry.mode === "spelling" || entry.mode === "spellingReview";
   }
 
+  function isWordStudyEntry(entry) {
+    return entry.mode === "wordStudy" || entry.mode === "wordStudyReview";
+  }
+
   function historyForTab(history, tab) {
     return history.filter(function (entry) {
       if (tab === "math") return isMathEntry(entry);
@@ -380,6 +472,7 @@
       if (tab === "science") return isScienceEntry(entry);
       if (tab === "dol") return isDolEntry(entry);
       if (tab === "spelling") return isSpellingEntry(entry);
+      if (tab === "wordStudy") return isWordStudyEntry(entry);
       return (
         !isMathEntry(entry) &&
         !isMath2Entry(entry) &&
@@ -387,7 +480,8 @@
         !isSocialEntry(entry) &&
         !isScienceEntry(entry) &&
         !isDolEntry(entry) &&
-        !isSpellingEntry(entry)
+        !isSpellingEntry(entry) &&
+        !isWordStudyEntry(entry)
       );
     });
   }
@@ -402,6 +496,7 @@
     if (entry.mode === "scienceReview") return "Review Missed Science";
     if (entry.mode === "dolReview") return "Review Missed DOL";
     if (entry.mode === "spellingReview") return "Review Missed Spelling";
+    if (entry.mode === "wordStudyReview") return "Review Missed Word Study";
     if (entry.mode === "reading") {
       var passage = window.READING_PASSAGES.filter(function (p) {
         return p.id === entry.setId;
@@ -437,6 +532,12 @@
         return s.id === entry.setId;
       })[0];
       return spellingSet ? spellingSet.name : "Spelling";
+    }
+    if (entry.mode === "wordStudy") {
+      var wordStudySet = window.WORD_STUDY_SETS.filter(function (s) {
+        return s.id === entry.setId;
+      })[0];
+      return wordStudySet ? wordStudySet.name : "Word Study";
     }
     var set = window.WORD_SETS.filter(function (s) {
       return s.id === entry.setId;
@@ -510,6 +611,7 @@
     var missedScienceList = Object.keys(progress.missedScience);
     var missedDolList = Object.keys(progress.missedDol);
     var missedSpellingList = Object.keys(progress.missedSpelling);
+    var missedWordStudyList = Object.keys(progress.missedWordStudy);
 
     clearChildren(homeScreen);
 
@@ -524,7 +626,8 @@
       { id: "social", label: "Social" },
       { id: "science", label: "Science" },
       { id: "dol", label: "DOL" },
-      { id: "spelling", label: "Spelling" }
+      { id: "spelling", label: "Spelling" },
+      { id: "wordStudy", label: "Word Study" }
     ].forEach(function (tab) {
       var tabBtn = document.createElement("button");
       tabBtn.className = "tab-btn" + (activeHomeTab === tab.id ? " active" : "");
@@ -918,7 +1021,7 @@
 
       homeScreen.appendChild(dolReviewWrap);
       appendMissedInventory("Missed DOL Inventory", progress.missedDol, "prompt");
-    } else {
+    } else if (activeHomeTab === "spelling") {
       var spellingLabel = document.createElement("div");
       spellingLabel.className = "section-label";
       spellingLabel.textContent = "Spelling Sets";
@@ -975,6 +1078,63 @@
 
       homeScreen.appendChild(spellingReviewWrap);
       appendMissedInventory("Missed Spelling Inventory", progress.missedSpelling, "prompt");
+    } else {
+      var wordStudyLabel = document.createElement("div");
+      wordStudyLabel.className = "section-label";
+      wordStudyLabel.textContent = "Word Study Sets";
+      homeScreen.appendChild(wordStudyLabel);
+
+      var wordStudyList = document.createElement("div");
+      wordStudyList.className = "set-list";
+
+      window.WORD_STUDY_SETS.forEach(function (set) {
+        var btn = document.createElement("button");
+        btn.className = "set-card";
+        btn.innerHTML =
+          '<span><span class="set-name">' +
+          set.name +
+          '</span><span class="set-meta">' +
+          set.questions.length +
+          " questions</span></span>";
+        btn.addEventListener("click", function () {
+          startWordStudyQuiz(set);
+        });
+        wordStudyList.appendChild(btn);
+      });
+
+      homeScreen.appendChild(wordStudyList);
+
+      var wordStudyReviewLabel = document.createElement("div");
+      wordStudyReviewLabel.className = "section-label";
+      wordStudyReviewLabel.textContent = "Practice";
+      homeScreen.appendChild(wordStudyReviewLabel);
+
+      var wordStudyReviewWrap = document.createElement("div");
+      wordStudyReviewWrap.className = "home-actions";
+
+      if (missedWordStudyList.length === 0) {
+        var wordStudyNote = document.createElement("div");
+        wordStudyNote.className = "empty-note";
+        wordStudyNote.textContent =
+          "No missed words yet. Words you miss will show up here to review.";
+        wordStudyReviewWrap.appendChild(wordStudyNote);
+      } else {
+        var wordStudyReviewBtn = document.createElement("button");
+        wordStudyReviewBtn.className = "set-card review-card";
+        wordStudyReviewBtn.innerHTML =
+          '<span><span class="set-name">Review Missed Word Study</span>' +
+          '<span class="set-meta">' +
+          missedWordStudyList.length +
+          (missedWordStudyList.length === 1 ? " word" : " words") +
+          "</span></span>";
+        wordStudyReviewBtn.addEventListener("click", function () {
+          startWordStudyReview(progress);
+        });
+        wordStudyReviewWrap.appendChild(wordStudyReviewBtn);
+      }
+
+      homeScreen.appendChild(wordStudyReviewWrap);
+      appendMissedInventory("Missed Word Study Inventory", progress.missedWordStudy, "prompt");
     }
 
     var tabHistory = historyForTab(progress.history, activeHomeTab);
@@ -993,6 +1153,8 @@
         ? "DOL"
         : activeHomeTab === "spelling"
         ? "spelling"
+        : activeHomeTab === "wordStudy"
+        ? "word study"
         : "word";
 
     var progressLabel = document.createElement("div");
@@ -1012,6 +1174,8 @@
         ? "DOL Progress"
         : activeHomeTab === "spelling"
         ? "Spelling Progress"
+        : activeHomeTab === "wordStudy"
+        ? "Word Study Progress"
         : "Word Progress";
     homeScreen.appendChild(progressLabel);
 
@@ -1071,6 +1235,8 @@
         ? "DOL Score History"
         : tab === "spelling"
         ? "Spelling Score History"
+        : tab === "wordStudy"
+        ? "Word Study Score History"
         : "Word Score History";
     historyScreen.appendChild(label);
 
@@ -1431,6 +1597,48 @@
     showScreen(quizScreen);
   }
 
+  function wordStudyQuestions(set) {
+    return set.questions.map(function (q) {
+      return {
+        type: "wordStudy",
+        setId: set.id,
+        topic: set.name,
+        prompt: q.prompt,
+        choices: q.choices,
+        answerIndex: q.answerIndex
+      };
+    });
+  }
+
+  function startWordStudyQuiz(set) {
+    quizState = {
+      setId: set.id,
+      mode: "wordStudy",
+      questions: shuffle(wordStudyQuestions(set)),
+      index: 0,
+      score: 0,
+      missedThisRound: []
+    };
+    renderQuestion();
+    showScreen(quizScreen);
+  }
+
+  function startWordStudyReview(progress) {
+    var questions = Object.keys(progress.missedWordStudy).map(function (key) {
+      return progress.missedWordStudy[key].data;
+    });
+    quizState = {
+      setId: null,
+      mode: "wordStudyReview",
+      questions: shuffle(questions),
+      index: 0,
+      score: 0,
+      missedThisRound: []
+    };
+    renderQuestion();
+    showScreen(quizScreen);
+  }
+
   function renderQuestion() {
     var q = quizState.questions[quizState.index];
     var options = shuffle(
@@ -1485,7 +1693,7 @@
       var card = document.createElement("div");
       card.className = "phrase-card";
 
-      if (q.type === "math" || q.type === "social" || q.type === "math2" || q.type === "science" || q.type === "dol" || q.type === "spelling") {
+      if (q.type === "math" || q.type === "social" || q.type === "math2" || q.type === "science" || q.type === "dol" || q.type === "spelling" || q.type === "wordStudy") {
         var topicEl = document.createElement("div");
         topicEl.className = "math-topic";
         topicEl.textContent = q.topic;
@@ -1494,7 +1702,7 @@
 
       var phraseEl = document.createElement("p");
       phraseEl.className = "phrase-text";
-      if (q.type === "math" || q.type === "social" || q.type === "math2" || q.type === "science" || q.type === "dol" || q.type === "spelling") {
+      if (q.type === "math" || q.type === "social" || q.type === "math2" || q.type === "science" || q.type === "dol" || q.type === "spelling" || q.type === "wordStudy") {
         phraseEl.classList.add("text-prompt");
         phraseEl.textContent = q.prompt;
       } else {
@@ -1571,6 +1779,8 @@
       updateDolProgressForAnswer(q, isCorrect);
     } else if (quizState.mode === "spelling" || quizState.mode === "spellingReview") {
       updateSpellingProgressForAnswer(q, isCorrect);
+    } else if (quizState.mode === "wordStudy" || quizState.mode === "wordStudyReview") {
+      updateWordStudyProgressForAnswer(q, isCorrect);
     } else {
       updateProgressForAnswer(q, isCorrect);
     }
@@ -1734,6 +1944,24 @@
     saveProgress(progress);
   }
 
+  function updateWordStudyProgressForAnswer(question, isCorrect) {
+    var progress = loadProgress();
+    var key = question.setId + "::" + question.prompt;
+
+    if (isCorrect) {
+      if (progress.missedWordStudy[key]) {
+        progress.missedWordStudy[key].streak++;
+        if (progress.missedWordStudy[key].streak >= STREAK_TO_CLEAR) {
+          delete progress.missedWordStudy[key];
+        }
+      }
+    } else {
+      progress.missedWordStudy[key] = { streak: 0, data: question };
+    }
+
+    saveProgress(progress);
+  }
+
   function finishQuiz() {
     var progress = loadProgress();
     progress.history.push({
@@ -1784,14 +2012,15 @@
     var isScience = mode === "science" || mode === "scienceReview";
     var isDol = mode === "dol" || mode === "dolReview";
     var isSpelling = mode === "spelling" || mode === "spellingReview";
-    var usesPrompt = isMath || isReading || isSocial || isScience || isDol || isSpelling;
+    var isWordStudy = mode === "wordStudy" || mode === "wordStudyReview";
+    var usesPrompt = isMath || isReading || isSocial || isScience || isDol || isSpelling || isWordStudy;
 
     if (missed.length > 0) {
       var label = document.createElement("div");
       label.className = "section-label";
       label.textContent = isMath
         ? "Problems to Review"
-        : isReading || isSocial || isScience || isDol || isSpelling
+        : isReading || isSocial || isScience || isDol || isSpelling || isWordStudy
         ? "Questions to Review"
         : "Words to Review";
       endScreen.appendChild(label);

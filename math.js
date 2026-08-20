@@ -356,5 +356,23 @@ window.MATH_SETS = [
         answerIndex: 0
       }
     ]
+  },
+  {
+    id: "set8",
+    name: "Math Set 8",
+    questions: [
+      {
+        prompt: "What is the volume of the solid figure below?",
+        diagram: {
+          type: "compositeBlocks",
+          blocks: [
+            { x: 0, y: 3, z: 0, w: 5, h: 1, d: 1 },
+            { x: 2, y: 0, z: 0, w: 1, h: 3, d: 1 }
+          ]
+        },
+        choices: ["8", "9", "16", "20"],
+        answerIndex: 0
+      }
+    ]
   }
 ];
