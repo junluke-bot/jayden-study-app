@@ -157,5 +157,131 @@ window.MATH_SETS = [
         answerIndex: 0
       }
     ]
+  },
+  {
+    id: "set4",
+    name: "Math Set 4",
+    questions: [
+      {
+        prompt:
+          "Which digit in the number 276,325 has 10 times greater value than it has in the number 723,652?",
+        choices: ["6", "3", "5", "7"],
+        answerIndex: 0
+      },
+      {
+        prompt: 'Which of the following numbers is equal to "twenty-five and twelve thousandths"?',
+        choices: ["25.012", "25.12", "25,012", "2,512,000"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What digit makes this true? 4.758 < 4.7__8",
+        choices: ["6", "1", "3", "4"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the area of an elementary school basketball court with a length of 74 ft and a width of 42 ft?",
+        choices: ["3,108 sq. ft.", "444 sq. ft.", "1,776 sq. ft.", "4,446 sq. ft."],
+        answerIndex: 0
+      },
+      {
+        prompt: "5 people share 1/2 lb of chocolate equally. How much chocolate will each person get?",
+        choices: ["1/10 lb.", "2/7 lb.", "2 1/2 lb.", "10 lb."],
+        answerIndex: 0
+      },
+      {
+        prompt: "3 5/8 − 1 3/4 = ?",
+        choices: ["1 7/8", "2 2/4", "2 1/8", "5 2/4"],
+        answerIndex: 0
+      },
+      {
+        prompt: "A row of circles has 4 yellow circles and 3 red circles. What fraction of the circles are red?",
+        choices: ["3/7", "3/4", "4/3", "4/7"],
+        answerIndex: 0
+      }
+    ]
+  },
+  {
+    id: "set5",
+    name: "Math Set 5",
+    questions: [
+      {
+        prompt: "Each of 5 pieces of cheese weighs 3/4 of a pound. How much do the pieces of cheese weigh altogether?",
+        choices: ["15/4 lb.", "2 lb.", "15/20 lb.", "8/9 lb."],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "The sides of a rectangle are 6 and 10. How many times will the area of the rectangle decrease if the shorter side is divided in half?",
+        choices: ["2", "3", "4", "5"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Marsha sold 2/3 of a pound of cake to each of 5 customers. How many pounds of cake did Marsha sell in total?",
+        choices: ["less than 5 pounds", "more than 5 pounds", "5 pounds", "more than 10 pounds"],
+        answerIndex: 0
+      },
+      {
+        prompt: "A stick is 1/2 a yard long. Joshua cut the stick into 3 equal pieces. What is the length of each piece?",
+        choices: ["1/6 yard", "3/6 yard", "1 1/2 yard", "2 yard"],
+        answerIndex: 0
+      },
+      {
+        prompt: "How many cans of 1/3 of a liter can be filled with 2 liters of juice?",
+        choices: ["6", "3", "2", "1"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Peter's stick is 3 feet long. Michael's stick is 2 inches shorter than Peter's. How long is Michael's stick?",
+        choices: ["2 ft 10 in.", "2 ft 8 in.", "3 ft 2 in.", "1 ft."],
+        answerIndex: 0
+      },
+      {
+        prompt: "A right rectangular prism has dimensions 1 in × 2 in × 4 in. What is its volume?",
+        choices: ["8 in³", "7 in³", "4 in³", "2 in³"],
+        answerIndex: 0
+      }
+    ]
+  },
+  {
+    id: "set6",
+    name: "Math Set 6",
+    questions: [
+      {
+        prompt: "What is the volume of a box whose width is 3 ft, length is 5 ft, and height is 2 ft?",
+        choices: ["30 ft³", "15 ft³", "10 ft³", "6 ft³"],
+        answerIndex: 0
+      },
+      {
+        prompt: "How many angles does a pentagon have?",
+        choices: ["5", "6", "4", "3"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which of the following attributes does NOT belong to a square?",
+        choices: ["The sum of interior angles is 180°", "All angles are equal", "The number of sides is 4", "Opposite sides are parallel"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A solid figure is made of two parts: a yellow piece with a volume of 2/5 and a green piece with a volume of 3/4. What is the total volume of the solid figure?",
+        choices: ["1 3/20", "1 1/10", "3/10", "5/9"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Fill in the missing sign: 3 × 1/5 ___ 3 × 7/4",
+        choices: ["<", ">", "=", "≥"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Convert 36 feet to inches.",
+        choices: ["432 inches", "48 inches", "108 inches", "360 inches"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the area of the base of a right rectangular prism with a volume of 312 and a height of 13?",
+        choices: ["24", "13", "299", "325"],
+        answerIndex: 0
+      }
+    ]
   }
 ];
