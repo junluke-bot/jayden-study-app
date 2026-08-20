@@ -1,7 +1,9 @@
 // Math question sets for the Iowa Assessments practice app,
 // transcribed from an Iowa Assessments practice test booklet (Test A).
-// Figure/graph/grid-dependent questions from the source booklet were left
-// out since this app only renders text, matching the math2.js convention.
+// Limited to fractions, decimals, and geometry (measurement/volume/shapes/
+// coordinates). Figure/graph/grid-dependent questions from the source
+// booklet were left out since this app only renders text, matching the
+// math2.js convention.
 // Each set has an id, a display name, and a list of questions.
 // Each question has:
 //   prompt      - the question text
@@ -14,28 +16,6 @@ window.MATH_SETS = [
     id: "set1",
     name: "Math Set 1",
     questions: [
-      {
-        prompt: "Which rule generates the numerical pattern below? 3, 6, 9, 12, …",
-        choices: ["Add 3", "Subtract 3", "Multiply by 2", "Divide by 4"],
-        answerIndex: 0
-      },
-      {
-        prompt: "What is the value of (16 + 8) − 4 ÷ 2?",
-        choices: ["22", "18", "10", "8"],
-        answerIndex: 0
-      },
-      {
-        prompt:
-          "There are 4 cars with 5 passengers in each car. After driving 30 miles, one person from each car left. After driving 10 more miles, 3 people left the first car. How many passengers are left in the 4 cars?",
-        choices: ["13", "1", "4", "16"],
-        answerIndex: 0
-      },
-      {
-        prompt:
-          "There are 5 bags with 6 marbles in each bag. If the number of marbles in each bag increases by 2, which expression shows the total number of marbles?",
-        choices: ["5 × (6 + 2)", "5 × 6 + 2", "6 × (5 + 2)", "6 × 5 + 2"],
-        answerIndex: 0
-      },
       {
         prompt:
           "The price of a pack of chewing gum is $2.35 and the price of a bottle of water is $1.15. John bought 3 packs of chewing gum and 2 bottles of water. How much did he pay in total?",
@@ -67,22 +47,6 @@ window.MATH_SETS = [
         prompt: "Round the number 265.283 to the nearest hundredth.",
         choices: ["265.28", "265.27", "265.29", "300"],
         answerIndex: 0
-      }
-    ]
-  },
-  {
-    id: "set2",
-    name: "Math Set 2",
-    questions: [
-      {
-        prompt: "One bag of chocolate candies contains 42 candies. How many candies are in 136 bags?",
-        choices: ["5,712", "816", "3,264", "8,160"],
-        answerIndex: 0
-      },
-      {
-        prompt: "168 trees are arranged in 14 rows. How many trees are in each row?",
-        choices: ["12", "210", "182", "154"],
-        answerIndex: 0
       },
       {
         prompt: "Add 2/3 + 4/5",
@@ -94,7 +58,13 @@ window.MATH_SETS = [
           "The length of a yellow ant is 3/4 of an inch, and the length of a black ant is 5/8 of an inch. What is the difference between the lengths of the yellow and black ants?",
         choices: ["1/8 inch", "2/4 inch", "15/32 inch", "8/12 inch"],
         answerIndex: 0
-      },
+      }
+    ]
+  },
+  {
+    id: "set2",
+    name: "Math Set 2",
+    questions: [
       {
         prompt: "Three friends shared 10 pounds of ice cream equally. How many pounds did each of them get?",
         choices: ["3 1/3 lb.", "3/10 lb.", "7 lb.", "13 lb."],
@@ -121,13 +91,7 @@ window.MATH_SETS = [
         prompt: "Peter hikes 3/4 of a mile every day. How many miles does Peter hike in 5 days?",
         choices: ["3 3/4", "15/20", "2", "5"],
         answerIndex: 0
-      }
-    ]
-  },
-  {
-    id: "set3",
-    name: "Math Set 3",
-    questions: [
+      },
       {
         prompt:
           "1/3 of all students in the class are boys. They are divided into 2 equal groups. What fraction of all students are boys in one group?",
@@ -138,7 +102,13 @@ window.MATH_SETS = [
         prompt: "One bowl can hold 1/2 a pound of rice. How many bowls will it take to hold 4 pounds of rice?",
         choices: ["8", "2", "4", "6"],
         answerIndex: 0
-      },
+      }
+    ]
+  },
+  {
+    id: "set3",
+    name: "Math Set 3",
+    questions: [
       {
         prompt:
           "A right rectangular prism has a length of 2 ft, a width of 2 ft, and a height of 3 ft. What is its volume?",
