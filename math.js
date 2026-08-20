@@ -1,350 +1,191 @@
-// Randomly-generated math practice problems.
-// Depends on nothing; exposes window.MATH_PROBLEM_TYPES, a list of
-// { id, name, generate() } where generate() returns a question shaped like:
-//   { type: "math", topic, prompt, choices, answerIndex }
-// (choices[0] is always the correct answer, mirroring the words.js convention —
-// app.js shuffles choice order at render time.)
+// Math question sets for the Iowa Assessments practice app,
+// transcribed from an Iowa Assessments practice test booklet (Test A).
+// Figure/graph/grid-dependent questions from the source booklet were left
+// out since this app only renders text, matching the math2.js convention.
+// Each set has an id, a display name, and a list of questions.
+// Each question has:
+//   prompt      - the question text
+//   choices     - four answer options (choices[0] is always correct;
+//                 app.js shuffles choice order at render time)
+//   answerIndex - always 0 here, matching the words.js/math2.js convention
 
-(function () {
-  "use strict";
-
-  function randInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  function gcd(a, b) {
-    a = Math.abs(a);
-    b = Math.abs(b);
-    while (b) {
-      var t = b;
-      b = a % b;
-      a = t;
-    }
-    return a || 1;
-  }
-
-  function reduceFraction(num, den) {
-    var g = gcd(num, den);
-    return [num / g, den / g];
-  }
-
-  function fractionText(num, den) {
-    return num + "/" + den;
-  }
-
-  function numericDistractors(correct, scale, count) {
-    var set = new Set();
-    var guard = 0;
-    while (set.size < count && guard < 300) {
-      guard++;
-      var delta = randInt(1, scale) * (Math.random() < 0.5 ? 1 : -1);
-      var candidate = correct + delta;
-      if (candidate > 0 && candidate !== correct) {
-        set.add(candidate);
+window.MATH_SETS = [
+  {
+    id: "set1",
+    name: "Math Set 1",
+    questions: [
+      {
+        prompt: "Which rule generates the numerical pattern below? 3, 6, 9, 12, …",
+        choices: ["Add 3", "Subtract 3", "Multiply by 2", "Divide by 4"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the value of (16 + 8) − 4 ÷ 2?",
+        choices: ["22", "18", "10", "8"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "There are 4 cars with 5 passengers in each car. After driving 30 miles, one person from each car left. After driving 10 more miles, 3 people left the first car. How many passengers are left in the 4 cars?",
+        choices: ["13", "1", "4", "16"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "There are 5 bags with 6 marbles in each bag. If the number of marbles in each bag increases by 2, which expression shows the total number of marbles?",
+        choices: ["5 × (6 + 2)", "5 × 6 + 2", "6 × (5 + 2)", "6 × 5 + 2"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "The price of a pack of chewing gum is $2.35 and the price of a bottle of water is $1.15. John bought 3 packs of chewing gum and 2 bottles of water. How much did he pay in total?",
+        choices: ["$9.35", "$8.15", "$3.50", "$5"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Which digit in the number 643,289 represents 1/10 of the value that it represents in the number 462,398?",
+        choices: ["9", "3", "6", "8"],
+        answerIndex: 0
+      },
+      {
+        prompt: "How would you read the number 4.032?",
+        choices: [
+          "Four and thirty-two thousandths",
+          "Four thousands thirty-two",
+          "Four and thirty-two",
+          "Forty and thirty-two"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Complete the sentence to make it true: 24.637 ___ 24.367",
+        choices: [">", "<", "=", "≤"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Round the number 265.283 to the nearest hundredth.",
+        choices: ["265.28", "265.27", "265.29", "300"],
+        answerIndex: 0
       }
-    }
-    return Array.from(set);
-  }
-
-  function fractionDistractors(correctText, baseNum, baseDen, extraTexts) {
-    var set = new Set();
-    extraTexts.forEach(function (t) {
-      if (t !== correctText && set.size < 3) set.add(t);
-    });
-    var guard = 0;
-    while (set.size < 3 && guard < 100) {
-      guard++;
-      var fakeNum = baseNum + randInt(-2, 2);
-      var fakeDen = baseDen + randInt(-2, 2);
-      if (fakeNum > 0 && fakeDen > 0) {
-        var t = fractionText(fakeNum, fakeDen);
-        if (t !== correctText) set.add(t);
+    ]
+  },
+  {
+    id: "set2",
+    name: "Math Set 2",
+    questions: [
+      {
+        prompt: "One bag of chocolate candies contains 42 candies. How many candies are in 136 bags?",
+        choices: ["5,712", "816", "3,264", "8,160"],
+        answerIndex: 0
+      },
+      {
+        prompt: "168 trees are arranged in 14 rows. How many trees are in each row?",
+        choices: ["12", "210", "182", "154"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Add 2/3 + 4/5",
+        choices: ["1 7/15", "6/8", "8/15", "4/11"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "The length of a yellow ant is 3/4 of an inch, and the length of a black ant is 5/8 of an inch. What is the difference between the lengths of the yellow and black ants?",
+        choices: ["1/8 inch", "2/4 inch", "15/32 inch", "8/12 inch"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Three friends shared 10 pounds of ice cream equally. How many pounds did each of them get?",
+        choices: ["3 1/3 lb.", "3/10 lb.", "7 lb.", "13 lb."],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Samantha bought 4/5 of a pound of ice cream. She ate 1/3 of the ice cream. How many pounds of ice cream did Samantha eat?",
+        choices: ["4/15 lb.", "5/8 lb.", "5/12 lb.", "1/3 lb."],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "The sides of a rectangle are 6 ft. and 4 ft. How many times will the area of the rectangle increase if the longer side is doubled?",
+        choices: ["2", "12", "8", "4"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Complete the sentence to make it true: 2 × 3/7 ___ 2 × 7/3",
+        choices: ["<", ">", "=", "≥"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Peter hikes 3/4 of a mile every day. How many miles does Peter hike in 5 days?",
+        choices: ["3 3/4", "15/20", "2", "5"],
+        answerIndex: 0
       }
-    }
-    return Array.from(set).slice(0, 3);
-  }
-
-  function toMixedText(num, den) {
-    var reduced = reduceFraction(num, den);
-    var n = reduced[0], d = reduced[1];
-    var whole = Math.floor(n / d);
-    var rem = n % d;
-    if (rem === 0) return String(whole);
-    if (whole === 0) return fractionText(rem, d);
-    return whole + " " + fractionText(rem, d);
-  }
-
-  function mixedPromptText(whole, num, den) {
-    return whole + " " + fractionText(num, den);
-  }
-
-  function mixedDistractors(correctText, baseNum, baseDen, rawPairs, extraTexts) {
-    var set = new Set();
-    (extraTexts || []).forEach(function (t) {
-      if (t !== correctText && set.size < 3) set.add(t);
-    });
-    rawPairs.forEach(function (pair) {
-      if (set.size >= 3) return;
-      if (pair[0] > 0 && pair[1] > 0) {
-        var t = toMixedText(pair[0], pair[1]);
-        if (t !== correctText) set.add(t);
+    ]
+  },
+  {
+    id: "set3",
+    name: "Math Set 3",
+    questions: [
+      {
+        prompt:
+          "1/3 of all students in the class are boys. They are divided into 2 equal groups. What fraction of all students are boys in one group?",
+        choices: ["1/6", "3/6", "2/3", "2/6"],
+        answerIndex: 0
+      },
+      {
+        prompt: "One bowl can hold 1/2 a pound of rice. How many bowls will it take to hold 4 pounds of rice?",
+        choices: ["8", "2", "4", "6"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A right rectangular prism has a length of 2 ft, a width of 2 ft, and a height of 3 ft. What is its volume?",
+        choices: ["12 ft³", "4 ft³", "6 ft³", "7 ft³"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A duck starts at position (4, 3) on a coordinate grid. It moves 2 units up and 1 unit right. What is its new position?",
+        choices: ["(5,5)", "(6,4)", "(5,1)", "(3,5)"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which of the following statements is true for a rhombus?",
+        choices: [
+          "Opposite sides are parallel",
+          "All angles are equal",
+          "A rhombus has 5 sides",
+          "The sum of interior angles is 180°"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "A right rectangular prism has dimensions 13 in × 15 in × 32 in. What is its volume?",
+        choices: ["6,240 in³", "896 in³", "480 in³", "416 in³"],
+        answerIndex: 0
+      },
+      {
+        prompt: 'Fill in the missing sign to make this true: "four and twenty-six hundredths" ___ 4.62',
+        choices: ["<", "≥", "=", ">"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the area of a painting with a width of 4/5 of a yard and a height of 2/3 of a yard?",
+        choices: [
+          "8/15 square yards",
+          "3/4 square yards",
+          "3 1/3 square yards",
+          "1 7/15 square yards"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Round to the nearest tenth the result of 2.48 − 0.4",
+        choices: ["2.1", "2.8", "2.4", "2.0"],
+        answerIndex: 0
       }
-    });
-    var guard = 0;
-    while (set.size < 3 && guard < 100) {
-      guard++;
-      var fakeNum = baseNum + randInt(-2, 2);
-      var fakeDen = baseDen + randInt(-2, 2);
-      if (fakeNum > 0 && fakeDen > 0) {
-        var t = toMixedText(fakeNum, fakeDen);
-        if (t !== correctText) set.add(t);
-      }
-    }
-    return Array.from(set).slice(0, 3);
+    ]
   }
-
-  function formatCents(cents) {
-    return (cents / 100).toFixed(2);
-  }
-
-  function generateDecimalAddition() {
-    var aCents = randInt(100, 9999);
-    var bCents = randInt(100, 9999);
-    var correctCents = aCents + bCents;
-    var scale = Math.max(50, Math.round(correctCents * 0.08));
-    var distractors = numericDistractors(correctCents, scale, 3);
-    return {
-      type: "math",
-      topic: "Decimal Addition",
-      prompt: formatCents(aCents) + " + " + formatCents(bCents),
-      choices: [formatCents(correctCents)].concat(distractors.map(formatCents)),
-      answerIndex: 0
-    };
-  }
-
-  function generateDecimalSubtraction() {
-    var aCents = randInt(200, 9999);
-    var bCents = randInt(100, aCents - 1);
-    var correctCents = aCents - bCents;
-    var scale = Math.max(50, Math.round(correctCents * 0.08));
-    var distractors = numericDistractors(correctCents, scale, 3);
-    return {
-      type: "math",
-      topic: "Decimal Subtraction",
-      prompt: formatCents(aCents) + " − " + formatCents(bCents),
-      choices: [formatCents(correctCents)].concat(distractors.map(formatCents)),
-      answerIndex: 0
-    };
-  }
-
-  function generateMultiplication() {
-    var a = randInt(100, 999);
-    var b = randInt(10, 99);
-    var correct = a * b;
-    var scale = Math.max(20, Math.round(correct * 0.08));
-    var distractors = numericDistractors(correct, scale, 3);
-    return {
-      type: "math",
-      topic: "3-digit × 2-digit Multiplication",
-      prompt: a + " × " + b,
-      choices: [String(correct)].concat(distractors.map(String)),
-      answerIndex: 0
-    };
-  }
-
-  function generateFractionMultiplication() {
-    var n1 = randInt(1, 9), d1 = randInt(2, 9);
-    var n2 = randInt(1, 9), d2 = randInt(2, 9);
-    var rawNum = n1 * n2, rawDen = d1 * d2;
-    var reduced = reduceFraction(rawNum, rawDen);
-    var correctText = fractionText(reduced[0], reduced[1]);
-    var extras = [
-      fractionText(rawNum, rawDen),
-      fractionText(n1 + n2, d1 + d2),
-      fractionText(n1 * d2, d1 * n2)
-    ];
-    var distractors = fractionDistractors(correctText, reduced[0], reduced[1], extras);
-    return {
-      type: "math",
-      topic: "Fraction Multiplication",
-      prompt: fractionText(n1, d1) + " × " + fractionText(n2, d2),
-      choices: [correctText].concat(distractors),
-      answerIndex: 0
-    };
-  }
-
-  function generateFractionDivision() {
-    var n1 = randInt(1, 9), d1 = randInt(2, 9);
-    var n2 = randInt(1, 9), d2 = randInt(2, 9);
-    // a/b ÷ c/d = a/b × d/c
-    var rawNum = n1 * d2, rawDen = d1 * n2;
-    var reduced = reduceFraction(rawNum, rawDen);
-    var correctText = fractionText(reduced[0], reduced[1]);
-    var extras = [
-      fractionText(rawNum, rawDen),
-      fractionText(n1 * n2, d1 * d2),
-      fractionText(n1 * d1, n2 * d2)
-    ];
-    var distractors = fractionDistractors(correctText, reduced[0], reduced[1], extras);
-    return {
-      type: "math",
-      topic: "Fraction Division",
-      prompt: fractionText(n1, d1) + " ÷ " + fractionText(n2, d2),
-      choices: [correctText].concat(distractors),
-      answerIndex: 0
-    };
-  }
-
-  function generateFractionAddition() {
-    var d1 = randInt(2, 9);
-    var d2 = randInt(2, 9);
-    while (d2 === d1) {
-      d2 = randInt(2, 9);
-    }
-    var n1 = randInt(1, d1 - 1);
-    var n2 = randInt(1, d2 - 1);
-
-    var rawNum = n1 * d2 + n2 * d1;
-    var rawDen = d1 * d2;
-    var reduced = reduceFraction(rawNum, rawDen);
-    var correctText = toMixedText(rawNum, rawDen);
-
-    var rawPairs = [
-      [n1 + n2, d1 + d2], // added numerators and denominators straight across
-      [n1 * d2 + n2 * d1, d1], // only converted one fraction to the common denominator
-      [n1 + n2, d1] // added numerators but kept just one denominator
-    ];
-
-    var distractors = mixedDistractors(correctText, reduced[0], reduced[1], rawPairs, []);
-
-    return {
-      type: "math",
-      topic: "Fraction Addition (Unlike Denominators)",
-      prompt: fractionText(n1, d1) + " + " + fractionText(n2, d2),
-      choices: [correctText].concat(distractors),
-      answerIndex: 0
-    };
-  }
-
-  function generateFractionSubtraction() {
-    var d1 = randInt(2, 9);
-    var d2 = randInt(2, 9);
-    while (d2 === d1) {
-      d2 = randInt(2, 9);
-    }
-    var n1 = randInt(1, d1 - 1);
-    var n2 = randInt(1, d2 - 1);
-
-    // Ensure n1/d1 > n2/d2 so the result is positive.
-    if (n1 * d2 <= n2 * d1) {
-      var tn = n1, td = d1;
-      n1 = n2; d1 = d2;
-      n2 = tn; d2 = td;
-    }
-    if (n1 * d2 === n2 * d1) {
-      n1 = Math.min(d1 - 1, n1 + 1);
-    }
-
-    var rawNum = n1 * d2 - n2 * d1;
-    var rawDen = d1 * d2;
-    var reduced = reduceFraction(rawNum, rawDen);
-    var correctText = toMixedText(rawNum, rawDen);
-
-    var rawPairs = [
-      [Math.abs(n1 - n2), Math.abs(d1 - d2)], // subtracted numerators and denominators straight across
-      [Math.abs(n1 * d2 - n2 * d1), d1], // only converted one fraction to the common denominator
-      [Math.abs(n1 - n2), d1] // subtracted numerators but kept just one denominator
-    ];
-
-    var distractors = mixedDistractors(correctText, reduced[0], reduced[1], rawPairs, []);
-
-    return {
-      type: "math",
-      topic: "Fraction Subtraction (Unlike Denominators)",
-      prompt: fractionText(n1, d1) + " − " + fractionText(n2, d2),
-      choices: [correctText].concat(distractors),
-      answerIndex: 0
-    };
-  }
-
-  function generateMixedFractionMultiplication() {
-    var whole = randInt(1, 5);
-    var d1 = randInt(2, 9);
-    var n1 = randInt(1, d1 - 1);
-    var n2 = randInt(1, 9), d2 = randInt(2, 9);
-    var improperNum = whole * d1 + n1;
-
-    var rawNum = improperNum * n2;
-    var rawDen = d1 * d2;
-    var reduced = reduceFraction(rawNum, rawDen);
-    var correctText = toMixedText(rawNum, rawDen);
-
-    var extraTexts = [];
-    if (reduced[0] >= reduced[1]) {
-      extraTexts.push(fractionText(reduced[0], reduced[1]));
-    }
-
-    var rawPairs = [
-      [n1 * n2, d1 * d2], // ignored the whole number part
-      [whole * n2, d2], // ignored the fractional part
-      [improperNum * d2, n2 * d1] // accidentally divided instead of multiplying
-    ];
-
-    var distractors = mixedDistractors(correctText, reduced[0], reduced[1], rawPairs, extraTexts);
-
-    return {
-      type: "math",
-      topic: "Mixed Number × Fraction",
-      prompt: mixedPromptText(whole, n1, d1) + " × " + fractionText(n2, d2),
-      choices: [correctText].concat(distractors),
-      answerIndex: 0
-    };
-  }
-
-  function generateMixedFractionDivision() {
-    var whole = randInt(1, 5);
-    var d1 = randInt(2, 9);
-    var n1 = randInt(1, d1 - 1);
-    var n2 = randInt(1, 9), d2 = randInt(2, 9);
-    var improperNum = whole * d1 + n1;
-
-    // improperNum/d1 ÷ n2/d2 = improperNum/d1 × d2/n2
-    var rawNum = improperNum * d2;
-    var rawDen = d1 * n2;
-    var reduced = reduceFraction(rawNum, rawDen);
-    var correctText = toMixedText(rawNum, rawDen);
-
-    var extraTexts = [];
-    if (reduced[0] >= reduced[1]) {
-      extraTexts.push(fractionText(reduced[0], reduced[1]));
-    }
-
-    var rawPairs = [
-      [improperNum * n2, d1 * d2], // accidentally multiplied instead of dividing
-      [whole * d2, n2], // ignored the fractional part
-      [n1 * d2, d1 * n2] // used only the fractional part, ignored the whole number
-    ];
-
-    var distractors = mixedDistractors(correctText, reduced[0], reduced[1], rawPairs, extraTexts);
-
-    return {
-      type: "math",
-      topic: "Mixed Number ÷ Fraction",
-      prompt: mixedPromptText(whole, n1, d1) + " ÷ " + fractionText(n2, d2),
-      choices: [correctText].concat(distractors),
-      answerIndex: 0
-    };
-  }
-
-  window.MATH_PROBLEM_TYPES = [
-    { id: "decAdd", name: "Decimal Addition", generate: generateDecimalAddition },
-    { id: "decSub", name: "Decimal Subtraction", generate: generateDecimalSubtraction },
-    { id: "mult3x2", name: "3-digit × 2-digit Multiplication", generate: generateMultiplication },
-    { id: "fracMult", name: "Fraction Multiplication", generate: generateFractionMultiplication },
-    { id: "fracDiv", name: "Fraction Division", generate: generateFractionDivision },
-    { id: "fracAdd", name: "Fraction Addition (Unlike Denominators)", generate: generateFractionAddition },
-    { id: "fracSub", name: "Fraction Subtraction (Unlike Denominators)", generate: generateFractionSubtraction },
-    { id: "mixedFracMult", name: "Mixed Number × Fraction", generate: generateMixedFractionMultiplication },
-    { id: "mixedFracDiv", name: "Mixed Number ÷ Fraction", generate: generateMixedFractionDivision }
-  ];
-})();
+];

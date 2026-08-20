@@ -8,7 +8,6 @@
   var STREAK_TO_CLEAR = 2;
 
   var HISTORY_DISPLAY_LIMIT = 20;
-  var MATH_SESSION_LENGTH = 5;
   var MATH2_SESSION_LENGTH = 10;
 
   var homeScreen = document.getElementById("home-screen");
@@ -146,7 +145,6 @@
   }
 
   function setNameForEntry(entry) {
-    if (entry.mode === "math") return "Daily Math Practice";
     if (entry.mode === "mathReview") return "Review Missed Math";
     if (entry.mode === "math2") return "Daily Math 2 Practice";
     if (entry.mode === "math2Review") return "Review Missed Math 2";
@@ -161,6 +159,12 @@
         return p.id === entry.setId;
       })[0];
       return passage ? passage.title : "Reading Passage";
+    }
+    if (entry.mode === "math") {
+      var mathSet = window.MATH_SETS.filter(function (s) {
+        return s.id === entry.setId;
+      })[0];
+      return mathSet ? mathSet.name : "Math";
     }
     if (entry.mode === "social") {
       var socialSet = window.SOCIAL_STUDIES_SETS.filter(function (s) {
@@ -346,25 +350,44 @@
     } else if (activeHomeTab === "math") {
       var mathLabel = document.createElement("div");
       mathLabel.className = "section-label";
-      mathLabel.textContent = "Math Practice";
+      mathLabel.textContent = "Math Sets";
       homeScreen.appendChild(mathLabel);
+
+      var mathList = document.createElement("div");
+      mathList.className = "set-list";
+
+      window.MATH_SETS.forEach(function (set) {
+        var btn = document.createElement("button");
+        btn.className = "set-card";
+        btn.innerHTML =
+          '<span><span class="set-name">' +
+          set.name +
+          '</span><span class="set-meta">' +
+          set.questions.length +
+          " questions</span></span>";
+        btn.addEventListener("click", function () {
+          startMathQuiz(set);
+        });
+        mathList.appendChild(btn);
+      });
+
+      homeScreen.appendChild(mathList);
+
+      var mathReviewLabel = document.createElement("div");
+      mathReviewLabel.className = "section-label";
+      mathReviewLabel.textContent = "Practice";
+      homeScreen.appendChild(mathReviewLabel);
 
       var mathWrap = document.createElement("div");
       mathWrap.className = "home-actions";
 
-      var mathBtn = document.createElement("button");
-      mathBtn.className = "set-card";
-      mathBtn.innerHTML =
-        '<span><span class="set-name">Daily Math Practice</span>' +
-        '<span class="set-meta">' +
-        MATH_SESSION_LENGTH +
-        " mixed questions</span></span>";
-      mathBtn.addEventListener("click", function () {
-        startMathPractice();
-      });
-      mathWrap.appendChild(mathBtn);
-
-      if (missedMathList.length > 0) {
+      if (missedMathList.length === 0) {
+        var mathNote = document.createElement("div");
+        mathNote.className = "empty-note";
+        mathNote.textContent =
+          "No missed problems yet. Problems you miss will show up here to review.";
+        mathWrap.appendChild(mathNote);
+      } else {
         var mathReviewBtn = document.createElement("button");
         mathReviewBtn.className = "set-card review-card";
         mathReviewBtn.innerHTML =
@@ -866,20 +889,24 @@
     showScreen(quizScreen);
   }
 
-  function startMathPractice() {
-    var types = window.MATH_PROBLEM_TYPES;
-    var guaranteed = types.map(function (t) {
-      return t.generate();
+  function mathQuestions(set) {
+    return set.questions.map(function (q) {
+      return {
+        type: "math",
+        setId: set.id,
+        topic: set.name,
+        prompt: q.prompt,
+        choices: q.choices,
+        answerIndex: q.answerIndex
+      };
     });
-    var extras = [];
-    for (var i = guaranteed.length; i < MATH_SESSION_LENGTH; i++) {
-      var type = types[Math.floor(Math.random() * types.length)];
-      extras.push(type.generate());
-    }
+  }
+
+  function startMathQuiz(set) {
     quizState = {
-      setId: null,
+      setId: set.id,
       mode: "math",
-      questions: shuffle(guaranteed.concat(extras)),
+      questions: shuffle(mathQuestions(set)),
       index: 0,
       score: 0,
       missedThisRound: []
@@ -1218,10 +1245,7 @@
 
       var phraseEl = document.createElement("p");
       phraseEl.className = "phrase-text";
-      if (q.type === "math") {
-        phraseEl.classList.add("math-prompt");
-        phraseEl.textContent = q.prompt;
-      } else if (q.type === "social" || q.type === "math2" || q.type === "science" || q.type === "dol" || q.type === "spelling") {
+      if (q.type === "math" || q.type === "social" || q.type === "math2" || q.type === "science" || q.type === "dol" || q.type === "spelling") {
         phraseEl.classList.add("text-prompt");
         phraseEl.textContent = q.prompt;
       } else {
