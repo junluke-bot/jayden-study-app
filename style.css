@@ -251,6 +251,18 @@ html, body {
   text-align: left;
 }
 
+.diagram-wrap {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.diagram-svg {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+}
+
 .choices {
   display: flex;
   flex-direction: column;

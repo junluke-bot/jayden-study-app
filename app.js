@@ -84,6 +84,254 @@
     return phrase.replace(pattern, "<mark>$1</mark>");
   }
 
+  // ---------- Question diagrams (original SVG art, not scans) ----------
+
+  var SVG_NS = "http://www.w3.org/2000/svg";
+
+  function svgEl(tag, attrs) {
+    var el = document.createElementNS(SVG_NS, tag);
+    Object.keys(attrs || {}).forEach(function (key) {
+      el.setAttribute(key, attrs[key]);
+    });
+    return el;
+  }
+
+  function buildCoordGridDiagram(spec) {
+    var min = spec.range[0];
+    var max = spec.range[1];
+    var n = max - min;
+    var pad = 26;
+    var cell = 32;
+    var size = pad * 2 + cell * n;
+
+    function px(x) {
+      return pad + (x - min) * cell;
+    }
+    function py(y) {
+      return pad + (max - y) * cell;
+    }
+
+    var svg = svgEl("svg", { viewBox: "0 0 " + size + " " + size, class: "diagram-svg" });
+
+    for (var i = 0; i <= n; i++) {
+      var gv = min + i;
+      var isAxis = gv === 0;
+      svg.appendChild(
+        svgEl("line", {
+          x1: px(gv), y1: py(min), x2: px(gv), y2: py(max),
+          stroke: isAxis ? "var(--text)" : "var(--border)",
+          "stroke-width": isAxis ? 2 : 1
+        })
+      );
+      svg.appendChild(
+        svgEl("line", {
+          x1: px(min), y1: py(gv), x2: px(max), y2: py(gv),
+          stroke: isAxis ? "var(--text)" : "var(--border)",
+          "stroke-width": isAxis ? 2 : 1
+        })
+      );
+    }
+
+    for (var xi = min; xi <= max; xi++) {
+      var xLabel = svgEl("text", {
+        x: px(xi), y: py(min) + 16, "text-anchor": "middle",
+        "font-size": 11, fill: "var(--muted)"
+      });
+      xLabel.textContent = String(xi);
+      svg.appendChild(xLabel);
+    }
+    for (var yi = min; yi <= max; yi++) {
+      var yLabel = svgEl("text", {
+        x: px(min) - 10, y: py(yi) + 4, "text-anchor": "end",
+        "font-size": 11, fill: "var(--muted)"
+      });
+      yLabel.textContent = String(yi);
+      svg.appendChild(yLabel);
+    }
+
+    if (spec.polygon) {
+      var polyPts = spec.polygon
+        .map(function (pt) {
+          return px(pt[0]) + "," + py(pt[1]);
+        })
+        .join(" ");
+      svg.appendChild(
+        svgEl("polygon", {
+          points: polyPts, fill: "var(--accent)", "fill-opacity": 0.18,
+          stroke: "var(--accent-dark)", "stroke-width": 2.5
+        })
+      );
+    }
+
+    (spec.points || []).forEach(function (p) {
+      var cx = px(p.x);
+      var cy = py(p.y);
+      svg.appendChild(svgEl("circle", { cx: cx, cy: cy, r: 5, fill: "var(--accent-dark)" }));
+      if (p.label) {
+        var labelEl = svgEl("text", {
+          x: cx + 9, y: cy - 9, "font-size": 16, "font-weight": 700,
+          fill: "var(--accent-dark)"
+        });
+        labelEl.textContent = p.label;
+        svg.appendChild(labelEl);
+      }
+    });
+
+    return svg;
+  }
+
+  function buildLinePlotDiagram(spec) {
+    var labels = spec.labels;
+    var counts = spec.counts;
+    var maxCount = Math.max.apply(null, counts);
+    var colWidth = 56;
+    var markSize = 16;
+    var pad = 20;
+    var width = pad * 2 + colWidth * labels.length;
+    var topPad = spec.note ? 34 : 12;
+    var height = topPad + markSize * maxCount + 40;
+
+    var svg = svgEl("svg", { viewBox: "0 0 " + width + " " + height, class: "diagram-svg" });
+
+    if (spec.note) {
+      var noteEl = svgEl("text", {
+        x: width / 2, y: 16, "text-anchor": "middle", "font-size": 11.5, fill: "var(--muted)"
+      });
+      noteEl.textContent = spec.note;
+      svg.appendChild(noteEl);
+    }
+
+    var baseline = height - 24;
+    svg.appendChild(
+      svgEl("line", {
+        x1: pad, y1: baseline, x2: width - pad, y2: baseline,
+        stroke: "var(--text)", "stroke-width": 2
+      })
+    );
+
+    labels.forEach(function (label, i) {
+      var cx = pad + colWidth * i + colWidth / 2;
+      var tickLabel = svgEl("text", {
+        x: cx, y: baseline + 20, "text-anchor": "middle", "font-size": 13, fill: "var(--text)"
+      });
+      tickLabel.textContent = String(label);
+      svg.appendChild(tickLabel);
+
+      for (var k = 0; k < counts[i]; k++) {
+        var cy = baseline - 12 - k * markSize;
+        var half = 6;
+        svg.appendChild(
+          svgEl("line", {
+            x1: cx - half, y1: cy - half, x2: cx + half, y2: cy + half,
+            stroke: "var(--accent-dark)", "stroke-width": 2.5, "stroke-linecap": "round"
+          })
+        );
+        svg.appendChild(
+          svgEl("line", {
+            x1: cx - half, y1: cy + half, x2: cx + half, y2: cy - half,
+            stroke: "var(--accent-dark)", "stroke-width": 2.5, "stroke-linecap": "round"
+          })
+        );
+      }
+    });
+
+    return svg;
+  }
+
+  function buildCubeBlockDiagram(spec) {
+    var w = spec.width;
+    var h = spec.height;
+    var d = spec.depth;
+    var s = 34;
+    var isoX = 22;
+    var isoY = 16;
+    var pad = 18;
+
+    var totalW = w * s + d * isoX + pad * 2;
+    var totalH = h * s + d * isoY + pad * 2;
+
+    var originX = pad + d * isoX;
+    var originY = totalH - pad;
+
+    function front(cx, cy) {
+      return [originX + cx * s, originY - cy * s];
+    }
+    function back(pt, cz) {
+      return [pt[0] + cz * isoX, pt[1] - cz * isoY];
+    }
+    function pts(list) {
+      return list.map(function (p) { return p[0] + "," + p[1]; }).join(" ");
+    }
+
+    var svg = svgEl("svg", { viewBox: "0 0 " + totalW + " " + totalH, class: "diagram-svg" });
+
+    var fbl = front(0, 0), fbr = front(w, 0), ftr = front(w, h), ftl = front(0, h);
+
+    // Top face (lightest — catches the most light)
+    svg.appendChild(
+      svgEl("polygon", {
+        points: pts([ftl, ftr, back(ftr, d), back(ftl, d)]),
+        fill: "var(--accent)", "fill-opacity": 0.18, stroke: "var(--accent-dark)", "stroke-width": 2.2
+      })
+    );
+    // Right face (darkest — in shadow)
+    svg.appendChild(
+      svgEl("polygon", {
+        points: pts([fbr, ftr, back(ftr, d), back(fbr, d)]),
+        fill: "var(--accent)", "fill-opacity": 0.85, stroke: "var(--accent-dark)", "stroke-width": 2.2
+      })
+    );
+    // Front face (medium)
+    svg.appendChild(
+      svgEl("polygon", {
+        points: pts([fbl, fbr, ftr, ftl]),
+        fill: "var(--accent)", "fill-opacity": 0.5, stroke: "var(--accent-dark)", "stroke-width": 2.2
+      })
+    );
+
+    var gridColor = "var(--accent-dark)";
+
+    for (var cx = 1; cx < w; cx++) {
+      var a = front(cx, 0), b = front(cx, h);
+      svg.appendChild(svgEl("line", { x1: a[0], y1: a[1], x2: b[0], y2: b[1], stroke: gridColor, "stroke-width": 1.3, "stroke-opacity": 0.8 }));
+      var ta = front(cx, h), tb = back(ta, d);
+      svg.appendChild(svgEl("line", { x1: ta[0], y1: ta[1], x2: tb[0], y2: tb[1], stroke: gridColor, "stroke-width": 1.3, "stroke-opacity": 0.8 }));
+    }
+    for (var cy = 1; cy < h; cy++) {
+      var c = front(0, cy), e = front(w, cy);
+      svg.appendChild(svgEl("line", { x1: c[0], y1: c[1], x2: e[0], y2: e[1], stroke: gridColor, "stroke-width": 1.3, "stroke-opacity": 0.8 }));
+      var ra = front(w, cy), rb = back(ra, d);
+      svg.appendChild(svgEl("line", { x1: ra[0], y1: ra[1], x2: rb[0], y2: rb[1], stroke: gridColor, "stroke-width": 1.3, "stroke-opacity": 0.8 }));
+    }
+    for (var cz = 1; cz < d; cz++) {
+      var tl = back(front(0, h), cz), tr = back(front(w, h), cz);
+      svg.appendChild(svgEl("line", { x1: tl[0], y1: tl[1], x2: tr[0], y2: tr[1], stroke: gridColor, "stroke-width": 1.3, "stroke-opacity": 0.8 }));
+      var rt = back(front(w, h), cz), rbm = back(front(w, 0), cz);
+      svg.appendChild(svgEl("line", { x1: rt[0], y1: rt[1], x2: rbm[0], y2: rbm[1], stroke: gridColor, "stroke-width": 1.3, "stroke-opacity": 0.8 }));
+    }
+
+    return svg;
+  }
+
+  function buildRhombusDiagram() {
+    var svg = svgEl("svg", { viewBox: "0 0 200 140", class: "diagram-svg" });
+    svg.appendChild(
+      svgEl("polygon", {
+        points: "40,115 120,95 143,16 63,36",
+        fill: "var(--accent)", "fill-opacity": 0.18, stroke: "var(--accent-dark)", "stroke-width": 2.5
+      })
+    );
+    return svg;
+  }
+
+  function buildDiagram(diagram) {
+    if (diagram.type === "coordGrid") return buildCoordGridDiagram(diagram);
+    if (diagram.type === "linePlot") return buildLinePlotDiagram(diagram);
+    if (diagram.type === "cubeBlock") return buildCubeBlockDiagram(diagram);
+    if (diagram.type === "rhombus") return buildRhombusDiagram();
+    return null;
+  }
+
   function clearChildren(el) {
     while (el.firstChild) el.removeChild(el.firstChild);
   }
@@ -896,6 +1144,7 @@
         setId: set.id,
         topic: set.name,
         prompt: q.prompt,
+        diagram: q.diagram,
         choices: q.choices,
         answerIndex: q.answerIndex
       };
@@ -1252,6 +1501,15 @@
         phraseEl.innerHTML = highlightWord(q.phrase, q.word);
       }
       card.appendChild(phraseEl);
+
+      if (q.diagram) {
+        var diagramWrap = document.createElement("div");
+        diagramWrap.className = "diagram-wrap";
+        var diagramSvg = buildDiagram(q.diagram);
+        if (diagramSvg) diagramWrap.appendChild(diagramSvg);
+        card.appendChild(diagramWrap);
+      }
+
       quizScreen.appendChild(card);
     }
 

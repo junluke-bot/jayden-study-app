@@ -283,5 +283,78 @@ window.MATH_SETS = [
         answerIndex: 0
       }
     ]
+  },
+  {
+    id: "set7",
+    name: "Math Set 7",
+    questions: [
+      {
+        prompt: "What is the position of point A?",
+        diagram: { type: "coordGrid", range: [-4, 4], points: [{ x: -3, y: 1, label: "A" }] },
+        choices: ["(-3,1)", "(1,-3)", "(3,1)", "(1,3)"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What type of figure is ABCD?",
+        diagram: {
+          type: "coordGrid",
+          range: [0, 6],
+          polygon: [[1, 1], [4, 1], [6, 4], [3, 4]],
+          points: [
+            { x: 1, y: 1, label: "A" },
+            { x: 4, y: 1, label: "B" },
+            { x: 6, y: 4, label: "C" },
+            { x: 3, y: 4, label: "D" }
+          ]
+        },
+        choices: ["Parallelogram", "Rhombus", "Square", "Rectangle"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which point is at (1, -2)?",
+        diagram: {
+          type: "coordGrid",
+          range: [-4, 4],
+          points: [
+            { x: -1, y: 2, label: "X" },
+            { x: -3, y: 1, label: "Y" },
+            { x: 1, y: -2, label: "Z" },
+            { x: 2, y: -1, label: "W" }
+          ]
+        },
+        choices: ["Z", "X", "Y", "W"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What type of quadrilateral is this?",
+        diagram: { type: "rhombus" },
+        choices: ["Rhombus", "Rectangle", "Square", "Trapezoid"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "The line plot below shows the number of coins Sarah has in each pocket. What is the total amount of money that Sarah has?",
+        diagram: {
+          type: "linePlot",
+          labels: [1, 2, 3, 4],
+          counts: [1, 4, 5, 2],
+          note: "Each X represents 1/2 of a dollar"
+        },
+        choices: ["$6", "$2", "$4", "$24"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the volume of the cube below, which consists of unit cubes?",
+        diagram: { type: "cubeBlock", width: 2, height: 2, depth: 2 },
+        choices: ["8 unit cubes", "4 unit cubes", "12 unit cubes", "24 unit cubes"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the volume of the prism below, which consists of unit cubes?",
+        diagram: { type: "cubeBlock", width: 2, height: 3, depth: 2 },
+        choices: ["12 unit cubes", "16 unit cubes", "4 unit cubes", "6 unit cubes"],
+        answerIndex: 0
+      }
+    ]
   }
 ];
