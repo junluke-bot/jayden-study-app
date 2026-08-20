@@ -3214,5 +3214,653 @@ window.WORD_SETS = [
         meaning: "thinly scattered or not dense"
       }
     ]
+  },
+  {
+    id: "set15",
+    name: "Grade 4 Vocabulary",
+    words: [
+      {
+        word: "captivity",
+        phrase: "The lion lives in captivity.",
+        choices: ["confinement", "freedom", "jungle", "Africa"],
+        answerIndex: 0,
+        meaning: "the state of being kept confined, not free"
+      },
+      {
+        word: "disclose",
+        phrase: "I cannot disclose that.",
+        choices: ["reveal", "conceal", "withhold", "hide"],
+        answerIndex: 0,
+        meaning: "to make known; reveal"
+      },
+      {
+        word: "descend",
+        phrase: "Descend to 20,000 feet.",
+        choices: ["lower", "increase", "rise", "ascend"],
+        answerIndex: 0,
+        meaning: "to move downward"
+      },
+      {
+        word: "horror",
+        phrase: "It was a horror movie.",
+        choices: ["scary", "funny", "dramatic", "sad"],
+        answerIndex: 0,
+        meaning: "a feeling of intense fear or shock"
+      },
+      {
+        word: "considerable",
+        phrase: "a considerable amount of time",
+        choices: ["large", "insignificant", "small", "itsy"],
+        answerIndex: 0,
+        meaning: "large in amount or size"
+      },
+      {
+        word: "heroic",
+        phrase: "a heroic effort",
+        choices: ["bold", "meek", "true", "timid"],
+        answerIndex: 0,
+        meaning: "showing great courage"
+      },
+      {
+        word: "jagged",
+        phrase: "a jagged edge",
+        choices: ["broken", "gentle", "smooth", "sloped"],
+        answerIndex: 0,
+        meaning: "having a sharp, uneven edge"
+      },
+      {
+        word: "peculiar",
+        phrase: "a peculiar smell",
+        choices: ["distinguished", "stinky", "nasty", "normal"],
+        answerIndex: 0,
+        meaning: "distinctive; unusual in a particular way"
+      },
+      {
+        word: "act in",
+        phrase: "Please act in my interest.",
+        choices: ["represent", "know", "disclose", "understand"],
+        answerIndex: 0,
+        meaning: "to represent or look out for someone's benefit"
+      },
+      {
+        word: "sturdy",
+        phrase: "Sturdy shoes",
+        choices: ["durable", "wobbly", "unstable", "thin"],
+        answerIndex: 0,
+        meaning: "strongly built; not easily damaged"
+      },
+      {
+        word: "variety",
+        phrase: "a variety of interests",
+        choices: ["array", "limitation", "uniformity", "preference"],
+        answerIndex: 0,
+        meaning: "a number of different types of something"
+      },
+      {
+        word: "tragic",
+        phrase: "A tragic story",
+        choices: ["catastrophic", "horror", "blessed", "dramatic"],
+        answerIndex: 0,
+        meaning: "causing great sadness; disastrous"
+      },
+      {
+        word: "valiant",
+        phrase: "a valiant act",
+        choices: ["courageous", "simple", "careless", "thoughtful"],
+        answerIndex: 0,
+        meaning: "showing courage or bravery"
+      },
+      {
+        word: "indicate",
+        phrase: "Please indicate your choice.",
+        choices: ["announce", "conceal", "hide", "mislead"],
+        answerIndex: 0,
+        meaning: "to point out or make known"
+      },
+      {
+        word: "proceed",
+        phrase: "Proceed to the next station.",
+        choices: ["go", "halt", "retreat", "wait"],
+        answerIndex: 0,
+        meaning: "to move forward; continue"
+      },
+      {
+        word: "reveal",
+        phrase: "Reveal the secret.",
+        choices: ["disclose", "hide", "suppress", "keep"],
+        answerIndex: 0,
+        meaning: "to make something known that was hidden"
+      },
+      {
+        word: "shabby",
+        phrase: "a shabby couch",
+        choices: ["shoddy", "comfortable", "expensive", "chic"],
+        answerIndex: 0,
+        meaning: "worn out and in poor condition"
+      },
+      {
+        word: "pointless",
+        phrase: "A pointless effort",
+        choices: ["ridiculous", "sensible", "beneficial", "useful"],
+        answerIndex: 0,
+        meaning: "having no purpose"
+      },
+      {
+        word: "modest",
+        phrase: "You are too modest.",
+        choices: ["bashful", "bold", "conceited", "proud"],
+        answerIndex: 0,
+        meaning: "not boastful; shy about one's abilities"
+      },
+      {
+        word: "entire",
+        phrase: "My entire wardrobe",
+        choices: ["whole", "incomplete", "limited", "closet"],
+        answerIndex: 0,
+        meaning: "whole; complete"
+      },
+      {
+        word: "skilled",
+        phrase: "A skilled worker",
+        choices: ["accomplished", "inept", "awkward", "driven"],
+        answerIndex: 0,
+        meaning: "having ability or expertise"
+      },
+      {
+        word: "shriek",
+        phrase: "To shriek with laughter",
+        choices: ["scream", "giggle", "peep", "gasp"],
+        answerIndex: 0,
+        meaning: "to give a loud, high-pitched cry"
+      },
+      {
+        word: "frantic",
+        phrase: "a frantic call",
+        choices: ["distressed", "calm", "docile", "mad"],
+        answerIndex: 0,
+        meaning: "wild with fear, worry, or excitement"
+      },
+      {
+        word: "ease",
+        phrase: "We talked with ease.",
+        choices: ["comfort", "excitement", "difficulty", "unrest"],
+        answerIndex: 0,
+        meaning: "freedom from difficulty; comfort"
+      },
+      {
+        word: "desire",
+        phrase: "This is my greatest desire.",
+        choices: ["longing", "gift", "aversion", "dislike"],
+        answerIndex: 0,
+        meaning: "a strong wish for something"
+      },
+      {
+        word: "contribute",
+        phrase: "I want to contribute.",
+        choices: ["donate", "withdraw", "join", "neglect"],
+        answerIndex: 0,
+        meaning: "to give something, especially to help"
+      },
+      {
+        word: "administer",
+        phrase: "Please administer support.",
+        choices: ["deliver", "deny", "withdraw", "shun"],
+        answerIndex: 0,
+        meaning: "to give or provide something"
+      },
+      {
+        word: "humble",
+        phrase: "The boy is humble.",
+        choices: ["meek", "brave", "assertive", "friendly"],
+        answerIndex: 0,
+        meaning: "not proud; modest"
+      },
+      {
+        word: "resist",
+        phrase: "Don't resist change.",
+        choices: ["oppose", "comply", "conform", "agree"],
+        answerIndex: 0,
+        meaning: "to refuse to accept or go along with"
+      },
+      {
+        word: "gazebo",
+        phrase: "The gazebo in the backyard",
+        choices: ["pavilion", "arena", "theater", "grounds"],
+        answerIndex: 0,
+        meaning: "a small roofed structure, often open-sided, in a garden or yard"
+      }
+    ]
+  },
+  {
+    id: "set16",
+    name: "Grade 5 Vocabulary",
+    words: [
+      {
+        word: "antagonist",
+        phrase: "He plays the antagonist.",
+        choices: ["adversary", "hero", "protagonist", "lead"],
+        answerIndex: 0,
+        meaning: "a character who opposes the main character"
+      },
+      {
+        word: "records",
+        phrase: "lost records",
+        choices: ["documents", "oration", "books", "dvds"],
+        answerIndex: 0,
+        meaning: "written or official documents"
+      },
+      {
+        word: "deprive",
+        phrase: "Don't deprive him.",
+        choices: ["constrain", "release", "indulge", "endow"],
+        answerIndex: 0,
+        meaning: "to keep someone from having or enjoying something"
+      },
+      {
+        word: "nonchalant",
+        phrase: "He acted nonchalant.",
+        choices: ["easygoing", "intense", "nervous", "fine"],
+        answerIndex: 0,
+        meaning: "calm and relaxed; not worried"
+      },
+      {
+        word: "perish",
+        phrase: "Publish or perish",
+        choices: ["be destroyed", "revive", "flourish", "germinate"],
+        answerIndex: 0,
+        meaning: "to die or come to an end"
+      },
+      {
+        word: "minor",
+        phrase: "a minor talent",
+        choices: ["insignificant", "child", "big", "important"],
+        answerIndex: 0,
+        meaning: "small in size or importance"
+      },
+      {
+        word: "gorge",
+        phrase: "Don't gorge on the food",
+        choices: ["gobble", "nibble", "graze", "taste"],
+        answerIndex: 0,
+        meaning: "to eat greedily or in large amounts"
+      },
+      {
+        word: "obsolete",
+        phrase: "The device is obsolete.",
+        choices: ["dated", "contemporary", "broken", "moldy"],
+        answerIndex: 0,
+        meaning: "no longer used; outdated"
+      },
+      {
+        word: "sparse",
+        phrase: "His decor is sparse.",
+        choices: ["simple", "lush", "overdone", "classic"],
+        answerIndex: 0,
+        meaning: "thinly spread; not dense"
+      },
+      {
+        word: "vivid",
+        phrase: "a vivid description",
+        choices: ["graphic", "weak", "indulgent", "quiet"],
+        answerIndex: 0,
+        meaning: "producing a clear, strong image in the mind"
+      },
+      {
+        word: "revert",
+        phrase: "Click here to revert to the home page.",
+        choices: ["return", "find", "open", "copy"],
+        answerIndex: 0,
+        meaning: "to return to a previous state"
+      },
+      {
+        word: "motivate",
+        phrase: "Motivate the team.",
+        choices: ["excite", "depress", "gather", "persuade"],
+        answerIndex: 0,
+        meaning: "to give someone a reason to act"
+      },
+      {
+        word: "provide",
+        phrase: "Provide shelter",
+        choices: ["supply", "remove", "obstruct", "design"],
+        answerIndex: 0,
+        meaning: "to supply or make available"
+      },
+      {
+        word: "settle",
+        phrase: "Don't settle for less",
+        choices: ["accept", "move", "achieve", "reside"],
+        answerIndex: 0,
+        meaning: "to accept something as final, often less than hoped for"
+      },
+      {
+        word: "suspend",
+        phrase: "Suspend disbelief",
+        choices: ["cease", "allow", "cause", "begin"],
+        answerIndex: 0,
+        meaning: "to stop something temporarily"
+      },
+      {
+        word: "kin",
+        phrase: "Next of kin",
+        choices: ["relatives", "friends", "sisters", "neighbors"],
+        answerIndex: 0,
+        meaning: "family members; relatives"
+      },
+      {
+        word: "pedestrian",
+        phrase: "That new song is pedestrian.",
+        choices: ["boring", "different", "exceptional", "bystander"],
+        answerIndex: 0,
+        meaning: "ordinary and dull; unremarkable"
+      },
+      {
+        word: "excavate",
+        phrase: "Excavate the find",
+        choices: ["explore", "promote", "bury", "photograph"],
+        answerIndex: 0,
+        meaning: "to dig out or uncover"
+      },
+      {
+        word: "intense",
+        phrase: "An intense experience",
+        choices: ["acute", "lazy", "quiet", "indifferent"],
+        answerIndex: 0,
+        meaning: "very strong or extreme"
+      },
+      {
+        word: "mischief",
+        phrase: "Full of mischief",
+        choices: ["shenanigans", "giggles", "obedience", "jokes"],
+        answerIndex: 0,
+        meaning: "playful troublemaking"
+      },
+      {
+        word: "exert",
+        phrase: "to exert pressure",
+        choices: ["apply", "misuse", "ignore", "shun"],
+        answerIndex: 0,
+        meaning: "to apply or use effort or force"
+      },
+      {
+        word: "detect",
+        phrase: "To detect a lie",
+        choices: ["discover", "miss", "ignore", "overlook"],
+        answerIndex: 0,
+        meaning: "to discover or notice something"
+      },
+      {
+        word: "bungle",
+        phrase: "To bungle a job",
+        choices: ["blunder", "fix", "succeed", "complete"],
+        answerIndex: 0,
+        meaning: "to do something clumsily or carelessly"
+      },
+      {
+        word: "soundproof",
+        phrase: "soundproof booth",
+        choices: ["silent", "noisy", "airtight", "humming"],
+        answerIndex: 0,
+        meaning: "designed to block sound from passing through"
+      },
+      {
+        word: "assume",
+        phrase: "Assume the worst",
+        choices: ["believe", "doubt", "deduce", "deny"],
+        answerIndex: 0,
+        meaning: "to accept something as true without proof"
+      },
+      {
+        word: "compose",
+        phrase: "Compose yourself.",
+        choices: ["control", "arouse", "excite", "anger"],
+        answerIndex: 0,
+        meaning: "to calm or control oneself"
+      },
+      {
+        word: "aim",
+        phrase: "Aim for peace.",
+        choices: ["strive", "give", "speak", "write"],
+        answerIndex: 0,
+        meaning: "to try hard for a goal; strive"
+      },
+      {
+        word: "astound",
+        phrase: "You astound me.",
+        choices: ["amaze", "have", "bore", "horrify"],
+        answerIndex: 0,
+        meaning: "to surprise or amaze greatly"
+      },
+      {
+        word: "occasion",
+        phrase: "a special occasion",
+        choices: ["event", "invitation", "trip", "decoration"],
+        answerIndex: 0,
+        meaning: "a particular event or happening"
+      },
+      {
+        word: "illuminate",
+        phrase: "Illuminate your point.",
+        choices: ["explain", "confuse", "brighten", "sparkle"],
+        answerIndex: 0,
+        meaning: "to make something clear; to explain"
+      }
+    ]
+  },
+  {
+    id: "set17",
+    name: "Grade 6 Vocabulary",
+    words: [
+      {
+        word: "appeal",
+        phrase: "To appeal for help",
+        choices: ["request", "recall", "retract", "repent"],
+        answerIndex: 0,
+        meaning: "to make an earnest request"
+      },
+      {
+        word: "consent",
+        phrase: "Give consent",
+        choices: ["approval", "denial", "objection", "recommendation"],
+        answerIndex: 0,
+        meaning: "permission or approval"
+      },
+      {
+        word: "complement",
+        phrase: "A nice complement",
+        choices: ["counterpart", "detriment", "praise", "favor"],
+        answerIndex: 0,
+        meaning: "something that completes or matches well with another thing"
+      },
+      {
+        word: "collaborate",
+        phrase: "To collaborate on the project",
+        choices: ["cooperate", "disagree", "object", "oppose"],
+        answerIndex: 0,
+        meaning: "to work together with others"
+      },
+      {
+        word: "defer",
+        phrase: "To defer the discussion",
+        choices: ["procrastinate", "advance", "expedite", "hasten"],
+        answerIndex: 0,
+        meaning: "to put off until later; delay"
+      },
+      {
+        word: "conspicuous",
+        phrase: "conspicuous consumption",
+        choices: ["obvious", "concealed", "unremarkable", "subtle"],
+        answerIndex: 0,
+        meaning: "easily seen or noticed"
+      },
+      {
+        word: "arid",
+        phrase: "An arid climate",
+        choices: ["dry", "wet", "cold", "humid"],
+        answerIndex: 0,
+        meaning: "extremely dry, especially due to lack of rain"
+      },
+      {
+        word: "cultivate",
+        phrase: "Cultivate a friendship.",
+        choices: ["nurture", "harvest", "ignore", "neglect"],
+        answerIndex: 0,
+        meaning: "to develop or improve through effort"
+      },
+      {
+        word: "esteem",
+        phrase: "Hold him in esteem.",
+        choices: ["admire", "ridicule", "desire", "kindness"],
+        answerIndex: 0,
+        meaning: "respect and admiration"
+      },
+      {
+        word: "meager",
+        phrase: "Meager earnings",
+        choices: ["deficient", "adequate", "liberal", "superfluous"],
+        answerIndex: 0,
+        meaning: "small in amount; not enough"
+      },
+      {
+        word: "omniscient",
+        phrase: "An omniscient authority",
+        choices: ["almighty", "local", "recognized", "international"],
+        answerIndex: 0,
+        meaning: "knowing everything"
+      },
+      {
+        word: "priority",
+        phrase: "Make that a priority.",
+        choices: ["concern", "unimportant", "insignificant", "discussion"],
+        answerIndex: 0,
+        meaning: "something treated as more important than other things"
+      },
+      {
+        word: "recount",
+        phrase: "Recount what happened.",
+        choices: ["convey", "conceal", "hide", "repress"],
+        answerIndex: 0,
+        meaning: "to tell or describe in detail"
+      },
+      {
+        word: "remorse",
+        phrase: "Full of remorse",
+        choices: ["anguish", "happiness", "thoughts", "truth"],
+        answerIndex: 0,
+        meaning: "deep regret for something one has done"
+      },
+      {
+        word: "stifle",
+        phrase: "To stifle communication",
+        choices: ["suppress", "encourage", "help", "participate"],
+        answerIndex: 0,
+        meaning: "to hold back or suppress"
+      },
+      {
+        word: "verdict",
+        phrase: "The verdict was read.",
+        choices: ["judgment", "accusation", "jury", "accolade"],
+        answerIndex: 0,
+        meaning: "a formal decision or judgment"
+      },
+      {
+        word: "terrain",
+        phrase: "a rocky terrain",
+        choices: ["landscape", "argument", "vacant lot", "lunar surface"],
+        answerIndex: 0,
+        meaning: "an area of land, especially in terms of its physical features"
+      },
+      {
+        word: "swarm",
+        phrase: "Don't swarm the celebrity.",
+        choices: ["crowd", "ignore", "disperse", "target"],
+        answerIndex: 0,
+        meaning: "to gather in a large crowd"
+      },
+      {
+        word: "sanctuary",
+        phrase: "The dissident seeks sanctuary.",
+        choices: ["asylum", "hotel", "hospitality", "friendship"],
+        answerIndex: 0,
+        meaning: "a safe place; a place of protection"
+      },
+      {
+        word: "dissident",
+        phrase: "The dissident seeks sanctuary.",
+        choices: ["agitator", "politician", "conformist", "performer"],
+        answerIndex: 0,
+        meaning: "a person who publicly disagrees with authority"
+      },
+      {
+        word: "verge",
+        phrase: "On the verge of collapse",
+        choices: ["border", "beginning", "opposite", "middle"],
+        answerIndex: 0,
+        meaning: "the edge or point at which something begins"
+      },
+      {
+        word: "gangly",
+        phrase: "A gangly kid",
+        choices: ["tall and thin", "short and squat", "oppositional", "young"],
+        answerIndex: 0,
+        meaning: "tall, thin, and awkward in movement"
+      },
+      {
+        word: "rural",
+        phrase: "A rural setting",
+        choices: ["country", "urban", "suburban", "desert"],
+        answerIndex: 0,
+        meaning: "relating to the countryside"
+      },
+      {
+        word: "predicament",
+        phrase: "A tough predicament",
+        choices: ["bind", "solution", "history", "argument"],
+        answerIndex: 0,
+        meaning: "a difficult or unpleasant situation"
+      },
+      {
+        word: "plummet",
+        phrase: "The price will plummet.",
+        choices: ["fall", "rise", "stabilize", "double"],
+        answerIndex: 0,
+        meaning: "to fall suddenly and steeply"
+      },
+      {
+        word: "remote",
+        phrase: "A remote chance",
+        choices: ["unlikely", "likely", "close", "probable"],
+        answerIndex: 0,
+        meaning: "unlikely; distant"
+      },
+      {
+        word: "exonerated",
+        phrase: "The defendant was exonerated.",
+        choices: ["vindicated", "found guilty", "blamed", "accused"],
+        answerIndex: 0,
+        meaning: "cleared of blame or wrongdoing"
+      },
+      {
+        word: "retaliate",
+        phrase: "He might retaliate.",
+        choices: ["get even", "forgive", "disappoint", "sympathize"],
+        answerIndex: 0,
+        meaning: "to get even; to strike back"
+      },
+      {
+        word: "idiom",
+        phrase: "A unique idiom.",
+        choices: ["expression", "southern accent", "storytelling ability", "singing voice"],
+        answerIndex: 0,
+        meaning: "an expression whose meaning isn't obvious from its individual words"
+      },
+      {
+        word: "precise",
+        phrase: "The precise time",
+        choices: ["exact", "ambiguous", "false", "questionable"],
+        answerIndex: 0,
+        meaning: "exact and accurate"
+      }
+    ]
   }
 ];
