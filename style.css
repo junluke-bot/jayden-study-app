@@ -187,6 +187,7 @@ html, body {
   font-size: 1.5rem;
   line-height: 1.5;
   margin: 0;
+  white-space: pre-line;
 }
 
 .phrase-text mark {
