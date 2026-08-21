@@ -665,6 +665,28 @@
         setList.appendChild(btn);
       });
 
+      if (
+        window.MISSED_WORDS_SET &&
+        window.MISSED_WORDS_SET.words &&
+        window.MISSED_WORDS_SET.words.length > 0
+      ) {
+        var missedSetBtn = document.createElement("button");
+        missedSetBtn.className = "set-card";
+        missedSetBtn.innerHTML =
+          '<span><span class="set-name">' +
+          window.MISSED_WORDS_SET.name +
+          '</span><span class="set-meta">' +
+          window.MISSED_WORDS_SET.words.length +
+          (window.MISSED_WORDS_SET.words.length === 1
+            ? " question"
+            : " questions") +
+          "</span></span>";
+        missedSetBtn.addEventListener("click", function () {
+          startQuiz(window.MISSED_WORDS_SET, "normal");
+        });
+        setList.appendChild(missedSetBtn);
+      }
+
       homeScreen.appendChild(setList);
 
       var reviewLabel = document.createElement("div");
@@ -694,6 +716,16 @@
           startReviewQuiz(progress);
         });
         reviewWrap.appendChild(reviewBtn);
+
+        var exportBtn = document.createElement("button");
+        exportBtn.className = "set-card review-card";
+        exportBtn.innerHTML =
+          '<span><span class="set-name">Export Missed Words</span>' +
+          '<span class="set-meta">Save as missingwords.js</span></span>';
+        exportBtn.addEventListener("click", function () {
+          exportMissedWords(progress);
+        });
+        reviewWrap.appendChild(exportBtn);
       }
 
       homeScreen.appendChild(reviewWrap);
@@ -1301,6 +1333,29 @@
     };
     renderQuestion();
     showScreen(quizScreen);
+  }
+
+  function exportMissedWords(progress) {
+    var words = Object.keys(progress.missedWords).map(function (key) {
+      return progress.missedWords[key].data;
+    });
+    var fileText =
+      "// Words Jayden has missed, captured from the Words tab.\n" +
+      '// Replace missingwords.js in the project with this downloaded file to save it.\n' +
+      "window.MISSED_WORDS_SET = {\n" +
+      '  id: "missed-words",\n' +
+      '  name: "Missed Words",\n' +
+      "  words: " + JSON.stringify(words, null, 2) + "\n" +
+      "};\n";
+    var blob = new Blob([fileText], { type: "text/javascript" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = "missingwords.js";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   }
 
   function mathQuestions(set) {
