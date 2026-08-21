@@ -3862,5 +3862,337 @@ window.WORD_SETS = [
         meaning: "exact and accurate"
       }
     ]
+  },
+  {
+    id: "set18",
+    name: "Grade 4 Vocabulary 2",
+    words: [
+      {
+        word: "anticipate",
+        phrase: "We anticipate a fun trip.",
+        choices: ["expect", "forget", "dread", "avoid"],
+        answerIndex: 0,
+        meaning: "to expect or look forward to something"
+      },
+      {
+        word: "clamor",
+        phrase: "the clamor of the crowd",
+        choices: ["uproar", "silence", "whisper", "calm"],
+        answerIndex: 0,
+        meaning: "a loud, confused noise, often from a crowd"
+      },
+      {
+        word: "eager",
+        phrase: "she was eager to start",
+        choices: ["enthusiastic", "reluctant", "tired", "bored"],
+        answerIndex: 0,
+        meaning: "having or showing keen interest or enthusiasm"
+      },
+      {
+        word: "reluctant",
+        phrase: "he was reluctant to leave",
+        choices: ["unwilling", "eager", "ready", "excited"],
+        answerIndex: 0,
+        meaning: "unwilling and hesitant"
+      },
+      {
+        word: "banish",
+        phrase: "to banish the villain",
+        choices: ["exile", "welcome", "invite", "reward"],
+        answerIndex: 0,
+        meaning: "to send someone away as punishment"
+      },
+      {
+        word: "compensation",
+        phrase: "she received compensation for the damage",
+        choices: ["payment", "debt", "request", "complaint"],
+        answerIndex: 0,
+        meaning: "something given to make up for a loss or harm"
+      },
+      {
+        word: "dense",
+        phrase: "a dense forest",
+        choices: ["thick", "sparse", "open", "bare"],
+        answerIndex: 0,
+        meaning: "closely packed together; thick"
+      },
+      {
+        word: "flaw",
+        phrase: "a flaw in the plan",
+        choices: ["defect", "strength", "benefit", "success"],
+        answerIndex: 0,
+        meaning: "a mistake or weakness that makes something imperfect"
+      },
+      {
+        word: "gullible",
+        phrase: "he is gullible and believes anything",
+        choices: ["easily fooled", "suspicious", "wise", "cautious"],
+        answerIndex: 0,
+        meaning: "easily tricked or deceived"
+      },
+      {
+        word: "impact",
+        phrase: "the impact of the storm",
+        choices: ["effect", "cause", "delay", "silence"],
+        answerIndex: 0,
+        meaning: "a strong effect or influence"
+      },
+      {
+        word: "massive",
+        phrase: "a massive iceberg",
+        choices: ["enormous", "tiny", "narrow", "light"],
+        answerIndex: 0,
+        meaning: "very large in size, extent, or amount"
+      }
+    ]
+  },
+  {
+    id: "set19",
+    name: "Grade 5 Vocabulary 2",
+    words: [
+      {
+        word: "accurate",
+        phrase: "an accurate measurement",
+        choices: ["precise", "wrong", "careless", "rough"],
+        answerIndex: 0,
+        meaning: "correct and exact"
+      },
+      {
+        word: "crucial",
+        phrase: "a crucial decision",
+        choices: ["essential", "minor", "optional", "trivial"],
+        answerIndex: 0,
+        meaning: "extremely important; vital"
+      },
+      {
+        word: "emerge",
+        phrase: "the sun began to emerge",
+        choices: ["appear", "vanish", "hide", "sink"],
+        answerIndex: 0,
+        meaning: "to come out or become visible"
+      },
+      {
+        word: "ferocious",
+        phrase: "a ferocious storm",
+        choices: ["fierce", "gentle", "calm", "mild"],
+        answerIndex: 0,
+        meaning: "extremely fierce or violent"
+      },
+      {
+        word: "persuade",
+        phrase: "try to persuade him",
+        choices: ["convince", "discourage", "ignore", "confuse"],
+        answerIndex: 0,
+        meaning: "to cause someone to do something through reasoning"
+      },
+      {
+        word: "abrupt",
+        phrase: "an abrupt stop",
+        choices: ["sudden", "gradual", "expected", "slow"],
+        answerIndex: 0,
+        meaning: "sudden and unexpected"
+      },
+      {
+        word: "barrier",
+        phrase: "a barrier blocked the road",
+        choices: ["obstacle", "path", "opening", "bridge"],
+        answerIndex: 0,
+        meaning: "something that blocks or prevents movement"
+      },
+      {
+        word: "defiant",
+        phrase: "a defiant look",
+        choices: ["rebellious", "obedient", "cheerful", "shy"],
+        answerIndex: 0,
+        meaning: "boldly resisting authority"
+      },
+      {
+        word: "fragile",
+        phrase: "a fragile vase",
+        choices: ["delicate", "sturdy", "unbreakable", "heavy"],
+        answerIndex: 0,
+        meaning: "easily broken or damaged"
+      },
+      {
+        word: "gargantuan",
+        phrase: "a gargantuan meal",
+        choices: ["huge", "tiny", "average", "modest"],
+        answerIndex: 0,
+        meaning: "enormous; gigantic"
+      },
+      {
+        word: "hinder",
+        phrase: "rain will hinder our plans",
+        choices: ["delay", "help", "speed up", "allow"],
+        answerIndex: 0,
+        meaning: "to create difficulty for; delay or obstruct"
+      },
+      {
+        word: "jostle",
+        phrase: "the crowd began to jostle",
+        choices: ["push", "wait", "freeze", "applaud"],
+        answerIndex: 0,
+        meaning: "to bump or push roughly, as in a crowd"
+      }
+    ]
+  },
+  {
+    id: "set20",
+    name: "Grade 6 Vocabulary 2",
+    words: [
+      {
+        word: "abundant",
+        phrase: "an abundant harvest",
+        choices: ["plentiful", "scarce", "meager", "limited"],
+        answerIndex: 0,
+        meaning: "existing in large quantities; plentiful"
+      },
+      {
+        word: "bellow",
+        phrase: "the coach began to bellow",
+        choices: ["shout", "whisper", "sing", "hum"],
+        answerIndex: 0,
+        meaning: "to shout loudly"
+      },
+      {
+        word: "diminish",
+        phrase: "the pain will diminish",
+        choices: ["decrease", "increase", "remain", "spread"],
+        answerIndex: 0,
+        meaning: "to become or make smaller; lessen"
+      },
+      {
+        word: "exaggerate",
+        phrase: "don't exaggerate the story",
+        choices: ["overstate", "understate", "ignore", "forget"],
+        answerIndex: 0,
+        meaning: "to make something seem larger or more important than it is"
+      },
+      {
+        word: "formidable",
+        phrase: "a formidable opponent",
+        choices: ["daunting", "weak", "harmless", "easy"],
+        answerIndex: 0,
+        meaning: "inspiring fear or respect through being impressive or powerful"
+      },
+      {
+        word: "inevitably",
+        phrase: "inevitably, the truth came out",
+        choices: ["unavoidably", "possibly", "occasionally", "unlikely"],
+        answerIndex: 0,
+        meaning: "in a way that cannot be avoided; certainly"
+      },
+      {
+        word: "rigorous",
+        phrase: "a rigorous training schedule",
+        choices: ["demanding", "easy", "relaxed", "casual"],
+        answerIndex: 0,
+        meaning: "extremely thorough and demanding"
+      },
+      {
+        word: "unanimous",
+        phrase: "a unanimous vote",
+        choices: ["united", "divided", "split", "undecided"],
+        answerIndex: 0,
+        meaning: "fully in agreement; united in opinion"
+      },
+      {
+        word: "dwell",
+        phrase: "they dwell in the mountains",
+        choices: ["live", "travel", "visit", "wander"],
+        answerIndex: 0,
+        meaning: "to live in or reside at a place"
+      },
+      {
+        word: "eerie",
+        phrase: "an eerie silence",
+        choices: ["spooky", "comforting", "cheerful", "ordinary"],
+        answerIndex: 0,
+        meaning: "strange and frightening"
+      },
+      {
+        word: "frivolous",
+        phrase: "a frivolous excuse",
+        choices: ["silly", "serious", "valid", "important"],
+        answerIndex: 0,
+        meaning: "not having any serious purpose; trivial"
+      },
+      {
+        word: "hostile",
+        phrase: "a hostile crowd",
+        choices: ["unfriendly", "welcoming", "calm", "friendly"],
+        answerIndex: 0,
+        meaning: "unfriendly or aggressive"
+      },
+      {
+        word: "improvises",
+        phrase: "she improvises when she forgets her lines",
+        choices: ["adapts on the spot", "memorizes exactly", "reads aloud", "rehearses"],
+        answerIndex: 0,
+        meaning: "creates or performs something without preparation"
+      },
+      {
+        word: "linger",
+        phrase: "the smell began to linger",
+        choices: ["remain", "vanish", "fade quickly", "disperse"],
+        answerIndex: 0,
+        meaning: "to stay somewhere longer than necessary"
+      },
+      {
+        word: "monotonous",
+        phrase: "a monotonous lecture",
+        choices: ["boring", "exciting", "varied", "lively"],
+        answerIndex: 0,
+        meaning: "dull and repetitive; lacking variety"
+      }
+    ]
+  },
+  {
+    id: "set21",
+    name: "Vocabulary Quiz Words",
+    words: [
+      {
+        word: "melancholy",
+        phrase: "a melancholy mood",
+        choices: ["sad", "joyful", "excited", "calm"],
+        answerIndex: 0,
+        meaning: "a feeling of deep sadness"
+      },
+      {
+        word: "replenish",
+        phrase: "replenish the water supply",
+        choices: ["refill", "empty", "drain", "waste"],
+        answerIndex: 0,
+        meaning: "to fill something up again"
+      },
+      {
+        word: "vanish",
+        phrase: "the rabbit seemed to vanish",
+        choices: ["disappear", "appear", "remain", "arrive"],
+        answerIndex: 0,
+        meaning: "to disappear suddenly"
+      },
+      {
+        word: "fascinating",
+        phrase: "a fascinating documentary",
+        choices: ["captivating", "boring", "dull", "tedious"],
+        answerIndex: 0,
+        meaning: "extremely interesting"
+      },
+      {
+        word: "perilous",
+        phrase: "a perilous journey",
+        choices: ["dangerous", "safe", "easy", "calm"],
+        answerIndex: 0,
+        meaning: "full of danger or risk"
+      },
+      {
+        word: "flawless",
+        phrase: "a flawless performance",
+        choices: ["perfect", "sloppy", "messy", "clumsy"],
+        answerIndex: 0,
+        meaning: "without any mistakes or imperfections"
+      }
+    ]
   }
 ];
