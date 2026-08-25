@@ -8,7 +8,6 @@
   var STREAK_TO_CLEAR = 2;
 
   var HISTORY_DISPLAY_LIMIT = 20;
-  var MATH2_SESSION_LENGTH = 10;
 
   var homeScreen = document.getElementById("home-screen");
   var quizScreen = document.getElementById("quiz-screen");
@@ -796,13 +795,20 @@
       var math2Wrap = document.createElement("div");
       math2Wrap.className = "home-actions";
 
+      var math2WeakCategories = weakMath2Categories(progress);
+      var math2QuestionCount =
+        window.MATH2_QUESTIONS.length + math2WeakCategories.length * MATH2_EXTRA_PER_MISS;
       var math2Btn = document.createElement("button");
       math2Btn.className = "set-card";
       math2Btn.innerHTML =
         '<span><span class="set-name">Daily Math 2 Practice</span>' +
         '<span class="set-meta">' +
-        MATH2_SESSION_LENGTH +
-        " mixed questions</span></span>";
+        math2QuestionCount +
+        " mixed questions" +
+        (math2WeakCategories.length > 0
+          ? " (extra practice on weak areas included)"
+          : "") +
+        "</span></span>";
       math2Btn.addEventListener("click", function () {
         startMath2Practice();
       });
@@ -1402,21 +1408,22 @@
   }
 
   function startMath2Practice() {
-    var picked = shuffle(window.MATH2_QUESTIONS)
-      .slice(0, MATH2_SESSION_LENGTH)
-      .map(function (q) {
-        return {
-          type: "math2",
-          topic: "Math 2",
-          prompt: q.prompt,
-          choices: q.choices,
-          answerIndex: q.answerIndex
-        };
-      });
+    var progress = loadProgress();
+    var base = window.MATH2_QUESTIONS.map(function (q) {
+      return {
+        type: "math2",
+        topic: "Math 2",
+        category: q.category,
+        prompt: q.prompt,
+        choices: q.choices,
+        answerIndex: q.answerIndex
+      };
+    });
+    var extra = generateMath2Extras(weakMath2Categories(progress), MATH2_EXTRA_PER_MISS);
     quizState = {
       setId: null,
       mode: "math2",
-      questions: picked,
+      questions: shuffle(base.concat(extra)),
       index: 0,
       score: 0,
       missedThisRound: []
@@ -1425,14 +1432,229 @@
     showScreen(quizScreen);
   }
 
+  // ---------- Math 2 missed-topic reinforcement ----------
+  // When a Math 2 question is missed, its review session pulls in a few
+  // freshly generated problems of the same computation type (not just the
+  // exact missed question repeated) so Jayden gets extra reps on the type
+  // of problem he struggled with.
+
+  var MATH2_EXTRA_PER_MISS = 2;
+
+  function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function gcd(a, b) {
+    a = Math.abs(a);
+    b = Math.abs(b);
+    while (b) {
+      var t = b;
+      b = a % b;
+      a = t;
+    }
+    return a || 1;
+  }
+
+  function fractionString(num, den) {
+    if (den < 0) {
+      num = -num;
+      den = -den;
+    }
+    var g = gcd(num, den);
+    num = num / g;
+    den = den / g;
+    return den === 1 ? String(num) : num + "/" + den;
+  }
+
+  function uniquePush(list, value) {
+    if (list.indexOf(value) === -1) list.push(value);
+  }
+
+  function makeMath2Question(prompt, category, correctText, wrongTexts) {
+    var choices = [correctText];
+    for (var i = 0; i < wrongTexts.length && choices.length < 4; i++) {
+      uniquePush(choices, wrongTexts[i]);
+    }
+    var filler = 1;
+    while (choices.length < 4) {
+      var candidate = correctText + " (" + filler + ")";
+      uniquePush(choices, candidate);
+      filler++;
+    }
+    return {
+      type: "math2",
+      topic: "Math 2",
+      category: category,
+      prompt: prompt,
+      choices: choices,
+      answerIndex: 0
+    };
+  }
+
+  var MATH2_GENERATORS = {
+    mult3x2: function () {
+      var a = randomInt(100, 999);
+      var b = randomInt(10, 99);
+      var correct = a * b;
+      var wrong = [];
+      [correct + 100, correct - 100, correct + 10, correct - 10, correct + 1].forEach(
+        function (v) {
+          if (v > 0 && v !== correct) uniquePush(wrong, v.toLocaleString("en-US"));
+        }
+      );
+      return makeMath2Question(
+        "What is " + a + " × " + b + "?",
+        "mult3x2",
+        correct.toLocaleString("en-US"),
+        wrong
+      );
+    },
+    div4x2: function () {
+      var divisor = randomInt(11, 89);
+      var minQ = Math.ceil(1000 / divisor);
+      var maxQ = Math.floor(9999 / divisor);
+      var quotient = randomInt(minQ, maxQ);
+      var dividend = divisor * quotient;
+      var wrong = [];
+      [quotient + 1, quotient - 1, quotient + 10, quotient - 10].forEach(function (v) {
+        if (v > 0 && v !== quotient) uniquePush(wrong, String(v));
+      });
+      return makeMath2Question(
+        "What is " + dividend.toLocaleString("en-US") + " ÷ " + divisor + "?",
+        "div4x2",
+        String(quotient),
+        wrong
+      );
+    },
+    fracAddSub: function () {
+      var d1, d2, n1, n2, isAdd;
+      do {
+        d1 = randomInt(2, 9);
+        do {
+          d2 = randomInt(2, 9);
+        } while (d2 === d1);
+        n1 = randomInt(1, d1 - 1);
+        n2 = randomInt(1, d2 - 1);
+        isAdd = Math.random() < 0.5;
+      } while (!isAdd && n1 * d2 === n2 * d1);
+      if (!isAdd && n1 / d1 < n2 / d2) {
+        var tn = n1,
+          td = d1;
+        n1 = n2;
+        d1 = d2;
+        n2 = tn;
+        d2 = td;
+      }
+      var lcmVal = (d1 * d2) / gcd(d1, d2);
+      var combinedNum = isAdd
+        ? n1 * (lcmVal / d1) + n2 * (lcmVal / d2)
+        : n1 * (lcmVal / d1) - n2 * (lcmVal / d2);
+      var correct = fractionString(combinedNum, lcmVal);
+      var wrong = [];
+      uniquePush(
+        wrong,
+        fractionString(isAdd ? n1 + n2 : Math.abs(n1 - n2), d1 + d2)
+      );
+      uniquePush(wrong, fractionString(combinedNum + 1, lcmVal));
+      uniquePush(wrong, fractionString(Math.max(combinedNum - 1, 1), lcmVal));
+      uniquePush(wrong, fractionString(n1, d2));
+      return makeMath2Question(
+        "What is " + n1 + "/" + d1 + (isAdd ? " + " : " - ") + n2 + "/" + d2 + "?",
+        "fracAddSub",
+        correct,
+        wrong
+      );
+    },
+    fracMulDiv: function () {
+      var d1 = randomInt(2, 9);
+      var d2 = randomInt(2, 9);
+      var n1 = randomInt(1, d1 - 1);
+      var n2 = randomInt(1, d2 - 1);
+      var isMul = Math.random() < 0.5;
+      var resultNum = isMul ? n1 * n2 : n1 * d2;
+      var resultDen = isMul ? d1 * d2 : d1 * n2;
+      var correct = fractionString(resultNum, resultDen);
+      var wrong = [];
+      uniquePush(wrong, fractionString(n1 + n2, d1 + d2));
+      uniquePush(wrong, fractionString(isMul ? n1 * d2 : n1 * n2, isMul ? d1 * n2 : d1 * d2));
+      uniquePush(wrong, fractionString(resultNum + 1, resultDen));
+      uniquePush(wrong, fractionString(n2, n1 || 1));
+      return makeMath2Question(
+        "What is " + n1 + "/" + d1 + " " + (isMul ? "×" : "÷") + " " + n2 + "/" + d2 + "?",
+        "fracMulDiv",
+        correct,
+        wrong
+      );
+    },
+    decMult: function () {
+      var places = Math.random() < 0.5 ? 1 : 2;
+      var scale = Math.pow(10, places);
+      var scaledInt = randomInt(11, 9 * scale + 9);
+      var digit = randomInt(2, 9);
+      var product = scaledInt * digit;
+
+      function formatScaled(intValue, decimalPlaces) {
+        var negative = intValue < 0;
+        intValue = Math.abs(intValue);
+        var s = String(intValue);
+        while (s.length <= decimalPlaces) s = "0" + s;
+        var whole = decimalPlaces === 0 ? s : s.slice(0, s.length - decimalPlaces);
+        var frac = decimalPlaces === 0 ? "" : s.slice(s.length - decimalPlaces);
+        frac = frac.replace(/0+$/, "");
+        var text = frac.length ? whole + "." + frac : whole;
+        return negative ? "-" + text : text;
+      }
+
+      var decimalStr = formatScaled(scaledInt, places);
+      var correct = formatScaled(product, places);
+      var wrong = [];
+      uniquePush(wrong, formatScaled(product, places + 1));
+      uniquePush(wrong, formatScaled(product, Math.max(places - 1, 0)));
+      uniquePush(wrong, formatScaled(product - digit, places));
+      uniquePush(wrong, formatScaled(product + digit, places));
+      return makeMath2Question(
+        "What is " + decimalStr + " × " + digit + "?",
+        "decMult",
+        correct,
+        wrong
+      );
+    }
+  };
+
+  function weakMath2Categories(progress) {
+    var seen = {};
+    var categories = [];
+    Object.keys(progress.missedMath2).forEach(function (key) {
+      var cat = progress.missedMath2[key].data.category;
+      if (cat && !seen[cat]) {
+        seen[cat] = true;
+        categories.push(cat);
+      }
+    });
+    return categories;
+  }
+
+  function generateMath2Extras(categories, countPerCategory) {
+    var extra = [];
+    categories.forEach(function (category) {
+      var generator = MATH2_GENERATORS[category];
+      if (!generator) return;
+      for (var i = 0; i < countPerCategory; i++) {
+        extra.push(generator());
+      }
+    });
+    return extra;
+  }
+
   function startMath2Review(progress) {
     var problems = Object.keys(progress.missedMath2).map(function (key) {
       return progress.missedMath2[key].data;
     });
+    var extra = generateMath2Extras(weakMath2Categories(progress), MATH2_EXTRA_PER_MISS);
     quizState = {
       setId: null,
       mode: "math2Review",
-      questions: shuffle(problems),
+      questions: shuffle(problems.concat(extra)),
       index: 0,
       score: 0,
       missedThisRound: []
