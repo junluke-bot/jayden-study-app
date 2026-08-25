@@ -8,6 +8,7 @@
   var STREAK_TO_CLEAR = 2;
 
   var HISTORY_DISPLAY_LIMIT = 20;
+  var MATH2_SESSION_LENGTH = 7;
 
   var homeScreen = document.getElementById("home-screen");
   var quizScreen = document.getElementById("quiz-screen");
@@ -796,18 +797,15 @@
       math2Wrap.className = "home-actions";
 
       var math2WeakCategories = weakMath2Categories(progress);
-      var math2QuestionCount =
-        window.MATH2_QUESTIONS.length + math2WeakCategories.length * MATH2_EXTRA_PER_MISS;
       var math2Btn = document.createElement("button");
       math2Btn.className = "set-card";
       math2Btn.innerHTML =
         '<span><span class="set-name">Daily Math 2 Practice</span>' +
         '<span class="set-meta">' +
-        math2QuestionCount +
-        " mixed questions" +
+        MATH2_SESSION_LENGTH +
         (math2WeakCategories.length > 0
-          ? " (extra practice on weak areas included)"
-          : "") +
+          ? " questions targeting weak areas"
+          : " mixed questions") +
         "</span></span>";
       math2Btn.addEventListener("click", function () {
         startMath2Practice();
@@ -1407,23 +1405,24 @@
     showScreen(quizScreen);
   }
 
+  function buildMath2PracticeQuestions(progress) {
+    var weakCategories = weakMath2Categories(progress);
+    var activeCategories =
+      weakCategories.length > 0 ? weakCategories : Object.keys(MATH2_GENERATORS);
+    var questions = [];
+    for (var i = 0; i < MATH2_SESSION_LENGTH; i++) {
+      var category = activeCategories[i % activeCategories.length];
+      questions.push(MATH2_GENERATORS[category]());
+    }
+    return shuffle(questions);
+  }
+
   function startMath2Practice() {
     var progress = loadProgress();
-    var base = window.MATH2_QUESTIONS.map(function (q) {
-      return {
-        type: "math2",
-        topic: "Math 2",
-        category: q.category,
-        prompt: q.prompt,
-        choices: q.choices,
-        answerIndex: q.answerIndex
-      };
-    });
-    var extra = generateMath2Extras(weakMath2Categories(progress), MATH2_EXTRA_PER_MISS);
     quizState = {
       setId: null,
       mode: "math2",
-      questions: shuffle(base.concat(extra)),
+      questions: buildMath2PracticeQuestions(progress),
       index: 0,
       score: 0,
       missedThisRound: []
