@@ -1508,7 +1508,7 @@
     var categories = [];
     Object.keys(progress.missedMath2).forEach(function (key) {
       var cat = progress.missedMath2[key].data.category;
-      if (cat && !seen[cat]) {
+      if (cat && MATH2_GENERATORS[cat] && !seen[cat]) {
         seen[cat] = true;
         categories.push(cat);
       }
