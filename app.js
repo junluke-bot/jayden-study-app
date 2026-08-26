@@ -796,17 +796,13 @@
       var math2Wrap = document.createElement("div");
       math2Wrap.className = "home-actions";
 
-      var math2WeakCategories = weakMath2Categories(progress);
       var math2Btn = document.createElement("button");
       math2Btn.className = "set-card";
       math2Btn.innerHTML =
         '<span><span class="set-name">Daily Math 2 Practice</span>' +
         '<span class="set-meta">' +
         MATH2_SESSION_LENGTH +
-        (math2WeakCategories.length > 0
-          ? " questions targeting weak areas"
-          : " mixed questions") +
-        "</span></span>";
+        " decimal multiplication questions</span></span>";
       math2Btn.addEventListener("click", function () {
         startMath2Practice();
       });
@@ -1443,28 +1439,6 @@
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  function gcd(a, b) {
-    a = Math.abs(a);
-    b = Math.abs(b);
-    while (b) {
-      var t = b;
-      b = a % b;
-      a = t;
-    }
-    return a || 1;
-  }
-
-  function fractionString(num, den) {
-    if (den < 0) {
-      num = -num;
-      den = -den;
-    }
-    var g = gcd(num, den);
-    num = num / g;
-    den = den / g;
-    return den === 1 ? String(num) : num + "/" + den;
-  }
-
   function uniquePush(list, value) {
     if (list.indexOf(value) === -1) list.push(value);
   }
@@ -1491,100 +1465,6 @@
   }
 
   var MATH2_GENERATORS = {
-    mult3x2: function () {
-      var a = randomInt(100, 999);
-      var b = randomInt(10, 99);
-      var correct = a * b;
-      var wrong = [];
-      [correct + 100, correct - 100, correct + 10, correct - 10, correct + 1].forEach(
-        function (v) {
-          if (v > 0 && v !== correct) uniquePush(wrong, v.toLocaleString("en-US"));
-        }
-      );
-      return makeMath2Question(
-        "What is " + a + " × " + b + "?",
-        "mult3x2",
-        correct.toLocaleString("en-US"),
-        wrong
-      );
-    },
-    div4x2: function () {
-      var divisor = randomInt(11, 89);
-      var minQ = Math.ceil(1000 / divisor);
-      var maxQ = Math.floor(9999 / divisor);
-      var quotient = randomInt(minQ, maxQ);
-      var dividend = divisor * quotient;
-      var wrong = [];
-      [quotient + 1, quotient - 1, quotient + 10, quotient - 10].forEach(function (v) {
-        if (v > 0 && v !== quotient) uniquePush(wrong, String(v));
-      });
-      return makeMath2Question(
-        "What is " + dividend.toLocaleString("en-US") + " ÷ " + divisor + "?",
-        "div4x2",
-        String(quotient),
-        wrong
-      );
-    },
-    fracAddSub: function () {
-      var d1, d2, n1, n2, isAdd;
-      do {
-        d1 = randomInt(2, 9);
-        do {
-          d2 = randomInt(2, 9);
-        } while (d2 === d1);
-        n1 = randomInt(1, d1 - 1);
-        n2 = randomInt(1, d2 - 1);
-        isAdd = Math.random() < 0.5;
-      } while (!isAdd && n1 * d2 === n2 * d1);
-      if (!isAdd && n1 / d1 < n2 / d2) {
-        var tn = n1,
-          td = d1;
-        n1 = n2;
-        d1 = d2;
-        n2 = tn;
-        d2 = td;
-      }
-      var lcmVal = (d1 * d2) / gcd(d1, d2);
-      var combinedNum = isAdd
-        ? n1 * (lcmVal / d1) + n2 * (lcmVal / d2)
-        : n1 * (lcmVal / d1) - n2 * (lcmVal / d2);
-      var correct = fractionString(combinedNum, lcmVal);
-      var wrong = [];
-      uniquePush(
-        wrong,
-        fractionString(isAdd ? n1 + n2 : Math.abs(n1 - n2), d1 + d2)
-      );
-      uniquePush(wrong, fractionString(combinedNum + 1, lcmVal));
-      uniquePush(wrong, fractionString(Math.max(combinedNum - 1, 1), lcmVal));
-      uniquePush(wrong, fractionString(n1, d2));
-      return makeMath2Question(
-        "What is " + n1 + "/" + d1 + (isAdd ? " + " : " - ") + n2 + "/" + d2 + "?",
-        "fracAddSub",
-        correct,
-        wrong
-      );
-    },
-    fracMulDiv: function () {
-      var d1 = randomInt(2, 9);
-      var d2 = randomInt(2, 9);
-      var n1 = randomInt(1, d1 - 1);
-      var n2 = randomInt(1, d2 - 1);
-      var isMul = Math.random() < 0.5;
-      var resultNum = isMul ? n1 * n2 : n1 * d2;
-      var resultDen = isMul ? d1 * d2 : d1 * n2;
-      var correct = fractionString(resultNum, resultDen);
-      var wrong = [];
-      uniquePush(wrong, fractionString(n1 + n2, d1 + d2));
-      uniquePush(wrong, fractionString(isMul ? n1 * d2 : n1 * n2, isMul ? d1 * n2 : d1 * d2));
-      uniquePush(wrong, fractionString(resultNum + 1, resultDen));
-      uniquePush(wrong, fractionString(n2, n1 || 1));
-      return makeMath2Question(
-        "What is " + n1 + "/" + d1 + " " + (isMul ? "×" : "÷") + " " + n2 + "/" + d2 + "?",
-        "fracMulDiv",
-        correct,
-        wrong
-      );
-    },
     decMult: function () {
       var places = 1;
       var scale = Math.pow(10, places);
