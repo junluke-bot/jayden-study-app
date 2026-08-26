@@ -37,8 +37,32 @@ window.MATH2_QUESTIONS = [
     category: "fracMulDiv"
   },
   {
-    prompt: "What is 6.4 × 7?",
-    choices: ["44.8", "4.48", "448", "43.8"],
+    prompt: "What is 4.3 × 6?",
+    choices: ["25.8", "2.58", "258", "19.8"],
+    answerIndex: 0,
+    category: "decMult"
+  },
+  {
+    prompt: "What is 7.2 × 8?",
+    choices: ["57.6", "5.76", "576", "49.6"],
+    answerIndex: 0,
+    category: "decMult"
+  },
+  {
+    prompt: "What is 3.6 × 9?",
+    choices: ["32.4", "3.24", "324", "23.4"],
+    answerIndex: 0,
+    category: "decMult"
+  },
+  {
+    prompt: "What is 8.5 × 3?",
+    choices: ["25.5", "2.55", "255", "22.5"],
+    answerIndex: 0,
+    category: "decMult"
+  },
+  {
+    prompt: "What is 6.7 × 5?",
+    choices: ["33.5", "3.35", "335", "28.5"],
     answerIndex: 0,
     category: "decMult"
   }

@@ -1586,9 +1586,12 @@
       );
     },
     decMult: function () {
-      var places = Math.random() < 0.5 ? 1 : 2;
+      var places = 1;
       var scale = Math.pow(10, places);
-      var scaledInt = randomInt(11, 9 * scale + 9);
+      var scaledInt;
+      do {
+        scaledInt = randomInt(11, 9 * scale + 9);
+      } while (scaledInt % scale === 0);
       var digit = randomInt(2, 9);
       var product = scaledInt * digit;
 
