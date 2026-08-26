@@ -65,5 +65,11 @@ window.MATH2_QUESTIONS = [
     choices: ["33.5", "3.35", "335", "28.5"],
     answerIndex: 0,
     category: "decMult"
+  },
+  {
+    prompt: "What is 2.9 × 4?",
+    choices: ["11.6", "1.16", "116", "7.6"],
+    answerIndex: 0,
+    category: "decMult"
   }
 ];
