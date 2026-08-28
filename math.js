@@ -374,5 +374,71 @@ window.MATH_SETS = [
         answerIndex: 0
       }
     ]
+  },
+  {
+    id: "set9",
+    name: "Math Set 9",
+    questions: [
+      {
+        prompt:
+          "What is the volume of the figure below? The measurements of 1 block are 1 cm by 1 cm by 1 cm.",
+        diagram: { type: "cubeBlock", width: 2, height: 8, depth: 1 },
+        choices: [
+          "16 cubic centimeters (16 cm³)",
+          "8 cubic centimeters (8 cm³)",
+          "160 cubic centimeters (160 cm³)",
+          "24 cubic centimeters (24 cm³)"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "What is the volume of the figure below? The measurements of 1 block are 1 cm by 1 cm by 1 cm.",
+        diagram: { type: "cubeBlock", width: 2, height: 6, depth: 2 },
+        choices: [
+          "24 cubic centimeters (24 cm³)",
+          "12 cubic centimeters (12 cm³)",
+          "240 cubic centimeters (240 cm³)",
+          "20 cubic centimeters (20 cm³)"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "What is the volume of the figure below? The measurements of 1 block are 1 cm by 1 cm by 1 cm.",
+        diagram: { type: "cubeBlock", width: 3, height: 6, depth: 1 },
+        choices: [
+          "18 cubic centimeters (18 cm³)",
+          "12 cubic centimeters (12 cm³)",
+          "180 cubic centimeters (180 cm³)",
+          "15 cubic centimeters (15 cm³)"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "What is the volume of the figure below? The measurements of 1 block are 1 cm by 1 cm by 1 cm.",
+        diagram: { type: "cubeBlock", width: 2, height: 10, depth: 1 },
+        choices: [
+          "20 cubic centimeters (20 cm³)",
+          "10 cubic centimeters (10 cm³)",
+          "200 cubic centimeters (200 cm³)",
+          "18 cubic centimeters (18 cm³)"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "What is the volume of the figure below? The measurements of 1 block are 1 cm by 1 cm by 1 cm.",
+        diagram: { type: "cubeBlock", width: 3, height: 7, depth: 1 },
+        choices: [
+          "21 cubic centimeters (21 cm³)",
+          "10 cubic centimeters (10 cm³)",
+          "210 cubic centimeters (210 cm³)",
+          "24 cubic centimeters (24 cm³)"
+        ],
+        answerIndex: 0
+      }
+    ]
   }
 ];
