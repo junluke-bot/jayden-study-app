@@ -1220,4 +1220,145 @@ window.WORD_STUDY_SETS = [
       },
     ]
   },
+  {
+    id: "wordstudy-missed",
+    name: "Missed Words",
+    questions: [
+      {
+        prompt: "What does \"approximately\" mean?",
+        choices: ["close to an exact amount but not exactly", "unpredictable", "hidden from sight or kept secret", "misfortune; challenging circumstances"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"intercept\" mean?",
+        choices: ["to stop or catch something before it reaches its destination", "argue; assert", "very strong or extreme", "a hidden or stored supply of useful things"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"cache\" mean?",
+        choices: ["a hidden or stored supply of useful things", "failure, disaster", "written or official documents", "very strong or extreme"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"reserved\" mean?",
+        choices: ["quiet and not quick to show feelings", "a hidden or stored supply of useful things", "hidden from sight or kept secret", "idea or opinion without evidence"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"anticipation\" mean?",
+        choices: ["a feeling of excitement or expectation about what will happen", "unpredictable", "scatter", "mythology, stories, body of traditions"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"concealed\" mean?",
+        choices: ["hidden from sight or kept secret", "unpredictable", "dry; barren", "written or official documents"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"pedestrian\" mean?",
+        choices: ["ordinary and dull; unremarkable", "misfortune; challenging circumstances", "unpredictable", "producing a clear, strong image in the mind"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"obsolete\" mean?",
+        choices: ["no longer used; outdated", "to stop or catch something before it reaches its destination", "nonprofessional; unskilled", "argue; assert"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"intense\" mean?",
+        choices: ["very strong or extreme", "dry; barren", "written or official documents", "to return to a previous state"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"vivid\" mean?",
+        choices: ["producing a clear, strong image in the mind", "lack", "scatter", "a hidden or stored supply of useful things"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"antagonist\" mean?",
+        choices: ["a character who opposes the main character", "a hidden or stored supply of useful things", "written or official documents", "argue; assert"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"records\" mean?",
+        choices: ["written or official documents", "a hidden or stored supply of useful things", "dry; barren", "lack"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"revert\" mean?",
+        choices: ["to return to a previous state", "quiet and not quick to show feelings", "idea or opinion without evidence", "to stop or catch something before it reaches its destination"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"amateur\" mean?",
+        choices: ["nonprofessional; unskilled", "argue; assert", "unpredictable", "hidden from sight or kept secret"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"adversity\" mean?",
+        choices: ["misfortune; challenging circumstances", "a hidden or stored supply of useful things", "a character who opposes the main character", "quiet and not quick to show feelings"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"animosity\" mean?",
+        choices: ["intense hostility", "dry; barren", "idea or opinion without evidence", "failure, disaster"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"ambiance\" mean?",
+        choices: ["the atmosphere or mood of a place", "mythology, stories, body of traditions", "intense hostility", "unpredictable"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"arid\" mean?",
+        choices: ["dry; barren", "ordinary and dull; unremarkable", "to return to a previous state", "intense hostility"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"dearth\" mean?",
+        choices: ["lack", "written or official documents", "a character who opposes the main character", "unpredictable"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"contend\" mean?",
+        choices: ["argue; assert", "the atmosphere or mood of a place", "a feeling of excitement or expectation about what will happen", "mythology, stories, body of traditions"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"conjecture\" mean?",
+        choices: ["idea or opinion without evidence", "producing a clear, strong image in the mind", "a feeling of excitement or expectation about what will happen", "misfortune; challenging circumstances"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"lore\" mean?",
+        choices: ["mythology, stories, body of traditions", "accept enthusiastically", "intense hostility", "lack"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"erratic\" mean?",
+        choices: ["unpredictable", "accept enthusiastically", "producing a clear, strong image in the mind", "hidden from sight or kept secret"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"disperse\" mean?",
+        choices: ["scatter", "dry; barren", "to return to a previous state", "very strong or extreme"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"embrace\" mean?",
+        choices: ["accept enthusiastically", "intense hostility", "misfortune; challenging circumstances", "eccentricity, quirk"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"idiosyncrasy\" mean?",
+        choices: ["eccentricity, quirk", "nonprofessional; unskilled", "quiet and not quick to show feelings", "the atmosphere or mood of a place"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does \"fiasco\" mean?",
+        choices: ["failure, disaster", "the atmosphere or mood of a place", "written or official documents", "idea or opinion without evidence"],
+        answerIndex: 0
+      }
+    ]
+  }
 ];
