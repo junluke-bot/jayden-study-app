@@ -381,62 +381,32 @@ window.MATH_SETS = [
     questions: [
       {
         prompt:
-          "What is the volume of the figure below? The measurements of 1 block are 1 cm by 1 cm by 1 cm.",
-        diagram: { type: "cubeBlock", width: 2, height: 8, depth: 1 },
-        choices: [
-          "16 cubic centimeters (16 cm³)",
-          "8 cubic centimeters (8 cm³)",
-          "160 cubic centimeters (160 cm³)",
-          "24 cubic centimeters (24 cm³)"
-        ],
+          "Maria has a 2-gallon container of orange juice. She pours out 15 ounces for breakfast. How much orange juice is left in the container, in ounces?",
+        choices: ["241", "256", "231", "251"],
         answerIndex: 0
       },
       {
         prompt:
-          "What is the volume of the figure below? The measurements of 1 block are 1 cm by 1 cm by 1 cm.",
-        diagram: { type: "cubeBlock", width: 2, height: 6, depth: 2 },
-        choices: [
-          "24 cubic centimeters (24 cm³)",
-          "12 cubic centimeters (12 cm³)",
-          "240 cubic centimeters (240 cm³)",
-          "20 cubic centimeters (20 cm³)"
-        ],
+          "Carlos filled a 4-quart pitcher with iced tea. He served 12 ounces to a friend. How much iced tea remains in the pitcher, in ounces?",
+        choices: ["116", "128", "106", "120"],
         answerIndex: 0
       },
       {
         prompt:
-          "What is the volume of the figure below? The measurements of 1 block are 1 cm by 1 cm by 1 cm.",
-        diagram: { type: "cubeBlock", width: 3, height: 6, depth: 1 },
-        choices: [
-          "18 cubic centimeters (18 cm³)",
-          "12 cubic centimeters (12 cm³)",
-          "180 cubic centimeters (180 cm³)",
-          "15 cubic centimeters (15 cm³)"
-        ],
+          "A recipe calls for 1 gallon of milk. Jenny has already used 40 ounces of it. How many ounces of milk does she have left from the original gallon?",
+        choices: ["88", "128", "98", "78"],
         answerIndex: 0
       },
       {
         prompt:
-          "What is the volume of the figure below? The measurements of 1 block are 1 cm by 1 cm by 1 cm.",
-        diagram: { type: "cubeBlock", width: 2, height: 10, depth: 1 },
-        choices: [
-          "20 cubic centimeters (20 cm³)",
-          "10 cubic centimeters (10 cm³)",
-          "200 cubic centimeters (200 cm³)",
-          "18 cubic centimeters (18 cm³)"
-        ],
+          "Tom bought a 3-quart bottle of sports drink. He drank 18 ounces during practice. How many ounces of sports drink are left in the bottle?",
+        choices: ["78", "96", "88", "68"],
         answerIndex: 0
       },
       {
         prompt:
-          "What is the volume of the figure below? The measurements of 1 block are 1 cm by 1 cm by 1 cm.",
-        diagram: { type: "cubeBlock", width: 3, height: 7, depth: 1 },
-        choices: [
-          "21 cubic centimeters (21 cm³)",
-          "10 cubic centimeters (10 cm³)",
-          "210 cubic centimeters (210 cm³)",
-          "24 cubic centimeters (24 cm³)"
-        ],
+          "A water cooler holds 5 gallons of water. By the end of the morning, 30 ounces have been used. How many ounces of water remain in the cooler?",
+        choices: ["610", "640", "620", "600"],
         answerIndex: 0
       }
     ]
