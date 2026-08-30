@@ -1,5 +1,8 @@
-// Reading comprehension passages for the Iowa Assessments practice app,
-// transcribed from an Iowa 5th Grade ELA practice test (Test C).
+// Reading comprehension passages for the Iowa Assessments practice app.
+// Passages 1-5 are transcribed from an Iowa 5th Grade ELA practice test (Test C).
+// Passages 6-10 use public-domain/government texts (Burgess's Reddy Fox,
+// Eggleston's Michael Angelo story, La Fontaine's fable, an Aesop's fable,
+// and a girlshealth.gov article) with original comprehension questions.
 // Each passage has an id, title, the passage text (paragraphs separated by
 // "\n\n"), and multiple choice questions.
 // Each question has:
@@ -361,6 +364,397 @@ window.READING_PASSAGES = [
           "The Lion is selfish",
           'The Man from "The Goose that Laid the Golden Eggs" makes the best choices',
           'The goose from "The Goose that Laid the Golden Eggs" had the least intelligence'
+        ],
+        answerIndex: 0
+      }
+    ]
+  },
+  {
+    id: "passage6",
+    title: "Reddy Grows Careless (adapted from The Adventures of Reddy Fox by Thornton W. Burgess)",
+    text: [
+      "Ol' Mistah Buzzard was right. Trouble was right at the heels of Reddy Fox, although Reddy wouldn't have believed it if he had been told. He had stolen that plump pet chicken of Farmer Brown's boy for no reason under the sun but to show off. He wanted everyone to know how bold he was. He thought himself so smart that he could do just exactly what he pleased and no one could stop him. He liked to strut around through the Green Forest and over the Green Meadows and brag about what he had done and what he could do.",
+      "Now people who brag and boast and who like to show off are almost sure to come to grief. And when they do, very few people are sorry for them. None of the little meadow and forest people liked Reddy Fox, anyway, and they were getting so tired of his boasting that they just ached to see him get into trouble.",
+      "Peter Rabbit, happy-go-lucky Peter Rabbit, shook his head gravely when he heard how Reddy had stolen that pet chicken of Farmer Brown's boy, and was boasting about it to everyone.",
+      "\"Reddy Fox is getting so puffed up that pretty soon he won't be able to see his own feet,\" said Peter Rabbit. \"If Reddy doesn't watch out, someday he'll step right into a trap.\"",
+      "Now when Farmer Brown's boy heard about the boldness of Reddy Fox, he shut his mouth tight in a way that was unpleasant to see and reached for his gun. \"I can't afford to raise chickens to feed foxes!\" said he. Then he whistled for Bowser the Hound, and together they started out. It wasn't long before Bowser found Reddy's tracks.",
+      "Reddy Fox, taking a nap on the edge of the Green Forest, heard Bowser's big, deep voice. He pricked up his ears, then he grinned. \"I feel just like a good run today,\" said he, and trotted off along the Crooked Little Path down the hill.",
+      "Now this was a beautiful summer day and Reddy knew that in summer men and boys seldom hunt foxes. \"It's only Bowser the Hound,\" thought Reddy, \"and when I've had a good run, I'll play a trick on him so that he will lose my track.\" So Reddy didn't use his eyes as he should have done. You see, he thought himself so smart that he had grown careless. He kept looking back to see where Bowser the Hound was, but didn't look around to make sure that no other danger was near.",
+      "Ol' Mistah Buzzard, sailing round and round, way up in the blue, blue sky, could see everything going on down below. He could see Reddy Fox running along the edge of the Green Forest and every few minutes stopping to chuckle and listen to Bowser the Hound trying to pick out the trail Reddy had made so hard to follow by his twists and turns. And he saw something else, did Ol' Mistah Buzzard. It looked to him very much like the barrel of a gun sticking out from behind an old tree just ahead of Reddy.",
+      "\"Ah reckon it's just like Ah said: Reddy Fox is gwine to meet trouble right smart soon,\" muttered Ol' Mistah Buzzard."
+    ].join("\n\n"),
+    questions: [
+      {
+        prompt: "Why do the other animals want to see Reddy Fox get into trouble?",
+        choices: [
+          "They are tired of his bragging and boasting.",
+          "They are jealous that he caught a chicken.",
+          "They are afraid of him.",
+          "They want Farmer Brown's boy to like them instead."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does it mean that Reddy Fox has \"grown careless\"?",
+        choices: [
+          "He has stopped paying close attention to danger.",
+          "He has become messy in his appearance.",
+          "He has forgotten how to run quickly.",
+          "He has lost interest in chickens."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Why does Peter Rabbit warn that Reddy might \"step right into a trap\"?",
+        choices: [
+          "He thinks Reddy's overconfidence will lead him into danger.",
+          "He wants Jimmy Skunk to set an actual trap for Reddy.",
+          "He is worried a trap has been left in the forest by mistake.",
+          "He heard Farmer Brown's boy planning it out loud."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "How does the author build suspense at the end of the passage?",
+        choices: [
+          "By showing a hidden danger is near while Reddy still feels safe.",
+          "By describing the weather changing suddenly.",
+          "By having Bowser the Hound give up the chase.",
+          "By revealing that Reddy already escaped safely."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What can readers infer about Ol' Mistah Buzzard's role in the story?",
+        choices: [
+          "He is an observer who can see danger the other characters cannot.",
+          "He is the one hunting Reddy Fox.",
+          "He is Farmer Brown's boy in disguise.",
+          "He is trying to warn Reddy directly."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which word best describes Reddy Fox's attitude at the start of the passage?",
+        choices: ["Boastful", "Fearful", "Modest", "Lonely"],
+        answerIndex: 0
+      }
+    ]
+  },
+  {
+    id: "passage7",
+    title: "How a Boy Was Hired Out, and What Came of It (adapted from Strange Stories from History for Young People by George Cary Eggleston)",
+    text: [
+      "When Michael Angelo was twelve years of age, although he had had no instruction in art, he did a piece of work which greatly pleased the painter Ghirlandajo. That artist at once declared that here was a lad of genius, who must quit his school studies and become a painter.",
+      "When Michael Angelo had been with Ghirlandajo about two years, he went one day to the Gardens of St. Mark, where the Prince Lorenzo de' Medici — who was the foremost patron of art in Florence — had established a rich museum of art-works at great expense. One of the workmen in the garden gave the boy leave to try his hand at copying some of the sculptures there, and Michael, who had hitherto studied only painting, was glad of a chance to experiment with the chisel, which he preferred to the brush. He chose for his model an ancient figure of a faun, which was somewhat mutilated. The mouth, indeed, was entirely broken off, but the boy was very self-reliant, and this did not trouble him. He worked day after day at the piece, creating a mouth for it of his own imagining, with the lips parted in laughter and the teeth displayed.",
+      "When he had finished, and was looking at his work, a man standing near asked if he might offer a criticism.",
+      "\"Yes,\" answered the boy, \"if it is a just one.\" \"Of that you shall be the judge,\" said the man. \"Very well. What is it?\" \"The forehead of your faun is old, but the mouth is young. See, it has a full set of perfect teeth. A faun so old as this one is would not have perfect teeth.\"",
+      "The lad admitted the justice of the criticism, and proceeded to remedy the defect by chipping away two or three of the teeth, and chiseling the gums so as to give them a shriveled appearance.",
+      "The next morning, when Michael went to remove his faun from the garden, it was gone. He searched everywhere for it, but without success. Finally, seeing the man who had made the suggestion about the teeth, he asked him if he knew where it was. \"Yes,\" replied the man, \"and if you will follow me I'll show you where it is.\" \"Will you give it back to me? I made it, and have a right to it.\" \"Oh, if you must have it, you shall.\"",
+      "With that he led the way into the palace of the prince, and there, among the most precious works of art in the collection, stood the faun. The young sculptor cried out in alarm, declaring that the Prince Lorenzo would never forgive the introduction of so rude a piece of work among his treasures of sculpture. To his astonishment the man declared that he was himself the Prince Lorenzo de' Medici, and that he set the highest value upon this work.",
+      "\"I am your protector and friend,\" he added. \"Henceforth you shall be counted as my son, for you are destined to become one of the great masters of art.\"",
+      "This was overwhelming good-fortune. Lorenzo de' Medici was a powerful nobleman, known far and wide to be a most expert judge of works of art. His approval was in itself fame and fortune."
+    ].join("\n\n"),
+    questions: [
+      {
+        prompt: "Why was Michael Angelo not troubled by the faun's missing mouth?",
+        choices: [
+          "He was confident enough to invent a new mouth himself.",
+          "He planned to ask Ghirlandajo for help.",
+          "He did not notice the mouth was missing.",
+          "He preferred sculptures without mouths."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "How did Michael Angelo react to the stranger's criticism of his sculpture?",
+        choices: [
+          "He accepted it and fixed the problem.",
+          "He argued that the criticism was unfair.",
+          "He abandoned the sculpture entirely.",
+          "He ignored the comment completely."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What was surprising about the identity of the man who criticized the sculpture?",
+        choices: [
+          "He turned out to be the powerful Prince Lorenzo de' Medici.",
+          "He turned out to be Ghirlandajo in disguise.",
+          "He turned out to be a thief.",
+          "He turned out to be another young sculptor."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Why does the author include the detail that the faun was placed among the prince's \"most precious works of art\"?",
+        choices: [
+          "To show how highly the prince valued Michael Angelo's work.",
+          "To explain how expensive the museum was.",
+          "To show that the faun was stolen property.",
+          "To describe what the garden looked like."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What lesson does this story MOST LIKELY teach?",
+        choices: [
+          "Being open to feedback can lead to great rewards.",
+          "Famous people should not be trusted.",
+          "Art museums are dangerous places.",
+          "Only trained painters can become sculptors."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Based on the passage, how would you describe Prince Lorenzo de' Medici?",
+        choices: [
+          "Generous and a skilled judge of art.",
+          "Suspicious and secretive.",
+          "Cruel and demanding.",
+          "Careless and easily fooled."
+        ],
+        answerIndex: 0
+      }
+    ]
+  },
+  {
+    id: "passage8",
+    title: "The Dove and the Ant (by Jean de La Fontaine)",
+    text: [
+      "An Ant who in a brook would drink",
+      "Fell off the bank. He tried",
+      "To swim, and felt his courage sink--",
+      "This ocean seemed so wide.",
+      "But for a dove who flew above",
+      "He would have drowned and died.",
+      "The friendly Dove within her beak",
+      "A bridge of grass-stem bore:",
+      "On this the Ant, though worn and weak.",
+      "Contrived to reach the shore",
+      "Said he: \"The tact of this kind act",
+      "I'll cherish evermore.\"",
+      "Behold! A barefoot wretch went by",
+      "With slingshot in his hand.",
+      "Said he: \"You'll make a pigeon pie",
+      "That will be kind of grand.\"",
+      "He meant to murder the gentle bird--",
+      "Who did not understand.",
+      "The Ant then stung him on the heel",
+      "(So quick to see the sling).",
+      "He turned his head, and missed a meal:",
+      "The pigeon pie took wing.",
+      "And so the Dove lived on to love--",
+      "Beloved by everything."
+    ].join("\n\n"),
+    questions: [
+      {
+        prompt: "Why does the Ant almost drown at the beginning of the poem?",
+        choices: [
+          "He falls into a brook and cannot swim well enough to escape it.",
+          "He is pushed in by another animal.",
+          "He is caught in a storm.",
+          "He falls asleep near the water."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "How does the Dove help the Ant?",
+        choices: [
+          "She gives him a blade of grass to use as a bridge to safety.",
+          "She carries him across in her beak.",
+          "She calls for help from other birds.",
+          "She pulls him out with her claws."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does the Ant do to repay the Dove's kindness?",
+        choices: [
+          "He stings a hunter's heel to stop him from catching the Dove.",
+          "He builds the Dove a nest.",
+          "He warns other ants about the hunter.",
+          "He brings the Dove food."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the theme, or lesson, of this poem?",
+        choices: [
+          "A kind act is often repaid with kindness.",
+          "Only the strong can help others.",
+          "It is foolish to trust strangers.",
+          "Small creatures should avoid danger."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which word best describes the \"barefoot wretch\" in the poem?",
+        choices: ["Dangerous", "Generous", "Careful", "Friendly"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Why might the poet have chosen a tiny ant to be the hero who saves the Dove?",
+        choices: [
+          "To show that even the smallest creature can make a big difference.",
+          "To show that ants are the smartest animals.",
+          "To make the poem funnier.",
+          "To explain how ants build bridges."
+        ],
+        answerIndex: 0
+      }
+    ]
+  },
+  {
+    id: "passage9",
+    title: "Mercury and the Woodman (from Aesop's Fables)",
+    text: [
+      "A poor Woodman was cutting down a tree near the edge of a deep pool in the forest. It was late in the day and the Woodman was tired. He had been working since sunrise and his strokes were not so sure as they had been early that morning. Thus it happened that the axe slipped and flew out of his hands into the pool.",
+      "The Woodman was in despair. The axe was all he possessed with which to make a living, and he had not money enough to buy a new one. As he stood wringing his hands and weeping, the god Mercury suddenly appeared and asked what the trouble was. The Woodman told what had happened, and straightway the kind Mercury dived into the pool. When he came up again he held a wonderful golden axe.",
+      "\"Is this your axe?\" Mercury asked the Woodman.",
+      "\"No,\" answered the honest Woodman, \"that is not my axe.\" Mercury laid the golden axe on the bank and sprang back into the pool. This time he brought up an axe of silver, but the Woodman declared again that his axe was just an ordinary one with a wooden handle.",
+      "Mercury dived down for the third time, and when he came up again he had the very axe that had been lost.",
+      "The poor Woodman was very glad that his axe had been found and could not thank the kind god enough. Mercury was greatly pleased with the Woodman's honesty.",
+      "\"I admire your honesty,\" he said, \"and as a reward you may have all three axes, the gold and the silver as well as your own.\"",
+      "The happy Woodman returned to his home with his treasures, and soon the story of his good fortune was known to everybody in the village. Now there were several Woodmen in the village who believed that they could easily win the same good fortune. They hurried out into the woods, one here, one there, and hiding their axes in the bushes, pretended they had lost them. Then they wept and wailed and called on Mercury to help them.",
+      "And indeed, Mercury did appear, first to this one, then to that. To each one he showed an axe of gold, and each one eagerly claimed it to be the one he had lost. But Mercury did not give them the golden axe. Instead he gave them each a hard whack over the head with it and sent them home. And when they returned next day to look for their own axes, they were nowhere to be found.",
+      "Moral: Honesty is the best policy."
+    ].join("\n\n"),
+    questions: [
+      {
+        prompt: "Why does Mercury reward the Woodman with all three axes?",
+        choices: [
+          "Because the Woodman was honest about which axe was really his.",
+          "Because the Woodman worked hard cutting down trees.",
+          "Because the Woodman prayed to Mercury.",
+          "Because the Woodman was the poorest man in the village."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What lesson do the other Woodmen fail to understand?",
+        choices: [
+          "That dishonesty does not lead to a real reward.",
+          "That gold axes are heavier than silver ones.",
+          "That Mercury only appears once per village.",
+          "That trees should not be cut down near water."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "How does Mercury punish the dishonest Woodmen?",
+        choices: [
+          "He hits each of them with the golden axe instead of rewarding them.",
+          "He takes away their real axes right away.",
+          "He tells the whole village about their lie.",
+          "He turns their axes to stone."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What can readers infer happened to the dishonest Woodmen's own axes?",
+        choices: [
+          "They lost their real axes for good because of their trick.",
+          "Mercury returned them along with a golden axe.",
+          "Their axes turned into gold overnight.",
+          "The other villagers stole them."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which detail shows that the first Woodman was truly poor?",
+        choices: [
+          "The axe was all he possessed with which to make a living.",
+          "He had been working since sunrise.",
+          "He wept and wailed by the pool.",
+          "He lived in a village with many other Woodmen."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the moral of this fable?",
+        choices: [
+          "Honesty is the best policy.",
+          "Hard work always pays off.",
+          "Never trust a stranger.",
+          "Greed makes people stronger."
+        ],
+        answerIndex: 0
+      }
+    ]
+  },
+  {
+    id: "passage10",
+    title: "Why Fitness Matters (adapted from girlshealth.gov)",
+    text: [
+      "What is physical fitness? A condition or state of being that helps you look, feel and do your best. It is the ability to do tasks full of energy, and still be able to do other things with your time, such as schoolwork and activities with family and friends. It is a basis for good health and well-being. Fitness involves performance of the heart and lungs, and the muscles of the body. Fitness can also influence how alert you are and how you feel emotionally.",
+      "Exercise is an important part of a lifetime of good health! Exercising is also fun and is something you can do with friends. Regular exercise provides both mental and physical health benefits.",
+      "Mental health benefits of exercise: One of the great things about exercise is that it can improve your mental health. Regular exercise can help you feel less stressed, can improve your self-esteem, and can help you to feel ready to learn in school. Kids who exercise may also have reduced symptoms of anxiety and depression.",
+      "Exercise can also improve your overall mood. Did you have an argument with a friend? Or did you do poorly on a test? A workout at the gym or a brisk 30-minute walk will make your brain produce chemicals that will make you happier and more relaxed than before you started working out.",
+      "What if you're having trouble sleeping? Again, it's exercise to the rescue! Regular exercise can help you fall asleep faster and help you sleep deeper. A good night's sleep can improve your concentration and productivity in school the next day.",
+      "Physical health benefits of exercise: Another great thing about exercise is that it can keep your body healthy. Kids who exercise often have a healthier body weight than kids who don't exercise. Exercise makes your bones solid, improves your heart and lungs, and makes your muscles strong.",
+      "Exercise can also affect specific diseases that affect adolescents and teens. New research shows that teens who exercise regularly (about 60 minutes of brisk exercise each day) burn more calories and use blood sugar more efficiently than teens who don't exercise. This could protect them from developing type 2 diabetes.",
+      "Here is something else to consider: children and adolescents who are overweight are more likely to become adults who are overweight. If you start good habits, like daily exercise, when you are young, you will be likely to continue them when you're older.",
+      "Get moving! The more time you spend in front of the television or playing video games, the less time you have to be active. Not being active is called a sedentary lifestyle. Leading a sedentary lifestyle can cause weight gain and even obesity, which can lead to type 2 diabetes, high cholesterol levels, and high blood pressure. Make physical activity a regular part of your life. It can help you protect your health!"
+    ].join("\n\n"),
+    questions: [
+      {
+        prompt: "According to the passage, which is a mental health benefit of exercise?",
+        choices: [
+          "It can reduce stress and improve self-esteem.",
+          "It can make your bones stronger.",
+          "It can help you grow taller.",
+          "It can improve your eyesight."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does the passage say can happen if someone leads a sedentary lifestyle?",
+        choices: [
+          "They may gain weight and develop health problems like diabetes.",
+          "They may become better at video games.",
+          "They may sleep less than active people.",
+          "They may become more focused in school."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which detail from the passage explains why exercise can help someone sleep better?",
+        choices: [
+          "Regular exercise helps you fall asleep faster and sleep more deeply.",
+          "Exercise makes you too tired to dream.",
+          "Exercise raises your body temperature at night.",
+          "Exercise reduces the amount of sleep you need."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Why does the author most likely include information about type 2 diabetes?",
+        choices: [
+          "To show a serious health risk that regular exercise can help prevent.",
+          "To explain how diabetes is diagnosed.",
+          "To compare type 1 and type 2 diabetes.",
+          "To describe a treatment for diabetes."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the main purpose of this passage?",
+        choices: [
+          "To explain how exercise benefits both the mind and the body.",
+          "To convince readers to join a sports team.",
+          "To describe the history of physical education.",
+          "To warn readers about the dangers of exercise."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Based on the passage, which habit would most likely help someone avoid a sedentary lifestyle?",
+        choices: [
+          "Taking a 30-minute walk instead of watching television.",
+          "Reading a book before bed.",
+          "Playing a video game with a friend.",
+          "Eating a healthy snack after school."
         ],
         answerIndex: 0
       }
