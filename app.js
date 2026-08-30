@@ -8,7 +8,7 @@
   var STREAK_TO_CLEAR = 2;
 
   var HISTORY_DISPLAY_LIMIT = 20;
-  var MATH2_SESSION_LENGTH = 7;
+  var MATH2_SESSION_LENGTH = 8;
 
   var homeScreen = document.getElementById("home-screen");
   var quizScreen = document.getElementById("quiz-screen");
@@ -802,7 +802,7 @@
         '<span><span class="set-name">Daily Math 2 Practice</span>' +
         '<span class="set-meta">' +
         MATH2_SESSION_LENGTH +
-        " decimal multiplication questions</span></span>";
+        " unit conversion questions</span></span>";
       math2Btn.addEventListener("click", function () {
         startMath2Practice();
       });
@@ -1464,43 +1464,143 @@
     };
   }
 
-  var MATH2_GENERATORS = {
-    decMult: function () {
-      var places = 1;
-      var scale = Math.pow(10, places);
-      var scaledInt;
-      do {
-        scaledInt = randomInt(11, 9 * scale + 9);
-      } while (scaledInt % scale === 0);
-      var digit = randomInt(2, 9);
-      var product = scaledInt * digit;
+  // Unit-conversion facts, transcribed from the "Standard/Metric Conversions"
+  // reference chart (length, weight, capacity, time). Each fact is
+  // 1 <big> = <factor> <small>.
+  var UNIT_PLURALS = {
+    inch: "inches",
+    foot: "feet",
+    yard: "yards",
+    mile: "miles",
+    ounce: "ounces",
+    pound: "pounds",
+    ton: "tons",
+    "fluid ounce": "fluid ounces",
+    cup: "cups",
+    pint: "pints",
+    quart: "quarts",
+    gallon: "gallons",
+    second: "seconds",
+    minute: "minutes",
+    hour: "hours",
+    day: "days",
+    week: "weeks",
+    year: "years",
+    decade: "decades",
+    century: "centuries",
+    millimeter: "millimeters",
+    centimeter: "centimeters",
+    meter: "meters",
+    kilometer: "kilometers",
+    milligram: "milligrams",
+    gram: "grams",
+    kilogram: "kilograms",
+    milliliter: "milliliters",
+    liter: "liters"
+  };
 
-      function formatScaled(intValue, decimalPlaces) {
-        var negative = intValue < 0;
-        intValue = Math.abs(intValue);
-        var s = String(intValue);
-        while (s.length <= decimalPlaces) s = "0" + s;
-        var whole = decimalPlaces === 0 ? s : s.slice(0, s.length - decimalPlaces);
-        var frac = decimalPlaces === 0 ? "" : s.slice(s.length - decimalPlaces);
-        frac = frac.replace(/0+$/, "");
-        var text = frac.length ? whole + "." + frac : whole;
-        return negative ? "-" + text : text;
-      }
+  function pluralUnit(unit) {
+    return UNIT_PLURALS[unit] || unit + "s";
+  }
 
-      var decimalStr = formatScaled(scaledInt, places);
-      var correct = formatScaled(product, places);
-      var wrong = [];
-      uniquePush(wrong, formatScaled(product, places + 1));
-      uniquePush(wrong, formatScaled(product, Math.max(places - 1, 0)));
-      uniquePush(wrong, formatScaled(product - digit, places));
-      uniquePush(wrong, formatScaled(product + digit, places));
-      return makeMath2Question(
-        "What is " + decimalStr + " × " + digit + "?",
-        "decMult",
-        correct,
-        wrong
-      );
+  function fmtNum(value) {
+    return value.toLocaleString("en-US");
+  }
+
+  var MATH2_FACTS = {
+    lengthStd: [
+      { big: "foot", small: "inch", factor: 12 },
+      { big: "yard", small: "foot", factor: 3 },
+      { big: "mile", small: "foot", factor: 5280 },
+      { big: "mile", small: "yard", factor: 1760 }
+    ],
+    weightStd: [
+      { big: "pound", small: "ounce", factor: 16 },
+      { big: "ton", small: "pound", factor: 2000 }
+    ],
+    capacityStd: [
+      { big: "cup", small: "fluid ounce", factor: 8 },
+      { big: "pint", small: "cup", factor: 2 },
+      { big: "quart", small: "pint", factor: 2 },
+      { big: "gallon", small: "quart", factor: 4 }
+    ],
+    timeStd: [
+      { big: "minute", small: "second", factor: 60 },
+      { big: "hour", small: "minute", factor: 60 },
+      { big: "day", small: "hour", factor: 24 },
+      { big: "week", small: "day", factor: 7 },
+      { big: "year", small: "day", factor: 365 },
+      { big: "year", small: "week", factor: 52 },
+      { big: "decade", small: "year", factor: 10 },
+      { big: "century", small: "year", factor: 100 }
+    ],
+    lengthMetric: [
+      { big: "centimeter", small: "millimeter", factor: 10 },
+      { big: "meter", small: "centimeter", factor: 100 },
+      { big: "kilometer", small: "meter", factor: 1000 }
+    ],
+    weightMetric: [
+      { big: "gram", small: "milligram", factor: 1000 },
+      { big: "kilogram", small: "gram", factor: 1000 }
+    ],
+    capacityMetric: [{ big: "liter", small: "milliliter", factor: 1000 }]
+  };
+  MATH2_FACTS.mixedReview = []
+    .concat(MATH2_FACTS.lengthStd)
+    .concat(MATH2_FACTS.weightStd)
+    .concat(MATH2_FACTS.capacityStd)
+    .concat(MATH2_FACTS.timeStd)
+    .concat(MATH2_FACTS.lengthMetric)
+    .concat(MATH2_FACTS.weightMetric)
+    .concat(MATH2_FACTS.capacityMetric);
+
+  function conversionQuestion(fact, category) {
+    var direction = Math.random() < 0.5 ? "down" : "up";
+    var n = randomInt(2, 9);
+    var prompt, correct, wrong;
+    if (direction === "down") {
+      var answer = n * fact.factor;
+      prompt =
+        "How many " + pluralUnit(fact.small) + " are in " + n + " " + pluralUnit(fact.big) + "?";
+      correct = fmtNum(answer);
+      wrong = [
+        fmtNum((n + 1) * fact.factor),
+        fmtNum(Math.max(n - 1, 1) * fact.factor),
+        fmtNum(n * (fact.factor + 1))
+      ];
+    } else {
+      var smallAmount = n * fact.factor;
+      prompt =
+        "How many " +
+        pluralUnit(fact.big) +
+        " are in " +
+        fmtNum(smallAmount) +
+        " " +
+        pluralUnit(fact.small) +
+        "?";
+      correct = String(n);
+      wrong = [String(n + 1), String(Math.max(n - 1, 1)), String(n + 2)];
     }
+    return makeMath2Question(prompt, category, correct, wrong);
+  }
+
+  function makeConversionGenerator(category) {
+    return function () {
+      var facts = MATH2_FACTS[category];
+      var fact = facts[randomInt(0, facts.length - 1)];
+      return conversionQuestion(fact, category);
+    };
+  }
+
+  var MATH2_GENERATORS = {
+    lengthStd: makeConversionGenerator("lengthStd"),
+    weightStd: makeConversionGenerator("weightStd"),
+    capacityStd: makeConversionGenerator("capacityStd"),
+    timeStd: makeConversionGenerator("timeStd"),
+    lengthMetric: makeConversionGenerator("lengthMetric"),
+    weightMetric: makeConversionGenerator("weightMetric"),
+    capacityMetric: makeConversionGenerator("capacityMetric"),
+    mixedReview: makeConversionGenerator("mixedReview")
   };
 
   function weakMath2Categories(progress) {

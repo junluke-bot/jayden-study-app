@@ -410,5 +410,127 @@ window.MATH_SETS = [
         answerIndex: 0
       }
     ]
+  },
+  {
+    id: "set10",
+    name: "Math Set 10",
+    questions: [
+      {
+        prompt:
+          "A picture shows 6 equal groups of pencils, with 5 pencils in each group. Which equation calculates the total number of pencils?",
+        choices: [
+          "5 × 6 = ?",
+          "5 + 5 + 5 + 5 + 5 + 3 = ?",
+          "(3 × 6) + (2 × 5) = ?",
+          "(5 × 5) + 3 = ?"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A large triangle has a base of 9 and a height of 12. A smaller triangle has a base of 3 and a height of 4. Based on their areas, how many of the smaller triangles could fit inside the larger triangle?",
+        choices: ["9", "3", "6", "10"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which equation is (3 × 2) + (3 × 4) = 18 rewritten showing the distributive property?",
+        choices: [
+          "3 × (2 + 4) = 18",
+          "6 + 12 = 18",
+          "(3 × 2) + (3 × 4) = 3 × 6",
+          "18 = 18"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Marsha initially deposited $98,232 into her checking account in January. She deposits $14,543 into her account at the beginning of every month, starting in February. About how much money will she have at the end of April?",
+        choices: ["about $140,000", "about $100,000", "about $130,000", "about $200,000"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "If Marsha continues depositing $14,543 every month, how much exactly will she have deposited from February to the following February (12 deposits)?",
+        choices: ["$174,516", "$180,000", "$183,234", "$145,343"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Square B's side length is twice that of square A's. How much larger is the area of square B than square A?",
+        choices: [
+          "Square B's area is four times as large",
+          "They are the same",
+          "Square B's area is twice as large",
+          "Square B's area is eight times as large"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "How many centimeters are in one kilometer?",
+        choices: ["100,000", "10", "100", "1,000"],
+        answerIndex: 0
+      },
+      {
+        prompt: "At what time are the hands on a clock at right angles?",
+        choices: ["3:00", "5:25", "6:07", "4:30"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which fraction is in simplest form?",
+        choices: ["4/9", "44/88", "36/12", "5/35"],
+        answerIndex: 0
+      }
+    ]
+  },
+  {
+    id: "set11",
+    name: "Math Set 11",
+    questions: [
+      {
+        prompt:
+          "Rod has twice as many crackers as Jane. Jane has four more crackers than Bob. What is the greatest common factor of the number of crackers Rod has and the number of crackers Bob has?",
+        choices: ["There isn't enough information", "2", "4", "8"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "John is designing a lottery where he hands out the numbers 1 through 20 to his friends. He will draw two numbers out of a hat. He first picks the number 13 and does not put it back. What is the probability the second number is greater than 10?",
+        choices: ["9/19", "10/20", "11/19", "11/20"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct unit for measuring volume?",
+        choices: ["liters", "inches", "meters", "tons"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "On a balance scale, 3 triangles on one side balance exactly with 2 hexagons on the other side. If one hexagon weighs 12 pounds, how much does one triangle weigh?",
+        choices: ["8 pounds", "7 pounds", "12 pounds", "6 pounds"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Using the same balance scale (3 triangles balance 2 hexagons, and one hexagon weighs 12 pounds), what fraction represents the weight of one triangle over the weight of one hexagon, in simplest form?",
+        choices: ["2/3", "4/3", "4/6", "6/8"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Chris has 3 quarters, 4 dimes, 5 nickels, and 6 pennies. He wants to buy as many candies as he can for 10 cents each. How many candies can he buy?",
+        choices: ["14", "8", "10", "12"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Chris has 3 quarters, 4 dimes, 5 nickels, and 6 pennies, and spends as much as he can on candies costing 10 cents each. How much change does he have left?",
+        choices: ["6 cents", "24 cents", "50 cents", "1 cent"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What mixed fraction represents the amount of dollars equal to 7 quarters, one nickel, and 17 pennies?",
+        choices: ["1 97/100", "3 1/4", "2 13/100", "87/100"],
+        answerIndex: 0
+      }
+    ]
   }
 ];
