@@ -4194,5 +4194,214 @@ window.WORD_SETS = [
         meaning: "without any mistakes or imperfections"
       }
     ]
+  },
+  {
+    id: "set22",
+    name: "Missed Words",
+    words: [
+      {
+        word: "abundant",
+        phrase: "an abundant harvest",
+        choices: ["plentiful", "scarce", "rotten", "hidden"],
+        answerIndex: 0,
+        meaning: "plentiful; a lot"
+      },
+      {
+        word: "acquired",
+        phrase: "she acquired a new skill",
+        choices: ["gained", "lost", "forgot", "broke"],
+        answerIndex: 0,
+        meaning: "gained; obtained"
+      },
+      {
+        word: "adequate",
+        phrase: "adequate supplies for the trip",
+        choices: ["enough", "insufficient", "excessive", "broken"],
+        answerIndex: 0,
+        meaning: "enough; sufficient"
+      },
+      {
+        word: "altered",
+        phrase: "he altered his plans",
+        choices: ["changed", "kept", "copied", "ignored"],
+        answerIndex: 0,
+        meaning: "changed"
+      },
+      {
+        word: "ample",
+        phrase: "ample time to finish",
+        choices: ["more than enough", "barely enough", "no time at all", "too little"],
+        answerIndex: 0,
+        meaning: "more than enough"
+      },
+      {
+        word: "authentic",
+        phrase: "an authentic signature",
+        choices: ["genuine", "fake", "copied", "stolen"],
+        answerIndex: 0,
+        meaning: "genuine; real"
+      },
+      {
+        word: "clarify",
+        phrase: "please clarify your answer",
+        choices: ["make clear", "confuse", "hide", "repeat"],
+        answerIndex: 0,
+        meaning: "make clear"
+      },
+      {
+        word: "compatible",
+        phrase: "the two programs are compatible",
+        choices: ["able to work well together", "in conflict", "identical", "unrelated"],
+        answerIndex: 0,
+        meaning: "able to work well together"
+      },
+      {
+        word: "concise",
+        phrase: "a concise summary",
+        choices: ["brief and clear", "long and wordy", "confusing", "incomplete"],
+        answerIndex: 0,
+        meaning: "brief and clear"
+      },
+      {
+        word: "derives",
+        phrase: "the word derives from Latin",
+        choices: ["comes from", "destroys", "hides", "replaces"],
+        answerIndex: 0,
+        meaning: "gets or comes from"
+      },
+      {
+        word: "distinct",
+        phrase: "two distinct colors",
+        choices: ["clearly different", "identical", "blended", "faded"],
+        answerIndex: 0,
+        meaning: "clearly different"
+      },
+      {
+        word: "diverse",
+        phrase: "a diverse group of students",
+        choices: ["varied", "identical", "small", "quiet"],
+        answerIndex: 0,
+        meaning: "varied; different"
+      },
+      {
+        word: "frequent",
+        phrase: "a frequent visitor",
+        choices: ["happening often", "happening rarely", "happening once", "happening never"],
+        answerIndex: 0,
+        meaning: "happening often"
+      },
+      {
+        word: "frivolous",
+        phrase: "a frivolous excuse",
+        choices: ["not serious", "very serious", "important", "urgent"],
+        answerIndex: 0,
+        meaning: "not serious; unimportant"
+      },
+      {
+        word: "gradual",
+        phrase: "a gradual change",
+        choices: ["slow, little by little", "sudden", "instant", "reversed"],
+        answerIndex: 0,
+        meaning: "happening slowly, little by little"
+      },
+      {
+        word: "implied",
+        phrase: "she implied she was upset",
+        choices: ["suggested without saying directly", "stated clearly", "denied", "shouted"],
+        answerIndex: 0,
+        meaning: "suggested without directly saying"
+      },
+      {
+        word: "indifferent",
+        phrase: "he seemed indifferent to the outcome",
+        choices: ["unconcerned", "excited", "furious", "devoted"],
+        answerIndex: 0,
+        meaning: "unconcerned; not interested"
+      },
+      {
+        word: "inhibit",
+        phrase: "fear can inhibit progress",
+        choices: ["hold back", "speed up", "support", "celebrate"],
+        answerIndex: 0,
+        meaning: "restrain; hold back"
+      },
+      {
+        word: "innovative",
+        phrase: "an innovative invention",
+        choices: ["new and original", "outdated", "copied", "broken"],
+        answerIndex: 0,
+        meaning: "new; original"
+      },
+      {
+        word: "interpret",
+        phrase: "interpret the poem's meaning",
+        choices: ["explain the meaning of", "memorize", "ignore", "rewrite"],
+        answerIndex: 0,
+        meaning: "understand or explain the meaning"
+      },
+      {
+        word: "legitimate",
+        phrase: "a legitimate excuse",
+        choices: ["valid", "fake", "silly", "rude"],
+        answerIndex: 0,
+        meaning: "valid; genuine"
+      },
+      {
+        word: "meticulous",
+        phrase: "meticulous notes",
+        choices: ["extremely careful", "careless", "messy", "quick"],
+        answerIndex: 0,
+        meaning: "extremely careful"
+      },
+      {
+        word: "objective",
+        phrase: "an objective report",
+        choices: ["unbiased", "one-sided", "emotional", "exaggerated"],
+        answerIndex: 0,
+        meaning: "unbiased; based on facts"
+      },
+      {
+        word: "postpone",
+        phrase: "postpone the meeting",
+        choices: ["delay until later", "start immediately", "cancel forever", "speed up"],
+        answerIndex: 0,
+        meaning: "delay until later"
+      },
+      {
+        word: "prominent",
+        phrase: "a prominent landmark",
+        choices: ["noticeable", "hidden", "tiny", "forgettable"],
+        answerIndex: 0,
+        meaning: "noticeable; important"
+      },
+      {
+        word: "prospect",
+        phrase: "the prospect of a new job",
+        choices: ["possibility", "certainty", "memory", "mistake"],
+        answerIndex: 0,
+        meaning: "possibility"
+      },
+      {
+        word: "recede",
+        phrase: "the floodwaters began to recede",
+        choices: ["move back", "rise higher", "freeze", "boil"],
+        answerIndex: 0,
+        meaning: "move back or away"
+      },
+      {
+        word: "skeptical",
+        phrase: "she was skeptical of the claim",
+        choices: ["doubtful", "trusting", "excited", "careless"],
+        answerIndex: 0,
+        meaning: "doubtful"
+      },
+      {
+        word: "tentative",
+        phrase: "a tentative plan",
+        choices: ["uncertain; not final", "final and fixed", "impossible", "forgotten"],
+        answerIndex: 0,
+        meaning: "uncertain; not final"
+      }
+    ]
   }
 ];
