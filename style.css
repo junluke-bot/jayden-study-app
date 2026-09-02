@@ -173,6 +173,14 @@ html, body {
   text-align: center;
 }
 
+.quiz-timer {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 14px;
+  margin-top: -8px;
+  text-align: center;
+}
+
 .phrase-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -358,6 +366,12 @@ html, body {
 .end-score .score-message {
   margin-top: 8px;
   font-size: 1.1rem;
+}
+
+.end-score .score-time {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: var(--muted);
 }
 
 .missed-list {

@@ -17,6 +17,8 @@
 
   var quizState = null;
   var activeHomeTab = "words";
+  var quizTimerInterval = null;
+  var TIMED_MODES = ["math", "mathReview", "math2", "math2Review"];
 
   // ---------- Persistence ----------
 
@@ -422,6 +424,38 @@
 
   function clearChildren(el) {
     while (el.firstChild) el.removeChild(el.firstChild);
+  }
+
+  // ---------- Quiz timer (Math and Math 2 tabs) ----------
+
+  function isTimedMode(mode) {
+    return TIMED_MODES.indexOf(mode) !== -1;
+  }
+
+  function formatElapsed(totalSeconds) {
+    var m = Math.floor(totalSeconds / 60);
+    var s = totalSeconds % 60;
+    return m + ":" + (s < 10 ? "0" + s : s);
+  }
+
+  function updateTimerDisplay() {
+    if (!quizState || !quizState.startTime) return;
+    var el = document.getElementById("quiz-timer");
+    if (!el) return;
+    var elapsed = Math.floor((Date.now() - quizState.startTime) / 1000);
+    el.textContent = "⏱ " + formatElapsed(elapsed);
+  }
+
+  function startQuizTimer() {
+    stopQuizTimer();
+    quizTimerInterval = setInterval(updateTimerDisplay, 1000);
+  }
+
+  function stopQuizTimer() {
+    if (quizTimerInterval) {
+      clearInterval(quizTimerInterval);
+      quizTimerInterval = null;
+    }
   }
 
   function showScreen(screen) {
@@ -1410,8 +1444,10 @@
       questions: mathQuestions(set),
       index: 0,
       score: 0,
-      missedThisRound: []
+      missedThisRound: [],
+      startTime: Date.now()
     };
+    startQuizTimer();
     renderQuestion();
     showScreen(quizScreen);
   }
@@ -1426,8 +1462,10 @@
       questions: shuffle(problems),
       index: 0,
       score: 0,
-      missedThisRound: []
+      missedThisRound: [],
+      startTime: Date.now()
     };
+    startQuizTimer();
     renderQuestion();
     showScreen(quizScreen);
   }
@@ -1453,8 +1491,10 @@
       questions: math2SetQuestions(set),
       index: 0,
       score: 0,
-      missedThisRound: []
+      missedThisRound: [],
+      startTime: Date.now()
     };
+    startQuizTimer();
     renderQuestion();
     showScreen(quizScreen);
   }
@@ -1479,8 +1519,10 @@
       questions: buildMath2PracticeQuestions(progress),
       index: 0,
       score: 0,
-      missedThisRound: []
+      missedThisRound: [],
+      startTime: Date.now()
     };
+    startQuizTimer();
     renderQuestion();
     showScreen(quizScreen);
   }
@@ -1697,8 +1739,10 @@
       questions: shuffle(problems.concat(extra)),
       index: 0,
       score: 0,
-      missedThisRound: []
+      missedThisRound: [],
+      startTime: Date.now()
     };
+    startQuizTimer();
     renderQuestion();
     showScreen(quizScreen);
   }
@@ -1970,6 +2014,7 @@
     backBtn.className = "back-btn";
     backBtn.textContent = "← Back";
     backBtn.addEventListener("click", function () {
+      stopQuizTimer();
       quizState = null;
       renderHome();
     });
@@ -1980,6 +2025,15 @@
     progressEl.textContent =
       "Question " + (quizState.index + 1) + " of " + quizState.questions.length;
     quizScreen.appendChild(progressEl);
+
+    if (isTimedMode(quizState.mode)) {
+      var timerEl = document.createElement("div");
+      timerEl.id = "quiz-timer";
+      timerEl.className = "quiz-timer";
+      timerEl.textContent =
+        "⏱ " + formatElapsed(Math.floor((Date.now() - quizState.startTime) / 1000));
+      quizScreen.appendChild(timerEl);
+    }
 
     if (q.type === "reading") {
       var passageCard = document.createElement("div");
@@ -2280,6 +2334,11 @@
   }
 
   function finishQuiz() {
+    var elapsedSeconds = isTimedMode(quizState.mode)
+      ? Math.floor((Date.now() - quizState.startTime) / 1000)
+      : null;
+    stopQuizTimer();
+
     var progress = loadProgress();
     progress.history.push({
       setId: quizState.setId,
@@ -2293,7 +2352,8 @@
       quizState.score,
       quizState.questions.length,
       quizState.missedThisRound,
-      quizState.mode
+      quizState.mode,
+      elapsedSeconds
     );
   }
 
@@ -2308,7 +2368,7 @@
     return "Keep practicing — you'll get there!";
   }
 
-  function renderEndScreen(score, total, missed, mode) {
+  function renderEndScreen(score, total, missed, mode, elapsedSeconds) {
     clearChildren(endScreen);
 
     var scoreBox = document.createElement("div");
@@ -2321,6 +2381,10 @@
       '</div><div class="score-message">' +
       encouragingMessage(score, total) +
       "</div>";
+    if (elapsedSeconds != null) {
+      scoreBox.innerHTML +=
+        '<div class="score-time">Time: ' + formatElapsed(elapsedSeconds) + "</div>";
+    }
     endScreen.appendChild(scoreBox);
 
     var isMath = mode === "math" || mode === "mathReview" || mode === "math2" || mode === "math2Review";
