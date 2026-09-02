@@ -488,7 +488,13 @@
 
   function setNameForEntry(entry) {
     if (entry.mode === "mathReview") return "Review Missed Math";
-    if (entry.mode === "math2") return "Daily Math 2 Practice";
+    if (entry.mode === "math2") {
+      if (!entry.setId) return "Daily Math 2 Practice";
+      var math2Set = (window.MATH2_SETS || []).filter(function (s) {
+        return s.id === entry.setId;
+      })[0];
+      return math2Set ? math2Set.name : "Math 2";
+    }
     if (entry.mode === "math2Review") return "Review Missed Math 2";
     if (entry.mode === "review") return "Review Missed Words";
     if (entry.mode === "readingReview") return "Review Missed Reading";
@@ -788,9 +794,34 @@
       homeScreen.appendChild(mathWrap);
       appendMissedInventory("Missed Math Inventory", progress.missedMath, "prompt");
     } else if (activeHomeTab === "math2") {
+      var math2SetsLabel = document.createElement("div");
+      math2SetsLabel.className = "section-label";
+      math2SetsLabel.textContent = "Math 2 Sets";
+      homeScreen.appendChild(math2SetsLabel);
+
+      var math2SetList = document.createElement("div");
+      math2SetList.className = "set-list";
+
+      (window.MATH2_SETS || []).forEach(function (set) {
+        var setBtn = document.createElement("button");
+        setBtn.className = "set-card";
+        setBtn.innerHTML =
+          '<span><span class="set-name">' +
+          set.name +
+          '</span><span class="set-meta">' +
+          set.questions.length +
+          " questions</span></span>";
+        setBtn.addEventListener("click", function () {
+          startMath2Set(set);
+        });
+        math2SetList.appendChild(setBtn);
+      });
+
+      homeScreen.appendChild(math2SetList);
+
       var math2Label = document.createElement("div");
       math2Label.className = "section-label";
-      math2Label.textContent = "Math 2 Practice";
+      math2Label.textContent = "Daily Practice";
       homeScreen.appendChild(math2Label);
 
       var math2Wrap = document.createElement("div");
@@ -1393,6 +1424,33 @@
       setId: null,
       mode: "mathReview",
       questions: shuffle(problems),
+      index: 0,
+      score: 0,
+      missedThisRound: []
+    };
+    renderQuestion();
+    showScreen(quizScreen);
+  }
+
+  function math2SetQuestions(set) {
+    return set.questions.map(function (q) {
+      return {
+        type: "math2",
+        setId: set.id,
+        topic: set.name,
+        category: set.id,
+        prompt: q.prompt,
+        choices: q.choices,
+        answerIndex: q.answerIndex
+      };
+    });
+  }
+
+  function startMath2Set(set) {
+    quizState = {
+      setId: set.id,
+      mode: "math2",
+      questions: math2SetQuestions(set),
       index: 0,
       score: 0,
       missedThisRound: []
