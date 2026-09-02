@@ -28,9 +28,8 @@ window.MATH_SETS = [
         answerIndex: 0
       },
       {
-        prompt:
-          "Noah read 22 pages Monday, 28 Tuesday, 25 Wednesday, and 20 Thursday. He wants to average 24 pages per day for 5 days. How many pages must he read Friday?",
-        choices: ["25", "24", "26", "29"],
+        prompt: "A recipe calls for 2 quarts of milk. Sarah has 3 cups of milk. How many more cups does she need?",
+        choices: ["5 cups", "3 cups", "8 cups", "11 cups"],
         answerIndex: 0
       },
       {
