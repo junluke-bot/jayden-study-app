@@ -19,6 +19,7 @@
   var activeHomeTab = "words";
   var quizTimerInterval = null;
   var TIMED_MODES = ["math", "mathReview", "math2", "math2Review"];
+  var DAILY_WORDS_LENGTH = 20;
 
   // ---------- Persistence ----------
 
@@ -521,6 +522,7 @@
   }
 
   function setNameForEntry(entry) {
+    if (entry.mode === "dailyWords") return "Daily Words Practice";
     if (entry.mode === "mathReview") return "Review Missed Math";
     if (entry.mode === "math2") {
       if (!entry.setId) return "Daily Math 2 Practice";
@@ -736,6 +738,18 @@
 
       var reviewWrap = document.createElement("div");
       reviewWrap.className = "home-actions";
+
+      var dailyWordsBtn = document.createElement("button");
+      dailyWordsBtn.className = "set-card";
+      dailyWordsBtn.innerHTML =
+        '<span><span class="set-name">Daily Words Practice</span>' +
+        '<span class="set-meta">' +
+        DAILY_WORDS_LENGTH +
+        " fresh questions</span></span>";
+      dailyWordsBtn.addEventListener("click", function () {
+        startDailyWordsPractice(progress);
+      });
+      reviewWrap.appendChild(dailyWordsBtn);
 
       if (missedList.length === 0) {
         var note = document.createElement("div");
@@ -1392,6 +1406,66 @@
       setId: null,
       mode: "review",
       questions: shuffle(words),
+      index: 0,
+      score: 0,
+      missedThisRound: []
+    };
+    renderQuestion();
+    showScreen(quizScreen);
+  }
+
+  // ---------- Daily Words Practice ----------
+  // Pulls a fresh, randomized 20-word session each time it's started:
+  // missed words are prioritized for reinforcement, then filled out with
+  // random words from across every Word Set so the session stays varied
+  // day to day rather than repeating one fixed list.
+
+  function allWordsPool() {
+    var seen = {};
+    var pool = [];
+    (window.WORD_SETS || []).forEach(function (set) {
+      set.words.forEach(function (w) {
+        var key = w.word.toLowerCase();
+        if (!seen[key]) {
+          seen[key] = true;
+          pool.push(w);
+        }
+      });
+    });
+    return pool;
+  }
+
+  function buildDailyWordsPractice(progress) {
+    var seen = {};
+    var picks = [];
+
+    shuffle(Object.keys(progress.missedWords)).forEach(function (key) {
+      if (picks.length >= DAILY_WORDS_LENGTH) return;
+      var w = progress.missedWords[key].data;
+      var wordKey = w.word.toLowerCase();
+      if (!seen[wordKey]) {
+        seen[wordKey] = true;
+        picks.push(w);
+      }
+    });
+
+    shuffle(allWordsPool()).forEach(function (w) {
+      if (picks.length >= DAILY_WORDS_LENGTH) return;
+      var wordKey = w.word.toLowerCase();
+      if (!seen[wordKey]) {
+        seen[wordKey] = true;
+        picks.push(w);
+      }
+    });
+
+    return shuffle(picks);
+  }
+
+  function startDailyWordsPractice(progress) {
+    quizState = {
+      setId: null,
+      mode: "dailyWords",
+      questions: buildDailyWordsPractice(progress),
       index: 0,
       score: 0,
       missedThisRound: []
