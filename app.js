@@ -1498,7 +1498,9 @@
   }
 
   function mathQuestions(set) {
-    return set.questions.map(function (q) {
+    var generator = MATH_SET_GENERATORS[set.id];
+    var questions = generator ? generator() : set.questions;
+    return questions.map(function (q) {
       return {
         type: "math",
         setId: set.id,
@@ -1545,7 +1547,9 @@
   }
 
   function math2SetQuestions(set) {
-    return set.questions.map(function (q) {
+    var generator = MATH2_SET_GENERATORS[set.id];
+    var questions = generator ? generator() : set.questions;
+    return questions.map(function (q) {
       return {
         type: "math2",
         setId: set.id,
@@ -1775,6 +1779,375 @@
     weightMetric: makeConversionGenerator("weightMetric"),
     capacityMetric: makeConversionGenerator("capacityMetric"),
     mixedReview: makeConversionGenerator("mixedReview")
+  };
+
+  // ---------- Regenerated static sets ----------
+  // MATH_SET_GENERATORS / MATH2_SET_GENERATORS let a specific set (matched
+  // by id) produce a fresh batch of questions each time it's started,
+  // instead of always serving the same fixed list from math.js/math2.js.
+  // Each generator keeps the original question's wording/structure but
+  // randomizes the numbers (and, for fraction problems, picks from a
+  // pool of pre-verified fraction pairs) so answers stay correct.
+
+  function makeGenQuestion(prompt, correctText, wrongTexts) {
+    var choices = [correctText];
+    for (var i = 0; i < wrongTexts.length && choices.length < 4; i++) {
+      uniquePush(choices, wrongTexts[i]);
+    }
+    var filler = 1;
+    while (choices.length < 4) {
+      uniquePush(choices, correctText + " (" + filler + ")");
+      filler++;
+    }
+    return { prompt: prompt, choices: choices, answerIndex: 0 };
+  }
+
+  function gcdNum(a, b) {
+    return b === 0 ? a : gcdNum(b, a % b);
+  }
+
+  function lcmNum(a, b) {
+    return (a * b) / gcdNum(a, b);
+  }
+
+  function fmtWeight(cents) {
+    var s = (cents / 100).toFixed(2);
+    s = s.replace(/(\.\d*?)0+$/, "$1").replace(/\.$/, "");
+    return s;
+  }
+
+  function fmtMoney(cents) {
+    return "$" + (cents / 100).toFixed(2);
+  }
+
+  function trimDecimal(n) {
+    var s = n.toFixed(2);
+    s = s.replace(/(\.\d*?)0+$/, "$1").replace(/\.$/, "");
+    return s;
+  }
+
+  function formatHalfYards(v) {
+    var whole = Math.floor(v);
+    return v - whole === 0.5 ? whole + " 1/2" : String(whole);
+  }
+
+  var MATH_SET_GENERATORS = {
+    set1: function () {
+      return [
+        genRiceStore(),
+        genPlaygroundPerimeter(),
+        genFifthGradeFraction(),
+        genQuartsCups(),
+        genRectangleWidth(),
+        genPencilsFractions(),
+        genSchoolMoney()
+      ];
+    }
+  };
+
+  function genRiceStore() {
+    var startCents = randomInt(3000, 7000);
+    var soldCents = randomInt(500, startCents - 500);
+    var receivedCents = randomInt(100, 999);
+    var correctCents = startCents - soldCents + receivedCents;
+    var wrong = [
+      fmtWeight(startCents - soldCents - receivedCents),
+      fmtWeight(startCents + soldCents + receivedCents),
+      fmtWeight(correctCents + 100)
+    ];
+    return makeGenQuestion(
+      "A store had " +
+        fmtWeight(startCents) +
+        " pounds of rice. It sold " +
+        fmtWeight(soldCents) +
+        " pounds in the morning and received " +
+        fmtWeight(receivedCents) +
+        " more pounds in the afternoon. How many pounds of rice does the store have now?",
+      fmtWeight(correctCents),
+      wrong
+    );
+  }
+
+  function genPlaygroundPerimeter() {
+    var length = randomInt(3, 12) + (Math.random() < 0.5 ? 0.5 : 0);
+    var width = randomInt(2, 8) + (Math.random() < 0.5 ? 0.5 : 0);
+    var correct = 2 * (length + width);
+    var area = length * width;
+    var wrong = [trimDecimal(correct / 2), trimDecimal(area), trimDecimal(correct * 2)];
+    return makeGenQuestion(
+      "A rectangular playground is " +
+        formatHalfYards(length) +
+        " yards long and " +
+        formatHalfYards(width) +
+        " yards wide. What is its perimeter?",
+      trimDecimal(correct) + " yards",
+      wrong.map(function (w) {
+        return w + " yards";
+      })
+    );
+  }
+
+  function genFifthGradeFraction() {
+    var fracs = [
+      { n: 1, d: 4 },
+      { n: 1, d: 3 },
+      { n: 3, d: 8 },
+      { n: 2, d: 5 },
+      { n: 5, d: 6 },
+      { n: 1, d: 2 },
+      { n: 3, d: 4 },
+      { n: 2, d: 3 }
+    ];
+    var f = fracs[randomInt(0, fracs.length - 1)];
+    var unit = f.d * randomInt(4, 16);
+    var fractionPart = (unit / f.d) * f.n;
+    var remainder = unit - fractionPart;
+    var perUnit = unit / f.d;
+    var wrong = [
+      String(fractionPart),
+      String(remainder + perUnit),
+      String(Math.max(remainder - perUnit, 0))
+    ];
+    return makeGenQuestion(
+      "There are " +
+        unit +
+        " students in a club. " +
+        f.n +
+        "/" +
+        f.d +
+        " of the students are in fifth grade. How many students are not in fifth grade?",
+      String(remainder),
+      wrong
+    );
+  }
+
+  function genQuartsCups() {
+    var quarts = randomInt(1, 4);
+    var totalCups = quarts * 4;
+    var haveCups = randomInt(1, totalCups - 1);
+    var correct = totalCups - haveCups;
+    var wrong = [String(haveCups), String(totalCups), String(correct + 4)];
+    return makeGenQuestion(
+      "A recipe calls for " +
+        quarts +
+        " quarts of milk. Sarah has " +
+        haveCups +
+        " cups of milk. How many more cups does she need?",
+      correct + " cups",
+      wrong.map(function (w) {
+        return w + " cups";
+      })
+    );
+  }
+
+  function genRectangleWidth() {
+    var length = randomInt(3, 12);
+    var width = randomInt(2, 10);
+    var perimeter = 2 * (length + width);
+    var wrong = [String(perimeter / 2), String(perimeter - length), String(length)];
+    return makeGenQuestion(
+      "A rectangle has a perimeter of " +
+        perimeter +
+        " feet. Its length is " +
+        length +
+        " feet. What is its width?",
+      width + " feet",
+      wrong.map(function (w) {
+        return w + " feet";
+      })
+    );
+  }
+
+  function genPencilsFractions() {
+    var pairs = [
+      { n1: 1, d1: 5, n2: 1, d2: 3 },
+      { n1: 1, d1: 4, n2: 1, d2: 6 },
+      { n1: 2, d1: 5, n2: 1, d2: 4 },
+      { n1: 1, d1: 3, n2: 1, d2: 4 },
+      { n1: 1, d1: 6, n2: 1, d2: 3 }
+    ];
+    var pair = pairs[randomInt(0, pairs.length - 1)];
+    var lcmVal = lcmNum(pair.d1, pair.d2);
+    var total = lcmVal * randomInt(1, 6);
+    var red = (total / pair.d1) * pair.n1;
+    var blue = (total / pair.d2) * pair.n2;
+    var yellow = total - red - blue;
+    var wrong = [String(red + blue), String(red), String(blue)];
+    return makeGenQuestion(
+      "A box contains " +
+        total +
+        " pencils. " +
+        pair.n1 +
+        "/" +
+        pair.d1 +
+        " are red and " +
+        pair.n2 +
+        "/" +
+        pair.d2 +
+        " are blue. The rest are yellow. How many pencils are yellow?",
+      String(yellow),
+      wrong
+    );
+  }
+
+  function genSchoolMoney() {
+    var mon = randomInt(3000, 20000);
+    var tue = randomInt(3000, 20000);
+    var spent = randomInt(1000, mon + tue - 500);
+    var correct = mon + tue - spent;
+    var wrong = [fmtMoney(mon + tue), fmtMoney(mon + tue + spent), fmtMoney(mon - spent)];
+    return makeGenQuestion(
+      "A school collected " +
+        fmtMoney(mon) +
+        " on Monday and " +
+        fmtMoney(tue) +
+        " on Tuesday. It spent " +
+        fmtMoney(spent) +
+        " on supplies. How much money remained?",
+      fmtMoney(correct),
+      wrong
+    );
+  }
+
+  var FRACTION_ADD_POOL = [
+    { left: "3/4", right: "5/8", correct: "1 3/8", wrong: ["1 1/8", "1 5/8", "1 7/8"] },
+    { left: "1/2", right: "1/3", correct: "5/6", wrong: ["1/6", "2/5", "1 1/6"] },
+    { left: "2/3", right: "1/4", correct: "11/12", wrong: ["3/7", "1/12", "1 1/12"] },
+    { left: "5/6", right: "1/4", correct: "1 1/12", wrong: ["6/10", "11/12", "1 5/12"] },
+    { left: "3/8", right: "1/2", correct: "7/8", wrong: ["4/10", "1/8", "1 1/8"] },
+    { left: "1/3", right: "1/6", correct: "1/2", wrong: ["2/9", "1/6", "2/3"] }
+  ];
+
+  var FRACTION_MULT_POOL = [
+    { left: "5/6", right: "3/5", correct: "1/2", wrong: ["2/3", "3/4", "5/6"] },
+    { left: "2/3", right: "3/4", correct: "1/2", wrong: ["5/7", "3/8", "5/12"] },
+    { left: "4/5", right: "2/3", correct: "8/15", wrong: ["6/8", "2/15", "3/15"] },
+    { left: "3/4", right: "2/5", correct: "3/10", wrong: ["5/9", "1/10", "5/20"] },
+    { left: "5/8", right: "4/5", correct: "1/2", wrong: ["9/13", "1/8", "4/13"] },
+    { left: "2/7", right: "7/8", correct: "1/4", wrong: ["9/15", "1/8", "3/8"] }
+  ];
+
+  var FRACTION_DIV_POOL = [
+    { left: "7/8", right: "1/4", correct: "3 1/2", wrong: ["2 1/2", "3", "4"] },
+    { left: "5/6", right: "1/3", correct: "2 1/2", wrong: ["1 1/2", "2", "3"] },
+    { left: "3/4", right: "1/8", correct: "6", wrong: ["4", "5", "8"] },
+    { left: "2/3", right: "1/6", correct: "4", wrong: ["2", "3", "6"] },
+    { left: "5/8", right: "1/2", correct: "1 1/4", wrong: ["5/8", "1 1/2", "2 1/2"] },
+    { left: "9/10", right: "3/5", correct: "1 1/2", wrong: ["3/5", "1 1/5", "2"] }
+  ];
+
+  function pickFractionPool(pool, opSymbol) {
+    var entry = pool[randomInt(0, pool.length - 1)];
+    return makeGenQuestion(
+      entry.left + " " + opSymbol + " " + entry.right + " = ?",
+      entry.correct,
+      entry.wrong
+    );
+  }
+
+  function genSubtraction() {
+    var a = randomInt(2000, 9899);
+    var b = randomInt(1000, a - 100);
+    var correct = a - b;
+    var wrong = [correct + 10, correct - 10, correct + 1000];
+    return makeGenQuestion(
+      fmtNum(a) + " − " + fmtNum(b) + " = ?",
+      fmtNum(correct),
+      wrong.map(fmtNum)
+    );
+  }
+
+  function genMultiplication() {
+    var a = randomInt(200, 899);
+    var b = randomInt(12, 89);
+    var correct = a * b;
+    var wrong = [a * (b + 1), a * (b - 1), correct + 100];
+    return makeGenQuestion(
+      fmtNum(a) + " × " + b + " = ?",
+      fmtNum(correct),
+      wrong.map(fmtNum)
+    );
+  }
+
+  function genDivision() {
+    var divisor = randomInt(12, 45);
+    var quotient = randomInt(100, 450);
+    var dividend = divisor * quotient;
+    var wrong = [quotient + 10, quotient - 10, quotient + 1];
+    return makeGenQuestion(
+      fmtNum(dividend) + " ÷ " + divisor + " = ?",
+      fmtNum(quotient),
+      wrong.map(fmtNum)
+    );
+  }
+
+  function genDecimalAdd() {
+    var aCents = randomInt(150, 950);
+    if (aCents % 100 === 0) aCents += 3;
+    var bCents = randomInt(150, 950);
+    if (bCents % 100 === 0) bCents += 3;
+    var correct = aCents + bCents;
+    var wrong = [correct + 100, correct - 100, correct + 10];
+    return makeGenQuestion(
+      fmtWeight(aCents) + " + " + fmtWeight(bCents) + " = ?",
+      fmtWeight(correct),
+      wrong.map(fmtWeight)
+    );
+  }
+
+  function genDecimalSub() {
+    var aCents = randomInt(500, 999);
+    if (aCents % 100 === 0) aCents += 3;
+    var bCents = randomInt(150, aCents - 100);
+    if (bCents % 100 === 0) bCents += 3;
+    var correct = aCents - bCents;
+    var wrong = [correct + 100, correct - 10, aCents + bCents];
+    return makeGenQuestion(
+      fmtWeight(aCents) + " − " + fmtWeight(bCents) + " = ?",
+      fmtWeight(correct),
+      wrong.map(fmtWeight)
+    );
+  }
+
+  function genDecimalMult() {
+    var aT = randomInt(15, 95);
+    var bT = randomInt(12, 48);
+    var correctHundredths = aT * bT;
+    var wrong = [correctHundredths + 100, correctHundredths - 100, correctHundredths + 10];
+    return makeGenQuestion(
+      fmtWeight(aT * 10) + " × " + fmtWeight(bT * 10) + " = ?",
+      fmtWeight(correctHundredths),
+      wrong.map(fmtWeight)
+    );
+  }
+
+  function genDecimalDiv() {
+    var bT = randomInt(11, 25);
+    var quotient = randomInt(2, 12);
+    var dividendTenths = bT * quotient;
+    var wrong = [String(quotient / 10), fmtNum(quotient * 10), fmtNum(quotient * 100)];
+    return makeGenQuestion(
+      fmtWeight(dividendTenths * 10) + " ÷ " + fmtWeight(bT * 10) + " = ?",
+      String(quotient),
+      wrong
+    );
+  }
+
+  var MATH2_SET_GENERATORS = {
+    computation1: function () {
+      return [
+        genSubtraction(),
+        genMultiplication(),
+        genDivision(),
+        pickFractionPool(FRACTION_ADD_POOL, "+"),
+        pickFractionPool(FRACTION_MULT_POOL, "×"),
+        genDecimalAdd(),
+        genDecimalSub(),
+        genDecimalMult(),
+        genDecimalDiv(),
+        pickFractionPool(FRACTION_DIV_POOL, "÷")
+      ];
+    }
   };
 
   function weakMath2Categories(progress) {
