@@ -48,5 +48,51 @@ window.MATH_SETS = [
         answerIndex: 0
       }
     ]
+  },
+  {
+    id: "daily-drill",
+    name: "Math Daily Drill",
+    questions: [
+      {
+        prompt:
+          "A water bottle is 3/4 full. Jayden drinks 1/3 of the water that is currently in the bottle. What fraction of the whole bottle of water did he drink?",
+        choices: ["1/4", "1/12", "5/12", "7/12"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which number makes the equation true? 3.6 × [ ___ ] = 36",
+        choices: ["10", "0.1", "1", "100"],
+        answerIndex: 0
+      },
+      {
+        prompt: "A ribbon is 3 yards 2 feet long. How many feet long is the ribbon?",
+        choices: ["11 ft", "5 ft", "9 ft", "12 ft"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A rectangular garden has a length of 14 feet and a width of 9 feet. A fence will go around the entire garden. How many feet of fencing are needed?",
+        choices: ["46 ft", "23 ft", "126 ft", "252 ft"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Books checked out from the library: Monday 36, Tuesday 48, Wednesday 42, Thursday 54. How many more books were checked out on Tuesday and Thursday combined than on Monday and Wednesday combined?",
+        choices: ["24", "12", "18", "30"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A school bought 8 boxes of pencils. Each box contained 36 pencils. The pencils were shared equally among 12 classrooms. How many pencils did each classroom receive?",
+        choices: ["24", "18", "32", "48"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A rectangular playground is 24 yards long and 18 yards wide. One-fourth of its total area will be used for a basketball practice area. What is the area of the part not used for basketball?",
+        choices: ["324 square yards", "108 square yards", "216 square yards", "432 square yards"],
+        answerIndex: 0
+      }
+    ]
   }
 ];
