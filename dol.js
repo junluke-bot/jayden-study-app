@@ -1,6 +1,10 @@
 // Daily Oral Language (DOL) question sets for the Iowa Assessments practice app.
 // Original content covering four categories: Spelling, Capitalization,
 // Punctuation, and Usage and Expression, each with three practice sets.
+// Also includes "Language Review Week 5", converted to multiple choice from
+// the Monday-Thursday correction/grammar exercises in the Daily Language
+// Review Grade 5 Workbook (Week 5), in the varied-question-type style of a
+// Daily Language Quiz.
 // Each question has:
 //   prompt      - the question text
 //   choices     - four answer options (choices[0] is always correct;
@@ -1275,6 +1279,212 @@ window.DOL_SETS = [
           "Line 1",
           "Line 3",
           "No mistake"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "language-review-week5",
+    "name": "Language Review Week 5",
+    "questions": [
+      {
+        "prompt": "Select the sentence that is correctly capitalized and punctuated.",
+        "choices": [
+          "\"Don't put your feet on the furniture,\" said Grandmother.",
+          "\"Dont put your feet on the furniture,\" said grandmother.",
+          "\"Don't put you're feet on the furniture,\" said Grandmother.",
+          "Don't put your feet on the furniture, said Grandmother."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "This doesn't look like anything I've ever seen before.",
+          "This doesnt look like nothing ive ever seen before.",
+          "This doesn't look like nothing I've ever seen before.",
+          "This doesn't look like anything Ive ever seen before."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which is the correct possessive form for \"the new coat belonging to Sharon\"?",
+        "choices": [
+          "Sharon's new coat",
+          "Sharons new coat",
+          "Sharons' new coat",
+          "Sharon's' new coat"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Mr. Tan gave ______ each five dollars for helping clean out his garage.",
+        "choices": [
+          "them",
+          "those",
+          "these",
+          "their"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "What does the figure of speech \"button up your lip\" mean?",
+        "choices": [
+          "Be quiet and stop talking",
+          "Get dressed warmly",
+          "Speak louder",
+          "Smile and say hello"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which is the correct way to divide the word \"collar\" into syllables?",
+        "choices": [
+          "col lar",
+          "coll ar",
+          "co llar",
+          "colla r"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "In the sentence \"The tortoise moved slowly down the path,\" does the underlined word slowly tell how, when, where, or to what extent?",
+        "choices": [
+          "How",
+          "When",
+          "Where",
+          "To what extent"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Don't touch that red hot skillet!",
+          "Dont touch that red hot skillet!",
+          "Don't touch that read hot skillet!",
+          "Don't touch that read hot skillet"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Lupe asked why he never does his homework.",
+          "lupe asked why doesnt he never do his homework.",
+          "Lupe asked why he doesn't never do his homework.",
+          "Lupe asked why doesn't he never do his homework."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "In the sentence \"Ito had to get a tetanus shot after he stepped on a rusty nail,\" what was the cause?",
+        "choices": [
+          "He stepped on a rusty nail.",
+          "He had to get a tetanus shot.",
+          "He was playing outside.",
+          "He visited his doctor for a checkup."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Mavis ate most of her salad, but she left an orange slice.",
+          "mavis ate most of her salad but she left a orange slice.",
+          "Mavis ate most of her salad but she left a orange slice.",
+          "Mavis ate most of her salad, but she left a orange slice."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Dr. Conrad's wife, Jill, will join him at the ceremony.",
+          "dr conrads wife jill will join him at the ceremony.",
+          "Dr. Conrads wife, Jill, will join him at the ceremony.",
+          "Dr. Conrad's wife Jill will join him at the ceremony."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which part of speech is the underlined word in \"She picked a delicious peach from the tree\"? (delicious)",
+        "choices": [
+          "Adjective",
+          "Noun",
+          "Verb",
+          "Adverb"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Are \"generous\" and \"stingy\" synonyms or antonyms?",
+        "choices": [
+          "Antonyms",
+          "Synonyms",
+          "Homophones",
+          "Compound words"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "What is the correct abbreviation for \"Ohio\"?",
+        "choices": [
+          "OH",
+          "Oh.",
+          "O",
+          "Ohi."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "What are the correct past and future tense forms of the verb \"plan\"?",
+        "choices": [
+          "planned; will plan",
+          "planed; will plan",
+          "planned; is planning",
+          "plans; planned"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which is the correct possessive form for \"eggs belonging to that bird\"?",
+        "choices": [
+          "that bird's eggs",
+          "that birds eggs",
+          "that birds' eggs",
+          "that bird's' eggs"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Were the musicians nervous before the concert began?",
+          "was the musicians nervous before the concert begun?",
+          "Was the musicians nervous before the concert began?",
+          "Were the musicians nervous before the concert begun?"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Mildred picked a peach from the tree. It was delicious.",
+          "mildred picked an peach from the tree it were delicious.",
+          "Mildred picked an peach from the tree. It was delicious.",
+          "Mildred picked a peach from the tree. It were delicious."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Is the sentence \"After the ceremony was over, everyone went out to celebrate\" declarative, interrogative, imperative, or exclamatory?",
+        "choices": [
+          "Declarative",
+          "Interrogative",
+          "Imperative",
+          "Exclamatory"
         ],
         "answerIndex": 0
       }
