@@ -137,6 +137,113 @@ window.SCIENCE_SETS = [
           "Digging deeper channels in the river"
         ],
         answerIndex: 0
+      },
+      {
+        prompt: "What is the influence of oceans on ecosystems?",
+        choices: [
+          "They provide homes for marine life.",
+          "They are the reason why grasslands are present.",
+          "They are the reason for rain.",
+          "They are where cold-blooded animals live."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the purpose of a decomposer?",
+        choices: [
+          "To break down dead animals and plants",
+          "To produce their own food",
+          "To eat living poisonous plants",
+          "To eat away dangerous rodents"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Why is corn a producer?",
+        choices: [
+          "It makes its own food.",
+          "It eats other organisms.",
+          "It is an herbivore.",
+          "It is a carnivore."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "In a food chain, corn is eaten by a rat, the rat is eaten by a snake, and the snake is eaten by an owl. Which organism is an herbivore?",
+        choices: ["Rat", "Corn", "Snake", "Owl"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What happens to matter when a snake eats a rat?",
+        choices: [
+          "All of the matter gets transferred to the snake.",
+          "All of the matter gets transferred to the rat.",
+          "Matter is equally distributed between the snake and the rat.",
+          "No matter is transferred."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the best way to save our Earth from excess human activity?",
+        choices: [
+          "Teach others how to conserve",
+          "Only flush the toilet once a day",
+          "Throw all of your trash away in the river because it is going to end up there anyway",
+          "Don't buy produce"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is an omnivore?",
+        choices: [
+          "An animal that eats plants and animals",
+          "An animal that eats only plants",
+          "An animal that eats only animals",
+          "An animal that eats only marine animals"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A polar bear makes its way to a tropical rainforest ecosystem. How does this impact the ecosystem there?",
+        choices: [
+          "It disrupts the balance there",
+          "The native animals hibernate",
+          "All the plants get eaten",
+          "Nothing is affected"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is a human activity that negatively impacts our Earth in major ways?",
+        choices: ["Industry", "Planting trees", "Eating plant-based foods", "Using artificial lights"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What animal is most likely an herbivore?",
+        choices: ["Deer", "Bear", "Lynx", "Fox"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Why do animals migrate?",
+        choices: [
+          "To find favorable living conditions",
+          "To travel in groups",
+          "To live in colder places",
+          "To explore new places"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is one way we can protect Earth from extreme pollution?",
+        choices: [
+          "Walk to school",
+          "Switch to disposable paper, wood and plastics",
+          "Only drink one glass of water a day",
+          "Take short showers"
+        ],
+        answerIndex: 0
       }
     ]
   },
@@ -203,6 +310,71 @@ window.SCIENCE_SETS = [
           "They are always brittle.",
           "They do not conduct electricity."
         ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which scenario shows particles that are too small to be seen?",
+        choices: [
+          "Dissolving sugar in water",
+          "Stirring water",
+          "A seashell on shore",
+          "Raindrops falling down from the sky"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Making a Caesar salad is an example of a...",
+        choices: ["Physical change", "Chemical change", "Chemical reaction", "Science"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does a diamond and a gold bar have in common?",
+        choices: ["Both are minerals", "Both are easy to mine", "Both are easy to bend", "Both are easy to break"],
+        answerIndex: 0
+      },
+      {
+        prompt: "A ball-and-stick model of CO2 shows one carbon atom bonded to two oxygen atoms. How many carbon atoms are in this molecule?",
+        choices: ["1", "2", "3", "4"],
+        answerIndex: 0
+      },
+      {
+        prompt: "A ball-and-stick model shows one carbon atom bonded to four hydrogen atoms. What is the correct chemical formula for this molecule?",
+        choices: ["CH4", "CH3", "H2O", "C4H"],
+        answerIndex: 0
+      },
+      {
+        prompt: "How many carbons are in the chemical formula C4H10?",
+        choices: ["4", "10", "14", "2"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Why can't we see water molecules?",
+        choices: [
+          "They are too small to be seen",
+          "There are water cells, but not molecules",
+          "There are no microscopes that can magnify them enough to be seen",
+          "Their existence has never been proven"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "A student decides to burn wood for scientific purposes. What fact is true regarding the wood?",
+        choices: [
+          "A whole new product is made with different properties.",
+          "The change in the wood can be reversed.",
+          "A physical reaction has occurred.",
+          "The wood gets heated up, but nothing about its properties change."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "How many hydrogens are in the compound NH3?",
+        choices: ["3", "1", "4", "2"],
+        answerIndex: 0
+      },
+      {
+        prompt: "A ball-and-stick model shows one oxygen atom bonded to two hydrogen atoms. What is the correct formula for this molecule?",
+        choices: ["H2O", "HO", "H2O2", "HO2"],
         answerIndex: 0
       }
     ]
@@ -289,6 +461,16 @@ window.SCIENCE_SETS = [
           "Sound moves at the same speed in all materials."
         ],
         answerIndex: 0
+      },
+      {
+        prompt: "Where is the force of gravity pulling towards?",
+        choices: [
+          "Down towards the center of Earth",
+          "Down towards the ground",
+          "Up towards the atmosphere",
+          "Up towards the tallest building in the world"
+        ],
+        answerIndex: 0
       }
     ]
   },
@@ -319,6 +501,190 @@ window.SCIENCE_SETS = [
           "It is larger than all the other stars.",
           "It has more energy than all the other stars."
         ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which planet is the furthest away from Earth?",
+        choices: ["Neptune", "Venus", "Jupiter", "Mercury"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A star was found close to Neptune. From which planet would you be able to see the star at its brightest?",
+        choices: ["Uranus", "Mercury", "Earth", "Mars"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the hydrosphere?",
+        choices: [
+          "The part of Earth that is made of water.",
+          "The envelope of gases that surround Earth.",
+          "The region where living organisms interact.",
+          "The region where rocks can be found on Earth."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which of these are parts of the water cycle?",
+        choices: [
+          "Evaporation, condensation, precipitation",
+          "Weathering and erosion, heat and pressure",
+          "Birth, mating, death",
+          "Seed, plant, death"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is a biosphere?",
+        choices: [
+          "The part of Earth where living organisms are found.",
+          "The part of Earth where dissolved gases are found.",
+          "The part of Earth where water is found.",
+          "The part of Earth where ice and glaciers are found."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "On which planet would the Sun appear the brightest?",
+        choices: ["Mercury", "Earth", "Venus", "Neptune"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What are the layers that make up the inner Earth?",
+        choices: [
+          "Crust, mantle, outer core, inner core",
+          "Crust, mantle, outer core, middle core",
+          "Biosphere, lithosphere, atmosphere, hydrosphere",
+          "Biosphere, lithosphere, atmosphere, watersphere"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Where are tropical climates found?",
+        choices: [
+          "By the equator",
+          "Near cities with a lot of pollution",
+          "Towards the North or South poles",
+          "In between the equator and the poles"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the Big Dipper?",
+        choices: ["Constellation", "Planet", "Galaxy", "Moon"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the reason for Earth's seasons?",
+        choices: [
+          "Earth's tilted axis",
+          "The position of the Sun",
+          "The position of the Moon",
+          "Both the position of the Sun and the Moon"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What happens during a solar eclipse?",
+        choices: [
+          "The Moon blocks out the Sun",
+          "The Sun blocks out the Moon",
+          "The Moon blocks out half of the Sun",
+          "The Sun blocks out half of the Moon"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which Earth layer is the hottest?",
+        choices: ["Inner core", "Crust", "Mantle", "Outer core"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Where is the majority of water found on Earth?",
+        choices: ["Oceans", "Rivers", "Lakes", "Underwater aquifers"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the majority of the quality of water that you can find in nature?",
+        choices: ["Saltwater", "Soap water", "Freshwater", "Sandy water"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What galaxy do we live in?",
+        choices: ["Milky Way", "Earth", "Solar system", "The Sun"],
+        answerIndex: 0
+      }
+    ]
+  },
+  {
+    id: "lifeScience",
+    name: "Life Science",
+    questions: [
+      {
+        prompt: "What do plants use for photosynthesis?",
+        choices: ["Air, water", "Air, soil", "Soil", "Compost"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What part of a lemon tree is edible?",
+        choices: ["Fruit", "Root", "Stem", "Leaves"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is needed for photosynthesis?",
+        choices: ["Light Energy", "Oxygen", "Electrical Energy", "Nitrogen"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Select the organism/plant that is most likely to perform photosynthesis.",
+        choices: ["Aloe vera", "Moose", "Peacock", "Camel"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is a byproduct of photosynthesis?",
+        choices: ["Oxygen", "Water", "Carbon dioxide", "Nitrogen"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which part of the cell is found in a plant cell but not in an animal cell?",
+        choices: ["Chloroplast", "Cytoplasm", "Mitochondria", "Nucleus"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What are organisms made out of?",
+        choices: ["Cells", "One cell", "Lungs", "Chloroplasts"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is another word for evaporation in plant leaves?",
+        choices: ["Transpiration", "Diffusion", "Cohesion", "Adhesion"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which part of the cell is also known as the \"powerhouse of the cell\"?",
+        choices: ["Mitochondria", "Cytoplasm", "Ribosomes", "Golgi Apparatus"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Where does the source of a plant's energy come from?",
+        choices: ["Sun", "Soil", "Other plants", "Moon"],
+        answerIndex: 0
+      }
+    ]
+  },
+  {
+    id: "humanBody",
+    name: "Human Body",
+    questions: [
+      {
+        prompt: "What organ is part of the digestive system?",
+        choices: ["Esophagus", "Spine", "Heart", "Lungs"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "In this organ, vital minerals and nutrients are absorbed from food and put back into the body. Which organ matches this description?",
+        choices: ["Small intestine", "Liver", "Lungs", "Pancreas"],
         answerIndex: 0
       }
     ]

@@ -85,6 +85,67 @@ window.SOCIAL_STUDIES_SETS = [
           "30th Amendment"
         ],
         answerIndex: 0
+      },
+      {
+        prompt: "Who can be involved in a President's Cabinet?",
+        choices: ["Secretary of Defense", "House of Representatives", "Senators", "Chief Justice"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which option shows a reason why we have government?",
+        choices: [
+          "To provide safety from outside threats",
+          "To make citizens unhappy",
+          "To not set rules for citizens",
+          "To not help others"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Of the options provided, which one is most likely to be an official community worker?",
+        choices: ["Nurse", "Hiker", "High school basketball player", "Musician"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is true about the United States of America?",
+        choices: [
+          "We have three official branches of government",
+          "We have two official branches of government",
+          "Our capital is New York City",
+          "Only the Supreme Court judges are allowed to make new laws for our country"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is something that you should always try to do as an American citizen?",
+        choices: [
+          "Be kind to everyone",
+          "To never participate in your community",
+          "To never listen to the law",
+          "Argue with others"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Some people are unhappy since they are taking down a park in order to build new homes. To address their concerns, they might take it to the ___.",
+        choices: ["City hall", "Park", "Library", "Bank"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is NOT an example of protecting the environment?",
+        choices: [
+          "Letting the faucet run all day",
+          "Choosing to walk to get somewhere over using a car",
+          "Turning off the lights when you are not in the room",
+          "Always recycling"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the minimum age to be president?",
+        choices: ["35", "25", "30", "40"],
+        answerIndex: 0
       }
     ]
   },
@@ -219,6 +280,47 @@ window.SOCIAL_STUDIES_SETS = [
           "They each raised taxes",
           "They each changed the amendment process itself"
         ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the definition of freedom of speech?",
+        choices: [
+          "The right to express your opinion without getting punished",
+          "The right to keep a weapon to protect themselves",
+          "The right to publish information",
+          "The right to join together"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which federal document shows that Americans are allowed to make their own decisions?",
+        choices: ["Constitution", "Declaration of Independence", "Articles of Confederation", "The Official US Code"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "The Eighth Amendment states that \"excessive bail shall not be required, nor excessive fines imposed, nor cruel and unusual punishments inflicted.\" Why would the colonists like this amendment added to the United States Constitution?",
+        choices: [
+          "They want equal and fair punishments for everyone",
+          "They like having unfair punishments for everyone",
+          "They want more money for themselves",
+          "They want no jails to exist"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Why do we have a Bill of Rights in our Constitution?",
+        choices: [
+          "It establishes our basic rights as American citizens",
+          "It states all of our amendments",
+          "It states how our government works entirely",
+          "It is the introduction to the Constitution"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What would be an example of the \"right of assembly\"?",
+        choices: ["Hosting a dinner with your friends", "Watching a movie by yourself", "Being home alone", "Sleeping"],
         answerIndex: 0
       }
     ]
@@ -379,6 +481,97 @@ window.SOCIAL_STUDIES_SETS = [
           "By working together to create one big government"
         ],
         answerIndex: 0
+      },
+      {
+        prompt: "What resources did Native Americans use from their environment?",
+        choices: ["Animal skins", "Bricks", "Toilet paper", "Swords"],
+        answerIndex: 0
+      },
+      {
+        prompt: "In the 1700s, who settled in the New England colonies?",
+        choices: ["English", "French", "Spanish", "Portuguese"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Who sponsored Christopher Columbus on his exploration trip?",
+        choices: ["Ferdinand and Isabella", "Alexander the Great", "King George III", "Genghis Khan"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What was the Industrial Revolution responsible for?",
+        choices: [
+          "Massive growth in the population",
+          "Labor costs to be the same",
+          "A national outbreak",
+          "Massive emigration out of the country"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What was the name of the boat the Pilgrims sailed to America on?",
+        choices: ["Mayflower", "Titanic", "Santa Maria", "USS Constitution"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which state is part of the Southern colonies?",
+        choices: ["Georgia", "Connecticut", "Pennsylvania", "New Jersey"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Who were the militiamen who were trained in weaponry and were known for being ready at a minute's notice during the Revolutionary War?",
+        choices: ["Minutemen", "Native Americans", "British", "Hourmen"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Who were the two sides in the American Revolution?",
+        choices: [
+          "England and the United States",
+          "United States and Germany",
+          "France and England",
+          "France and the United States"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which state is NOT a part of the 13 original colonies?",
+        choices: ["Tennessee", "Virginia", "North Carolina", "New Hampshire"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Who wrote the Declaration of Independence?",
+        choices: ["Thomas Jefferson", "Samuel Adams", "James Madison", "John Hancock"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Who is most likely to be a Loyalist?",
+        choices: [
+          "A farmer who supported the British crown",
+          "An American soldier",
+          "A blacksmith who supported the idea of America",
+          "George Washington"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is something that a Patriot would participate in?",
+        choices: [
+          "War, fighting on the American side",
+          "Making goods for the British",
+          "War, fighting on the British side",
+          "Farming"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Who was the US president during the Civil War?",
+        choices: ["Abraham Lincoln", "Andrew Johnson", "James Buchanan", "Ulysses S. Grant"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Out of the answer choices provided, which was invented first?",
+        choices: ["Wheel", "Telephone", "Paper", "Electricity"],
+        answerIndex: 0
       }
     ]
   },
@@ -471,6 +664,153 @@ window.SOCIAL_STUDIES_SETS = [
           "Order more teddy bears",
           "Close the toy store"
         ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is an import?",
+        choices: [
+          "A good brought into a country",
+          "A good brought out of a country",
+          "Goods traded between countries",
+          "Goods being given away for free"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is an example of an export in regards to where we live?",
+        choices: ["American car", "South African wool", "Palestinian iron", "Greek olives"],
+        answerIndex: 0
+      },
+      {
+        prompt: "How do coupons help consumers?",
+        choices: [
+          "They help reduce the price",
+          "Coupons only help producers",
+          "They help raise the price",
+          "They get rid of tax"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which option shows an example of a cash crop?",
+        choices: [
+          "Someone growing sugarcane in Hawaii so that it could be sold in Rhode Island",
+          "Buying rice from an overseas country",
+          "Raising your own chickens so you don't have to pay for eggs at the store",
+          "A farmer growing his own corn for his family"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does it mean to barter something?",
+        choices: ["To trade without using money", "To steal", "To trade using money", "To get it for free"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does income mean?",
+        choices: [
+          "An amount of money earned over a period of time",
+          "A loss in money that comes from providing labor",
+          "The system of how banks handle their money",
+          "The system of how you pay your taxes"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "When a new video game is just released, the price is ___, the supply is ___, and the demand ___.",
+        choices: ["High, high, high", "High, low, high", "Low, low, low", "Low, high, low"],
+        answerIndex: 0
+      },
+      {
+        prompt: "When a product is in scarcity, that means that it is in ___.",
+        choices: ["Shortage", "Convenience for the consumer", "Excess", "Efficiency for the producer"],
+        answerIndex: 0
+      },
+      {
+        prompt: "In Wisconsin, the price of cheese increases. This causes ___ amount of cheese to be purchased.",
+        choices: ["Less", "A stagnant", "The same", "More"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Where are you most likely to find an ATM?",
+        choices: ["Bank", "Post office", "Library", "Movie theater"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What could you NOT have a surplus of?",
+        choices: ["Debt", "Money", "Crops", "Animals"],
+        answerIndex: 0
+      },
+      {
+        prompt: "How do you receive income?",
+        choices: ["Salary", "By shaking hands with others", "Coupons", "High fives"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is someone that would earn profit?",
+        choices: [
+          "Getting money from selling vases",
+          "Losing money because you didn't have any customers",
+          "Losing money because you charged your products too high",
+          "Getting money by not selling anything"
+        ],
+        answerIndex: 0
+      }
+    ]
+  },
+  {
+    id: "geography",
+    name: "Geography",
+    questions: [
+      {
+        prompt: "If it is 4 p.m. in South Carolina, what time is it in Washington State?",
+        choices: ["1 PM", "7 PM", "1 AM", "7 AM"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the capital of Minnesota?",
+        choices: ["Saint Paul", "Juneau", "Dover", "Hartford"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What does a topographic map show?",
+        choices: ["Elevation of an area", "Temperature of an area", "Rainfall of an area", "Details of an area"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is Lake Huron a part of?",
+        choices: ["Great Lakes", "Lake District", "Arrow Lakes", "America Great Lakes"],
+        answerIndex: 0
+      },
+      {
+        prompt: "On a map of the Iberian Peninsula, which country is Spain next to?",
+        choices: ["France", "Germany", "Italy", "England"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is an example of a rural area?",
+        choices: ["Farmland", "Downtown", "House in a community", "Mansion"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which state is a part of the Midwest region?",
+        choices: ["Nebraska", "Nevada", "Montana", "Mississippi"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the southernmost state in the United States of America?",
+        choices: ["Florida", "South Carolina", "Colorado", "Maine"],
+        answerIndex: 0
+      },
+      {
+        prompt: "On which continent can you find the Rocky Mountains?",
+        choices: ["North America", "Asia", "Europe", "South America"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the capital of Iowa?",
+        choices: ["Des Moines", "Dover", "Denver", "Bismarck"],
         answerIndex: 0
       }
     ]
