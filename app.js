@@ -2131,10 +2131,14 @@
   }
 
   function genDecimalSub() {
-    var aCents = randomInt(500, 999);
-    if (aCents % 100 === 0) aCents += 3;
-    var bCents = randomInt(150, aCents - 100);
-    if (bCents % 100 === 0) bCents += 3;
+    var aCents, bCents;
+    for (var attempt = 0; attempt < 50; attempt++) {
+      aCents = randomInt(500, 999);
+      if (aCents % 100 === 0) aCents += 3;
+      bCents = randomInt(150, aCents - 100);
+      if (bCents % 100 === 0) bCents += 3;
+      if (needsRegrouping(aCents, bCents)) break;
+    }
     var correct = aCents - bCents;
     var wrong = [correct + 100, correct - 10, aCents + bCents];
     return makeGenQuestion(
