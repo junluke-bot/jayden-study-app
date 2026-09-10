@@ -23,8 +23,18 @@ window.MATH2_SETS = [
         answerIndex: 0
       },
       {
+        prompt: "412 × 58 = ?",
+        choices: ["23,896", "22,896", "23,996", "24,896"],
+        answerIndex: 0
+      },
+      {
         prompt: "6,552 ÷ 24 = ?",
         choices: ["273", "263", "283", "293"],
+        answerIndex: 0
+      },
+      {
+        prompt: "7,392 ÷ 42 = ?",
+        choices: ["176", "166", "186", "177"],
         answerIndex: 0
       },
       {

@@ -2081,6 +2081,20 @@
     );
   }
 
+  function genDivision4by2() {
+    var divisor = randomInt(11, 97);
+    var minQuotient = Math.ceil(1000 / divisor);
+    var maxQuotient = Math.floor(9999 / divisor);
+    var quotient = randomInt(minQuotient, maxQuotient);
+    var dividend = divisor * quotient;
+    var wrong = [quotient + 10, quotient - 10, quotient + 1];
+    return makeGenQuestion(
+      fmtNum(dividend) + " ÷ " + divisor + " = ?",
+      fmtNum(quotient),
+      wrong.map(fmtNum)
+    );
+  }
+
   function genDecimalAdd() {
     var aCents = randomInt(150, 950);
     if (aCents % 100 === 0) aCents += 3;
@@ -2138,7 +2152,9 @@
       return [
         genSubtraction(),
         genMultiplication(),
+        genMultiplication(),
         genDivision(),
+        genDivision4by2(),
         pickFractionPool(FRACTION_ADD_POOL, "+"),
         pickFractionPool(FRACTION_MULT_POOL, "×"),
         genDecimalAdd(),
