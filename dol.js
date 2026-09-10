@@ -1,10 +1,10 @@
 // Daily Oral Language (DOL) question sets for the Iowa Assessments practice app.
 // Original content covering four categories: Spelling, Capitalization,
 // Punctuation, and Usage and Expression, each with three practice sets.
-// Also includes "Language Review Week 5", converted to multiple choice from
-// the Monday-Thursday correction/grammar exercises in the Daily Language
-// Review Grade 5 Workbook (Week 5), in the varied-question-type style of a
-// Daily Language Quiz.
+// Also includes "Language Review Week 5" and "Language Review Week 6",
+// converted to multiple choice from the Monday-Thursday correction/grammar
+// exercises in the Daily Language Review Grade 5 Workbook, in the
+// varied-question-type style of a Daily Language Quiz.
 // Each question has:
 //   prompt      - the question text
 //   choices     - four answer options (choices[0] is always correct;
@@ -1485,6 +1485,212 @@ window.DOL_SETS = [
           "Interrogative",
           "Imperative",
           "Exclamatory"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "language-review-week6",
+    "name": "Language Review Week 6",
+    "questions": [
+      {
+        "prompt": "Select the sentence that is correctly capitalized, spelled, and punctuated.",
+        "choices": [
+          "Mrs. Lee has traveled to Europe, Asia, and South America.",
+          "mrs lee have traveled to europ asia and south america",
+          "Mrs. Lee have traveled to Europe, Asia, and South America.",
+          "Mrs. Lee has traveled to Europ, Asia, and South America."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "I can't wait to travel by myself.",
+          "i cant weight to travel by myself",
+          "I can't weight to travel by myself.",
+          "I cant wait to travel by myself."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "In the sentence \"Climbing to the rock ledge will test his skills and his mettle,\" what does the word mettle mean?",
+        "choices": [
+          "Courage or strength of character",
+          "A type of metal",
+          "His fear",
+          "His climbing gear"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which word is a synonym for mistaken?",
+        "choices": [
+          "Incorrect",
+          "Correct",
+          "Certain",
+          "Confident"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Is this passage fiction or nonfiction? \"Unopened flower buds of the clove tree are used to dull the pain of a toothache, freshen breath, and flavor ham.\"",
+        "choices": [
+          "Nonfiction",
+          "Fiction",
+          "Poetry",
+          "A recipe"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "In the sentence \"Look at that huge pumpkin!\" does the underlined adjective huge tell which one, what kind, or how many?",
+        "choices": [
+          "What kind",
+          "Which one",
+          "How many",
+          "None of these"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "What is the predicate in the sentence \"The whiskers on my kitten twitch when I rub its back\"?",
+        "choices": [
+          "twitch when I rub its back",
+          "The whiskers on my kitten",
+          "twitch",
+          "my kitten"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Derek said he was too busy to make his bed.",
+          "derek sad he was two busy too make his bed",
+          "Derek said he was to busy to make his bed.",
+          "Derek sad he was too busy too make his bed."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Bob, Lee, and Al went to the Steinhart Aquarium to see the sharks.",
+          "bob lee and al went to the steinhart aquarium to see the shark",
+          "Bob, Lee, and Al went to the steinhart aquarium to see the sharks.",
+          "Bob Lee and Al went to the Steinhart Aquarium to see the sharks."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which word is NOT spelled correctly?",
+        "choices": [
+          "preveiw",
+          "inconsiderate",
+          "uncomfortable",
+          "prejudice"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "What contraction is made from the words \"we\" and \"are\"?",
+        "choices": [
+          "we're",
+          "were",
+          "we is",
+          "weare"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which of these is a real word made by adding a prefix to \"test\"?",
+        "choices": [
+          "Retest",
+          "Testcon",
+          "Vertest",
+          "Mistest"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correctly punctuated.",
+        "choices": [
+          "\"If we work hard,\" Judy replied, \"we'll earn a good grade.\"",
+          "if we work hard replied judy well earn a good grade",
+          "If we work hard, replied Judy, we'll earn a good grade.",
+          "\"If we work hard, replied Judy, well earn a good grade.\""
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correctly punctuated.",
+        "choices": [
+          "Michael asked, \"How soon will breakfast be ready?\"",
+          "michael ask how soon will brakefast be ready",
+          "Michael asked, \"How soon will brakefast be ready?\"",
+          "Michael asked how soon will breakfast be ready."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Is the word \"occupied\" past, present, or future tense?",
+        "choices": [
+          "Past",
+          "Present",
+          "Future",
+          "None of these"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Every Saturday my brother watches Iron Chef.",
+          "every saterday myh brother watches iron chef",
+          "Every saterday my brother watches Iron Chef.",
+          "Every Saturday my brother watches iron chef."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Last summer my friend Tara moved to Taos, New Mexico.",
+          "last sumer my friend tara moved to taos new mexico",
+          "Last summer my friend Tara moved to Taos New Mexico.",
+          "Last sumer my friend Tara moved to Taos, New Mexico."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Choose the best word to complete this analogy: seldom : many :: often : ___",
+        "choices": [
+          "few",
+          "lots",
+          "more",
+          "several"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Are \"quick\" and \"speedy\" synonyms, antonyms, or homophones?",
+        "choices": [
+          "Synonyms",
+          "Antonyms",
+          "Homophones",
+          "None of these"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Are \"week\" and \"weak\" synonyms, antonyms, or homophones?",
+        "choices": [
+          "Homophones",
+          "Synonyms",
+          "Antonyms",
+          "None of these"
         ],
         "answerIndex": 0
       }
