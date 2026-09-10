@@ -2045,9 +2045,30 @@
     );
   }
 
+  function digitsOf(n) {
+    return String(n)
+      .split("")
+      .reverse()
+      .map(Number);
+  }
+
+  function needsRegrouping(a, b) {
+    var da = digitsOf(a);
+    var db = digitsOf(b);
+    var len = Math.max(da.length, db.length);
+    for (var i = 0; i < len; i++) {
+      if ((da[i] || 0) < (db[i] || 0)) return true;
+    }
+    return false;
+  }
+
   function genSubtraction() {
-    var a = randomInt(2000, 9899);
-    var b = randomInt(1000, a - 100);
+    var a, b;
+    for (var attempt = 0; attempt < 50; attempt++) {
+      a = randomInt(2000, 9899);
+      b = randomInt(1000, a - 100);
+      if (needsRegrouping(a, b)) break;
+    }
     var correct = a - b;
     var wrong = [correct + 10, correct - 10, correct + 1000];
     return makeGenQuestion(
