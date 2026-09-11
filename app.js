@@ -2116,6 +2116,32 @@
     );
   }
 
+  function genNoneOfThese() {
+    var a = randomInt(20, 99);
+    var b = randomInt(20, 99);
+    var correct, prompt;
+    if (Math.random() < 0.5) {
+      correct = a + b;
+      prompt = a + " + " + b + " = ?";
+    } else {
+      if (b > a) {
+        var t = a;
+        a = b;
+        b = t;
+      }
+      correct = a - b;
+      prompt = a + " − " + b + " = ?";
+    }
+    var wrong = [];
+    while (wrong.length < 3) {
+      var candidate = correct + randomInt(-5, 5);
+      if (candidate !== correct && candidate >= 0 && wrong.indexOf(candidate) === -1) {
+        wrong.push(candidate);
+      }
+    }
+    return makeGenQuestion(prompt, "None of these", wrong.map(String));
+  }
+
   function genDecimalAdd() {
     var aCents = randomInt(150, 950);
     if (aCents % 100 === 0) aCents += 3;
@@ -2186,7 +2212,8 @@
         genDecimalSub(),
         genDecimalMult(),
         genDecimalDiv(),
-        pickFractionPool(FRACTION_DIV_POOL, "÷")
+        pickFractionPool(FRACTION_DIV_POOL, "÷"),
+        genNoneOfThese()
       ];
     }
   };
