@@ -1281,6 +1281,16 @@ window.DOL_SETS = [
           "No mistake"
         ],
         "answerIndex": 0
+      },
+      {
+        "prompt": "Read the following sentence and decide if it has a capitalization error, punctuation error, spelling error, or no mistake.\n\"There grandfather baked cookies and the children ate them all.\"",
+        "choices": [
+          "Spelling error",
+          "Capitalization error",
+          "Punctuation error",
+          "No mistake"
+        ],
+        "answerIndex": 0
       }
     ]
   },
