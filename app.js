@@ -1621,23 +1621,43 @@
     if (list.indexOf(value) === -1) list.push(value);
   }
 
-  function makeMath2Question(prompt, category, correctText, wrongTexts) {
-    var choices = [correctText];
+  // Every procedurally-generated question (Daily Practice, Computation
+  // Practice, Daily Math 2 Practice) has a chance of surfacing "None of
+  // these" as one of its four choices - sometimes it's the correct answer
+  // (the real answer is left off the list), sometimes it's just another
+  // wrong option. The three "wrong" values a generator computes are always
+  // guaranteed distinct from the correct answer, so swapping in
+  // "None of these" as the correct choice is always valid.
+  var NONE_OF_THESE_CHANCE = 0.2;
+
+  function buildChoicesWithNoneOfThese(correctText, wrongTexts) {
+    var useNoneOfThese = Math.random() < NONE_OF_THESE_CHANCE;
+    var choices = [useNoneOfThese ? "None of these" : correctText];
     for (var i = 0; i < wrongTexts.length && choices.length < 4; i++) {
       uniquePush(choices, wrongTexts[i]);
     }
+    if (!useNoneOfThese) {
+      if (choices.length < 4) {
+        uniquePush(choices, "None of these");
+      } else if (choices.indexOf("None of these") === -1) {
+        choices[choices.length - 1] = "None of these";
+      }
+    }
     var filler = 1;
     while (choices.length < 4) {
-      var candidate = correctText + " (" + filler + ")";
-      uniquePush(choices, candidate);
+      uniquePush(choices, correctText + " (" + filler + ")");
       filler++;
     }
+    return choices;
+  }
+
+  function makeMath2Question(prompt, category, correctText, wrongTexts) {
     return {
       type: "math2",
       topic: "Math 2",
       category: category,
       prompt: prompt,
-      choices: choices,
+      choices: buildChoicesWithNoneOfThese(correctText, wrongTexts),
       answerIndex: 0
     };
   }
@@ -1790,16 +1810,11 @@
   // pool of pre-verified fraction pairs) so answers stay correct.
 
   function makeGenQuestion(prompt, correctText, wrongTexts) {
-    var choices = [correctText];
-    for (var i = 0; i < wrongTexts.length && choices.length < 4; i++) {
-      uniquePush(choices, wrongTexts[i]);
-    }
-    var filler = 1;
-    while (choices.length < 4) {
-      uniquePush(choices, correctText + " (" + filler + ")");
-      filler++;
-    }
-    return { prompt: prompt, choices: choices, answerIndex: 0 };
+    return {
+      prompt: prompt,
+      choices: buildChoicesWithNoneOfThese(correctText, wrongTexts),
+      answerIndex: 0
+    };
   }
 
   function gcdNum(a, b) {
@@ -2116,32 +2131,6 @@
     );
   }
 
-  function genNoneOfThese() {
-    var a = randomInt(20, 99);
-    var b = randomInt(20, 99);
-    var correct, prompt;
-    if (Math.random() < 0.5) {
-      correct = a + b;
-      prompt = a + " + " + b + " = ?";
-    } else {
-      if (b > a) {
-        var t = a;
-        a = b;
-        b = t;
-      }
-      correct = a - b;
-      prompt = a + " − " + b + " = ?";
-    }
-    var wrong = [];
-    while (wrong.length < 3) {
-      var candidate = correct + randomInt(-5, 5);
-      if (candidate !== correct && candidate >= 0 && wrong.indexOf(candidate) === -1) {
-        wrong.push(candidate);
-      }
-    }
-    return makeGenQuestion(prompt, "None of these", wrong.map(String));
-  }
-
   function genDecimalAdd() {
     var aCents = randomInt(150, 950);
     if (aCents % 100 === 0) aCents += 3;
@@ -2212,8 +2201,7 @@
         genDecimalSub(),
         genDecimalMult(),
         genDecimalDiv(),
-        pickFractionPool(FRACTION_DIV_POOL, "÷"),
-        genNoneOfThese()
+        pickFractionPool(FRACTION_DIV_POOL, "÷")
       ];
     }
   };

@@ -71,11 +71,6 @@ window.MATH2_SETS = [
         prompt: "7/8 ÷ 1/4 = ?",
         choices: ["3 1/2", "2 1/2", "3", "4"],
         answerIndex: 0
-      },
-      {
-        prompt: "58 + 47 = ?",
-        choices: ["None of these", "108", "104", "109"],
-        answerIndex: 0
       }
     ]
   }
