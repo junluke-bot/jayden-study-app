@@ -17,10 +17,10 @@ window.SCIENCE_SETS = [
         prompt:
           "While digging at an excavation site, Amelia discovered bird fossils at a depth of 35 feet. Then, Amelia discovered fish fossils at a depth of 75 feet. What does this suggest about the age of the fossils?",
         choices: [
-          "The fish fossils are older.",
-          "The bird fossils are older.",
-          "Both fossils are approximately the same age.",
-          "Both fossils are from the same species."
+          "The fish fossils formed first.",
+          "The bird fossils formed first.",
+          "Both fossils are roughly the same age.",
+          "Both fossils belong to the same species."
         ],
         answerIndex: 0
       },
@@ -35,7 +35,7 @@ window.SCIENCE_SETS = [
         choices: [
           "Glaciers and ice caps",
           "Underground rivers",
-          "The ocean",
+          "Ocean water",
           "Lakes and ponds"
         ],
         answerIndex: 0
@@ -48,10 +48,10 @@ window.SCIENCE_SETS = [
       {
         prompt: "Which action would help reduce pollution in an ecosystem?",
         choices: [
-          "Creating systems to filter wastewater before it enters rivers",
-          "Redirecting factory waste into a lake",
-          "Removing forests to build roads",
-          "Building a golf course"
+          "Filtering wastewater before it reaches rivers",
+          "Dumping factory waste into a lake",
+          "Clearing forests to build roads",
+          "Constructing a golf course"
         ],
         answerIndex: 0
       },
@@ -61,17 +61,17 @@ window.SCIENCE_SETS = [
           "Water and nutrients",
           "Air and bacteria",
           "Soil and animals",
-          "Fungus and insects"
+          "Fungus and bugs"
         ],
         answerIndex: 0
       },
       {
         prompt: "A plant will grow best in an environment with:",
         choices: [
-          "Lots of water, sunlight, and nutrients",
-          "Low amount of sunlight, dry soil, and little water",
-          "Lots of nutrients, no sunlight, and dry air",
-          "Full shade, little water, and nutrient-rich soil"
+          "Plenty of water, sunlight, and nutrients",
+          "Little sunlight, dry soil, and barely any water",
+          "Plenty of nutrients, no sunlight, and dry air",
+          "Deep shade, little water, and nutrient-rich soil"
         ],
         answerIndex: 0
       },
@@ -83,10 +83,10 @@ window.SCIENCE_SETS = [
       {
         prompt: "How do decomposers like fungi and bacteria help an ecosystem?",
         choices: [
-          "They return nutrients to the soil by breaking down dead organisms.",
-          "They move pollen between plants.",
-          "They provide oxygen for animals.",
-          "They create new soil by eroding rocks."
+          "They break down dead organisms and return nutrients to the soil.",
+          "They carry pollen from plant to plant.",
+          "They supply animals with oxygen.",
+          "They wear down rocks to form new soil."
         ],
         answerIndex: 0
       },
@@ -111,60 +111,60 @@ window.SCIENCE_SETS = [
         prompt:
           "In a coastal ecosystem, sea stars eat mussels, and mussels filter water. If pollution kills off most of the sea stars, what is the most likely result?",
         choices: [
-          "Mussel populations will go up.",
-          "More sea stars will migrate to the area.",
-          "The mussels will stop filtering water.",
-          "Sea stars will begin to filter water."
+          "The mussel population will increase.",
+          "More sea stars will move into the area.",
+          "The mussels will no longer filter the water.",
+          "Sea stars will start filtering the water."
         ],
         answerIndex: 0
       },
       {
         prompt: "Which of the following would take place during erosion?",
         choices: [
-          "Wind carrying sand from one place to another",
-          "Lava cooling into rock",
-          "Plants absorbing water through their roots",
-          "Ice melting into water"
+          "Wind blowing sand from one place to another",
+          "Lava hardening into rock",
+          "Plant roots soaking up water",
+          "Ice melting into liquid water"
         ],
         answerIndex: 0
       },
       {
         prompt: "What would be the best way to prevent erosion on a riverbank?",
         choices: [
-          "Planting grasses and shrubs along the river's edge",
-          "Taking away all trees from the riverbank",
-          "Increasing the speed of the river's current",
-          "Digging deeper channels in the river"
+          "Planting grass and shrubs along the riverbank",
+          "Clearing all the trees from the riverbank",
+          "Speeding up the river's current",
+          "Carving deeper channels into the river"
         ],
         answerIndex: 0
       },
       {
         prompt: "What is the influence of oceans on ecosystems?",
         choices: [
-          "They provide homes for marine life.",
-          "They are the reason why grasslands are present.",
-          "They are the reason for rain.",
-          "They are where cold-blooded animals live."
+          "They give marine animals a place to live.",
+          "They're the reason grasslands exist.",
+          "They cause rainfall.",
+          "They're home to cold-blooded animals only."
         ],
         answerIndex: 0
       },
       {
         prompt: "What is the purpose of a decomposer?",
         choices: [
-          "To break down dead animals and plants",
-          "To produce their own food",
-          "To eat living poisonous plants",
-          "To eat away dangerous rodents"
+          "To break down dead plants and animals",
+          "To make their own food",
+          "To feed on living poisonous plants",
+          "To get rid of dangerous rodents"
         ],
         answerIndex: 0
       },
       {
         prompt: "Why is corn a producer?",
         choices: [
-          "It makes its own food.",
-          "It eats other organisms.",
-          "It is an herbivore.",
-          "It is a carnivore."
+          "It produces its own food.",
+          "It feeds on other organisms.",
+          "It's a plant-eater.",
+          "It's a meat-eater."
         ],
         answerIndex: 0
       },
@@ -177,30 +177,30 @@ window.SCIENCE_SETS = [
       {
         prompt: "What happens to matter when a snake eats a rat?",
         choices: [
-          "All of the matter gets transferred to the snake.",
-          "All of the matter gets transferred to the rat.",
-          "Matter is equally distributed between the snake and the rat.",
-          "No matter is transferred."
+          "All the matter passes to the snake.",
+          "All the matter passes to the rat.",
+          "The matter is split evenly between the snake and the rat.",
+          "No matter is exchanged at all."
         ],
         answerIndex: 0
       },
       {
         prompt: "What is the best way to save our Earth from excess human activity?",
         choices: [
-          "Teach others how to conserve",
-          "Only flush the toilet once a day",
-          "Throw all of your trash away in the river because it is going to end up there anyway",
-          "Don't buy produce"
+          "Teach others ways to conserve resources",
+          "Flush the toilet only once each day",
+          "Toss all your trash in the river since it'll end up there eventually",
+          "Stop buying fruits and vegetables"
         ],
         answerIndex: 0
       },
       {
         prompt: "What is an omnivore?",
         choices: [
-          "An animal that eats plants and animals",
+          "An animal that eats both plants and animals",
           "An animal that eats only plants",
-          "An animal that eats only animals",
-          "An animal that eats only marine animals"
+          "An animal that eats only other animals",
+          "An animal that eats only sea creatures"
         ],
         answerIndex: 0
       },
@@ -208,16 +208,16 @@ window.SCIENCE_SETS = [
         prompt:
           "A polar bear makes its way to a tropical rainforest ecosystem. How does this impact the ecosystem there?",
         choices: [
-          "It disrupts the balance there",
-          "The native animals hibernate",
-          "All the plants get eaten",
-          "Nothing is affected"
+          "It throws off the ecosystem's balance",
+          "The native animals go into hibernation",
+          "Every plant gets eaten",
+          "There is no effect at all"
         ],
         answerIndex: 0
       },
       {
         prompt: "What is a human activity that negatively impacts our Earth in major ways?",
-        choices: ["Industry", "Planting trees", "Eating plant-based foods", "Using artificial lights"],
+        choices: ["Industry", "Planting more trees", "Eating a plant-based diet", "Using artificial lighting"],
         answerIndex: 0
       },
       {
@@ -228,20 +228,20 @@ window.SCIENCE_SETS = [
       {
         prompt: "Why do animals migrate?",
         choices: [
-          "To find favorable living conditions",
-          "To travel in groups",
-          "To live in colder places",
-          "To explore new places"
+          "To seek out better living conditions",
+          "To move together as a group",
+          "To settle somewhere colder",
+          "To discover new places"
         ],
         answerIndex: 0
       },
       {
         prompt: "What is one way we can protect Earth from extreme pollution?",
         choices: [
-          "Walk to school",
-          "Switch to disposable paper, wood and plastics",
-          "Only drink one glass of water a day",
-          "Take short showers"
+          "Walk instead of driving to school",
+          "Switch to disposable paper, wood, and plastic products",
+          "Limit yourself to one glass of water a day",
+          "Keep your showers short"
         ],
         answerIndex: 0
       }
@@ -254,10 +254,10 @@ window.SCIENCE_SETS = [
       {
         prompt: "Which answer choice is an example of an energy source that is renewable?",
         choices: [
-          "A solar panel converting sunlight into electricity",
-          "Burning wood for heat",
-          "A train using coal for power",
-          "A car running on gasoline"
+          "A solar panel turning sunlight into electricity",
+          "Burning wood to produce heat",
+          "A train powered by coal",
+          "A car that runs on gasoline"
         ],
         answerIndex: 0
       },
@@ -267,15 +267,15 @@ window.SCIENCE_SETS = [
           "Natural gas",
           "Wind turbines",
           "Hydroelectric dams",
-          "Geothermal power"
+          "Geothermal energy"
         ],
         answerIndex: 0
       },
       {
         prompt: "What type of energy is produced when electrical energy flows into a light bulb?",
         choices: [
-          "Heat energy and light energy",
-          "Sound energy and solar energy",
+          "Heat and light energy",
+          "Sound and solar energy",
           "Magnetic energy",
           "Nuclear energy"
         ],
@@ -294,7 +294,7 @@ window.SCIENCE_SETS = [
     questions: [
       {
         prompt: "Which of the following objects is most likely to be attracted to a magnet?",
-        choices: ["A steel paperclip", "A plastic button", "A glass marble", "A wooden pencil"],
+        choices: ["A metal paperclip", "A plastic button", "A glass marble", "A wooden pencil"],
         answerIndex: 0
       },
       {
@@ -305,31 +305,31 @@ window.SCIENCE_SETS = [
       {
         prompt: "Which of the following is a property of most metals?",
         choices: [
-          "They can be melted and reshaped.",
-          "They shatter easily.",
-          "They are always brittle.",
-          "They do not conduct electricity."
+          "They can be melted down and reshaped.",
+          "They break apart easily.",
+          "They are always fragile.",
+          "They don't conduct electricity."
         ],
         answerIndex: 0
       },
       {
         prompt: "Which scenario shows particles that are too small to be seen?",
         choices: [
-          "Dissolving sugar in water",
-          "Stirring water",
-          "A seashell on shore",
-          "Raindrops falling down from the sky"
+          "Sugar dissolving in water",
+          "Water being stirred",
+          "A seashell lying on the shore",
+          "Raindrops falling from the sky"
         ],
         answerIndex: 0
       },
       {
         prompt: "Making a Caesar salad is an example of a...",
-        choices: ["Physical change", "Chemical change", "Chemical reaction", "Science"],
+        choices: ["Physical change", "Chemical change", "Chemical reaction", "Branch of science"],
         answerIndex: 0
       },
       {
         prompt: "What does a diamond and a gold bar have in common?",
-        choices: ["Both are minerals", "Both are easy to mine", "Both are easy to bend", "Both are easy to break"],
+        choices: ["They are both minerals", "They are both easy to mine", "They both bend easily", "They both break easily"],
         answerIndex: 0
       },
       {
@@ -350,20 +350,20 @@ window.SCIENCE_SETS = [
       {
         prompt: "Why can't we see water molecules?",
         choices: [
-          "They are too small to be seen",
-          "There are water cells, but not molecules",
-          "There are no microscopes that can magnify them enough to be seen",
-          "Their existence has never been proven"
+          "They're far too small to see",
+          "Water is made of cells, not molecules",
+          "No microscope is powerful enough to magnify them",
+          "Scientists have never proven they exist"
         ],
         answerIndex: 0
       },
       {
         prompt: "A student decides to burn wood for scientific purposes. What fact is true regarding the wood?",
         choices: [
-          "A whole new product is made with different properties.",
-          "The change in the wood can be reversed.",
-          "A physical reaction has occurred.",
-          "The wood gets heated up, but nothing about its properties change."
+          "An entirely new substance forms with different properties.",
+          "The change can be undone.",
+          "Only a physical reaction took place.",
+          "The wood heats up, but its properties stay the same."
         ],
         answerIndex: 0
       },
@@ -387,10 +387,10 @@ window.SCIENCE_SETS = [
         prompt:
           "Two students pull identical wagons. One wagon moves faster than the other. What is the most likely reason?",
         choices: [
-          "The student pulling the faster wagon is using more force.",
-          "The slower wagon is lighter.",
-          "The students are using equal force.",
-          "The heavier wagon moves faster."
+          "The student with the faster wagon is applying more force.",
+          "The slower wagon weighs less.",
+          "Both students are applying the same amount of force.",
+          "The heavier wagon is the one moving faster."
         ],
         answerIndex: 0
       },
@@ -403,30 +403,30 @@ window.SCIENCE_SETS = [
       {
         prompt: "What effect does gravity have on a rock sitting on the edge of a cliff?",
         choices: [
-          "It pulls the rock downward.",
-          "It pushes the rock toward the ocean.",
-          "It breaks the rock down slowly over time.",
-          "It causes the rock to change shape."
+          "It pulls the rock down.",
+          "It pushes the rock out toward the ocean.",
+          "It wears the rock down gradually over time.",
+          "It changes the rock's shape."
         ],
         answerIndex: 0
       },
       {
         prompt: "How does increasing the steepness of a ramp affect the speed of a rolling object?",
         choices: [
-          "It increases the object's speed.",
-          "It makes the object roll slower.",
-          "It has no effect on speed.",
-          "It makes the object stop moving."
+          "It makes the object roll faster.",
+          "It slows the object's roll.",
+          "It doesn't change the speed at all.",
+          "It brings the object to a stop."
         ],
         answerIndex: 0
       },
       {
         prompt: "A baseball rests on a baseball field. What force is keeping the baseball from moving?",
         choices: [
-          "Gravity pulling it toward the Earth's core",
-          "The Sun's energy",
-          "The Earth's magnetic field",
-          "The movement of the atmosphere"
+          "Gravity pulling it toward the center of the Earth",
+          "Energy from the Sun",
+          "The Earth's magnetic pull",
+          "Movement in the atmosphere"
         ],
         answerIndex: 0
       },
@@ -444,10 +444,10 @@ window.SCIENCE_SETS = [
       {
         prompt: "Over an hour, waves on a lake became taller. What does this tell us?",
         choices: [
-          "The energy of the waves has gone up.",
-          "The energy of the waves has gone down.",
-          "The waves lost momentum.",
-          "The gravity of the Moon stopped affecting the water."
+          "The waves' energy has increased.",
+          "The waves' energy has decreased.",
+          "The waves have lost their momentum.",
+          "The Moon's gravity no longer affects the water."
         ],
         answerIndex: 0
       },
@@ -455,20 +455,20 @@ window.SCIENCE_SETS = [
         prompt:
           "A scientist tests the speed of sound through different materials. He finds that sound travels the slowest in air, faster in water, and the fastest in steel. What does this tell us?",
         choices: [
-          "Sound travels the fastest in solids.",
-          "Sound travels the fastest in gases.",
-          "Sound cannot move through solids.",
-          "Sound moves at the same speed in all materials."
+          "Sound moves fastest through solids.",
+          "Sound moves fastest through gases.",
+          "Sound can't travel through solids at all.",
+          "Sound travels at the same speed no matter the material."
         ],
         answerIndex: 0
       },
       {
         prompt: "Where is the force of gravity pulling towards?",
         choices: [
-          "Down towards the center of Earth",
-          "Down towards the ground",
-          "Up towards the atmosphere",
-          "Up towards the tallest building in the world"
+          "Toward the center of the Earth",
+          "Toward the ground",
+          "Up toward the atmosphere",
+          "Up toward the world's tallest building"
         ],
         answerIndex: 0
       }
@@ -486,20 +486,20 @@ window.SCIENCE_SETS = [
       {
         prompt: "What keeps objects on the Earth from floating off into space?",
         choices: [
-          "The Earth's gravity",
+          "Earth's gravity",
           "The Sun's magnetic field",
-          "The diameter of Earth's axis",
-          "The Earth's rotation"
+          "The width of Earth's axis",
+          "Earth's rotation"
         ],
         answerIndex: 0
       },
       {
         prompt: "Why does the Sun appear brighter compared to other stars in the sky?",
         choices: [
-          "It is much closer to Earth than other stars.",
-          "It is hotter than all the other stars.",
-          "It is larger than all the other stars.",
-          "It has more energy than all the other stars."
+          "It's far closer to Earth than any other star.",
+          "It's hotter than every other star.",
+          "It's bigger than every other star.",
+          "It gives off more energy than every other star."
         ],
         answerIndex: 0
       },
@@ -517,30 +517,30 @@ window.SCIENCE_SETS = [
       {
         prompt: "What is the hydrosphere?",
         choices: [
-          "The part of Earth that is made of water.",
-          "The envelope of gases that surround Earth.",
-          "The region where living organisms interact.",
-          "The region where rocks can be found on Earth."
+          "The water found on and around Earth.",
+          "The layer of gases surrounding Earth.",
+          "The area where living things interact.",
+          "The area where rocks are found on Earth."
         ],
         answerIndex: 0
       },
       {
         prompt: "Which of these are parts of the water cycle?",
         choices: [
-          "Evaporation, condensation, precipitation",
-          "Weathering and erosion, heat and pressure",
-          "Birth, mating, death",
-          "Seed, plant, death"
+          "Evaporation, condensation, and precipitation",
+          "Weathering, erosion, heat, and pressure",
+          "Birth, mating, and death",
+          "Seed, growth, and death"
         ],
         answerIndex: 0
       },
       {
         prompt: "What is a biosphere?",
         choices: [
-          "The part of Earth where living organisms are found.",
-          "The part of Earth where dissolved gases are found.",
-          "The part of Earth where water is found.",
-          "The part of Earth where ice and glaciers are found."
+          "The layer of Earth where living things are found.",
+          "The layer of Earth where dissolved gases exist.",
+          "The layer of Earth made up of water.",
+          "The layer of Earth covered in ice and glaciers."
         ],
         answerIndex: 0
       },
@@ -552,20 +552,20 @@ window.SCIENCE_SETS = [
       {
         prompt: "What are the layers that make up the inner Earth?",
         choices: [
-          "Crust, mantle, outer core, inner core",
-          "Crust, mantle, outer core, middle core",
-          "Biosphere, lithosphere, atmosphere, hydrosphere",
-          "Biosphere, lithosphere, atmosphere, watersphere"
+          "The crust, mantle, outer core, and inner core",
+          "The crust, mantle, outer core, and middle core",
+          "The biosphere, lithosphere, atmosphere, and hydrosphere",
+          "The biosphere, lithosphere, atmosphere, and watersphere"
         ],
         answerIndex: 0
       },
       {
         prompt: "Where are tropical climates found?",
         choices: [
-          "By the equator",
-          "Near cities with a lot of pollution",
-          "Towards the North or South poles",
-          "In between the equator and the poles"
+          "Near the equator",
+          "Near heavily polluted cities",
+          "Close to the North or South Pole",
+          "Between the equator and the poles"
         ],
         answerIndex: 0
       },
@@ -577,20 +577,20 @@ window.SCIENCE_SETS = [
       {
         prompt: "What is the reason for Earth's seasons?",
         choices: [
-          "Earth's tilted axis",
-          "The position of the Sun",
-          "The position of the Moon",
-          "Both the position of the Sun and the Moon"
+          "The tilt of Earth's axis",
+          "Where the Sun is positioned",
+          "Where the Moon is positioned",
+          "The positions of both the Sun and the Moon"
         ],
         answerIndex: 0
       },
       {
         prompt: "What happens during a solar eclipse?",
         choices: [
-          "The Moon blocks out the Sun",
-          "The Sun blocks out the Moon",
-          "The Moon blocks out half of the Sun",
-          "The Sun blocks out half of the Moon"
+          "The Moon passes in front of the Sun, blocking it",
+          "The Sun blocks the Moon from view",
+          "The Moon covers half of the Sun",
+          "The Sun covers half of the Moon"
         ],
         answerIndex: 0
       },
@@ -632,7 +632,7 @@ window.SCIENCE_SETS = [
       },
       {
         prompt: "What is needed for photosynthesis?",
-        choices: ["Light Energy", "Oxygen", "Electrical Energy", "Nitrogen"],
+        choices: ["Light energy", "Oxygen", "Electrical energy", "Nitrogen"],
         answerIndex: 0
       },
       {
@@ -662,7 +662,7 @@ window.SCIENCE_SETS = [
       },
       {
         prompt: "Which part of the cell is also known as the \"powerhouse of the cell\"?",
-        choices: ["Mitochondria", "Cytoplasm", "Ribosomes", "Golgi Apparatus"],
+        choices: ["Mitochondria", "Cytoplasm", "Ribosomes", "Golgi apparatus"],
         answerIndex: 0
       },
       {
@@ -697,10 +697,10 @@ window.SCIENCE_SETS = [
         prompt:
           "A scientist plants five identical flowers in different amounts of sunlight to test how it affects growth. What is the independent variable in this experiment?",
         choices: [
-          "The amount of sunlight",
-          "The type of plant",
-          "The soil used",
-          "The number of flowers"
+          "The amount of sunlight given",
+          "The type of plant used",
+          "The soil that's used",
+          "The number of flowers planted"
         ],
         answerIndex: 0
       },
@@ -712,7 +712,7 @@ window.SCIENCE_SETS = [
       {
         prompt: "Which tool would best help compare the mass of two objects?",
         choices: [
-          "A digital scale",
+          "An electronic scale",
           "A graduated cylinder",
           "A ruler",
           "A thermometer"
@@ -728,10 +728,10 @@ window.SCIENCE_SETS = [
         prompt:
           "A scientist is testing how the amount of water affects plant growth. She gives different amounts of water to three identical plants and measures their height over time. Which term is used to describe the amount of water the scientist gives to the plants?",
         choices: [
-          "Independent Variable",
+          "Independent variable",
           "Hypothesis",
           "Control",
-          "Dependent Variable"
+          "Dependent variable"
         ],
         answerIndex: 0
       }
