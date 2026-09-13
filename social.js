@@ -94,10 +94,10 @@ window.SOCIAL_STUDIES_SETS = [
       {
         prompt: "Which option shows a reason why we have government?",
         choices: [
-          "To provide safety from outside threats",
-          "To make citizens unhappy",
-          "To not set rules for citizens",
-          "To not help others"
+          "To keep citizens safe from outside threats",
+          "To make citizens miserable",
+          "To avoid setting any rules for citizens",
+          "To refuse to help others"
         ],
         answerIndex: 0
       },
@@ -109,20 +109,20 @@ window.SOCIAL_STUDIES_SETS = [
       {
         prompt: "What is true about the United States of America?",
         choices: [
-          "We have three official branches of government",
-          "We have two official branches of government",
-          "Our capital is New York City",
-          "Only the Supreme Court judges are allowed to make new laws for our country"
+          "The government has three official branches",
+          "The government has two official branches",
+          "New York City is our nation's capital",
+          "Only Supreme Court judges can create new laws for the country"
         ],
         answerIndex: 0
       },
       {
         prompt: "What is something that you should always try to do as an American citizen?",
         choices: [
-          "Be kind to everyone",
-          "To never participate in your community",
-          "To never listen to the law",
-          "Argue with others"
+          "Treat everyone with kindness",
+          "Avoid participating in your community",
+          "Ignore the law",
+          "Pick arguments with others"
         ],
         answerIndex: 0
       },
@@ -135,10 +135,10 @@ window.SOCIAL_STUDIES_SETS = [
       {
         prompt: "Which is NOT an example of protecting the environment?",
         choices: [
-          "Letting the faucet run all day",
-          "Choosing to walk to get somewhere over using a car",
-          "Turning off the lights when you are not in the room",
-          "Always recycling"
+          "Leaving the faucet running all day",
+          "Walking somewhere instead of driving",
+          "Switching off lights when you leave a room",
+          "Recycling consistently"
         ],
         answerIndex: 0
       },
@@ -156,10 +156,10 @@ window.SOCIAL_STUDIES_SETS = [
       {
         prompt: "Which of the following is a responsibility of a U.S. citizen?",
         choices: [
-          "Serving on a jury when called",
-          "Voting in another country's elections",
-          "Refusing to pay taxes",
-          "Ignoring local laws"
+          "Reporting for jury duty when summoned",
+          "Voting in a foreign country's elections",
+          "Refusing to pay your taxes",
+          "Disregarding local laws"
         ],
         answerIndex: 0
       },
@@ -167,20 +167,20 @@ window.SOCIAL_STUDIES_SETS = [
         prompt:
           "Marcus is 18 and just registered to vote for the first time. Which citizen responsibility is he fulfilling?",
         choices: [
-          "Participating in the democratic process",
-          "Serving in a government office",
-          "Paying property taxes",
-          "Running for president"
+          "Taking part in the democratic process",
+          "Holding a government office",
+          "Paying property tax",
+          "Running for the presidency"
         ],
         answerIndex: 0
       },
       {
         prompt: "What is \"due process of law\"?",
         choices: [
-          "The government must follow fair procedures before taking away a person's life, liberty, or property",
-          "A law that only applies to government officials",
-          "The process of writing a new law",
-          "A citizen's right to skip a court hearing"
+          "The government must use fair procedures before taking a person's life, liberty, or property",
+          "A law that applies only to government officials",
+          "The steps involved in writing a new law",
+          "A citizen's right to miss a scheduled court hearing"
         ],
         answerIndex: 0
       },
@@ -198,40 +198,40 @@ window.SOCIAL_STUDIES_SETS = [
       {
         prompt: "How can an amendment be proposed to the U.S. Constitution?",
         choices: [
-          "By a two-thirds vote in both houses of Congress",
-          "By a majority vote of U.S. governors only",
-          "By a unanimous vote of the Supreme Court",
-          "By a public poll of all U.S. citizens"
+          "With a two-thirds vote from both houses of Congress",
+          "With a majority vote from the nation's governors alone",
+          "With a unanimous Supreme Court vote",
+          "With a nationwide public poll of citizens"
         ],
         answerIndex: 0
       },
       {
         prompt: "After an amendment is proposed, what must happen for it to become part of the Constitution?",
         choices: [
-          "Three-fourths of the states must ratify (approve) it",
-          "The President must personally rewrite it",
-          "It must be approved by a foreign government",
-          "It automatically becomes law after one year"
+          "Three-fourths of the states must approve (ratify) it",
+          "The President has to personally rewrite it",
+          "A foreign government must approve it",
+          "It becomes law automatically after a year"
         ],
         answerIndex: 0
       },
       {
         prompt: "What is the main purpose of the amendment process?",
         choices: [
-          "To allow the Constitution to be changed as the country's needs change over time",
-          "To make the Constitution impossible to change",
-          "To let the President change laws without Congress",
-          "To remove rights from citizens when needed"
+          "To let the Constitution evolve as the country's needs change",
+          "To keep the Constitution from ever being changed",
+          "To allow the President to change laws without Congress",
+          "To strip citizens of rights whenever necessary"
         ],
         answerIndex: 0
       },
       {
         prompt: "Why did the writers of the Constitution make the amendment process difficult, requiring broad agreement?",
         choices: [
-          "So that changes reflect wide, lasting support rather than a temporary majority",
-          "So that only the President could change the Constitution",
-          "So that no amendment could ever be passed",
-          "So that states would never have to agree with each other"
+          "So changes reflect broad, lasting agreement rather than a passing majority",
+          "So only the President has the power to change the Constitution",
+          "So that amendments could never actually pass",
+          "So states would never need to agree with one another"
         ],
         answerIndex: 0
       },
@@ -264,9 +264,9 @@ window.SOCIAL_STUDIES_SETS = [
         prompt:
           "Before the 19th Amendment was passed, women in most states were not allowed to vote. What did the 19th Amendment change?",
         choices: [
-          "It gave women the right to vote in all U.S. elections",
-          "It gave women the right to run for governor only",
-          "It gave women the right to serve on juries",
+          "It granted women voting rights in every U.S. election",
+          "It only allowed women to run for governor",
+          "It allowed women to serve on juries",
           "It gave women the right to own property"
         ],
         answerIndex: 0
@@ -275,20 +275,20 @@ window.SOCIAL_STUDIES_SETS = [
         prompt:
           "A group of amendments (the 15th, 19th, 23rd, 24th, and 26th) all deal with the same basic idea. What do they have in common?",
         choices: [
-          "They each expanded who is allowed to vote",
-          "They each created a new branch of government",
-          "They each raised taxes",
-          "They each changed the amendment process itself"
+          "Each one expanded who was allowed to vote",
+          "Each one created a new branch of government",
+          "Each one raised taxes",
+          "Each one changed the amendment process itself"
         ],
         answerIndex: 0
       },
       {
         prompt: "What is the definition of freedom of speech?",
         choices: [
-          "The right to express your opinion without getting punished",
-          "The right to keep a weapon to protect themselves",
-          "The right to publish information",
-          "The right to join together"
+          "The right to voice your opinion without facing punishment",
+          "The right to own a weapon for self-protection",
+          "The right to publish information publicly",
+          "The right to gather together with others"
         ],
         answerIndex: 0
       },
@@ -301,26 +301,26 @@ window.SOCIAL_STUDIES_SETS = [
         prompt:
           "The Eighth Amendment states that \"excessive bail shall not be required, nor excessive fines imposed, nor cruel and unusual punishments inflicted.\" Why would the colonists like this amendment added to the United States Constitution?",
         choices: [
-          "They want equal and fair punishments for everyone",
-          "They like having unfair punishments for everyone",
-          "They want more money for themselves",
-          "They want no jails to exist"
+          "They wanted punishments to be equal and fair for everyone",
+          "They preferred unfair punishments for everyone",
+          "They wanted more money for themselves",
+          "They wanted jails to be abolished entirely"
         ],
         answerIndex: 0
       },
       {
         prompt: "Why do we have a Bill of Rights in our Constitution?",
         choices: [
-          "It establishes our basic rights as American citizens",
-          "It states all of our amendments",
-          "It states how our government works entirely",
-          "It is the introduction to the Constitution"
+          "It sets out our basic rights as American citizens",
+          "It lists every one of our amendments",
+          "It explains exactly how our government functions",
+          "It serves as the Constitution's introduction"
         ],
         answerIndex: 0
       },
       {
         prompt: "What would be an example of the \"right of assembly\"?",
-        choices: ["Hosting a dinner with your friends", "Watching a movie by yourself", "Being home alone", "Sleeping"],
+        choices: ["Getting together with friends for dinner", "Watching a movie alone", "Staying home by yourself", "Taking a nap"],
         answerIndex: 0
       }
     ]
@@ -332,40 +332,40 @@ window.SOCIAL_STUDIES_SETS = [
       {
         prompt: "What was Christopher Columbus originally trying to find when he sailed from Europe?",
         choices: [
-          "A faster route to Asia",
-          "A new continent",
-          "An island with buried treasure",
-          "A new place to start a colony"
+          "A quicker route to Asia",
+          "An undiscovered continent",
+          "A treasure-filled island",
+          "A new site to establish a colony"
         ],
         answerIndex: 0
       },
       {
         prompt: "What was the Columbian Exchange?",
         choices: [
-          "The exchange of plants, animals, and diseases between the Old World and New World",
-          "The movement of Native Americans to Europe",
-          "A trade route established by the Dutch",
-          "A system of government used in colonial territories"
+          "The trading of plants, animals, and diseases between the Old and New Worlds",
+          "Native Americans relocating to Europe",
+          "A trade route the Dutch created",
+          "A style of government used in colonial territories"
         ],
         answerIndex: 0
       },
       {
         prompt: "Why did the Pilgrims come to North America in 1620?",
         choices: [
-          "To escape religious persecution",
+          "To flee religious persecution",
           "To trade furs with Native Americans",
-          "To search for gold and riches",
-          "To find a shorter route to Asia"
+          "To hunt for gold and riches",
+          "To discover a shorter route to Asia"
         ],
         answerIndex: 0
       },
       {
         prompt: "What was the main reason the American colonies declared independence from Britain?",
         choices: [
-          "They were unhappy with British taxes and lack of representation.",
-          "They wanted to form a new government with France.",
-          "They wanted to trade more with Native American groups.",
-          "They wanted to expand westward before Britain did."
+          "They resented British taxes and having no representation.",
+          "They wanted to build a new government alongside France.",
+          "They wanted to increase trade with Native American groups.",
+          "They wanted to expand west before Britain could."
         ],
         answerIndex: 0
       },
@@ -382,30 +382,30 @@ window.SOCIAL_STUDIES_SETS = [
       {
         prompt: "What did the Louisiana Purchase of 1803 do?",
         choices: [
-          "Doubled the size of the United States",
-          "Created a new tax on imported goods",
-          "Ended the Revolutionary War",
-          "Allowed slavery in new states"
+          "Doubled the United States' land area",
+          "Placed a new tax on imported goods",
+          "Brought the Revolutionary War to an end",
+          "Permitted slavery in new states"
         ],
         answerIndex: 0
       },
       {
         prompt: "What was the purpose of the Underground Railroad?",
         choices: [
-          "To help enslaved people escape to freedom",
-          "To transport goods secretly across the country",
-          "To build railroads in the South",
-          "To move soldiers during the Civil War"
+          "To help enslaved people reach freedom",
+          "To secretly move goods across the country",
+          "To construct railroads throughout the South",
+          "To transport soldiers during the Civil War"
         ],
         answerIndex: 0
       },
       {
         prompt: "Why did the Southern states secede from the Union in 1860-1861?",
         choices: [
-          "They wanted to continue the practice of slavery.",
-          "They wanted to form a new country based on democracy.",
-          "They disagreed with Northern policies about trade.",
-          "They were against westward expansion."
+          "They wanted to keep the practice of slavery going.",
+          "They wanted to found a new democratic nation.",
+          "They opposed the North's trade policies.",
+          "They opposed expansion into the West."
         ],
         answerIndex: 0
       },
@@ -413,20 +413,20 @@ window.SOCIAL_STUDIES_SETS = [
         prompt:
           "Why did the U.S. government create reservations for Native American tribes in the late 1800s?",
         choices: [
-          "To force them off their ancestral lands",
-          "To give them land for farming",
-          "To protect their traditional way of life",
-          "To train them to become U.S. citizens"
+          "To push them off their ancestral lands",
+          "To provide them farmland",
+          "To preserve their traditional way of life",
+          "To prepare them for U.S. citizenship"
         ],
         answerIndex: 0
       },
       {
         prompt: "Which of the following was an effect of the Industrial Revolution?",
         choices: [
-          "More people moved to cities to work in factories.",
-          "Farming became the main job for most Americans.",
-          "Fewer inventions were created.",
-          "Railroads became less important."
+          "More people relocated to cities for factory jobs.",
+          "Farming became most Americans' main occupation.",
+          "New inventions became less common.",
+          "Railroads lost their importance."
         ],
         answerIndex: 0
       },
@@ -434,20 +434,20 @@ window.SOCIAL_STUDIES_SETS = [
         prompt:
           "Why did millions of immigrants come through Ellis Island in the late 1800s and early 1900s?",
         choices: [
-          "To escape war and poverty in their home countries",
+          "To flee war and poverty back home",
           "To spread their religious beliefs",
-          "To visit family in New York for a short time",
-          "To vacation in the U.S."
+          "To make a brief visit to family in New York",
+          "To take a vacation in the U.S."
         ],
         answerIndex: 0
       },
       {
         prompt: "What was the Great Depression?",
         choices: [
-          "A time in the U.S. when many people were out of work and had very little money",
-          "A time when the number of jobs in the U.S. rapidly went up",
-          "A war between the U.S. and Europe",
-          "A war between the U.S. and Mexico"
+          "A period when many Americans were jobless and had very little money",
+          "A period when U.S. job numbers rose rapidly",
+          "A war fought between the U.S. and Europe",
+          "A war fought between the U.S. and Mexico"
         ],
         answerIndex: 0
       },
@@ -475,10 +475,10 @@ window.SOCIAL_STUDIES_SETS = [
         prompt:
           "During the Cold War (1947 to 1991), the United States and the Soviet Union were in competition, but they never fought each other directly. Instead, they tried to prove which country was stronger in different ways. What is one way they competed?",
         choices: [
-          "By competing in space exploration and military strength",
-          "By fighting in a war against each other",
-          "By setting up colonies together",
-          "By working together to create one big government"
+          "Through competition in space exploration and military power",
+          "By going to war directly against one another",
+          "By jointly establishing colonies",
+          "By joining forces to form one government"
         ],
         answerIndex: 0
       },
@@ -500,10 +500,10 @@ window.SOCIAL_STUDIES_SETS = [
       {
         prompt: "What was the Industrial Revolution responsible for?",
         choices: [
-          "Massive growth in the population",
-          "Labor costs to be the same",
-          "A national outbreak",
-          "Massive emigration out of the country"
+          "A huge jump in population",
+          "Labor costs staying the same",
+          "A nationwide disease outbreak",
+          "Massive emigration away from the country"
         ],
         answerIndex: 0
       },
@@ -546,9 +546,9 @@ window.SOCIAL_STUDIES_SETS = [
       {
         prompt: "Who is most likely to be a Loyalist?",
         choices: [
-          "A farmer who supported the British crown",
+          "A farmer loyal to the British crown",
           "An American soldier",
-          "A blacksmith who supported the idea of America",
+          "A blacksmith who believed in American independence",
           "George Washington"
         ],
         answerIndex: 0
@@ -556,9 +556,9 @@ window.SOCIAL_STUDIES_SETS = [
       {
         prompt: "What is something that a Patriot would participate in?",
         choices: [
-          "War, fighting on the American side",
-          "Making goods for the British",
-          "War, fighting on the British side",
+          "Fighting for the American side in the war",
+          "Producing goods for the British",
+          "Fighting for the British side in the war",
           "Farming"
         ],
         answerIndex: 0
@@ -589,19 +589,19 @@ window.SOCIAL_STUDIES_SETS = [
         prompt:
           'During what\'s called a "recession," businesses make less money, and people lose their jobs. As a result, people often spend less. Which of the following is least likely to happen during this time?',
         choices: [
-          "More people buy expensive cars.",
-          "The number of people without a job goes up.",
-          "The amount of money people save goes down.",
-          "Fewer people go out to eat at restaurants."
+          "More people start buying expensive cars.",
+          "Unemployment numbers rise.",
+          "People's savings decrease.",
+          "Fewer people dine out at restaurants."
         ],
         answerIndex: 0
       },
       {
         prompt: "Which is an example of a service?",
         choices: [
-          "A hairstylist giving a haircut",
-          "A carpenter selling handmade furniture",
-          "A customer purchasing a new laptop",
+          "A hairstylist cutting someone's hair",
+          "A carpenter selling handcrafted furniture",
+          "A customer buying a new laptop",
           "A farmer growing wheat"
         ],
         answerIndex: 0
@@ -609,10 +609,10 @@ window.SOCIAL_STUDIES_SETS = [
       {
         prompt: "What do consumers do in an economy?",
         choices: [
-          "Buy goods and services",
-          "Produce goods",
-          "Enforce laws",
-          "Set prices of goods and services"
+          "Purchase goods and services",
+          "Manufacture goods",
+          "Enforce the law",
+          "Decide the prices of goods and services"
         ],
         answerIndex: 0
       },
@@ -631,10 +631,10 @@ window.SOCIAL_STUDIES_SETS = [
       {
         prompt: "Which of the following is not an example of using local natural resources?",
         choices: [
-          "A bakery buying flour from another country",
-          "A farmer growing crops using soil on his/her farm",
-          "A lumber mill cutting down nearby trees",
-          "A fisherman catching fish in a nearby lake"
+          "A bakery importing flour from another country",
+          "A farmer growing crops in their own soil",
+          "A lumber mill logging nearby trees",
+          "A fisherman catching fish from a nearby lake"
         ],
         answerIndex: 0
       },
@@ -648,10 +648,10 @@ window.SOCIAL_STUDIES_SETS = [
         prompt:
           "Lena owns a small bakery that sells cupcakes. One day, many more people start coming to her shop, and she quickly sells out of cupcakes. What should she do to meet the demand?",
         choices: [
-          "Bake more cupcakes and raise the price",
-          "Close the bakery",
-          "Bake only cookies",
-          "Only sell cupcakes to her friends"
+          "Make more cupcakes and increase the price",
+          "Shut down the bakery",
+          "Switch to baking only cookies",
+          "Sell cupcakes only to her friends"
         ],
         answerIndex: 0
       },
@@ -659,20 +659,20 @@ window.SOCIAL_STUDIES_SETS = [
         prompt:
           "Alex owns a toy store that ordered too many teddy bears. Also, there are fewer customers who want to buy them. What should Alex do to sell more teddy bears?",
         choices: [
-          "Lower the price to encourage more people to buy them",
-          "Raise the price of the teddy bears",
-          "Order more teddy bears",
-          "Close the toy store"
+          "Drop the price to attract more buyers",
+          "Increase the price of the teddy bears",
+          "Order even more teddy bears",
+          "Shut down the toy store"
         ],
         answerIndex: 0
       },
       {
         prompt: "What is an import?",
         choices: [
-          "A good brought into a country",
-          "A good brought out of a country",
-          "Goods traded between countries",
-          "Goods being given away for free"
+          "A good brought in from another country",
+          "A good sent out to another country",
+          "Goods exchanged between countries",
+          "Goods given away at no cost"
         ],
         answerIndex: 0
       },
@@ -684,35 +684,35 @@ window.SOCIAL_STUDIES_SETS = [
       {
         prompt: "How do coupons help consumers?",
         choices: [
-          "They help reduce the price",
-          "Coupons only help producers",
-          "They help raise the price",
-          "They get rid of tax"
+          "They lower the price you pay",
+          "Coupons benefit producers only",
+          "They increase the price",
+          "They eliminate sales tax"
         ],
         answerIndex: 0
       },
       {
         prompt: "Which option shows an example of a cash crop?",
         choices: [
-          "Someone growing sugarcane in Hawaii so that it could be sold in Rhode Island",
-          "Buying rice from an overseas country",
-          "Raising your own chickens so you don't have to pay for eggs at the store",
-          "A farmer growing his own corn for his family"
+          "Growing sugarcane in Hawaii to sell in Rhode Island",
+          "Importing rice from an overseas country",
+          "Keeping chickens so you don't have to buy eggs at the store",
+          "A farmer growing corn just for his own family"
         ],
         answerIndex: 0
       },
       {
         prompt: "What does it mean to barter something?",
-        choices: ["To trade without using money", "To steal", "To trade using money", "To get it for free"],
+        choices: ["To exchange goods without using money", "To take something without paying", "To exchange goods using money", "To receive something at no cost"],
         answerIndex: 0
       },
       {
         prompt: "What does income mean?",
         choices: [
-          "An amount of money earned over a period of time",
-          "A loss in money that comes from providing labor",
-          "The system of how banks handle their money",
-          "The system of how you pay your taxes"
+          "Money earned over a period of time",
+          "Money lost as a result of doing labor",
+          "How banks manage their money",
+          "How you pay your taxes"
         ],
         answerIndex: 0
       },
@@ -724,7 +724,7 @@ window.SOCIAL_STUDIES_SETS = [
       },
       {
         prompt: "When a product is in scarcity, that means that it is in ___.",
-        choices: ["Shortage", "Convenience for the consumer", "Excess", "Efficiency for the producer"],
+        choices: ["A shortage", "A convenience for consumers", "A surplus", "An efficiency gain for producers"],
         answerIndex: 0
       },
       {
@@ -750,10 +750,10 @@ window.SOCIAL_STUDIES_SETS = [
       {
         prompt: "What is someone that would earn profit?",
         choices: [
-          "Getting money from selling vases",
-          "Losing money because you didn't have any customers",
-          "Losing money because you charged your products too high",
-          "Getting money by not selling anything"
+          "Making money by selling vases",
+          "Losing money from a lack of customers",
+          "Losing money by overpricing your products",
+          "Somehow making money without selling anything"
         ],
         answerIndex: 0
       }
@@ -775,7 +775,7 @@ window.SOCIAL_STUDIES_SETS = [
       },
       {
         prompt: "What does a topographic map show?",
-        choices: ["Elevation of an area", "Temperature of an area", "Rainfall of an area", "Details of an area"],
+        choices: ["The elevation of an area", "The temperature of an area", "The rainfall of an area", "The general details of an area"],
         answerIndex: 0
       },
       {
