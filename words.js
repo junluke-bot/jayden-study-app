@@ -2957,259 +2957,259 @@ window.WORD_SETS = [
       {
         word: "mock",
         phrase: "a mock assignment",
-        choices: ["make-believe", "structured", "difficult", "real"],
+        choices: ["pretend", "organized", "tough", "genuine"],
         answerIndex: 0,
         meaning: "not real; fake or pretend"
       },
       {
         word: "peculiar",
         phrase: "a peculiar way",
-        choices: ["distinct", "common", "usual", "vague"],
+        choices: ["odd", "ordinary", "routine", "unclear"],
         answerIndex: 0,
         meaning: "strange or unusual"
       },
       {
         word: "queasy",
         phrase: "a queasy feeling",
-        choices: ["anxious", "comfortable", "happy", "content"],
+        choices: ["nauseated", "at ease", "cheerful", "satisfied"],
         answerIndex: 0,
         meaning: "feeling nauseated or uneasy"
       },
       {
         word: "sturdy",
         phrase: "a sturdy table",
-        choices: ["strong", "weak", "uneven", "even"],
+        choices: ["solid", "flimsy", "lopsided", "level"],
         answerIndex: 0,
         meaning: "strongly and solidly built"
       },
       {
         word: "sole",
         phrase: "the sole survivor",
-        choices: ["one and only", "shared", "common", "living"],
+        choices: ["single", "joint", "widespread", "alive"],
         answerIndex: 0,
         meaning: "being the only one"
       },
       {
         word: "typical",
         phrase: "a typical reaction",
-        choices: ["common", "abnormal", "rare", "unorthodox"],
+        choices: ["standard", "unusual", "scarce", "unconventional"],
         answerIndex: 0,
         meaning: "usual or ordinary"
       },
       {
         word: "valiant",
         phrase: "a valiant effort",
-        choices: ["fearless", "timid", "timely", "weak"],
+        choices: ["brave", "cowardly", "punctual", "feeble"],
         answerIndex: 0,
         meaning: "showing courage or bravery"
       },
       {
         word: "vast",
         phrase: "the vast universe",
-        choices: ["endless", "expand", "long", "interesting"],
+        choices: ["immense", "shrink", "brief", "dull"],
         answerIndex: 0,
         meaning: "extremely large in area or extent"
       },
       {
         word: "abused",
         phrase: "an abused dog",
-        choices: ["mistreated", "well liked", "defended", "protected"],
+        choices: ["harmed", "adored", "stood up for", "safeguarded"],
         answerIndex: 0,
         meaning: "treated cruelly or harmfully"
       },
       {
         word: "composed",
         phrase: "composed music",
-        choices: ["constructed", "played", "listened", "liked"],
+        choices: ["written", "performed", "heard", "enjoyed"],
         answerIndex: 0,
         meaning: "created or written, as a piece of music"
       },
       {
         word: "edible",
         phrase: "edible berries",
-        choices: ["eatable", "poisonous", "suitable", "harmful"],
+        choices: ["consumable", "toxic", "appropriate", "dangerous"],
         answerIndex: 0,
         meaning: "safe to eat"
       },
       {
         word: "portable",
         phrase: "a portable table",
-        choices: ["easy to move", "lightweight", "inconvenient", "awkward"],
+        choices: ["movable", "cumbersome", "impractical", "clunky"],
         answerIndex: 0,
         meaning: "able to be carried or moved easily"
       },
       {
         word: "realistic",
         phrase: "realistic expectations",
-        choices: ["down-to-earth", "unusual", "impractical", "unique"],
+        choices: ["practical", "odd", "unworkable", "one-of-a-kind"],
         answerIndex: 0,
         meaning: "practical and sensible; based on what's actually possible"
       },
       {
         word: "summit",
         phrase: "a mountain summit",
-        choices: ["peak", "camp site", "base", "lake"],
+        choices: ["apex", "campground", "bottom", "pond"],
         answerIndex: 0,
         meaning: "the highest point of a mountain"
       },
       {
         word: "obsolete",
         phrase: "an obsolete machine",
-        choices: ["out-of-date", "hard to use", "up-to-date", "useful"],
+        choices: ["outmoded", "difficult to operate", "current", "practical"],
         answerIndex: 0,
         meaning: "no longer used; outdated"
       },
       {
         word: "myth",
         phrase: "an ancient myth",
-        choices: ["legend", "time", "reality", "classic"],
+        choices: ["fable", "era", "fact", "masterpiece"],
         answerIndex: 0,
         meaning: "a traditional story, often about gods or heroes"
       },
       {
         word: "immense",
         phrase: "an immense collection",
-        choices: ["massive", "envious", "beautiful", "limited"],
+        choices: ["vast", "jealous", "attractive", "restricted"],
         answerIndex: 0,
         meaning: "extremely large"
       },
       {
         word: "escalated",
         phrase: "an escalated order",
-        choices: ["raised", "reduced", "lost", "fulfilled"],
+        choices: ["stepped up", "lowered", "misplaced", "completed"],
         answerIndex: 0,
         meaning: "increased quickly"
       },
       {
         word: "comply",
         phrase: "comply with the law",
-        choices: ["obey", "ignore", "understand", "appeal"],
+        choices: ["cooperate", "defy", "misunderstand", "protest"],
         answerIndex: 0,
         meaning: "to act in agreement with a rule or request"
       },
       {
         word: "intercepted",
         phrase: "he was intercepted",
-        choices: ["cut off", "released", "encouraged", "occupied"],
+        choices: ["blocked", "freed", "motivated", "busy"],
         answerIndex: 0,
         meaning: "stopped or caught before reaching a destination"
       },
       {
         word: "identical",
         phrase: "identical shirts",
-        choices: ["the same", "distinct", "different", "common"],
+        choices: ["matching", "unique", "varied", "ordinary"],
         answerIndex: 0,
         meaning: "exactly alike"
       },
       {
         word: "excavate",
         phrase: "excavate the building",
-        choices: ["uncover", "leave", "sketch", "hold"],
+        choices: ["dig out", "abandon", "draw", "grip"],
         answerIndex: 0,
         meaning: "to dig out or expose by digging"
       },
       {
         word: "frigid",
         phrase: "a frigid day",
-        choices: ["chilly", "warm", "dark", "bright"],
+        choices: ["freezing", "balmy", "dim", "radiant"],
         answerIndex: 0,
         meaning: "very cold"
       },
       {
         word: "preserve",
         phrase: "preserve water",
-        choices: ["conserve", "drank", "gave up", "found"],
+        choices: ["save", "consumed", "surrendered", "discovered"],
         answerIndex: 0,
         meaning: "to keep safe or protect from loss"
       },
       {
         word: "reassure",
         phrase: "to reassure",
-        choices: ["comfort", "supply", "deny", "sleep"],
+        choices: ["soothe", "provide", "refuse", "rest"],
         answerIndex: 0,
         meaning: "to restore confidence; to ease someone's worries"
       },
       {
         word: "exerted",
         phrase: "exerted his strength",
-        choices: ["applied", "ignored", "concealed", "rested"],
+        choices: ["used", "disregarded", "hid", "relaxed"],
         answerIndex: 0,
         meaning: "used effort or strength for something"
       },
       {
         word: "mischief",
         phrase: "create mischief",
-        choices: ["trouble", "happiness", "obedience", "fairness"],
+        choices: ["naughtiness", "joy", "compliance", "justice"],
         answerIndex: 0,
         meaning: "playful troublemaking"
       },
       {
         word: "petrified",
         phrase: "petrified rocks",
-        choices: ["fossilized", "softened", "darkened", "sticky"],
+        choices: ["turned to stone", "made soft", "made dark", "made tacky"],
         answerIndex: 0,
         meaning: "turned into stone over a long time"
       },
       {
         word: "pasture",
         phrase: "across the pasture",
-        choices: ["meadow", "road", "track", "park"],
+        choices: ["grassland", "highway", "trail", "playground"],
         answerIndex: 0,
         meaning: "a grassy field used for grazing animals"
       },
       {
         word: "revert",
         phrase: "to revert",
-        choices: ["go back", "stay put", "push through", "halt"],
+        choices: ["return", "remain", "persevere", "stop"],
         answerIndex: 0,
         meaning: "to return to a previous state or condition"
       },
       {
         word: "ruined",
         phrase: "ruined the job",
-        choices: ["messed up", "fixed", "managed", "wrote"],
+        choices: ["spoiled", "repaired", "handled", "composed"],
         answerIndex: 0,
         meaning: "spoiled or damaged"
       },
       {
         word: "companion",
         phrase: "his companion",
-        choices: ["partner", "champion", "dog", "enemy"],
+        choices: ["associate", "victor", "pet", "adversary"],
         answerIndex: 0,
         meaning: "a person who accompanies or spends time with another"
       },
       {
         word: "dedicate",
         phrase: "dedicate yourself",
-        choices: ["devote", "strengthen", "beautify", "withhold"],
+        choices: ["commit", "empower", "adorn", "hold back"],
         answerIndex: 0,
         meaning: "to give one's time or effort to a purpose"
       },
       {
         word: "industrious",
         phrase: "an industrious attitude",
-        choices: ["hardworking", "lazy", "conscious", "lackadaisical"],
+        choices: ["diligent", "idle", "aware", "apathetic"],
         answerIndex: 0,
         meaning: "hardworking and diligent"
       },
       {
         word: "exasperated",
         phrase: "he was exasperated",
-        choices: ["irritated", "tired", "happy", "lonely"],
+        choices: ["frustrated", "exhausted", "delighted", "isolated"],
         answerIndex: 0,
         meaning: "very annoyed or frustrated"
       },
       {
         word: "apathetic",
         phrase: "acted apathetic",
-        choices: ["unconcerned", "caring", "upset", "frightened"],
+        choices: ["indifferent", "compassionate", "distressed", "scared"],
         answerIndex: 0,
         meaning: "showing little interest or concern"
       },
       {
         word: "sparse",
         phrase: "sparse vegetation",
-        choices: ["lacking", "abundant", "colorful", "ornate"],
+        choices: ["scant", "plentiful", "vibrant", "elaborate"],
         answerIndex: 0,
         meaning: "thinly scattered or not dense"
       }
@@ -3222,210 +3222,210 @@ window.WORD_SETS = [
       {
         word: "captivity",
         phrase: "The lion lives in captivity.",
-        choices: ["confinement", "freedom", "jungle", "Africa"],
+        choices: ["imprisonment", "liberty", "rainforest", "continent"],
         answerIndex: 0,
         meaning: "the state of being kept confined, not free"
       },
       {
         word: "disclose",
         phrase: "I cannot disclose that.",
-        choices: ["reveal", "conceal", "withhold", "hide"],
+        choices: ["divulge", "cover up", "keep back", "stash"],
         answerIndex: 0,
         meaning: "to make known; reveal"
       },
       {
         word: "descend",
         phrase: "Descend to 20,000 feet.",
-        choices: ["lower", "increase", "rise", "ascend"],
+        choices: ["go down", "climb up", "soar", "go higher"],
         answerIndex: 0,
         meaning: "to move downward"
       },
       {
         word: "horror",
         phrase: "It was a horror movie.",
-        choices: ["scary", "funny", "dramatic", "sad"],
+        choices: ["frightening", "hilarious", "theatrical", "sorrowful"],
         answerIndex: 0,
         meaning: "a feeling of intense fear or shock"
       },
       {
         word: "considerable",
         phrase: "a considerable amount of time",
-        choices: ["large", "insignificant", "small", "itsy"],
+        choices: ["substantial", "negligible", "minor", "tiny"],
         answerIndex: 0,
         meaning: "large in amount or size"
       },
       {
         word: "heroic",
         phrase: "a heroic effort",
-        choices: ["bold", "meek", "true", "timid"],
+        choices: ["courageous", "cowardly", "honest", "fearful"],
         answerIndex: 0,
         meaning: "showing great courage"
       },
       {
         word: "jagged",
         phrase: "a jagged edge",
-        choices: ["broken", "gentle", "smooth", "sloped"],
+        choices: ["rough-edged", "mild", "even", "slanted"],
         answerIndex: 0,
         meaning: "having a sharp, uneven edge"
       },
       {
         word: "peculiar",
         phrase: "a peculiar smell",
-        choices: ["distinguished", "stinky", "nasty", "normal"],
+        choices: ["unusual", "smelly", "unpleasant", "typical"],
         answerIndex: 0,
         meaning: "distinctive; unusual in a particular way"
       },
       {
         word: "act in",
         phrase: "Please act in my interest.",
-        choices: ["represent", "know", "disclose", "understand"],
+        choices: ["look out for", "be aware of", "reveal", "comprehend"],
         answerIndex: 0,
         meaning: "to represent or look out for someone's benefit"
       },
       {
         word: "sturdy",
         phrase: "Sturdy shoes",
-        choices: ["durable", "wobbly", "unstable", "thin"],
+        choices: ["tough", "shaky", "rickety", "flimsy"],
         answerIndex: 0,
         meaning: "strongly built; not easily damaged"
       },
       {
         word: "variety",
         phrase: "a variety of interests",
-        choices: ["array", "limitation", "uniformity", "preference"],
+        choices: ["assortment", "restriction", "sameness", "favorite"],
         answerIndex: 0,
         meaning: "a number of different types of something"
       },
       {
         word: "tragic",
         phrase: "A tragic story",
-        choices: ["catastrophic", "horror", "blessed", "dramatic"],
+        choices: ["heartbreaking", "terrifying", "fortunate", "theatrical"],
         answerIndex: 0,
         meaning: "causing great sadness; disastrous"
       },
       {
         word: "valiant",
         phrase: "a valiant act",
-        choices: ["courageous", "simple", "careless", "thoughtful"],
+        choices: ["gallant", "plain", "reckless", "considerate"],
         answerIndex: 0,
         meaning: "showing courage or bravery"
       },
       {
         word: "indicate",
         phrase: "Please indicate your choice.",
-        choices: ["announce", "conceal", "hide", "mislead"],
+        choices: ["signal", "cover up", "stash", "deceive"],
         answerIndex: 0,
         meaning: "to point out or make known"
       },
       {
         word: "proceed",
         phrase: "Proceed to the next station.",
-        choices: ["go", "halt", "retreat", "wait"],
+        choices: ["continue on", "stop", "withdraw", "pause"],
         answerIndex: 0,
         meaning: "to move forward; continue"
       },
       {
         word: "reveal",
         phrase: "Reveal the secret.",
-        choices: ["disclose", "hide", "suppress", "keep"],
+        choices: ["unveil", "conceal", "stifle", "retain"],
         answerIndex: 0,
         meaning: "to make something known that was hidden"
       },
       {
         word: "shabby",
         phrase: "a shabby couch",
-        choices: ["shoddy", "comfortable", "expensive", "chic"],
+        choices: ["run-down", "cozy", "costly", "fashionable"],
         answerIndex: 0,
         meaning: "worn out and in poor condition"
       },
       {
         word: "pointless",
         phrase: "A pointless effort",
-        choices: ["ridiculous", "sensible", "beneficial", "useful"],
+        choices: ["futile", "reasonable", "helpful", "worthwhile"],
         answerIndex: 0,
         meaning: "having no purpose"
       },
       {
         word: "modest",
         phrase: "You are too modest.",
-        choices: ["bashful", "bold", "conceited", "proud"],
+        choices: ["unassuming", "brazen", "vain", "boastful"],
         answerIndex: 0,
         meaning: "not boastful; shy about one's abilities"
       },
       {
         word: "entire",
         phrase: "My entire wardrobe",
-        choices: ["whole", "incomplete", "limited", "closet"],
+        choices: ["complete", "partial", "restricted", "wardrobe"],
         answerIndex: 0,
         meaning: "whole; complete"
       },
       {
         word: "skilled",
         phrase: "A skilled worker",
-        choices: ["accomplished", "inept", "awkward", "driven"],
+        choices: ["proficient", "unskilled", "clumsy", "ambitious"],
         answerIndex: 0,
         meaning: "having ability or expertise"
       },
       {
         word: "shriek",
         phrase: "To shriek with laughter",
-        choices: ["scream", "giggle", "peep", "gasp"],
+        choices: ["screech", "chuckle", "squeak", "gulp"],
         answerIndex: 0,
         meaning: "to give a loud, high-pitched cry"
       },
       {
         word: "frantic",
         phrase: "a frantic call",
-        choices: ["distressed", "calm", "docile", "mad"],
+        choices: ["frenzied", "composed", "tame", "furious"],
         answerIndex: 0,
         meaning: "wild with fear, worry, or excitement"
       },
       {
         word: "ease",
         phrase: "We talked with ease.",
-        choices: ["comfort", "excitement", "difficulty", "unrest"],
+        choices: ["effortlessness", "thrill", "hardship", "turmoil"],
         answerIndex: 0,
         meaning: "freedom from difficulty; comfort"
       },
       {
         word: "desire",
         phrase: "This is my greatest desire.",
-        choices: ["longing", "gift", "aversion", "dislike"],
+        choices: ["craving", "present", "distaste", "disfavor"],
         answerIndex: 0,
         meaning: "a strong wish for something"
       },
       {
         word: "contribute",
         phrase: "I want to contribute.",
-        choices: ["donate", "withdraw", "join", "neglect"],
+        choices: ["give", "remove", "enroll", "disregard"],
         answerIndex: 0,
         meaning: "to give something, especially to help"
       },
       {
         word: "administer",
         phrase: "Please administer support.",
-        choices: ["deliver", "deny", "withdraw", "shun"],
+        choices: ["dispense", "refuse", "retract", "avoid"],
         answerIndex: 0,
         meaning: "to give or provide something"
       },
       {
         word: "humble",
         phrase: "The boy is humble.",
-        choices: ["meek", "brave", "assertive", "friendly"],
+        choices: ["unpretentious", "bold", "forceful", "sociable"],
         answerIndex: 0,
         meaning: "not proud; modest"
       },
       {
         word: "resist",
         phrase: "Don't resist change.",
-        choices: ["oppose", "comply", "conform", "agree"],
+        choices: ["withstand", "obey", "submit", "consent"],
         answerIndex: 0,
         meaning: "to refuse to accept or go along with"
       },
       {
         word: "gazebo",
         phrase: "The gazebo in the backyard",
-        choices: ["pavilion", "arena", "theater", "grounds"],
+        choices: ["garden structure", "stadium", "playhouse", "property"],
         answerIndex: 0,
         meaning: "a small roofed structure, often open-sided, in a garden or yard"
       }
@@ -3438,210 +3438,210 @@ window.WORD_SETS = [
       {
         word: "antagonist",
         phrase: "He plays the antagonist.",
-        choices: ["adversary", "hero", "protagonist", "lead"],
+        choices: ["foe", "champion", "main character", "star"],
         answerIndex: 0,
         meaning: "a character who opposes the main character"
       },
       {
         word: "records",
         phrase: "lost records",
-        choices: ["documents", "oration", "books", "dvds"],
+        choices: ["files", "speech", "novels", "discs"],
         answerIndex: 0,
         meaning: "written or official documents"
       },
       {
         word: "deprive",
         phrase: "Don't deprive him.",
-        choices: ["constrain", "release", "indulge", "endow"],
+        choices: ["deny", "free", "pamper", "grant"],
         answerIndex: 0,
         meaning: "to keep someone from having or enjoying something"
       },
       {
         word: "nonchalant",
         phrase: "He acted nonchalant.",
-        choices: ["easygoing", "intense", "nervous", "fine"],
+        choices: ["cool and casual", "high-strung", "jittery", "so-so"],
         answerIndex: 0,
         meaning: "calm and relaxed; not worried"
       },
       {
         word: "perish",
         phrase: "Publish or perish",
-        choices: ["be destroyed", "revive", "flourish", "germinate"],
+        choices: ["expire", "revitalize", "thrive", "sprout"],
         answerIndex: 0,
         meaning: "to die or come to an end"
       },
       {
         word: "minor",
         phrase: "a minor talent",
-        choices: ["insignificant", "child", "big", "important"],
+        choices: ["trivial", "youngster", "major", "crucial"],
         answerIndex: 0,
         meaning: "small in size or importance"
       },
       {
         word: "gorge",
         phrase: "Don't gorge on the food",
-        choices: ["gobble", "nibble", "graze", "taste"],
+        choices: ["devour", "peck at", "browse", "sample"],
         answerIndex: 0,
         meaning: "to eat greedily or in large amounts"
       },
       {
         word: "obsolete",
         phrase: "The device is obsolete.",
-        choices: ["dated", "contemporary", "broken", "moldy"],
+        choices: ["old-fashioned", "modern", "malfunctioning", "stale"],
         answerIndex: 0,
         meaning: "no longer used; outdated"
       },
       {
         word: "sparse",
         phrase: "His decor is sparse.",
-        choices: ["simple", "lush", "overdone", "classic"],
+        choices: ["bare", "abundant", "excessive", "timeless"],
         answerIndex: 0,
         meaning: "thinly spread; not dense"
       },
       {
         word: "vivid",
         phrase: "a vivid description",
-        choices: ["graphic", "weak", "indulgent", "quiet"],
+        choices: ["lifelike", "faint", "excessive", "muted"],
         answerIndex: 0,
         meaning: "producing a clear, strong image in the mind"
       },
       {
         word: "revert",
         phrase: "Click here to revert to the home page.",
-        choices: ["return", "find", "open", "copy"],
+        choices: ["go back to", "locate", "unlock", "duplicate"],
         answerIndex: 0,
         meaning: "to return to a previous state"
       },
       {
         word: "motivate",
         phrase: "Motivate the team.",
-        choices: ["excite", "depress", "gather", "persuade"],
+        choices: ["inspire", "sadden", "collect", "urge"],
         answerIndex: 0,
         meaning: "to give someone a reason to act"
       },
       {
         word: "provide",
         phrase: "Provide shelter",
-        choices: ["supply", "remove", "obstruct", "design"],
+        choices: ["furnish", "take away", "block", "plan"],
         answerIndex: 0,
         meaning: "to supply or make available"
       },
       {
         word: "settle",
         phrase: "Don't settle for less",
-        choices: ["accept", "move", "achieve", "reside"],
+        choices: ["agree to", "relocate", "accomplish", "dwell"],
         answerIndex: 0,
         meaning: "to accept something as final, often less than hoped for"
       },
       {
         word: "suspend",
         phrase: "Suspend disbelief",
-        choices: ["cease", "allow", "cause", "begin"],
+        choices: ["halt", "permit", "trigger", "initiate"],
         answerIndex: 0,
         meaning: "to stop something temporarily"
       },
       {
         word: "kin",
         phrase: "Next of kin",
-        choices: ["relatives", "friends", "sisters", "neighbors"],
+        choices: ["family members", "pals", "siblings only", "neighbors"],
         answerIndex: 0,
         meaning: "family members; relatives"
       },
       {
         word: "pedestrian",
         phrase: "That new song is pedestrian.",
-        choices: ["boring", "different", "exceptional", "bystander"],
+        choices: ["unremarkable", "unusual", "outstanding", "onlooker"],
         answerIndex: 0,
         meaning: "ordinary and dull; unremarkable"
       },
       {
         word: "excavate",
         phrase: "Excavate the find",
-        choices: ["explore", "promote", "bury", "photograph"],
+        choices: ["dig into", "advertise", "cover up", "capture on film"],
         answerIndex: 0,
         meaning: "to dig out or uncover"
       },
       {
         word: "intense",
         phrase: "An intense experience",
-        choices: ["acute", "lazy", "quiet", "indifferent"],
+        choices: ["severe", "sluggish", "subdued", "apathetic"],
         answerIndex: 0,
         meaning: "very strong or extreme"
       },
       {
         word: "mischief",
         phrase: "Full of mischief",
-        choices: ["shenanigans", "giggles", "obedience", "jokes"],
+        choices: ["tomfoolery", "laughter", "cooperation", "riddles"],
         answerIndex: 0,
         meaning: "playful troublemaking"
       },
       {
         word: "exert",
         phrase: "to exert pressure",
-        choices: ["apply", "misuse", "ignore", "shun"],
+        choices: ["exercise", "abuse", "overlook", "avoid"],
         answerIndex: 0,
         meaning: "to apply or use effort or force"
       },
       {
         word: "detect",
         phrase: "To detect a lie",
-        choices: ["discover", "miss", "ignore", "overlook"],
+        choices: ["sense", "fail to notice", "disregard", "skip over"],
         answerIndex: 0,
         meaning: "to discover or notice something"
       },
       {
         word: "bungle",
         phrase: "To bungle a job",
-        choices: ["blunder", "fix", "succeed", "complete"],
+        choices: ["botch up", "repair", "triumph", "finish"],
         answerIndex: 0,
         meaning: "to do something clumsily or carelessly"
       },
       {
         word: "soundproof",
         phrase: "soundproof booth",
-        choices: ["silent", "noisy", "airtight", "humming"],
+        choices: ["sound-blocking", "loud", "sealed tight", "buzzing"],
         answerIndex: 0,
         meaning: "designed to block sound from passing through"
       },
       {
         word: "assume",
         phrase: "Assume the worst",
-        choices: ["believe", "doubt", "deduce", "deny"],
+        choices: ["presume", "question", "conclude logically", "refuse"],
         answerIndex: 0,
         meaning: "to accept something as true without proof"
       },
       {
         word: "compose",
         phrase: "Compose yourself.",
-        choices: ["control", "arouse", "excite", "anger"],
+        choices: ["calm oneself", "stir up", "thrill", "enrage"],
         answerIndex: 0,
         meaning: "to calm or control oneself"
       },
       {
         word: "aim",
         phrase: "Aim for peace.",
-        choices: ["strive", "give", "speak", "write"],
+        choices: ["target", "donate", "talk", "pen"],
         answerIndex: 0,
         meaning: "to try hard for a goal; strive"
       },
       {
         word: "astound",
         phrase: "You astound me.",
-        choices: ["amaze", "have", "bore", "horrify"],
+        choices: ["stun", "possess", "tire out", "terrify"],
         answerIndex: 0,
         meaning: "to surprise or amaze greatly"
       },
       {
         word: "occasion",
         phrase: "a special occasion",
-        choices: ["event", "invitation", "trip", "decoration"],
+        choices: ["instance", "invite", "journey", "ornament"],
         answerIndex: 0,
         meaning: "a particular event or happening"
       },
       {
         word: "illuminate",
         phrase: "Illuminate your point.",
-        choices: ["explain", "confuse", "brighten", "sparkle"],
+        choices: ["clarify", "puzzle", "glisten", "darken"],
         answerIndex: 0,
         meaning: "to make something clear; to explain"
       }
