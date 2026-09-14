@@ -814,5 +814,83 @@ window.SOCIAL_STUDIES_SETS = [
         answerIndex: 0
       }
     ]
+  },
+  {
+    id: "sept11",
+    name: "September 11th (9/11)",
+    questions: [
+      {
+        prompt: "Which of the following was 9/11?",
+        choices: [
+          "A terrorist attack on the United States",
+          "An Al-Qaeda code",
+          "The date of a CIA training exercise",
+          "The date of an FBI training exercise"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which of the following buildings were targeted in the attacks?",
+        choices: ["All the above", "The Twin Towers", "The Pentagon", "The Capitol Building"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Who is the founder of the Al-Qaeda terrorist group?",
+        choices: ["Osama bin Laden", "Visas", "Pentagon", "George W. Bush"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Which of the following was the primary weapon used by the terrorists to destroy the buildings?",
+        choices: ["Commercial airplanes", "Bombs", "Firearms", "Weapons of mass destruction"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Why was the Capitol Building spared from destruction?",
+        choices: [
+          "The passengers of the plane meant to crash into it overpowered the terrorists",
+          "The terrorists failed to board the plane they meant to crash into it",
+          "The bombs planted below it didn't go off",
+          "The CIA and FBI prevented the plot"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which of the following best defines Al-Qaeda?",
+        choices: [
+          "A terrorist organization based in the Middle East",
+          "A country in the Middle East",
+          "Osama Bin Laden's codename",
+          "The codename of the CIA mission to find Osama Bin Laden"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Who was the president of the United States when the 9/11 attacks happened?",
+        choices: ["George W. Bush", "Bill Clinton", "Barack Obama", "Donald Trump"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What was built on the site of the Twin Towers to memorialize the victims of the 9/11 attacks?",
+        choices: ["One World Trade Center", "A memorial statue", "The Patriot Act", "The Pentagon"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "True or False? People trying to save victims of the terrorist attack passed away as well.",
+        choices: ["True", "False"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which of the following resulted from the 9/11 attacks?",
+        choices: [
+          "All the above",
+          "2,996 dead",
+          "The start of the War in Afghanistan and the War in Iraq",
+          "The passing of the Patriot Act"
+        ],
+        answerIndex: 0
+      }
+    ]
   }
 ];
