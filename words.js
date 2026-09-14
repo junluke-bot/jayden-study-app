@@ -3654,210 +3654,210 @@ window.WORD_SETS = [
       {
         word: "appeal",
         phrase: "To appeal for help",
-        choices: ["request", "recall", "retract", "repent"],
+        choices: ["plead", "remember", "withdraw", "regret"],
         answerIndex: 0,
         meaning: "to make an earnest request"
       },
       {
         word: "consent",
         phrase: "Give consent",
-        choices: ["approval", "denial", "objection", "recommendation"],
+        choices: ["permission", "refusal", "protest", "suggestion"],
         answerIndex: 0,
         meaning: "permission or approval"
       },
       {
         word: "complement",
         phrase: "A nice complement",
-        choices: ["counterpart", "detriment", "praise", "favor"],
+        choices: ["match", "drawback", "compliment", "kindness"],
         answerIndex: 0,
         meaning: "something that completes or matches well with another thing"
       },
       {
         word: "collaborate",
         phrase: "To collaborate on the project",
-        choices: ["cooperate", "disagree", "object", "oppose"],
+        choices: ["team up", "argue", "protest", "resist"],
         answerIndex: 0,
         meaning: "to work together with others"
       },
       {
         word: "defer",
         phrase: "To defer the discussion",
-        choices: ["procrastinate", "advance", "expedite", "hasten"],
+        choices: ["postpone", "move up", "speed along", "rush"],
         answerIndex: 0,
         meaning: "to put off until later; delay"
       },
       {
         word: "conspicuous",
         phrase: "conspicuous consumption",
-        choices: ["obvious", "concealed", "unremarkable", "subtle"],
+        choices: ["noticeable", "hidden", "ordinary", "faint"],
         answerIndex: 0,
         meaning: "easily seen or noticed"
       },
       {
         word: "arid",
         phrase: "An arid climate",
-        choices: ["dry", "wet", "cold", "humid"],
+        choices: ["parched", "damp", "chilly", "muggy"],
         answerIndex: 0,
         meaning: "extremely dry, especially due to lack of rain"
       },
       {
         word: "cultivate",
         phrase: "Cultivate a friendship.",
-        choices: ["nurture", "harvest", "ignore", "neglect"],
+        choices: ["foster", "pick", "disregard", "spoil"],
         answerIndex: 0,
         meaning: "to develop or improve through effort"
       },
       {
         word: "esteem",
         phrase: "Hold him in esteem.",
-        choices: ["admire", "ridicule", "desire", "kindness"],
+        choices: ["regard highly", "mock", "long for", "gentleness"],
         answerIndex: 0,
         meaning: "respect and admiration"
       },
       {
         word: "meager",
         phrase: "Meager earnings",
-        choices: ["deficient", "adequate", "liberal", "superfluous"],
+        choices: ["scanty", "plentiful", "generous", "excess"],
         answerIndex: 0,
         meaning: "small in amount; not enough"
       },
       {
         word: "omniscient",
         phrase: "An omniscient authority",
-        choices: ["almighty", "local", "recognized", "international"],
+        choices: ["all-knowing", "regional", "well-known", "worldwide"],
         answerIndex: 0,
         meaning: "knowing everything"
       },
       {
         word: "priority",
         phrase: "Make that a priority.",
-        choices: ["concern", "unimportant", "insignificant", "discussion"],
+        choices: ["top concern", "trivial matter", "afterthought", "debate"],
         answerIndex: 0,
         meaning: "something treated as more important than other things"
       },
       {
         word: "recount",
         phrase: "Recount what happened.",
-        choices: ["convey", "conceal", "hide", "repress"],
+        choices: ["narrate", "keep secret", "cover up", "suppress"],
         answerIndex: 0,
         meaning: "to tell or describe in detail"
       },
       {
         word: "remorse",
         phrase: "Full of remorse",
-        choices: ["anguish", "happiness", "thoughts", "truth"],
+        choices: ["guilt", "joy", "curiosity", "honesty"],
         answerIndex: 0,
         meaning: "deep regret for something one has done"
       },
       {
         word: "stifle",
         phrase: "To stifle communication",
-        choices: ["suppress", "encourage", "help", "participate"],
+        choices: ["choke off", "promote", "assist", "join in"],
         answerIndex: 0,
         meaning: "to hold back or suppress"
       },
       {
         word: "verdict",
         phrase: "The verdict was read.",
-        choices: ["judgment", "accusation", "jury", "accolade"],
+        choices: ["ruling", "charge", "panel", "honor"],
         answerIndex: 0,
         meaning: "a formal decision or judgment"
       },
       {
         word: "terrain",
         phrase: "a rocky terrain",
-        choices: ["landscape", "argument", "vacant lot", "lunar surface"],
+        choices: ["ground", "debate", "empty lot", "moon rock"],
         answerIndex: 0,
         meaning: "an area of land, especially in terms of its physical features"
       },
       {
         word: "swarm",
         phrase: "Don't swarm the celebrity.",
-        choices: ["crowd", "ignore", "disperse", "target"],
+        choices: ["mob", "overlook", "scatter", "single out"],
         answerIndex: 0,
         meaning: "to gather in a large crowd"
       },
       {
         word: "sanctuary",
         phrase: "The dissident seeks sanctuary.",
-        choices: ["asylum", "hotel", "hospitality", "friendship"],
+        choices: ["refuge", "resort", "welcome", "companionship"],
         answerIndex: 0,
         meaning: "a safe place; a place of protection"
       },
       {
         word: "dissident",
         phrase: "The dissident seeks sanctuary.",
-        choices: ["agitator", "politician", "conformist", "performer"],
+        choices: ["rebel", "official", "loyalist", "entertainer"],
         answerIndex: 0,
         meaning: "a person who publicly disagrees with authority"
       },
       {
         word: "verge",
         phrase: "On the verge of collapse",
-        choices: ["border", "beginning", "opposite", "middle"],
+        choices: ["brink", "start", "reverse", "center"],
         answerIndex: 0,
         meaning: "the edge or point at which something begins"
       },
       {
         word: "gangly",
         phrase: "A gangly kid",
-        choices: ["tall and thin", "short and squat", "oppositional", "young"],
+        choices: ["lanky", "stout", "defiant", "youthful"],
         answerIndex: 0,
         meaning: "tall, thin, and awkward in movement"
       },
       {
         word: "rural",
         phrase: "A rural setting",
-        choices: ["country", "urban", "suburban", "desert"],
+        choices: ["countryside", "downtown", "suburban", "arid"],
         answerIndex: 0,
         meaning: "relating to the countryside"
       },
       {
         word: "predicament",
         phrase: "A tough predicament",
-        choices: ["bind", "solution", "history", "argument"],
+        choices: ["fix", "remedy", "backstory", "debate"],
         answerIndex: 0,
         meaning: "a difficult or unpleasant situation"
       },
       {
         word: "plummet",
         phrase: "The price will plummet.",
-        choices: ["fall", "rise", "stabilize", "double"],
+        choices: ["drop sharply", "climb", "level off", "double"],
         answerIndex: 0,
         meaning: "to fall suddenly and steeply"
       },
       {
         word: "remote",
         phrase: "A remote chance",
-        choices: ["unlikely", "likely", "close", "probable"],
+        choices: ["slim", "strong", "nearby", "certain"],
         answerIndex: 0,
         meaning: "unlikely; distant"
       },
       {
         word: "exonerated",
         phrase: "The defendant was exonerated.",
-        choices: ["vindicated", "found guilty", "blamed", "accused"],
+        choices: ["acquitted", "convicted", "faulted", "charged"],
         answerIndex: 0,
         meaning: "cleared of blame or wrongdoing"
       },
       {
         word: "retaliate",
         phrase: "He might retaliate.",
-        choices: ["get even", "forgive", "disappoint", "sympathize"],
+        choices: ["strike back", "pardon", "let down", "empathize"],
         answerIndex: 0,
         meaning: "to get even; to strike back"
       },
       {
         word: "idiom",
         phrase: "A unique idiom.",
-        choices: ["expression", "southern accent", "storytelling ability", "singing voice"],
+        choices: ["turn of phrase", "drawl", "narrative skill", "singing voice"],
         answerIndex: 0,
         meaning: "an expression whose meaning isn't obvious from its individual words"
       },
       {
         word: "precise",
         phrase: "The precise time",
-        choices: ["exact", "ambiguous", "false", "questionable"],
+        choices: ["accurate", "vague", "incorrect", "doubtful"],
         answerIndex: 0,
         meaning: "exact and accurate"
       }
@@ -3870,77 +3870,77 @@ window.WORD_SETS = [
       {
         word: "anticipate",
         phrase: "We anticipate a fun trip.",
-        choices: ["expect", "forget", "dread", "avoid"],
+        choices: ["look forward to", "overlook", "fear", "avoid"],
         answerIndex: 0,
         meaning: "to expect or look forward to something"
       },
       {
         word: "clamor",
         phrase: "the clamor of the crowd",
-        choices: ["uproar", "silence", "whisper", "calm"],
+        choices: ["racket", "stillness", "murmur", "hush"],
         answerIndex: 0,
         meaning: "a loud, confused noise, often from a crowd"
       },
       {
         word: "eager",
         phrase: "she was eager to start",
-        choices: ["enthusiastic", "reluctant", "tired", "bored"],
+        choices: ["keen", "hesitant", "worn out", "uninterested"],
         answerIndex: 0,
         meaning: "having or showing keen interest or enthusiasm"
       },
       {
         word: "reluctant",
         phrase: "he was reluctant to leave",
-        choices: ["unwilling", "eager", "ready", "excited"],
+        choices: ["hesitant", "keen", "prepared", "thrilled"],
         answerIndex: 0,
         meaning: "unwilling and hesitant"
       },
       {
         word: "banish",
         phrase: "to banish the villain",
-        choices: ["exile", "welcome", "invite", "reward"],
+        choices: ["cast out", "greet", "invite in", "praise"],
         answerIndex: 0,
         meaning: "to send someone away as punishment"
       },
       {
         word: "compensation",
         phrase: "she received compensation for the damage",
-        choices: ["payment", "debt", "request", "complaint"],
+        choices: ["reimbursement", "fine", "petition", "grievance"],
         answerIndex: 0,
         meaning: "something given to make up for a loss or harm"
       },
       {
         word: "dense",
         phrase: "a dense forest",
-        choices: ["thick", "sparse", "open", "bare"],
+        choices: ["packed tightly", "scattered", "wide open", "empty"],
         answerIndex: 0,
         meaning: "closely packed together; thick"
       },
       {
         word: "flaw",
         phrase: "a flaw in the plan",
-        choices: ["defect", "strength", "benefit", "success"],
+        choices: ["shortcoming", "advantage", "perk", "victory"],
         answerIndex: 0,
         meaning: "a mistake or weakness that makes something imperfect"
       },
       {
         word: "gullible",
         phrase: "he is gullible and believes anything",
-        choices: ["easily fooled", "suspicious", "wise", "cautious"],
+        choices: ["naive", "wary", "shrewd", "guarded"],
         answerIndex: 0,
         meaning: "easily tricked or deceived"
       },
       {
         word: "impact",
         phrase: "the impact of the storm",
-        choices: ["effect", "cause", "delay", "silence"],
+        choices: ["influence", "origin", "postponement", "quiet"],
         answerIndex: 0,
         meaning: "a strong effect or influence"
       },
       {
         word: "massive",
         phrase: "a massive iceberg",
-        choices: ["enormous", "tiny", "narrow", "light"],
+        choices: ["gigantic", "minuscule", "slender", "featherweight"],
         answerIndex: 0,
         meaning: "very large in size, extent, or amount"
       }
@@ -3953,84 +3953,84 @@ window.WORD_SETS = [
       {
         word: "accurate",
         phrase: "an accurate measurement",
-        choices: ["precise", "wrong", "careless", "rough"],
+        choices: ["exact", "mistaken", "sloppy", "approximate"],
         answerIndex: 0,
         meaning: "correct and exact"
       },
       {
         word: "crucial",
         phrase: "a crucial decision",
-        choices: ["essential", "minor", "optional", "trivial"],
+        choices: ["vital", "small", "optional", "unimportant"],
         answerIndex: 0,
         meaning: "extremely important; vital"
       },
       {
         word: "emerge",
         phrase: "the sun began to emerge",
-        choices: ["appear", "vanish", "hide", "sink"],
+        choices: ["come into view", "disappear", "duck away", "descend"],
         answerIndex: 0,
         meaning: "to come out or become visible"
       },
       {
         word: "ferocious",
         phrase: "a ferocious storm",
-        choices: ["fierce", "gentle", "calm", "mild"],
+        choices: ["violent", "mild", "peaceful", "light"],
         answerIndex: 0,
         meaning: "extremely fierce or violent"
       },
       {
         word: "persuade",
         phrase: "try to persuade him",
-        choices: ["convince", "discourage", "ignore", "confuse"],
+        choices: ["win over", "talk out of", "disregard", "puzzle"],
         answerIndex: 0,
         meaning: "to cause someone to do something through reasoning"
       },
       {
         word: "abrupt",
         phrase: "an abrupt stop",
-        choices: ["sudden", "gradual", "expected", "slow"],
+        choices: ["unexpected", "steady", "anticipated", "unhurried"],
         answerIndex: 0,
         meaning: "sudden and unexpected"
       },
       {
         word: "barrier",
         phrase: "a barrier blocked the road",
-        choices: ["obstacle", "path", "opening", "bridge"],
+        choices: ["blockade", "route", "gap", "crossing"],
         answerIndex: 0,
         meaning: "something that blocks or prevents movement"
       },
       {
         word: "defiant",
         phrase: "a defiant look",
-        choices: ["rebellious", "obedient", "cheerful", "shy"],
+        choices: ["insubordinate", "compliant", "pleasant", "timid"],
         answerIndex: 0,
         meaning: "boldly resisting authority"
       },
       {
         word: "fragile",
         phrase: "a fragile vase",
-        choices: ["delicate", "sturdy", "unbreakable", "heavy"],
+        choices: ["breakable", "solid", "indestructible", "weighty"],
         answerIndex: 0,
         meaning: "easily broken or damaged"
       },
       {
         word: "gargantuan",
         phrase: "a gargantuan meal",
-        choices: ["huge", "tiny", "average", "modest"],
+        choices: ["colossal", "small", "typical", "plain"],
         answerIndex: 0,
         meaning: "enormous; gigantic"
       },
       {
         word: "hinder",
         phrase: "rain will hinder our plans",
-        choices: ["delay", "help", "speed up", "allow"],
+        choices: ["impede", "assist", "hasten", "permit"],
         answerIndex: 0,
         meaning: "to create difficulty for; delay or obstruct"
       },
       {
         word: "jostle",
         phrase: "the crowd began to jostle",
-        choices: ["push", "wait", "freeze", "applaud"],
+        choices: ["shove", "pause", "stand still", "cheer"],
         answerIndex: 0,
         meaning: "to bump or push roughly, as in a crowd"
       }
@@ -4043,105 +4043,105 @@ window.WORD_SETS = [
       {
         word: "abundant",
         phrase: "an abundant harvest",
-        choices: ["plentiful", "scarce", "meager", "limited"],
+        choices: ["copious", "sparse", "insufficient", "restricted"],
         answerIndex: 0,
         meaning: "existing in large quantities; plentiful"
       },
       {
         word: "bellow",
         phrase: "the coach began to bellow",
-        choices: ["shout", "whisper", "sing", "hum"],
+        choices: ["roar", "murmur", "hum a tune", "chant softly"],
         answerIndex: 0,
         meaning: "to shout loudly"
       },
       {
         word: "diminish",
         phrase: "the pain will diminish",
-        choices: ["decrease", "increase", "remain", "spread"],
+        choices: ["lessen", "grow", "persist", "spread out"],
         answerIndex: 0,
         meaning: "to become or make smaller; lessen"
       },
       {
         word: "exaggerate",
         phrase: "don't exaggerate the story",
-        choices: ["overstate", "understate", "ignore", "forget"],
+        choices: ["blow out of proportion", "downplay", "leave out", "forget"],
         answerIndex: 0,
         meaning: "to make something seem larger or more important than it is"
       },
       {
         word: "formidable",
         phrase: "a formidable opponent",
-        choices: ["daunting", "weak", "harmless", "easy"],
+        choices: ["intimidating", "feeble", "unthreatening", "simple"],
         answerIndex: 0,
         meaning: "inspiring fear or respect through being impressive or powerful"
       },
       {
         word: "inevitably",
         phrase: "inevitably, the truth came out",
-        choices: ["unavoidably", "possibly", "occasionally", "unlikely"],
+        choices: ["certainly", "conceivably", "sometimes", "improbably"],
         answerIndex: 0,
         meaning: "in a way that cannot be avoided; certainly"
       },
       {
         word: "rigorous",
         phrase: "a rigorous training schedule",
-        choices: ["demanding", "easy", "relaxed", "casual"],
+        choices: ["strict", "effortless", "laid-back", "informal"],
         answerIndex: 0,
         meaning: "extremely thorough and demanding"
       },
       {
         word: "unanimous",
         phrase: "a unanimous vote",
-        choices: ["united", "divided", "split", "undecided"],
+        choices: ["in complete agreement", "split down the middle", "contested", "undecided"],
         answerIndex: 0,
         meaning: "fully in agreement; united in opinion"
       },
       {
         word: "dwell",
         phrase: "they dwell in the mountains",
-        choices: ["live", "travel", "visit", "wander"],
+        choices: ["reside", "journey", "pass through", "roam"],
         answerIndex: 0,
         meaning: "to live in or reside at a place"
       },
       {
         word: "eerie",
         phrase: "an eerie silence",
-        choices: ["spooky", "comforting", "cheerful", "ordinary"],
+        choices: ["unsettling", "soothing", "upbeat", "unremarkable"],
         answerIndex: 0,
         meaning: "strange and frightening"
       },
       {
         word: "frivolous",
         phrase: "a frivolous excuse",
-        choices: ["silly", "serious", "valid", "important"],
+        choices: ["trifling", "grave", "sound", "pressing"],
         answerIndex: 0,
         meaning: "not having any serious purpose; trivial"
       },
       {
         word: "hostile",
         phrase: "a hostile crowd",
-        choices: ["unfriendly", "welcoming", "calm", "friendly"],
+        choices: ["antagonistic", "warm", "peaceful", "cordial"],
         answerIndex: 0,
         meaning: "unfriendly or aggressive"
       },
       {
         word: "improvises",
         phrase: "she improvises when she forgets her lines",
-        choices: ["adapts on the spot", "memorizes exactly", "reads aloud", "rehearses"],
+        choices: ["makes it up on the fly", "recites word for word", "reads from a script", "practices repeatedly"],
         answerIndex: 0,
         meaning: "creates or performs something without preparation"
       },
       {
         word: "linger",
         phrase: "the smell began to linger",
-        choices: ["remain", "vanish", "fade quickly", "disperse"],
+        choices: ["persist", "disappear", "clear out fast", "scatter"],
         answerIndex: 0,
         meaning: "to stay somewhere longer than necessary"
       },
       {
         word: "monotonous",
         phrase: "a monotonous lecture",
-        choices: ["boring", "exciting", "varied", "lively"],
+        choices: ["tedious", "engaging", "diverse", "spirited"],
         answerIndex: 0,
         meaning: "dull and repetitive; lacking variety"
       }
@@ -4154,42 +4154,42 @@ window.WORD_SETS = [
       {
         word: "melancholy",
         phrase: "a melancholy mood",
-        choices: ["sad", "joyful", "excited", "calm"],
+        choices: ["gloomy", "cheerful", "lively", "serene"],
         answerIndex: 0,
         meaning: "a feeling of deep sadness"
       },
       {
         word: "replenish",
         phrase: "replenish the water supply",
-        choices: ["refill", "empty", "drain", "waste"],
+        choices: ["restock", "use up", "spill", "squander"],
         answerIndex: 0,
         meaning: "to fill something up again"
       },
       {
         word: "vanish",
         phrase: "the rabbit seemed to vanish",
-        choices: ["disappear", "appear", "remain", "arrive"],
+        choices: ["vanish from sight", "come into view", "stay put", "show up"],
         answerIndex: 0,
         meaning: "to disappear suddenly"
       },
       {
         word: "fascinating",
         phrase: "a fascinating documentary",
-        choices: ["captivating", "boring", "dull", "tedious"],
+        choices: ["riveting", "dreary", "flat", "monotonous"],
         answerIndex: 0,
         meaning: "extremely interesting"
       },
       {
         word: "perilous",
         phrase: "a perilous journey",
-        choices: ["dangerous", "safe", "easy", "calm"],
+        choices: ["hazardous", "secure", "effortless", "tranquil"],
         answerIndex: 0,
         meaning: "full of danger or risk"
       },
       {
         word: "flawless",
         phrase: "a flawless performance",
-        choices: ["perfect", "sloppy", "messy", "clumsy"],
+        choices: ["impeccable", "sloppy", "flawed", "awkward"],
         answerIndex: 0,
         meaning: "without any mistakes or imperfections"
       }
@@ -4202,203 +4202,203 @@ window.WORD_SETS = [
       {
         word: "abundant",
         phrase: "an abundant harvest",
-        choices: ["plentiful", "scarce", "rotten", "hidden"],
+        choices: ["ample", "sparse", "spoiled", "buried"],
         answerIndex: 0,
         meaning: "plentiful; a lot"
       },
       {
         word: "acquired",
         phrase: "she acquired a new skill",
-        choices: ["gained", "lost", "forgot", "broke"],
+        choices: ["picked up", "misplaced", "unlearned", "damaged"],
         answerIndex: 0,
         meaning: "gained; obtained"
       },
       {
         word: "adequate",
         phrase: "adequate supplies for the trip",
-        choices: ["enough", "insufficient", "excessive", "broken"],
+        choices: ["sufficient", "lacking", "overflowing", "damaged"],
         answerIndex: 0,
         meaning: "enough; sufficient"
       },
       {
         word: "altered",
         phrase: "he altered his plans",
-        choices: ["changed", "kept", "copied", "ignored"],
+        choices: ["modified", "preserved", "duplicated", "disregarded"],
         answerIndex: 0,
         meaning: "changed"
       },
       {
         word: "ample",
         phrase: "ample time to finish",
-        choices: ["more than enough", "barely enough", "no time at all", "too little"],
+        choices: ["plenty of", "barely any", "zero", "insufficient"],
         answerIndex: 0,
         meaning: "more than enough"
       },
       {
         word: "authentic",
         phrase: "an authentic signature",
-        choices: ["genuine", "fake", "copied", "stolen"],
+        choices: ["real", "counterfeit", "duplicated", "pilfered"],
         answerIndex: 0,
         meaning: "genuine; real"
       },
       {
         word: "clarify",
         phrase: "please clarify your answer",
-        choices: ["make clear", "confuse", "hide", "repeat"],
+        choices: ["explain more clearly", "muddle", "conceal", "restate word for word"],
         answerIndex: 0,
         meaning: "make clear"
       },
       {
         word: "compatible",
         phrase: "the two programs are compatible",
-        choices: ["able to work well together", "in conflict", "identical", "unrelated"],
+        choices: ["work well together", "clash with each other", "exactly alike", "totally unrelated"],
         answerIndex: 0,
         meaning: "able to work well together"
       },
       {
         word: "concise",
         phrase: "a concise summary",
-        choices: ["brief and clear", "long and wordy", "confusing", "incomplete"],
+        choices: ["short and to the point", "drawn out and wordy", "muddled", "unfinished"],
         answerIndex: 0,
         meaning: "brief and clear"
       },
       {
         word: "derives",
         phrase: "the word derives from Latin",
-        choices: ["comes from", "destroys", "hides", "replaces"],
+        choices: ["originates from", "wipes out", "conceals", "swaps out"],
         answerIndex: 0,
         meaning: "gets or comes from"
       },
       {
         word: "distinct",
         phrase: "two distinct colors",
-        choices: ["clearly different", "identical", "blended", "faded"],
+        choices: ["separate and different", "the same", "merged together", "washed out"],
         answerIndex: 0,
         meaning: "clearly different"
       },
       {
         word: "diverse",
         phrase: "a diverse group of students",
-        choices: ["varied", "identical", "small", "quiet"],
+        choices: ["mixed", "uniform", "tiny", "silent"],
         answerIndex: 0,
         meaning: "varied; different"
       },
       {
         word: "frequent",
         phrase: "a frequent visitor",
-        choices: ["happening often", "happening rarely", "happening once", "happening never"],
+        choices: ["regular", "occasional", "one-time", "never-occurring"],
         answerIndex: 0,
         meaning: "happening often"
       },
       {
         word: "frivolous",
         phrase: "a frivolous excuse",
-        choices: ["not serious", "very serious", "important", "urgent"],
+        choices: ["lacking substance", "weighty", "critical", "pressing"],
         answerIndex: 0,
         meaning: "not serious; unimportant"
       },
       {
         word: "gradual",
         phrase: "a gradual change",
-        choices: ["slow, little by little", "sudden", "instant", "reversed"],
+        choices: ["happening bit by bit", "abrupt", "instantaneous", "undone"],
         answerIndex: 0,
         meaning: "happening slowly, little by little"
       },
       {
         word: "implied",
         phrase: "she implied she was upset",
-        choices: ["suggested without saying directly", "stated clearly", "denied", "shouted"],
+        choices: ["hinted at", "announced plainly", "denied outright", "yelled"],
         answerIndex: 0,
         meaning: "suggested without directly saying"
       },
       {
         word: "indifferent",
         phrase: "he seemed indifferent to the outcome",
-        choices: ["unconcerned", "excited", "furious", "devoted"],
+        choices: ["apathetic", "thrilled", "enraged", "committed"],
         answerIndex: 0,
         meaning: "unconcerned; not interested"
       },
       {
         word: "inhibit",
         phrase: "fear can inhibit progress",
-        choices: ["hold back", "speed up", "support", "celebrate"],
+        choices: ["restrain", "accelerate", "back", "celebrate"],
         answerIndex: 0,
         meaning: "restrain; hold back"
       },
       {
         word: "innovative",
         phrase: "an innovative invention",
-        choices: ["new and original", "outdated", "copied", "broken"],
+        choices: ["groundbreaking", "old-fashioned", "borrowed", "faulty"],
         answerIndex: 0,
         meaning: "new; original"
       },
       {
         word: "interpret",
         phrase: "interpret the poem's meaning",
-        choices: ["explain the meaning of", "memorize", "ignore", "rewrite"],
+        choices: ["make sense of", "memorize word for word", "disregard", "rewrite entirely"],
         answerIndex: 0,
         meaning: "understand or explain the meaning"
       },
       {
         word: "legitimate",
         phrase: "a legitimate excuse",
-        choices: ["valid", "fake", "silly", "rude"],
+        choices: ["justified", "bogus", "absurd", "impolite"],
         answerIndex: 0,
         meaning: "valid; genuine"
       },
       {
         word: "meticulous",
         phrase: "meticulous notes",
-        choices: ["extremely careful", "careless", "messy", "quick"],
+        choices: ["painstakingly thorough", "sloppy", "disorganized", "hasty"],
         answerIndex: 0,
         meaning: "extremely careful"
       },
       {
         word: "objective",
         phrase: "an objective report",
-        choices: ["unbiased", "one-sided", "emotional", "exaggerated"],
+        choices: ["impartial", "biased", "emotional", "overblown"],
         answerIndex: 0,
         meaning: "unbiased; based on facts"
       },
       {
         word: "postpone",
         phrase: "postpone the meeting",
-        choices: ["delay until later", "start immediately", "cancel forever", "speed up"],
+        choices: ["push back", "kick off right away", "scrap entirely", "rush forward"],
         answerIndex: 0,
         meaning: "delay until later"
       },
       {
         word: "prominent",
         phrase: "a prominent landmark",
-        choices: ["noticeable", "hidden", "tiny", "forgettable"],
+        choices: ["conspicuous", "concealed", "minuscule", "unmemorable"],
         answerIndex: 0,
         meaning: "noticeable; important"
       },
       {
         word: "prospect",
         phrase: "the prospect of a new job",
-        choices: ["possibility", "certainty", "memory", "mistake"],
+        choices: ["chance", "guarantee", "recollection", "slip-up"],
         answerIndex: 0,
         meaning: "possibility"
       },
       {
         word: "recede",
         phrase: "the floodwaters began to recede",
-        choices: ["move back", "rise higher", "freeze", "boil"],
+        choices: ["retreat", "surge upward", "ice over", "boil"],
         answerIndex: 0,
         meaning: "move back or away"
       },
       {
         word: "skeptical",
         phrase: "she was skeptical of the claim",
-        choices: ["doubtful", "trusting", "excited", "careless"],
+        choices: ["unconvinced", "trusting", "eager", "unbothered"],
         answerIndex: 0,
         meaning: "doubtful"
       },
       {
         word: "tentative",
         phrase: "a tentative plan",
-        choices: ["uncertain; not final", "final and fixed", "impossible", "forgotten"],
+        choices: ["subject to change", "set in stone", "unworkable", "forgotten"],
         answerIndex: 0,
         meaning: "uncertain; not final"
       }
