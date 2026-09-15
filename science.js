@@ -736,5 +736,173 @@ window.SCIENCE_SETS = [
         answerIndex: 0
       }
     ]
+  },
+  {
+    id: "constructiveDestructive",
+    name: "Constructive & Destructive Forces",
+    questions: [
+      {
+        prompt: "What are very small pieces of rock, such as sand and silt, called?",
+        choices: ["Sediment", "Magma", "Bedrock", "Humus"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "What is a huge river of ice that weathers the land around it and erodes rocks and sediment called?",
+        choices: ["A glacier", "A delta", "A fault", "A tributary"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "In which order do the processes of weathering, erosion, and deposition usually occur?",
+        choices: [
+          "Weathering, then erosion, then deposition",
+          "Erosion, then weathering, then deposition",
+          "Deposition, then erosion, then weathering",
+          "Erosion, then deposition, then weathering"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which land feature forms where two continental plates move toward each other?",
+        choices: ["Mountains", "Valleys", "Deltas", "Canyons"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What three things cause both erosion and weathering?",
+        choices: [
+          "Wind, water, and ice",
+          "Fire, wind, and sunlight",
+          "Plants, animals, and bacteria",
+          "Heat, pressure, and time"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "What is the name for a structure built to stop or slow the flow of water in a stream or river?",
+        choices: ["A dam", "A levee", "A jetty", "A dredge"],
+        answerIndex: 0
+      },
+      {
+        prompt: "A manmade wall along the coast that sticks out into the ocean is called what?",
+        choices: ["A jetty", "A levee", "A dam", "A delta"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "What is the process by which ships remove sand from the bottom of the ocean to build a sand bar?",
+        choices: ["Dredging", "Deposition", "Weathering", "Erosion"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is a wall of earth or concrete that holds back rising water called?",
+        choices: ["A levee", "A jetty", "A dredge", "A delta"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the name used for someone who studies earthquakes?",
+        choices: ["A seismologist", "A volcanologist", "A geologist", "A meteorologist"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "What is a crack in the Earth's crust, usually found at the edge of plates, called?",
+        choices: ["A fault", "A delta", "A ridge", "A trench"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "What is a sudden release of energy in Earth's crust that causes the ground to shake called?",
+        choices: ["An earthquake", "A volcano", "A landslide", "A tsunami"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is a mountain made of lava, ash, and cinders called?",
+        choices: ["A volcano", "A glacier", "A fault", "A delta"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the moving of sediment by wind, water, or ice called?",
+        choices: ["Erosion", "Deposition", "Weathering", "Dredging"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the goal of beach restoration?",
+        choices: [
+          "To replace lost sand, reduce storm damage, and maintain healthy coastal habitats and beaches",
+          "To remove all the sand from a beach to prevent erosion",
+          "To build new volcanoes along the coastline",
+          "To stop all human activity near the ocean"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is melted rock that has flowed onto the Earth's surface called?",
+        choices: ["Lava", "Magma", "Sediment", "Ash"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the depositing (dropping off) of sediment called?",
+        choices: ["Deposition", "Erosion", "Weathering", "Dredging"],
+        answerIndex: 0
+      },
+      {
+        prompt: "When a river deposits sediment at its end, what land feature forms?",
+        choices: ["A delta", "A levee", "A jetty", "A glacier"],
+        answerIndex: 0
+      },
+      {
+        prompt: "How does a glacier help create new soil?",
+        choices: [
+          "By scraping small particles off large rocks, creating new sediment and soil",
+          "By melting and washing all the soil out to sea",
+          "By freezing existing soil so it can no longer erode",
+          "By depositing lava on top of the ground"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "How does a volcano build up new land?",
+        choices: [
+          "It adds lava to the Earth's surface",
+          "It removes sediment from the coastline",
+          "It creates deep cracks that swallow land",
+          "It freezes magma into new mountains"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the process of wearing away sediment from a landform called?",
+        choices: ["Weathering", "Deposition", "Dredging", "Erosion"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "What is the surface of the Earth directly above the most powerful point of an earthquake called?",
+        choices: ["Epicenter", "Fault line", "Fissure", "Crater"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is melted rock beneath the Earth's surface called?",
+        choices: ["Magma", "Lava", "Sediment", "Basalt"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What can be done to help prevent erosion?",
+        choices: [
+          "Build fences, rock walls, and plant trees",
+          "Remove all plants and trees from the area",
+          "Speed up the flow of nearby rivers",
+          "Dredge the riverbank deeper"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "The scale used to measure the strength of earthquakes is called the ___ scale.",
+        choices: ["Richter", "Fahrenheit", "Beaufort", "Saffir-Simpson"],
+        answerIndex: 0
+      }
+    ]
   }
 ];
