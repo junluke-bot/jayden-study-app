@@ -1,10 +1,11 @@
 // Daily Oral Language (DOL) question sets for the Iowa Assessments practice app.
 // Original content covering four categories: Spelling, Capitalization,
 // Punctuation, and Usage and Expression, each with three practice sets.
-// Also includes "Language Review Week 5" and "Language Review Week 6",
-// converted to multiple choice from the Monday-Thursday correction/grammar
-// exercises in the Daily Language Review Grade 5 Workbook, in the
-// varied-question-type style of a Daily Language Quiz.
+// Also includes "Language Review Week 5", "Language Review Week 6", and
+// "Language Review Week 7", converted to multiple choice from the
+// Monday-Thursday correction/grammar exercises in the Daily Language
+// Review Grade 5 Workbook, in the varied-question-type style of a
+// Daily Language Quiz.
 // Each question has:
 //   prompt      - the question text
 //   choices     - four answer options (choices[0] is always correct;
@@ -1702,6 +1703,157 @@ window.DOL_SETS = [
           "Antonyms",
           "None of these"
         ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "language-review-week7",
+    "name": "Language Review Week 7",
+    "questions": [
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Did you ride on one of the paddle boats along the Missouri River?",
+          "did you ride on won of the paddle boats along the missouri river",
+          "Did you ride on one of the paddle boats along the missouri river?",
+          "Did you ride on won of the paddle boats along the Missouri River?"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correctly capitalized and punctuated.",
+        "choices": [
+          "Larry shouted, \"Look at that!\"",
+          "larry shouted look at that",
+          "Larry shouted \"look at that.\"",
+          "Larry shouted, \"look at that!\""
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which sentence correctly uses the homophone pair \"band\" and \"banned\"?",
+        "choices": [
+          "The coach banned loud music, so the band had to practice in silence.",
+          "The coach band loud music, so the banned had to practice in silence.",
+          "The banned played at the football game on Friday night.",
+          "The band and the banned mean exactly the same thing."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which word is the preposition in this sentence: \"He found the puppy under the porch.\"?",
+        "choices": ["under", "found", "puppy", "porch"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which word belongs in this group: mauve, puce, indigo, aqua?",
+        "choices": ["Teal", "Triangle", "Whisper", "Tuesday"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which word is an antonym for \"unique\"?",
+        "choices": ["Common", "Rare", "Special", "One-of-a-kind"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which word is NOT spelled correctly?",
+        "choices": ["thier", "they're", "there", "their"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Snails, aphids, and mites nibbled on the plants in Aunt May's garden.",
+          "snails aphids and mites nibbled on the plants in aunt mays garden",
+          "Snails, aphids, and mites nibbled on the plants in aunt May's garden.",
+          "Snails aphids and mites nibbled on the plants in Aunt Mays garden."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "We like hot weather, so we always go to the beach to swim.",
+          "we like hot whether we always goes to the beach to swim",
+          "We like hot whether, so we always goes to the beach to swim.",
+          "We like hot weather, so we always goes to the beach to swim."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Does the word \"agreement\" have a prefix or a suffix?",
+        "choices": ["Suffix", "Prefix", "Both", "Neither"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Cherie thought, \"I hope he chooses me to be in the play.\"",
+          "cherie thought i hope he choose me to bee in the play",
+          "Cherie thought, \"I hope he choose me to bee in the play.\"",
+          "Cherie thought, \"i hope he chooses me to be in the play.\""
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Sometimes I feel like playing with my friends, and sometimes I don't.",
+          "sometimes i feels like playing with my friends and sometimes i doesnt",
+          "Sometimes I feels like playing with my friends, and sometimes I don't.",
+          "Sometimes I feel like playing with my friends and sometimes I doesnt."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "What is the root word (base word) of \"misbehaving\"?",
+        "choices": ["Behave", "Behav", "Misbehave", "Having"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Is the underlined phrase a simile or a metaphor? \"Max can always fool us because he is as sly as a fox.\"",
+        "choices": ["Simile", "Metaphor", "Neither", "Both"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which word is the adverb in this sentence: \"Mr. Morris worked patiently with the new student.\"?",
+        "choices": ["patiently", "worked", "student", "new"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "How many syllables are in the word \"intersection\"?",
+        "choices": ["4", "3", "5", "2"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "How many syllables are in the word \"occurring\"?",
+        "choices": ["3", "2", "4", "1"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "You mustn't play until after you've done your chores.",
+          "you musnt play until after you done your chores",
+          "You musnt play until after you've done your chores.",
+          "You mustn't play until after you done your chores."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "I may try out for soccer, or I may join the track team.",
+          "i may try out four soccer or i may join the track team",
+          "I may try out four soccer, or I may join the track team.",
+          "I may try out for soccer or I may join the track team"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which pronoun would replace the underlined words in this sentence: \"That football belongs to Mark and me.\"?",
+        "choices": ["Us", "Them", "They", "We"],
         "answerIndex": 0
       }
     ]
