@@ -904,5 +904,186 @@ window.SCIENCE_SETS = [
         answerIndex: 0
       }
     ]
+  },
+  {
+    id: "weatheringErosionPractice",
+    name: "Weathering & Erosion Practice",
+    questions: [
+      {
+        prompt:
+          "Which process breaks rock into smaller pieces without moving the pieces to a new location?",
+        choices: ["Weathering", "Erosion", "Deposition", "Flooding"],
+        answerIndex: 0
+      },
+      {
+        prompt: "A river carries sand and small rocks downstream. Which process is occurring?",
+        choices: ["Erosion", "Weathering", "Deposition", "Condensation"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Wind carries sand across a desert and drops it in a pile. The dropping of the sand is called -",
+        choices: ["Deposition", "Erosion", "Weathering", "Evaporation"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Water freezes inside a crack in a rock. The water expands and eventually causes the rock to split. This is an example of -",
+        choices: ["Weathering", "Erosion", "Deposition", "Construction"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the BEST example of erosion?",
+        choices: [
+          "A stream carrying soil downhill",
+          "Tree roots cracking a rock",
+          "Ice breaking a rock apart",
+          "Sand collecting at the mouth of a river"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which sequence correctly shows how sediment can move and then settle?",
+        choices: [
+          "Weathering -> erosion -> deposition",
+          "Deposition -> weathering -> erosion",
+          "Erosion -> deposition -> weathering",
+          "Weathering -> deposition -> erosion"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "After a heavy rain, soil from a hill is found at the bottom of the hill. Which TWO processes most directly caused this change?",
+        choices: [
+          "Erosion and deposition",
+          "Weathering and evaporation",
+          "Deposition and condensation",
+          "Weathering and freezing"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is an example of a mainly constructive force?",
+        choices: [
+          "A volcano creates new land from cooled lava.",
+          "A river washes away part of its bank.",
+          "Wind removes soil from a field.",
+          "Ocean waves wear away a cliff."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which event is MOST clearly an example of a destructive force?",
+        choices: [
+          "A landslide carries away part of a hillside.",
+          "Sediment forms a new sandbar.",
+          "Lava cools and forms new land.",
+          "A river deposits soil at its mouth."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A river slows down when it reaches the ocean. Sand and soil begin to collect near the river's mouth. Over many years, new land forms. Which process is MOST responsible for building this land?",
+        choices: ["Deposition", "Weathering", "Erosion", "Evaporation"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Students place identical rocks in two containers. Container 1: the rock remains dry. Container 2: the rock is repeatedly soaked with water and frozen. After several weeks, the rock in Container 2 has more cracks. What is the BEST conclusion?",
+        choices: [
+          "Freezing water can cause weathering.",
+          "Freezing water causes deposition.",
+          "Dry rocks erode faster than wet rocks.",
+          "Water prevents rocks from changing."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A student observes a cliff near the ocean and records how far the cliff edge moved backward each year: Year 1, 3 cm; Year 2, 5 cm; Year 3, 4 cm; Year 4, 6 cm. What does the evidence BEST support?",
+        choices: [
+          "The cliff is gradually being worn away.",
+          "The cliff is growing taller every year.",
+          "New land is forming at the cliff edge.",
+          "Weathering and erosion have stopped."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which agent can cause BOTH weathering and erosion?",
+        choices: ["Flowing water", "Sunlight only", "Clouds only", "Stars"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A farmer notices that rainwater is carrying topsoil away from a field. Which action would BEST help reduce the erosion?",
+        choices: [
+          "Plant grass or other vegetation.",
+          "Remove all plants from the field.",
+          "Add more loose soil to the field.",
+          "Make the hill steeper."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which statement BEST explains the difference between constructive and destructive forces?",
+        choices: [
+          "Constructive forces build Earth's surface, while destructive forces wear down or remove parts of it.",
+          "Constructive forces always happen quickly, while destructive forces always happen slowly.",
+          "Constructive forces happen only on land, while destructive forces happen only in water.",
+          "Constructive forces involve weather, while destructive forces involve rocks."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A volcano erupts on an island. The eruption destroys plants and rock near the volcano, but the cooled lava also creates new land. What does this show?",
+        choices: [
+          "The same Earth process can have both constructive and destructive effects.",
+          "Volcanoes can only be destructive.",
+          "Volcanoes can only be constructive.",
+          "Volcanoes do not change Earth's surface."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which situation shows weathering followed by erosion?",
+        choices: [
+          "A rock cracks, and later a stream carries the pieces away.",
+          "A stream drops sand and forms a sandbar.",
+          "Lava cools and becomes solid rock.",
+          "Wind drops sand behind a large rock."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "After a storm, Jayden sees a pile of sand at a bend in a stream. Which explanation is BEST?",
+        choices: [
+          "The water slowed down and deposited the sand.",
+          "The water sped up and weathered the sand.",
+          "The sand evaporated from the stream.",
+          "The sand changed into new rock."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which landform can be created by deposition?",
+        choices: ["A delta", "A weathered cliff", "A crack in a rock", "An eroded canyon wall"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A mountain becomes lower and smoother over millions of years. Which processes MOST likely caused this change?",
+        choices: [
+          "Weathering and erosion",
+          "Deposition and condensation",
+          "Evaporation and freezing",
+          "Deposition and volcanic activity"
+        ],
+        answerIndex: 0
+      }
+    ]
   }
 ];
