@@ -1085,5 +1085,256 @@ window.SCIENCE_SETS = [
         answerIndex: 0
       }
     ]
+  },
+  {
+    id: "iowaSciencePracticeTest28",
+    name: "Iowa Science Practice Test",
+    questions: [
+      {
+        prompt: "What causes day and night on Earth?",
+        choices: [
+          "Earth rotates on its axis",
+          "Earth revolves around the Sun",
+          "The Moon revolves around Earth",
+          "The Sun moves around Earth"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which sequence lists the planets in the correct order from the Sun?",
+        choices: [
+          "Mercury, Venus, Earth, Mars",
+          "Mercury, Earth, Venus, Mars",
+          "Venus, Mercury, Earth, Mars",
+          "Mercury, Venus, Mars, Earth"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A rock develops cracks after water repeatedly freezes and expands inside it. This is an example of -",
+        choices: ["Weathering", "Erosion", "Deposition", "Evaporation"],
+        answerIndex: 0
+      },
+      {
+        prompt: "A stream carries pieces of rock downstream. Which process is occurring?",
+        choices: ["Erosion", "Weathering", "Condensation", "Deposition"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A river slows as it reaches the ocean and drops sediment. Over time, new land forms. This is an example of -",
+        choices: [
+          "Deposition and a constructive process",
+          "Erosion and a destructive process",
+          "Weathering and a destructive process",
+          "Evaporation and a constructive process"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which process is mainly responsible for Earth's year?",
+        choices: [
+          "Earth's revolution around the Sun",
+          "Earth's rotation",
+          "The Moon's rotation",
+          "The Sun's revolution around Earth"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "During the water cycle, liquid water changes into water vapor. This process is called -",
+        choices: ["Evaporation", "Precipitation", "Condensation", "Collection"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A student sees that a shadow is long in the morning, shorter around noon, and long again in the evening. What BEST explains this pattern?",
+        choices: [
+          "Earth's position changes as it rotates.",
+          "The Sun becomes smaller at noon.",
+          "Earth's distance from the Sun changes greatly each day.",
+          "The object producing the shadow changes size."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which organism is a producer?",
+        choices: ["Grass", "Hawk", "Mushroom", "Rabbit"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Consider this food chain: Grass -> Grasshopper -> Frog -> Snake. What would MOST likely happen first if the number of grasshoppers greatly decreased?",
+        choices: [
+          "Frogs would have less food.",
+          "Grass would disappear.",
+          "Snakes would immediately increase.",
+          "Frogs would have more food."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the main role of decomposers in an ecosystem?",
+        choices: ["Break down dead organisms", "Produce sunlight", "Hunt other animals", "Make water"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which adaptation would BEST help an animal survive in a very cold environment?",
+        choices: ["Thick fur and body fat", "Thin fur", "Large, thin ears", "Very little body covering"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A plant is placed in a dark closet but receives enough water. After several days, it becomes weak. What is the BEST explanation?",
+        choices: [
+          "Plants need light to make food.",
+          "Plants cannot survive in soil.",
+          "Plants need darkness to grow.",
+          "Water prevents photosynthesis."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "In a food web, arrows show how energy moves between organisms. If an arrow points from a plant to a rabbit, what does this mean?",
+        choices: [
+          "The rabbit gets energy from the plant.",
+          "The plant eats the rabbit.",
+          "The plant gets energy from the rabbit.",
+          "The rabbit protects the plant."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which state of matter has a definite volume but takes the shape of its container?",
+        choices: ["Liquid", "Solid", "Gas", "Light"],
+        answerIndex: 0
+      },
+      {
+        prompt: "An ice cube melts into liquid water. Which statement is correct?",
+        choices: [
+          "The water has undergone a physical change.",
+          "A new substance has formed.",
+          "The water has disappeared.",
+          "The mass of the water must increase."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A student pushes two identical toy cars. Car A receives a stronger push than Car B. What would MOST likely happen?",
+        choices: [
+          "Car A would have a greater change in motion.",
+          "Car B would always travel faster.",
+          "Both cars would remain still.",
+          "The stronger force would make Car A lighter."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "What force pulls objects toward Earth?",
+        choices: ["Gravity", "Magnetism", "Electricity", "Friction"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A metal spoon is placed in a cup of hot soup. After several minutes, the handle becomes warm. What happened?",
+        choices: [
+          "Heat moved through the spoon.",
+          "Cold moved from the spoon into the soup.",
+          "The spoon created new energy.",
+          "The spoon changed into a new substance."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which material would MOST likely allow light to pass through clearly?",
+        choices: ["Clear glass", "Wood", "Cardboard", "Metal"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A student wants to determine whether sunlight affects plant growth. She uses two identical plants with the same soil and amount of water. One receives 8 hours of sunlight each day, while the other receives 2 hours. What variable is being changed?",
+        choices: ["Amount of sunlight", "Type of plant", "Amount of water", "Type of soil"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A student records plant growth after two weeks: 2 hours of sunlight per day produced 2 cm of growth, 4 hours produced 5 cm, 6 hours produced 8 cm, and 8 hours produced 10 cm. Which conclusion is BEST supported by the data?",
+        choices: [
+          "More sunlight was associated with more plant growth.",
+          "Sunlight prevents plants from growing.",
+          "Water has no effect on plants.",
+          "All plants grow exactly 2 cm each week."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "A student wants to test which type of soil holds the most water. What should the student keep the SAME?",
+        choices: [
+          "Amount of water added to each soil sample",
+          "Type of soil",
+          "Amount of water retained",
+          "Results of the experiment"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Four students measure the length of the same object: Student 1 recorded 20.1 cm, Student 2 recorded 20.2 cm, Student 3 recorded 20.1 cm, and Student 4 recorded 29.8 cm. Which measurement should the students MOST carefully check again?",
+        choices: [
+          "Student 4's measurement (29.8 cm)",
+          "Student 1's measurement (20.1 cm)",
+          "Student 2's measurement (20.2 cm)",
+          "Student 3's measurement (20.1 cm)"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A student predicts that heavier objects always fall faster than lighter objects. What is the BEST way to investigate the prediction?",
+        choices: [
+          "Drop objects of different masses under controlled conditions and measure their fall.",
+          "Read the prediction several times.",
+          "Ask a friend whether the prediction sounds correct.",
+          "Use only one object."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Why do scientists repeat experiments?",
+        choices: [
+          "To see whether results are consistent and reliable",
+          "To make the experiment longer",
+          "To guarantee their hypothesis is correct",
+          "To change the results"
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A student observes that a plant near a window is leaning toward the light. Which statement is an observation rather than an explanation?",
+        choices: [
+          "The plant is leaning toward the window.",
+          "The plant needs more water.",
+          "Sunlight caused the plant to grow faster.",
+          "The plant prefers warm temperatures."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "A student measures how far a toy car travels down ramps of different heights: a 10 cm ramp sends it 45 cm, a 20 cm ramp sends it 82 cm, and a 30 cm ramp sends it 121 cm. Which prediction is MOST reasonable for a 40-cm ramp?",
+        choices: [
+          "The car will travel more than 121 cm.",
+          "The car will travel about 20 cm.",
+          "The car will travel about 45 cm.",
+          "The car will not move."
+        ],
+        answerIndex: 0
+      }
+    ]
   }
 ];
