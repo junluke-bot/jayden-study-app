@@ -33,8 +33,13 @@ window.MATH2_SETS = [
         answerIndex: 0
       },
       {
-        prompt: "7,392 ÷ 42 = ?",
-        choices: ["176", "166", "186", "177"],
+        prompt: "8,436 ÷ 6 = ?",
+        choices: ["1,406", "1,416", "1,306", "1,046"],
+        answerIndex: 0
+      },
+      {
+        prompt: "5,616 ÷ 8 = ?",
+        choices: ["702", "712", "692", "720"],
         answerIndex: 0
       },
       {

@@ -2105,9 +2105,11 @@
     );
   }
 
-  function genDivision() {
-    var divisor = randomInt(12, 45);
-    var quotient = randomInt(100, 450);
+  function genDivision4by2() {
+    var divisor = randomInt(11, 97);
+    var minQuotient = Math.ceil(1000 / divisor);
+    var maxQuotient = Math.floor(9999 / divisor);
+    var quotient = randomInt(minQuotient, maxQuotient);
     var dividend = divisor * quotient;
     var wrong = [quotient + 10, quotient - 10, quotient + 1];
     return makeGenQuestion(
@@ -2117,8 +2119,8 @@
     );
   }
 
-  function genDivision4by2() {
-    var divisor = randomInt(11, 97);
+  function genDivision4by1() {
+    var divisor = randomInt(2, 9);
     var minQuotient = Math.ceil(1000 / divisor);
     var maxQuotient = Math.floor(9999 / divisor);
     var quotient = randomInt(minQuotient, maxQuotient);
@@ -2193,8 +2195,9 @@
         genSubtraction(),
         genMultiplication(),
         genMultiplication(),
-        genDivision(),
         genDivision4by2(),
+        genDivision4by1(),
+        genDivision4by1(),
         pickFractionPool(FRACTION_ADD_POOL, "+"),
         pickFractionPool(FRACTION_MULT_POOL, "×"),
         genDecimalAdd(),
