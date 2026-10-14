@@ -311,5 +311,108 @@ window.MATH_SETS = [
         answerIndex: 0
       }
     ]
+  },
+  {
+    id: "orderOfOperationsReview",
+    name: "Order of Operations Review",
+    questions: [
+      {
+        prompt: "What is the value of 3 × (7 − 3)?",
+        choices: ["12", "18", "4", "24"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the value of 5 + 6 × 3 − 2?",
+        choices: ["21", "31", "23", "33"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the value of 5 + 6 × (3 − 2)?",
+        choices: ["11", "21", "17", "9"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the value of 2 × (14 − 8) ÷ 4?",
+        choices: ["3", "5", "24", "12"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the value of (21 − 3) × 3?",
+        choices: ["54", "12", "21", "66"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which expression means: Multiply 5 by the product of 2 and 9?",
+        choices: ["5 × (2 × 9)", "5 + (2 × 9)", "(5 × 2) + 9", "5 × 2 + 9"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which expression means: Find the sum of 4 and 7, and then take it from 24?",
+        choices: ["24 − (4 + 7)", "(24 − 4) + 7", "24 + (4 − 7)", "(4 + 7) − 24"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which expression means: Subtract 12 from 37, then multiply by 7?",
+        choices: ["(37 − 12) × 7", "37 − (12 × 7)", "37 − 12 × 7", "(37 × 7) − 12"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which expression means: Add 9 to the product of 8 and 5?",
+        choices: ["(8 × 5) + 9", "8 × (5 + 9)", "(8 + 9) × 5", "8 + 5 × 9"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which expression means: Find the quotient of 18 divided by 3, then add 15?",
+        choices: ["(18 ÷ 3) + 15", "18 ÷ (3 + 15)", "18 + 3 ÷ 15", "(18 + 15) ÷ 3"],
+        answerIndex: 0
+      },
+      {
+        prompt: "What is the value of 11 × 3 + 8?",
+        choices: ["41", "121", "35", "112"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "What is the difference between an equation and an expression?",
+        choices: [
+          "An equation has an equal sign and states that two things are equal; an expression has no equal sign.",
+          "An expression always has an equal sign, while an equation never does.",
+          "An equation never uses numbers, while an expression always does.",
+          "There is no difference between them."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Melissa solved 5 + 3(5 − 2) by writing 5 + 3(3) = 8(3) = 24. What mistake did she make, and what is the correct answer?",
+        choices: [
+          "She combined 5 and 3 into 8 instead of multiplying 3 × 3 first; the correct answer is 14.",
+          "She did the subtraction wrong; the correct answer is 20.",
+          "She made no mistake; 24 is correct.",
+          "She should have added 5 + 3 + 3 to get 11."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Why do mathematicians always follow the order of operations when evaluating an expression?",
+        choices: [
+          "So that everyone gets the same answer when evaluating the same expression.",
+          "So that addition is always done before multiplication.",
+          "So that expressions take longer to solve.",
+          "Order of operations is just a suggestion and can be skipped."
+        ],
+        answerIndex: 0
+      },
+      {
+        prompt: "Rylee says 17 − 12 + 5 × 3 = 30. Is she correct?",
+        choices: [
+          "No — multiplication comes first (5 × 3 = 15), then work left to right: 17 − 12 + 15 = 20.",
+          "Yes, 30 is correct.",
+          "No, the correct answer is 50.",
+          "No, the correct answer is 0."
+        ],
+        answerIndex: 0
+      }
+    ]
   }
 ];
