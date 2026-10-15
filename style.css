@@ -346,14 +346,38 @@ html, body {
   background: var(--accent-dark);
 }
 
+.next-btn:disabled {
+  background: var(--border);
+  color: var(--muted);
+  cursor: default;
+}
+
 .short-answer-wrap {
   display: flex;
   flex-direction: column;
 }
 
+.race-note {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.race-field {
+  margin-bottom: 14px;
+}
+
+.race-label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--accent-dark);
+  margin-bottom: 4px;
+}
+
 .short-answer-input {
   width: 100%;
-  min-height: 110px;
+  min-height: 56px;
   padding: 14px 16px;
   font-family: inherit;
   font-size: 1.05rem;
@@ -385,8 +409,17 @@ html, body {
 }
 
 .sample-answer-box p {
-  margin: 0;
+  margin: 0 0 10px;
   line-height: 1.5;
+}
+
+.sample-answer-box p:last-child {
+  margin-bottom: 0;
+}
+
+.race-sample-label {
+  font-weight: 700;
+  color: var(--accent-dark);
 }
 
 .self-assess-wrap {

@@ -2,13 +2,18 @@
 // Transcribed from a Scholastic News "Big Debate" article (October 26, 2026
 // issue) about the $50.1 million sale of a T. rex fossil named Gus.
 // Each passage has an id, title, the passage text (paragraphs separated by
-// "\n\n"), and a list of short-answer questions.
+// "\n\n"), and a list of short-answer questions that enforce the RACE
+// strategy (Restate, Answer, Cite evidence, Explain) — Jayden's teacher
+// docked points on a worksheet for not using RACE, so the app requires all
+// four parts before he can check his answer.
 // Each question has:
 //   prompt       - the question text
-//   sampleAnswer - a model answer (shown after Jayden writes his own, so he
-//                  can self-check it against the text) — there are no
-//                  choices/answerIndex for this question type; app.js
-//                  renders a textarea instead of multiple-choice buttons.
+//   sampleAnswer - a model answer broken into the four RACE parts
+//                  { restate, answer, cite, explain }, shown after Jayden
+//                  writes his own so he can self-check it against the text.
+//                  There are no choices/answerIndex for this question type;
+//                  app.js renders four labeled textareas instead of
+//                  multiple-choice buttons.
 
 window.READING_PASSAGES = [
   {
@@ -28,20 +33,44 @@ window.READING_PASSAGES = [
       {
         prompt:
           "Based on the article, why does the sale of Gus make him \"the most expensive fossil ever\"?",
-        sampleAnswer:
-          "Gus's sale price of $50.1 million is higher than any fossil has ever sold for before. (The previous record was the $44.6 million paid for Gus's own skeleton at an earlier auction, and before that, the Stegosaurus named Apex set the record in 2024.)"
+        sampleAnswer: {
+          restate:
+            "The article explains why Gus's sale makes him the most expensive fossil ever.",
+          answer:
+            "Gus is the most expensive fossil ever because his skeleton sold for $50.1 million, more than any fossil has ever sold for.",
+          cite:
+            "According to the article, \"a T. rex skeleton sold to a mystery buyer for $50.1 million, making it the most expensive fossil ever.\"",
+          explain:
+            "This shows that no other fossil sale — including the earlier $44.6 million sale of Gus himself, or the record set in 2024 by the Stegosaurus Apex — came close to this price, which is why $50.1 million set a new record."
+        }
       },
       {
         prompt:
           "According to the \"YES\" side of the debate, why do some people think it's fine for commercial fossil hunters to sell dinosaur fossils?",
-        sampleAnswer:
-          "People on the YES side say that without commercial fossil hunters, rare fossils like Gus might never be found, since museums and universities often can't afford to pay for excavations. Jacob Jett also points out that fossils that aren't collected eventually get destroyed, or eroded, by nature. They also argue that fossil hunters and landowners deserve to be paid for their skill, hard work, and property."
+        sampleAnswer: {
+          restate:
+            "The YES side explains why some people think it's fine for commercial fossil hunters to sell dinosaur fossils.",
+          answer:
+            "Some people think it's fine because fossil hunters often find rare fossils that museums could never afford to search for themselves, and hunters deserve to be paid for their work.",
+          cite:
+            "The article states that \"museums and universities often can't afford to pay for excavations,\" and quotes Jacob Jett saying fossils that aren't collected \"get eroded by nature.\"",
+          explain:
+            "This evidence shows that without commercial fossil hunters taking on the cost and risk of digging up fossils, discoveries like Gus might be destroyed by weathering before anyone finds them, so selling fossils can actually help preserve them."
+        }
       },
       {
         prompt:
           "According to the \"NO\" side of the debate, why do many paleontologists worry about wealthy private collectors buying fossils like Gus?",
-        sampleAnswer:
-          "People on the NO side say most U.S. museums don't have as much money as wealthy individuals, so they can't compete — museums couldn't even attempt to buy Gus because the starting bid was $19 million. They also worry that fossils in private collections may never be shared with the public or studied by scientists, since, as Stuart Sumida says, \"If they're in private collections, we'll never learn about them.\""
+        sampleAnswer: {
+          restate:
+            "The NO side explains why many paleontologists worry about wealthy private collectors buying fossils like Gus.",
+          answer:
+            "Many paleontologists worry because most museums can't compete financially with wealthy collectors, and fossils bought privately might never be available for public viewing or scientific study.",
+          cite:
+            "The article says museums and universities \"couldn't even attempt to buy Gus, because the starting bid was $19 million,\" and quotes Stuart Sumida saying, \"If they're in private collections, we'll never learn about them.\"",
+          explain:
+            "This shows that when fossils go to private buyers instead of museums, important scientific information about prehistoric life could be lost to both scientists and the public forever."
+        }
       }
     ]
   }

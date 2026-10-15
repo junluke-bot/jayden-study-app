@@ -2629,31 +2629,93 @@
     quizScreen.appendChild(choicesEl);
   }
 
+  var RACE_STEPS = [
+    {
+      key: "restate",
+      label: "R — Restate the question",
+      placeholder: "Turn the question into the start of your answer..."
+    },
+    {
+      key: "answer",
+      label: "A — Answer the question",
+      placeholder: "State your answer clearly."
+    },
+    {
+      key: "cite",
+      label: "C — Cite evidence",
+      placeholder: 'Quote or point to evidence from the text, e.g. "According to the article..."'
+    },
+    {
+      key: "explain",
+      label: "E — Explain",
+      placeholder: "Explain how your evidence supports your answer."
+    }
+  ];
+
   function renderShortAnswer(q) {
     var wrap = document.createElement("div");
     wrap.className = "short-answer-wrap";
 
-    var textarea = document.createElement("textarea");
-    textarea.className = "short-answer-input";
-    textarea.rows = 4;
-    textarea.placeholder = "Write your answer in complete sentences...";
-    wrap.appendChild(textarea);
+    var raceNote = document.createElement("div");
+    raceNote.className = "race-note";
+    raceNote.textContent =
+      "Use the RACE strategy — fill in all four parts before checking your answer.";
+    wrap.appendChild(raceNote);
+
+    var fields = {};
+    RACE_STEPS.forEach(function (step) {
+      var field = document.createElement("div");
+      field.className = "race-field";
+
+      var label = document.createElement("label");
+      label.className = "race-label";
+      label.textContent = step.label;
+      field.appendChild(label);
+
+      var textarea = document.createElement("textarea");
+      textarea.className = "short-answer-input";
+      textarea.rows = 2;
+      textarea.placeholder = step.placeholder;
+      textarea.addEventListener("input", updateCheckBtnState);
+      field.appendChild(textarea);
+
+      fields[step.key] = textarea;
+      wrap.appendChild(field);
+    });
 
     var checkBtn = document.createElement("button");
     checkBtn.className = "next-btn";
     checkBtn.textContent = "Check My Answer";
+    checkBtn.disabled = true;
     wrap.appendChild(checkBtn);
+
+    function updateCheckBtnState() {
+      var allFilled = RACE_STEPS.every(function (step) {
+        return fields[step.key].value.trim().length > 0;
+      });
+      checkBtn.disabled = !allFilled;
+    }
 
     quizScreen.appendChild(wrap);
 
     checkBtn.addEventListener("click", function () {
-      textarea.disabled = true;
+      RACE_STEPS.forEach(function (step) {
+        fields[step.key].disabled = true;
+      });
       checkBtn.remove();
 
       var sampleEl = document.createElement("div");
       sampleEl.className = "sample-answer-box";
-      sampleEl.innerHTML =
-        '<div class="sample-answer-label">Sample answer</div><p>' + q.sampleAnswer + "</p>";
+      var sampleHtml = '<div class="sample-answer-label">Sample RACE answer</div>';
+      RACE_STEPS.forEach(function (step) {
+        sampleHtml +=
+          '<p><span class="race-sample-label">' +
+          step.label +
+          "</span> " +
+          q.sampleAnswer[step.key] +
+          "</p>";
+      });
+      sampleEl.innerHTML = sampleHtml;
       wrap.appendChild(sampleEl);
 
       var selfAssessWrap = document.createElement("div");
