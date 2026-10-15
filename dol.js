@@ -1857,5 +1857,153 @@ window.DOL_SETS = [
         "answerIndex": 0
       }
     ]
+  },
+  {
+    "id": "language-review-week9",
+    "name": "Language Review Week 9",
+    "questions": [
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "She heard the alarm and saw smoke coming from the kitchen.",
+          "she herd the alarm and seen smoke coming from the kitchen",
+          "She heard the alarm and seen smoke coming from the kitchen.",
+          "She herd the alarm and saw smoke coming from the kitchen."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "That whole yard is one giant garden.",
+          "that hole yard is won giant garden",
+          "That hole yard is one giant garden.",
+          "That whole yard is won giant garden."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which word belongs in this group: Pacific, Atlantic, Indian, Arctic?",
+        "choices": ["Southern", "Sahara", "Everest", "Amazon"],
+        "answerIndex": 0
+      },
+      {
+        "prompt":
+          "At what time of day would the following probably happen? Maria brushed her teeth, put on her pajamas, and climbed into bed.",
+        "choices": ["Night", "Morning", "Noon", "Afternoon"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which word is NOT spelled correctly?",
+        "choices": ["happyiest", "sunniest", "driest", "curliest"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which word rhymes with \"bright\"?",
+        "choices": ["night", "bread", "chair", "spoon"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "How is the word \"napkin\" correctly divided into syllables?",
+        "choices": ["nap-kin", "na-pkin", "n-apkin", "napki-n"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "How is the word \"dragon\" correctly divided into syllables?",
+        "choices": ["drag-on", "dra-gon", "d-ragon", "drago-n"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Carlos, Jasmine, and Leo went to Anna's house for Saturday lunch.",
+          "carlos jasmine and leo went to annas house for saturday lunch",
+          "Carlos, Jasmine, and Leo went to Annas house for Saturday lunch.",
+          "Carlos Jasmine and Leo went to Anna's house for Saturday lunch."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "The whole soccer team is riding to the tournament.",
+          "the hole soccer team are riding to the tournament",
+          "The hole soccer team is riding to the tournament.",
+          "The whole soccer team are riding to the tournament."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Did you ride the bus with Jamal and me to Riverside Park?",
+          "did you ride the bus with jamal and me to riverside park",
+          "Did you ride the bus with Jamal and me to riverside park?",
+          "Did you ride the bus with jamal and me to Riverside Park?"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Is Maya visiting her cousins in Miami, or is she staying home?",
+          "is maya visiting her cousins in miami or is she staying home",
+          "Is Maya visiting her cousins in Miami or is she staying home?",
+          "Is maya visiting her cousins in Miami, or is she staying home?"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt":
+          "Is the underlined word a subject pronoun or a possessive pronoun? \"The librarian told Sam that he could check out two books.\" (he)",
+        "choices": ["Subject pronoun", "Possessive pronoun"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Complete this analogy: Japan : Asia :: Mexico : ___",
+        "choices": ["North America", "South America", "Europe", "Africa"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "What reference source would you use to find the elevation of Mount Everest?",
+        "choices": ["An atlas", "A dictionary", "A thesaurus", "A novel"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Circle the correct abbreviation for \"ounce.\"",
+        "choices": ["oz.", "ou.", "onz.", "ozc."],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which word has the same sound as /f/ in \"fall\"?",
+        "choices": ["tough", "night", "ghost", "weigh"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "We're flying to Portland, Oregon, on the 9 o'clock flight.",
+          "were flying to portland oregon on the 9 oclock flight",
+          "We're flying to Portland Oregon on the 9 o'clock flight.",
+          "Were flying to Portland, Oregon, on the 9 oclock flight."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Marcus yelled, \"Watch out for that falling branch!\"",
+          "marcus yelled watch out for that falling branch",
+          "Marcus yelled \"watch out for that falling branch.\"",
+          "Marcus yelled, \"watch out for that falling branch\""
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Synonyms or antonyms? ancient, modern",
+        "choices": ["Antonyms", "Synonyms", "Homophones", "None of these"],
+        "answerIndex": 0
+      }
+    ]
   }
 ];
