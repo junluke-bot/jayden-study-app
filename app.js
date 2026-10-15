@@ -623,7 +623,7 @@
           '<span class="missed-word missed-prompt">' +
           item.prompt +
           '</span><span class="missed-meaning">Answer: ' +
-          item.choices[item.answerIndex] +
+          (item.choices ? item.choices[item.answerIndex] : item.sampleAnswer) +
           "</span>";
       }
       list.appendChild(li);
@@ -2262,7 +2262,8 @@
         passageText: passage.text,
         prompt: q.prompt,
         choices: q.choices,
-        answerIndex: q.answerIndex
+        answerIndex: q.answerIndex,
+        sampleAnswer: q.sampleAnswer
       };
     });
   }
@@ -2508,11 +2509,14 @@
 
   function renderQuestion() {
     var q = quizState.questions[quizState.index];
-    var options = shuffle(
-      q.choices.map(function (text, i) {
-        return { text: text, correct: i === q.answerIndex };
-      })
-    );
+    var isShortAnswer = q.type === "reading" && !q.choices;
+    var options = isShortAnswer
+      ? []
+      : shuffle(
+          q.choices.map(function (text, i) {
+            return { text: text, correct: i === q.answerIndex };
+          })
+        );
 
     clearChildren(quizScreen);
 
@@ -2598,6 +2602,11 @@
       quizScreen.appendChild(card);
     }
 
+    if (isShortAnswer) {
+      renderShortAnswer(q);
+      return;
+    }
+
     var choicesEl = document.createElement("div");
     choicesEl.className = "choices";
     var letters = ["A", "B", "C", "D"];
@@ -2618,6 +2627,84 @@
     });
 
     quizScreen.appendChild(choicesEl);
+  }
+
+  function renderShortAnswer(q) {
+    var wrap = document.createElement("div");
+    wrap.className = "short-answer-wrap";
+
+    var textarea = document.createElement("textarea");
+    textarea.className = "short-answer-input";
+    textarea.rows = 4;
+    textarea.placeholder = "Write your answer in complete sentences...";
+    wrap.appendChild(textarea);
+
+    var checkBtn = document.createElement("button");
+    checkBtn.className = "next-btn";
+    checkBtn.textContent = "Check My Answer";
+    wrap.appendChild(checkBtn);
+
+    quizScreen.appendChild(wrap);
+
+    checkBtn.addEventListener("click", function () {
+      textarea.disabled = true;
+      checkBtn.remove();
+
+      var sampleEl = document.createElement("div");
+      sampleEl.className = "sample-answer-box";
+      sampleEl.innerHTML =
+        '<div class="sample-answer-label">Sample answer</div><p>' + q.sampleAnswer + "</p>";
+      wrap.appendChild(sampleEl);
+
+      var selfAssessWrap = document.createElement("div");
+      selfAssessWrap.className = "choices self-assess-wrap";
+
+      var gotItBtn = document.createElement("button");
+      gotItBtn.className = "choice-btn";
+      gotItBtn.textContent = "I got it right";
+
+      var reviewBtn = document.createElement("button");
+      reviewBtn.className = "choice-btn";
+      reviewBtn.textContent = "I need to review this";
+
+      function finalizeShortAnswer(isCorrect, selectedBtn) {
+        gotItBtn.disabled = true;
+        reviewBtn.disabled = true;
+        selectedBtn.classList.add(isCorrect ? "correct" : "incorrect");
+
+        if (isCorrect) {
+          quizState.score++;
+        } else {
+          quizState.missedThisRound.push(q);
+        }
+        updateReadingProgressForAnswer(q, isCorrect);
+
+        var nextBtn = document.createElement("button");
+        nextBtn.className = "next-btn";
+        nextBtn.textContent =
+          quizState.index + 1 < quizState.questions.length ? "Next" : "See Results";
+        nextBtn.addEventListener("click", function () {
+          quizState.index++;
+          if (quizState.index < quizState.questions.length) {
+            renderQuestion();
+          } else {
+            finishQuiz();
+          }
+        });
+        quizScreen.appendChild(nextBtn);
+      }
+
+      gotItBtn.addEventListener("click", function () {
+        finalizeShortAnswer(true, gotItBtn);
+      });
+      reviewBtn.addEventListener("click", function () {
+        finalizeShortAnswer(false, reviewBtn);
+      });
+
+      selfAssessWrap.appendChild(gotItBtn);
+      selfAssessWrap.appendChild(reviewBtn);
+      wrap.appendChild(selfAssessWrap);
+    });
   }
 
   function handleAnswer(isCorrect, choicesEl, selectedBtn) {
@@ -2921,7 +3008,7 @@
             '<span class="missed-word missed-prompt">' +
             item.prompt +
             '</span><span class="missed-meaning">Answer: ' +
-            item.choices[item.answerIndex] +
+            (item.choices ? item.choices[item.answerIndex] : item.sampleAnswer) +
             "</span>";
         } else {
           li.innerHTML =

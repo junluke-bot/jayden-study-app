@@ -2,12 +2,13 @@
 // Transcribed from a Scholastic News "Big Debate" article (October 26, 2026
 // issue) about the $50.1 million sale of a T. rex fossil named Gus.
 // Each passage has an id, title, the passage text (paragraphs separated by
-// "\n\n"), and multiple choice questions.
+// "\n\n"), and a list of short-answer questions.
 // Each question has:
-//   prompt      - the question text
-//   choices     - four answer options (choices[0] is always correct;
-//                 app.js shuffles choice order at render time)
-//   answerIndex - always 0 here, matching the words.js/math.js convention
+//   prompt       - the question text
+//   sampleAnswer - a model answer (shown after Jayden writes his own, so he
+//                  can self-check it against the text) — there are no
+//                  choices/answerIndex for this question type; app.js
+//                  renders a textarea instead of multiple-choice buttons.
 
 window.READING_PASSAGES = [
   {
@@ -26,36 +27,21 @@ window.READING_PASSAGES = [
     questions: [
       {
         prompt:
-          "According to the article, why does the sale of Gus make him \"the most expensive fossil ever\"?",
-        choices: [
-          "His $50.1 million sale price was higher than any fossil had ever sold for before.",
-          "He is the oldest dinosaur fossil that scientists have ever discovered.",
-          "He is the only Tyrannosaurus rex skeleton that has ever been found.",
-          "He was found in a more remote location than any other fossil."
-        ],
-        answerIndex: 0
+          "Based on the article, why does the sale of Gus make him \"the most expensive fossil ever\"?",
+        sampleAnswer:
+          "Gus's sale price of $50.1 million is higher than any fossil has ever sold for before. (The previous record was the $44.6 million paid for Gus's own skeleton at an earlier auction, and before that, the Stegosaurus named Apex set the record in 2024.)"
       },
       {
         prompt:
           "According to the \"YES\" side of the debate, why do some people think it's fine for commercial fossil hunters to sell dinosaur fossils?",
-        choices: [
-          "Without fossil hunters, many rare fossils might never be found and could be destroyed by nature before anyone collects them.",
-          "Museums always have enough money to buy every fossil they want.",
-          "Selling fossils is not valuable work, so it doesn't matter who buys them.",
-          "Landowners are required by law to give away any fossils found on their property."
-        ],
-        answerIndex: 0
+        sampleAnswer:
+          "People on the YES side say that without commercial fossil hunters, rare fossils like Gus might never be found, since museums and universities often can't afford to pay for excavations. Jacob Jett also points out that fossils that aren't collected eventually get destroyed, or eroded, by nature. They also argue that fossil hunters and landowners deserve to be paid for their skill, hard work, and property."
       },
       {
         prompt:
           "According to the \"NO\" side of the debate, why do many paleontologists worry about wealthy private collectors buying fossils like Gus?",
-        choices: [
-          "Most museums can't afford to compete with wealthy collectors, and fossils kept in private collections may never be shared with the public or studied by scientists.",
-          "Private collectors are required by law to destroy any fossils they purchase.",
-          "Wealthy collectors always give their fossils away to museums for free.",
-          "Museums are not interested in displaying dinosaur fossils."
-        ],
-        answerIndex: 0
+        sampleAnswer:
+          "People on the NO side say most U.S. museums don't have as much money as wealthy individuals, so they can't compete — museums couldn't even attempt to buy Gus because the starting bid was $19 million. They also worry that fossils in private collections may never be shared with the public or studied by scientists, since, as Stuart Sumida says, \"If they're in private collections, we'll never learn about them.\""
       }
     ]
   }
