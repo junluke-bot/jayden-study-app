@@ -1883,8 +1883,8 @@ window.DOL_SETS = [
         "answerIndex": 0
       },
       {
-        "prompt": "Which word belongs in this group: Pacific, Atlantic, Indian, Arctic?",
-        "choices": ["Southern", "Sahara", "Everest", "Amazon"],
+        "prompt": "Which word belongs in this group: Pacific, Atlantic, Indian, ___?",
+        "choices": ["Arctic", "Sahara", "Everest", "Nile"],
         "answerIndex": 0
       },
       {
