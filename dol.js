@@ -2005,5 +2005,165 @@ window.DOL_SETS = [
         "answerIndex": 0
       }
     ]
+  },
+  {
+    "id": "language-review-week10",
+    "name": "Language Review Week 10",
+    "questions": [
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "The funniest book Kayla ever read was Tales of the Sea by J. R. Simms.",
+          "the funniest book kayla ever red was tales of the sea by j r simms",
+          "The funniest book Kayla ever read was tales of the sea by J. R. Simms.",
+          "The funniest book Kayla ever red was Tales of the Sea by J. R. Simms."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Mr. and Mrs. Chen have visited many cities across Asia.",
+          "mr and mrs chen has visited many citys across asia",
+          "Mr. and Mrs. Chen has visited many cities across Asia.",
+          "Mr. and Mrs. Chen have visited many citys across Asia."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Fact or fantasy? \"Dragons can breathe fire and talk to humans.\"",
+        "choices": ["Fantasy", "Fact"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "What two words make up the contraction \"wouldn't\"?",
+        "choices": ["would, not", "would, note", "will, not", "would, knot"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Choose the best word to complete the sentence: \"That puppy is the ___ one in the litter.\"",
+        "choices": ["friendliest", "friendlier", "friendly", "none of these"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which sentence best expresses an opinion?",
+        "choices": [
+          "School uniforms are a great idea because they reduce distractions.",
+          "Many schools require students to wear uniforms.",
+          "Uniforms often include a polo shirt and khaki pants.",
+          "Some schools do not require uniforms at all."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt":
+          "If the guide words on a page were \"garden\" and \"giant,\" which word would NOT be on the page?",
+        "choices": ["giraffe", "gate", "gentle", "germ"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Maria said, \"I'll save you and him a seat at the movies.\"",
+          "maria said ill save you and him a seat at the movies",
+          "Maria said, \"ill save you and him a seat at the movies.\"",
+          "Maria said \"I'll save you and him a seat at the movies.\""
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "\"Yikes, Jordan, that's a huge wave!\" shouted Derek.",
+          "yikes jordan thats a huge wave shout derek",
+          "\"Yikes Jordan that's a huge wave!\" shouted Derek.",
+          "\"Yikes, Jordan, thats a huge wave\" shout Derek."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which sentence correctly uses the homophone pair \"break\" and \"brake\"?",
+        "choices": [
+          "She hit the brake quickly to avoid a break in the road.",
+          "She hit the break quickly to avoid a brake in the road.",
+          "She hit the brake quickly to avoid a brake in the road.",
+          "The brake and the break mean the same thing."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Wash your hands, brush your hair, and then eat breakfast.",
+          "wash your hands brush youre hair and then eat breakfast",
+          "Wash your hands brush your hair and then eat breakfast.",
+          "Wash your hands, brush youre hair, and then eat breakfast."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Jake doesn't want anything from the store.",
+          "jake dont want nothing from the store",
+          "Jake doesn't want nothing from the store.",
+          "Jake don't want anything from the store."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "What is the present tense of the verb \"brought\"?",
+        "choices": ["bring", "brought", "bringed", "braught"],
+        "answerIndex": 0
+      },
+      {
+        "prompt":
+          "Declarative, interrogative, imperative, or exclamatory? \"Please close the door before you leave.\"",
+        "choices": ["Imperative", "Declarative", "Interrogative", "Exclamatory"],
+        "answerIndex": 0
+      },
+      {
+        "prompt":
+          "What is the following person's job? \"After checking the patient's heartbeat, Dr. Alvarez wrote a prescription and explained the treatment plan.\"",
+        "choices": ["Doctor", "Teacher", "Chef", "Pilot"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Which word would come last in alphabetical order?",
+        "choices": ["treat", "trail", "train", "trait"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "What is the plural of \"wolf\"?",
+        "choices": ["wolves", "wolfs", "wolves's", "wolfes"],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "\"I'm visiting Grandma this weekend,\" explained Noah.",
+          "im visiting grandma this weekend explained noah",
+          "\"im visiting Grandma this weekend,\" explained Noah.",
+          "\"I'm visiting grandma this weekend\" explained Noah."
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt": "Select the sentence that is correct.",
+        "choices": [
+          "Wasn't that the right answer to Taylor's question?",
+          "wasnt that the right answer to taylors question",
+          "Wasn't that the right answer to Taylors question?",
+          "Wasnt that the right answer to Taylor's question?"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "prompt":
+          "Give the complete predicate of this sentence: \"The success of the team depends on practice.\"",
+        "choices": ["depends on practice", "the success of the team", "depends", "the team"],
+        "answerIndex": 0
+      }
+    ]
   }
 ];
