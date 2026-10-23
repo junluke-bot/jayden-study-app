@@ -18,7 +18,7 @@
   var quizState = null;
   var activeHomeTab = "words";
   var quizTimerInterval = null;
-  var TIMED_MODES = ["math", "mathReview", "math2", "math2Review"];
+  var TIMED_MODES = ["math", "mathReview", "math2", "math2Review", "math2Adaptive"];
   var DAILY_WORDS_LENGTH = 20;
 
   // ---------- Persistence ----------
@@ -471,7 +471,9 @@
   }
 
   function isMath2Entry(entry) {
-    return entry.mode === "math2" || entry.mode === "math2Review";
+    return (
+      entry.mode === "math2" || entry.mode === "math2Review" || entry.mode === "math2Adaptive"
+    );
   }
 
   function isReadingEntry(entry) {
@@ -532,6 +534,7 @@
       return math2Set ? math2Set.name : "Math 2";
     }
     if (entry.mode === "math2Review") return "Review Missed Math 2";
+    if (entry.mode === "math2Adaptive") return "Adaptive Math Challenge";
     if (entry.mode === "review") return "Review Missed Words";
     if (entry.mode === "readingReview") return "Review Missed Reading";
     if (entry.mode === "socialReview") return "Review Missed Social Studies";
@@ -886,6 +889,18 @@
         startMath2Practice();
       });
       math2Wrap.appendChild(math2Btn);
+
+      var adaptiveBtn = document.createElement("button");
+      adaptiveBtn.className = "set-card";
+      adaptiveBtn.innerHTML =
+        '<span><span class="set-name">Adaptive Math Challenge</span>' +
+        '<span class="set-meta">' +
+        ADAPTIVE_TOTAL_QUESTIONS +
+        " questions · gets harder or easier as you go</span></span>";
+      adaptiveBtn.addEventListener("click", function () {
+        startAdaptiveMath2Challenge();
+      });
+      math2Wrap.appendChild(adaptiveBtn);
 
       if (missedMath2List.length > 0) {
         var math2ReviewBtn = document.createElement("button");
@@ -2133,6 +2148,137 @@
     );
   }
 
+  // ---------- Adaptive Math Challenge generators, by difficulty tier ----------
+
+  function genAddEasy() {
+    var a = randomInt(20, 89);
+    var b = randomInt(10, 79);
+    var correct = a + b;
+    var wrong = [correct + 10, correct - 10, correct + 1];
+    return makeGenQuestion(a + " + " + b + " = ?", fmtNum(correct), wrong.map(fmtNum));
+  }
+
+  function genSubEasy() {
+    var a = randomInt(40, 99);
+    var b = randomInt(10, a - 10);
+    var correct = a - b;
+    var wrong = [correct + 10, correct - 10, correct + 1];
+    return makeGenQuestion(a + " − " + b + " = ?", fmtNum(correct), wrong.map(fmtNum));
+  }
+
+  function genMultFacts() {
+    var a = randomInt(2, 12);
+    var b = randomInt(2, 12);
+    var correct = a * b;
+    var wrong = [correct + a, Math.max(correct - a, 1), correct + 1];
+    return makeGenQuestion(a + " × " + b + " = ?", fmtNum(correct), wrong.map(fmtNum));
+  }
+
+  var UNIT_FRACTION_DENOMINATORS = [2, 3, 4, 5, 10];
+
+  function genUnitFractionOfWhole() {
+    var d = UNIT_FRACTION_DENOMINATORS[randomInt(0, UNIT_FRACTION_DENOMINATORS.length - 1)];
+    var whole = d * randomInt(2, 9);
+    var correct = whole / d;
+    var wrong = [correct + d, Math.max(correct - 1, 1), whole];
+    return makeGenQuestion(
+      "What is 1/" + d + " of " + whole + "?",
+      fmtNum(correct),
+      wrong.map(fmtNum)
+    );
+  }
+
+  function genAddMed() {
+    var a = randomInt(200, 899);
+    var b = randomInt(100, 799);
+    var correct = a + b;
+    var wrong = [correct + 10, correct - 10, correct + 100];
+    return makeGenQuestion(
+      fmtNum(a) + " + " + fmtNum(b) + " = ?",
+      fmtNum(correct),
+      wrong.map(fmtNum)
+    );
+  }
+
+  function genMult2by1() {
+    var a = randomInt(12, 89);
+    var b = randomInt(2, 9);
+    var correct = a * b;
+    var wrong = [correct + b, Math.max(correct - b, 1), correct + 1];
+    return makeGenQuestion(a + " × " + b + " = ?", fmtNum(correct), wrong.map(fmtNum));
+  }
+
+  function genDiv2by1() {
+    var divisor = randomInt(2, 9);
+    var quotient = randomInt(5, 40);
+    var dividend = divisor * quotient;
+    var wrong = [quotient + 1, Math.max(quotient - 1, 1), quotient + divisor];
+    return makeGenQuestion(
+      dividend + " ÷ " + divisor + " = ?",
+      fmtNum(quotient),
+      wrong.map(fmtNum)
+    );
+  }
+
+  function genDecimalAddTenths() {
+    var aT = randomInt(10, 89);
+    var bT = randomInt(10, 89);
+    var correct = aT + bT;
+    var wrong = [correct + 10, correct - 10, correct + 1];
+    return makeGenQuestion(
+      fmtWeight(aT * 10) + " + " + fmtWeight(bT * 10) + " = ?",
+      fmtWeight(correct * 10),
+      wrong.map(function (w) {
+        return fmtWeight(w * 10);
+      })
+    );
+  }
+
+  function genMultLarge() {
+    var a = randomInt(200, 899);
+    var b = randomInt(120, 489);
+    var correct = a * b;
+    var wrong = [a * (b + 1), a * (b - 1), correct + 1000];
+    return makeGenQuestion(
+      fmtNum(a) + " × " + fmtNum(b) + " = ?",
+      fmtNum(correct),
+      wrong.map(fmtNum)
+    );
+  }
+
+  function genDivLarge() {
+    var divisor = randomInt(11, 97);
+    var minQuotient = Math.ceil(10000 / divisor);
+    var maxQuotient = Math.floor(99999 / divisor);
+    var quotient = randomInt(minQuotient, maxQuotient);
+    var dividend = divisor * quotient;
+    var wrong = [quotient + 10, quotient - 10, quotient + 1];
+    return makeGenQuestion(
+      fmtNum(dividend) + " ÷ " + divisor + " = ?",
+      fmtNum(quotient),
+      wrong.map(fmtNum)
+    );
+  }
+
+  var PERCENT_FACTS = [
+    { p: 10, div: 10 },
+    { p: 20, div: 5 },
+    { p: 25, div: 4 },
+    { p: 50, div: 2 }
+  ];
+
+  function genPercentOf() {
+    var fact = PERCENT_FACTS[randomInt(0, PERCENT_FACTS.length - 1)];
+    var k = randomInt(2, 40);
+    var base = fact.div * k;
+    var wrong = [k + fact.div, Math.max(k - fact.div, 1), k + 1];
+    return makeGenQuestion(
+      "What is " + fact.p + "% of " + base + "?",
+      fmtNum(k),
+      wrong.map(fmtNum)
+    );
+  }
+
   function genDecimalAdd() {
     var aCents = randomInt(150, 950);
     if (aCents % 100 === 0) aCents += 3;
@@ -2208,6 +2354,88 @@
       ];
     }
   };
+
+  // ---------- Adaptive Math Challenge ----------
+  // A computer-adaptive-style quiz: starts at a middle difficulty level and
+  // moves up a level after each correct answer, down a level after each
+  // miss (bounded to [ADAPTIVE_MIN_LEVEL, ADAPTIVE_MAX_LEVEL]), generating
+  // the next question just-in-time rather than pre-building a fixed list.
+
+  var ADAPTIVE_MIN_LEVEL = 1;
+  var ADAPTIVE_MAX_LEVEL = 5;
+  var ADAPTIVE_START_LEVEL = 3;
+  var ADAPTIVE_TOTAL_QUESTIONS = 15;
+
+  var ADAPTIVE_LEVEL_POOLS = {
+    1: [genAddEasy, genSubEasy, genMultFacts, genUnitFractionOfWhole],
+    2: [genAddMed, genMult2by1, genDiv2by1, genDecimalAddTenths],
+    3: [
+      genSubtraction,
+      genMultiplication,
+      genDivision4by2,
+      genDecimalAdd,
+      genDecimalSub,
+      function () {
+        return pickFractionPool(FRACTION_ADD_POOL, "+");
+      }
+    ],
+    4: [
+      genDivision4by1,
+      genDecimalMult,
+      genMultLarge,
+      function () {
+        return pickFractionPool(FRACTION_MULT_POOL, "×");
+      }
+    ],
+    5: [
+      genDivLarge,
+      genDecimalDiv,
+      genPercentOf,
+      function () {
+        return pickFractionPool(FRACTION_DIV_POOL, "÷");
+      }
+    ]
+  };
+
+  function generateAdaptiveQuestion(level) {
+    var pool = ADAPTIVE_LEVEL_POOLS[level];
+    var gen = pool[randomInt(0, pool.length - 1)];
+    var q = gen();
+    return {
+      type: "math2",
+      setId: "adaptiveChallenge",
+      topic: "Adaptive Math Challenge",
+      category: "adaptiveLevel" + level,
+      prompt: q.prompt,
+      choices: q.choices,
+      answerIndex: q.answerIndex
+    };
+  }
+
+  function adjustAdaptiveLevel(isCorrect) {
+    quizState.adaptiveLevel = isCorrect
+      ? Math.min(ADAPTIVE_MAX_LEVEL, quizState.adaptiveLevel + 1)
+      : Math.max(ADAPTIVE_MIN_LEVEL, quizState.adaptiveLevel - 1);
+    quizState.adaptivePeakLevel = Math.max(quizState.adaptivePeakLevel, quizState.adaptiveLevel);
+  }
+
+  function startAdaptiveMath2Challenge() {
+    quizState = {
+      setId: "adaptiveChallenge",
+      mode: "math2Adaptive",
+      questions: [generateAdaptiveQuestion(ADAPTIVE_START_LEVEL)],
+      index: 0,
+      score: 0,
+      missedThisRound: [],
+      startTime: Date.now(),
+      adaptiveLevel: ADAPTIVE_START_LEVEL,
+      adaptiveTotal: ADAPTIVE_TOTAL_QUESTIONS,
+      adaptivePeakLevel: ADAPTIVE_START_LEVEL
+    };
+    startQuizTimer();
+    renderQuestion();
+    showScreen(quizScreen);
+  }
 
   function weakMath2Categories(progress) {
     var seen = {};
@@ -2530,11 +2758,19 @@
     });
     quizScreen.appendChild(backBtn);
 
+    var progressTotal =
+      quizState.mode === "math2Adaptive" ? quizState.adaptiveTotal : quizState.questions.length;
     var progressEl = document.createElement("div");
     progressEl.className = "quiz-progress";
-    progressEl.textContent =
-      "Question " + (quizState.index + 1) + " of " + quizState.questions.length;
+    progressEl.textContent = "Question " + (quizState.index + 1) + " of " + progressTotal;
     quizScreen.appendChild(progressEl);
+
+    if (quizState.mode === "math2Adaptive") {
+      var levelEl = document.createElement("div");
+      levelEl.className = "quiz-level";
+      levelEl.textContent = "Level " + quizState.adaptiveLevel + " of " + ADAPTIVE_MAX_LEVEL;
+      quizScreen.appendChild(levelEl);
+    }
 
     if (isTimedMode(quizState.mode)) {
       var timerEl = document.createElement("div");
@@ -2795,6 +3031,9 @@
       updateMathProgressForAnswer(q, isCorrect);
     } else if (quizState.mode === "math2" || quizState.mode === "math2Review") {
       updateMath2ProgressForAnswer(q, isCorrect);
+    } else if (quizState.mode === "math2Adaptive") {
+      updateMath2ProgressForAnswer(q, isCorrect);
+      adjustAdaptiveLevel(isCorrect);
     } else if (quizState.mode === "reading" || quizState.mode === "readingReview") {
       updateReadingProgressForAnswer(q, isCorrect);
     } else if (quizState.mode === "social" || quizState.mode === "socialReview") {
@@ -2811,12 +3050,19 @@
       updateProgressForAnswer(q, isCorrect);
     }
 
+    var isAdaptive = quizState.mode === "math2Adaptive";
+    var hasMoreQuestions = isAdaptive
+      ? quizState.index + 1 < quizState.adaptiveTotal
+      : quizState.index + 1 < quizState.questions.length;
+
     var nextBtn = document.createElement("button");
     nextBtn.className = "next-btn";
-    nextBtn.textContent =
-      quizState.index + 1 < quizState.questions.length ? "Next" : "See Results";
+    nextBtn.textContent = hasMoreQuestions ? "Next" : "See Results";
     nextBtn.addEventListener("click", function () {
       quizState.index++;
+      if (isAdaptive && quizState.index < quizState.adaptiveTotal) {
+        quizState.questions.push(generateAdaptiveQuestion(quizState.adaptiveLevel));
+      }
       if (quizState.index < quizState.questions.length) {
         renderQuestion();
       } else {
@@ -3008,7 +3254,8 @@
       quizState.questions.length,
       quizState.missedThisRound,
       quizState.mode,
-      elapsedSeconds
+      elapsedSeconds,
+      quizState.adaptivePeakLevel
     );
   }
 
@@ -3023,7 +3270,7 @@
     return "Keep practicing — you'll get there!";
   }
 
-  function renderEndScreen(score, total, missed, mode, elapsedSeconds) {
+  function renderEndScreen(score, total, missed, mode, elapsedSeconds, adaptivePeakLevel) {
     clearChildren(endScreen);
 
     var scoreBox = document.createElement("div");
@@ -3040,9 +3287,22 @@
       scoreBox.innerHTML +=
         '<div class="score-time">Time: ' + formatElapsed(elapsedSeconds) + "</div>";
     }
+    if (mode === "math2Adaptive" && adaptivePeakLevel != null) {
+      scoreBox.innerHTML +=
+        '<div class="score-time">Highest level reached: ' +
+        adaptivePeakLevel +
+        " of " +
+        ADAPTIVE_MAX_LEVEL +
+        "</div>";
+    }
     endScreen.appendChild(scoreBox);
 
-    var isMath = mode === "math" || mode === "mathReview" || mode === "math2" || mode === "math2Review";
+    var isMath =
+      mode === "math" ||
+      mode === "mathReview" ||
+      mode === "math2" ||
+      mode === "math2Review" ||
+      mode === "math2Adaptive";
     var isReading = mode === "reading" || mode === "readingReview";
     var isSocial = mode === "social" || mode === "socialReview";
     var isScience = mode === "science" || mode === "scienceReview";

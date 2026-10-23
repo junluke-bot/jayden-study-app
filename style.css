@@ -181,6 +181,15 @@ html, body {
   text-align: center;
 }
 
+.quiz-level {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  margin-bottom: 14px;
+  margin-top: -8px;
+  text-align: center;
+}
+
 .phrase-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
