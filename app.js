@@ -896,7 +896,7 @@
         '<span><span class="set-name">Adaptive Math Challenge</span>' +
         '<span class="set-meta">' +
         ADAPTIVE_TOTAL_QUESTIONS +
-        " questions · gets harder or easier as you go</span></span>";
+        " questions · computation, geometry, measurement & more · gets harder or easier as you go</span></span>";
       adaptiveBtn.addEventListener("click", function () {
         startAdaptiveMath2Challenge();
       });
@@ -2279,6 +2279,137 @@
     );
   }
 
+  // ---------- Geometry, measurement, and numerical-reasoning generators,
+  // for the Adaptive Math Challenge (alongside the computation generators
+  // above and the unit-conversion generators in MATH2_GENERATORS below). ----
+
+  function genSquareArea() {
+    var side = randomInt(3, 15);
+    var correct = side * side;
+    var wrong = [side * 4, correct + side, Math.max(correct - side, 1)];
+    return makeGenQuestion(
+      "A square has a side length of " + side + " feet. What is its area?",
+      fmtNum(correct) + " square feet",
+      wrong.map(function (w) {
+        return fmtNum(w) + " square feet";
+      })
+    );
+  }
+
+  function genRectangleArea() {
+    var length = randomInt(4, 20);
+    var width = randomInt(3, 15);
+    var correct = length * width;
+    var perimeter = 2 * (length + width);
+    var wrong = [perimeter, correct + length, Math.max(correct - width, 1)];
+    return makeGenQuestion(
+      "A rectangle is " + length + " feet long and " + width + " feet wide. What is its area?",
+      fmtNum(correct) + " square feet",
+      wrong.map(function (w) {
+        return fmtNum(w) + " square feet";
+      })
+    );
+  }
+
+  var ANGLE_TYPES = [
+    { label: "Acute", min: 10, max: 89 },
+    { label: "Right", min: 90, max: 90 },
+    { label: "Obtuse", min: 91, max: 170 }
+  ];
+
+  function genAngleType() {
+    var correctType = ANGLE_TYPES[randomInt(0, ANGLE_TYPES.length - 1)];
+    var degrees = randomInt(correctType.min, correctType.max);
+    var wrong = ANGLE_TYPES.filter(function (t) {
+      return t.label !== correctType.label;
+    }).map(function (t) {
+      return t.label;
+    });
+    wrong.push("Straight");
+    return makeGenQuestion(
+      "An angle measures " + degrees + " degrees. What type of angle is it?",
+      correctType.label,
+      wrong
+    );
+  }
+
+  function genElapsedTime() {
+    var startHour = randomInt(1, 9);
+    var startMin = randomInt(0, 11) * 5;
+    var elapsed = randomInt(2, 8) * 5;
+    var startTotal = startHour * 60 + startMin;
+    var endTotal = startTotal + elapsed;
+    var endHour = Math.floor(endTotal / 60);
+    var endMin = endTotal % 60;
+    var startStr = startHour + ":" + (startMin < 10 ? "0" + startMin : startMin);
+    var endStr = endHour + ":" + (endMin < 10 ? "0" + endMin : endMin);
+    var wrong = [elapsed + 5, Math.max(elapsed - 5, 5), elapsed + 15];
+    return makeGenQuestion(
+      "Jayden started his homework at " +
+        startStr +
+        " and finished at " +
+        endStr +
+        ". How many minutes did his homework take?",
+      elapsed + " minutes",
+      wrong.map(function (w) {
+        return w + " minutes";
+      })
+    );
+  }
+
+  function genUnitRate() {
+    var items = randomInt(3, 9);
+    var pricePer = randomInt(2, 12);
+    var total = items * pricePer;
+    var wrong = [total + pricePer, Math.max(total - pricePer, 1), items + pricePer];
+    return makeGenQuestion(
+      "Apples cost $" + pricePer + " each. How much do " + items + " apples cost?",
+      "$" + total,
+      wrong.map(function (w) {
+        return "$" + w;
+      })
+    );
+  }
+
+  function genPatternNext() {
+    var start = randomInt(2, 20);
+    var step = randomInt(2, 9);
+    var terms = [];
+    for (var i = 0; i < 4; i++) {
+      terms.push(fmtNum(start + step * i));
+    }
+    var correct = start + step * 4;
+    var wrong = [correct + step, Math.max(correct - step, 1), correct + 1];
+    return makeGenQuestion(
+      "What is the next number in this pattern? " + terms.join(", ") + ", ___",
+      fmtNum(correct),
+      wrong.map(fmtNum)
+    );
+  }
+
+  function genAverage() {
+    var count = randomInt(3, 5);
+    var nums = [];
+    var sum = 0;
+    for (var i = 0; i < count; i++) {
+      var n = randomInt(2, 20);
+      nums.push(n);
+      sum += n;
+    }
+    var remainder = sum % count;
+    if (remainder !== 0) {
+      nums[0] += count - remainder;
+      sum += count - remainder;
+    }
+    var correct = sum / count;
+    var wrong = [correct + 1, Math.max(correct - 1, 1), correct + 2];
+    return makeGenQuestion(
+      "What is the average (mean) of these numbers: " + nums.join(", ") + "?",
+      fmtNum(correct),
+      wrong.map(fmtNum)
+    );
+  }
+
   function genDecimalAdd() {
     var aCents = randomInt(150, 950);
     if (aCents % 100 === 0) aCents += 3;
@@ -2367,14 +2498,35 @@
   var ADAPTIVE_TOTAL_QUESTIONS = 15;
 
   var ADAPTIVE_LEVEL_POOLS = {
-    1: [genAddEasy, genSubEasy, genMultFacts, genUnitFractionOfWhole],
-    2: [genAddMed, genMult2by1, genDiv2by1, genDecimalAddTenths],
+    1: [
+      genAddEasy,
+      genSubEasy,
+      genMultFacts,
+      genUnitFractionOfWhole,
+      genPatternNext
+    ],
+    2: [
+      genAddMed,
+      genMult2by1,
+      genDiv2by1,
+      genDecimalAddTenths,
+      genSquareArea,
+      genElapsedTime,
+      MATH2_GENERATORS.lengthStd,
+      MATH2_GENERATORS.timeStd
+    ],
     3: [
       genSubtraction,
       genMultiplication,
       genDivision4by2,
       genDecimalAdd,
       genDecimalSub,
+      genRectangleArea,
+      genAngleType,
+      genUnitRate,
+      genQuartsCups,
+      MATH2_GENERATORS.weightStd,
+      MATH2_GENERATORS.capacityStd,
       function () {
         return pickFractionPool(FRACTION_ADD_POOL, "+");
       }
@@ -2383,6 +2535,11 @@
       genDivision4by1,
       genDecimalMult,
       genMultLarge,
+      genRectangleWidth,
+      genAverage,
+      genSchoolMoney,
+      MATH2_GENERATORS.lengthMetric,
+      MATH2_GENERATORS.weightMetric,
       function () {
         return pickFractionPool(FRACTION_MULT_POOL, "×");
       }
@@ -2391,6 +2548,11 @@
       genDivLarge,
       genDecimalDiv,
       genPercentOf,
+      genPlaygroundPerimeter,
+      genRiceStore,
+      genFifthGradeFraction,
+      genPencilsFractions,
+      MATH2_GENERATORS.mixedReview,
       function () {
         return pickFractionPool(FRACTION_DIV_POOL, "÷");
       }
