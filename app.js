@@ -18,7 +18,15 @@
   var quizState = null;
   var activeHomeTab = "words";
   var quizTimerInterval = null;
-  var TIMED_MODES = ["math", "mathReview", "math2", "math2Review", "math2Adaptive"];
+  var TIMED_MODES = [
+    "math",
+    "mathReview",
+    "math2",
+    "math2Review",
+    "math2Adaptive",
+    "reading",
+    "readingReview"
+  ];
   var DAILY_WORDS_LENGTH = 20;
 
   // ---------- Persistence ----------
@@ -2665,8 +2673,10 @@
       questions: shuffle(readingQuestions(passage)),
       index: 0,
       score: 0,
-      missedThisRound: []
+      missedThisRound: [],
+      startTime: Date.now()
     };
+    startQuizTimer();
     renderQuestion();
     showScreen(quizScreen);
   }
@@ -2681,8 +2691,10 @@
       questions: shuffle(questions),
       index: 0,
       score: 0,
-      missedThisRound: []
+      missedThisRound: [],
+      startTime: Date.now()
     };
+    startQuizTimer();
     renderQuestion();
     showScreen(quizScreen);
   }
