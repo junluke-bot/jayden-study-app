@@ -1579,6 +1579,7 @@
         topic: set.name,
         category: set.id,
         prompt: q.prompt,
+        diagram: q.diagram,
         choices: q.choices,
         answerIndex: q.answerIndex
       };
