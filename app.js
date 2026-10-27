@@ -422,12 +422,133 @@
     return svg;
   }
 
+  // Generic polygon shape, built from raw points with optional tick marks
+  // (equal-side markers), right-angle corner markers, and side/vertex
+  // labels - used for the shape-classification questions (kites,
+  // trapezoids, parallelograms, triangles, pentagons, etc.).
+  function appendPolygonShape(parent, spec) {
+    var pts = spec.points;
+    var ptsStr = pts.map(function (p) { return p[0] + "," + p[1]; }).join(" ");
+    parent.appendChild(
+      svgEl("polygon", {
+        points: ptsStr,
+        fill: "var(--accent)",
+        "fill-opacity": spec.fillOpacity != null ? spec.fillOpacity : 0.18,
+        stroke: "var(--accent-dark)",
+        "stroke-width": 2.2
+      })
+    );
+
+    (spec.ticks || []).forEach(function (count, i) {
+      if (!count) return;
+      var a = pts[i], b = pts[(i + 1) % pts.length];
+      var dx = b[0] - a[0], dy = b[1] - a[1];
+      var len = Math.sqrt(dx * dx + dy * dy) || 1;
+      var ux = dx / len, uy = dy / len;
+      var nx = -uy, ny = ux;
+      var mx = (a[0] + b[0]) / 2, my = (a[1] + b[1]) / 2;
+      var spacing = 5;
+      for (var k = 0; k < count; k++) {
+        var offset = (k - (count - 1) / 2) * spacing;
+        var cx = mx + ux * offset, cy = my + uy * offset;
+        var half = 6;
+        parent.appendChild(
+          svgEl("line", {
+            x1: cx - nx * half, y1: cy - ny * half,
+            x2: cx + nx * half, y2: cy + ny * half,
+            stroke: "var(--accent-dark)", "stroke-width": 2
+          })
+        );
+      }
+    });
+
+    (spec.rightAngles || []).forEach(function (i) {
+      var n = pts.length;
+      var prev = pts[(i - 1 + n) % n], cur = pts[i], next = pts[(i + 1) % n];
+      var v1x = prev[0] - cur[0], v1y = prev[1] - cur[1];
+      var v2x = next[0] - cur[0], v2y = next[1] - cur[1];
+      var l1 = Math.sqrt(v1x * v1x + v1y * v1y) || 1;
+      var l2 = Math.sqrt(v2x * v2x + v2y * v2y) || 1;
+      var ux1 = (v1x / l1) * 10, uy1 = (v1y / l1) * 10;
+      var ux2 = (v2x / l2) * 10, uy2 = (v2y / l2) * 10;
+      var p1 = [cur[0] + ux1, cur[1] + uy1];
+      var p2 = [cur[0] + ux1 + ux2, cur[1] + uy1 + uy2];
+      var p3 = [cur[0] + ux2, cur[1] + uy2];
+      parent.appendChild(
+        svgEl("polyline", {
+          points: p1[0] + "," + p1[1] + " " + p2[0] + "," + p2[1] + " " + p3[0] + "," + p3[1],
+          fill: "none", stroke: "var(--accent-dark)", "stroke-width": 2
+        })
+      );
+    });
+
+    (spec.sideLabels || []).forEach(function (sl) {
+      var a = pts[sl.side], b = pts[(sl.side + 1) % pts.length];
+      var dx = b[0] - a[0], dy = b[1] - a[1];
+      var len = Math.sqrt(dx * dx + dy * dy) || 1;
+      var nx = -dy / len, ny = dx / len;
+      var mx = (a[0] + b[0]) / 2, my = (a[1] + b[1]) / 2;
+      var pushOut = sl.offset != null ? sl.offset : 16;
+      var lx = mx + nx * pushOut, ly = my + ny * pushOut;
+      var t = svgEl("text", {
+        x: lx, y: ly, "text-anchor": "middle", "font-size": 12, fill: "var(--text)"
+      });
+      t.textContent = sl.text;
+      parent.appendChild(t);
+    });
+
+    (spec.vertexLabels || []).forEach(function (vl) {
+      var p = pts[vl.index];
+      var t = svgEl("text", {
+        x: p[0] + (vl.dx || 0), y: p[1] + (vl.dy || 0), "text-anchor": "middle",
+        "font-size": 13, "font-weight": 700, fill: "var(--accent-dark)"
+      });
+      t.textContent = vl.text;
+      parent.appendChild(t);
+    });
+  }
+
+  function buildPolygonDiagram(spec) {
+    var vb = spec.viewBox || [200, 160];
+    var svg = svgEl("svg", { viewBox: "0 0 " + vb[0] + " " + vb[1], class: "diagram-svg" });
+    appendPolygonShape(svg, spec);
+    return svg;
+  }
+
+  function buildMultiPolygonDiagram(spec) {
+    var gap = 20;
+    var labelH = 20;
+    var totalW = spec.items.reduce(function (sum, it) { return sum + it.viewBox[0] + gap; }, 0) - gap;
+    var maxH = Math.max.apply(null, spec.items.map(function (it) { return it.viewBox[1]; })) + labelH;
+    var svg = svgEl("svg", { viewBox: "0 0 " + totalW + " " + maxH, class: "diagram-svg" });
+    var xOffset = 0;
+    spec.items.forEach(function (it) {
+      var g = svgEl("g", { transform: "translate(" + xOffset + ",0)" });
+      (it.shapes || [it]).forEach(function (shape) {
+        appendPolygonShape(g, shape);
+      });
+      if (it.label) {
+        var t = svgEl("text", {
+          x: it.viewBox[0] / 2, y: maxH - 4, "text-anchor": "middle",
+          "font-size": 13, "font-weight": 700, fill: "var(--accent-dark)"
+        });
+        t.textContent = it.label;
+        g.appendChild(t);
+      }
+      svg.appendChild(g);
+      xOffset += it.viewBox[0] + gap;
+    });
+    return svg;
+  }
+
   function buildDiagram(diagram) {
     if (diagram.type === "coordGrid") return buildCoordGridDiagram(diagram);
     if (diagram.type === "linePlot") return buildLinePlotDiagram(diagram);
     if (diagram.type === "cubeBlock") return buildCubeBlockDiagram(diagram);
     if (diagram.type === "compositeBlocks") return buildCompositeBlocksDiagram(diagram);
     if (diagram.type === "rhombus") return buildRhombusDiagram();
+    if (diagram.type === "polygon") return buildPolygonDiagram(diagram);
+    if (diagram.type === "multiPolygon") return buildMultiPolygonDiagram(diagram);
     return null;
   }
 

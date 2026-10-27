@@ -80,149 +80,199 @@ window.MATH2_SETS = [
     ]
   },
   {
-    // From Jayden's "Combined Fractions, Geometry & Measurement Plan" -
-    // area/perimeter, volume, angles, coordinate plane and shape
-    // classification, several with original diagrams (not scans from the
-    // PDF) built from app.js's diagram helpers.
+    // Transcribed from Jayden's "G.3 & G.4 Geometry Study Guide" quiz
+    // (photos of a Microsoft Forms page, 26 numbered items - #1 was a
+    // name field). Two items (9 and 23) had their answer choices cut off
+    // in the photos and are skipped. Shapes shown in the original form
+    // are redrawn here as original SVG diagrams (not scans) using
+    // app.js's polygon diagram helpers.
     id: "geometryMeasurementPractice",
     name: "Geometry & Measurement Practice",
     questions: [
       {
-        prompt: "A rectangle is 4 1/2 ft by 2 2/3 ft. Find its area.",
-        choices: ["12 sq ft", "11 1/2 sq ft", "12 1/2 sq ft", "10 1/2 sq ft"],
+        prompt:
+          "Juanita classified a scalene triangle, an isosceles trapezoid, a rectangle, and an equilateral triangle into two categories based on one property. Category A: scalene triangle, isosceles trapezoid. Category B: rectangle, equilateral triangle. Which property did Juanita likely use to put only the rectangle and the equilateral triangle in Category B?",
+        choices: [
+          "All of the angles within each shape are equal in measure.",
+          "Both shapes have at least one acute angle.",
+          "Both shapes do not have a pair of parallel sides.",
+          "Neither of the shapes have a pair of perpendicular sides."
+        ],
         answerIndex: 0
       },
       {
-        prompt: "A rectangle has a perimeter of 15 ft. One side is 3 1/2 ft. Find the length of the other side.",
-        choices: ["4 ft", "7 1/2 ft", "11 1/2 ft", "4 1/2 ft"],
+        prompt: "Which polygon is also a rectangle?",
+        choices: ["square", "parallelogram", "rhombus", "right trapezoid"],
         answerIndex: 0
       },
       {
-        prompt: "A garden has an area of 12 sq yd and a width of 2 2/5 yd. Find its length.",
-        choices: ["5 yd", "4 4/5 yd", "6 yd", "4 1/2 yd"],
+        prompt: "John studies a square, a parallelogram, a trapezoid, and a quadrilateral. Which shape MUST also be a rhombus?",
+        choices: ["square", "parallelogram", "trapezoid", "quadrilateral"],
         answerIndex: 0
       },
       {
-        prompt: "A square has a side length of 3 3/4 in. What is its perimeter?",
-        choices: ["15 in", "11 1/4 in", "13 1/2 in", "16 in"],
-        answerIndex: 0
-      },
-      {
-        prompt: "A box is 3 1/2 ft long, 2 ft wide, and 1 1/2 ft high. Find its volume.",
-        diagram: { type: "cubeBlock", width: 3.5, height: 1.5, depth: 2 },
-        choices: ["10 1/2 cubic ft", "7 cubic ft", "9 cubic ft", "12 cubic ft"],
-        answerIndex: 0
-      },
-      {
-        prompt: "A rectangular prism has a volume of 18 cubic ft, a length of 3 ft, and a width of 2 ft. Find its height.",
-        choices: ["3 ft", "6 ft", "9 ft", "2 1/2 ft"],
-        answerIndex: 0
-      },
-      {
-        prompt: "A rectangular prism has a volume of 15 cubic ft, a length of 2 1/2 ft, and a width of 2 ft. Find its height.",
-        choices: ["3 ft", "6 ft", "7 1/2 ft", "2 1/2 ft"],
-        answerIndex: 0
-      },
-      {
-        prompt: "What is 1/4 of a 360-degree turn?",
-        choices: ["90°", "120°", "72°", "80°"],
-        answerIndex: 0
-      },
-      {
-        prompt: "An angle measures 120°. One part of it is 2/3 of the total angle. How many degrees is that part?",
-        choices: ["80°", "40°", "60°", "90°"],
-        answerIndex: 0
-      },
-      {
-        prompt: "A 135° angle is split into two parts. One part is 47°. Find the unknown part.",
-        choices: ["88°", "90°", "82°", "78°"],
-        answerIndex: 0
-      },
-      {
-        prompt: "The graph shows points A(2, 1), B(2, 5), C(6, 5), and D(6, 1) connected in order. What shape is formed, and what is its area?",
+        prompt: "True or false? This kite-shaped figure has opposite sides that are parallel.",
         diagram: {
-          type: "coordGrid",
-          range: [0, 7],
-          polygon: [[2, 1], [2, 5], [6, 5], [6, 1]],
-          points: [
-            { x: 2, y: 1, label: "A" },
-            { x: 2, y: 5, label: "B" },
-            { x: 6, y: 5, label: "C" },
-            { x: 6, y: 1, label: "D" }
+          type: "polygon",
+          viewBox: [180, 170],
+          points: [[100, 15], [150, 75], [95, 155], [35, 80]]
+        },
+        choices: ["False", "True"],
+        answerIndex: 0
+      },
+      {
+        prompt: "True or false? This trapezoid has 2 sets of opposite parallel lines.",
+        diagram: {
+          type: "polygon",
+          viewBox: [200, 150],
+          points: [[60, 20], [140, 20], [170, 130], [30, 130]]
+        },
+        choices: ["False", "True"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Select the pair of polygons where EACH polygon has at least one obtuse angle and at least one acute angle. A: a right triangle and a rhombus (not a square). B: a trapezoid with two slanted sides and a rhombus (not a square). C: a right triangle and a regular hexagon. D: a trapezoid with two slanted sides and a regular hexagon.",
+        choices: ["B", "A", "C", "D"],
+        answerIndex: 0
+      },
+      {
+        prompt: "True or false? This rectangle has 2 sets of opposite parallel lines.",
+        diagram: {
+          type: "polygon",
+          viewBox: [190, 120],
+          points: [[20, 20], [170, 20], [170, 100], [20, 100]]
+        },
+        choices: ["True", "False"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which shape is described by the clues? The shape has no right angles. All of the sides are congruent.",
+        choices: ["equilateral triangle", "scalene triangle", "isosceles triangle", "right triangle"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Name the polygon shown.",
+        diagram: {
+          type: "polygon",
+          viewBox: [140, 140],
+          points: [[70, 10], [130, 55], [105, 130], [35, 130], [10, 55]]
+        },
+        choices: ["pentagon", "hexagon", "quadrilateral", "octagon"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which polygon has one or more pairs of parallel sides AND more than one pair of perpendicular sides?",
+        choices: ["square", "octagon", "rhombus", "trapezoid"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which triangle is an isosceles triangle?",
+        diagram: {
+          type: "multiPolygon",
+          items: [
+            { viewBox: [110, 100], label: "A", points: [[40, 15], [15, 80], [85, 80]] },
+            { viewBox: [110, 100], label: "B", points: [[15, 15], [15, 85], [95, 85]], rightAngles: [1] },
+            { viewBox: [110, 100], label: "C", points: [[50, 10], [30, 90], [70, 90]] },
+            { viewBox: [110, 100], label: "D", points: [[15, 65], [105, 78], [35, 88]] }
           ]
         },
+        choices: ["triangle C", "triangle A", "triangle B", "triangle D"],
+        answerIndex: 0
+      },
+      {
+        prompt: "How many sides are on an octagon?",
+        choices: ["8", "9", "6", "4"],
+        answerIndex: 0
+      },
+      {
+        prompt: "This shape is a quadrilateral with only ONE pair of parallel sides. What is it?",
+        choices: ["trapezoid", "parallelogram", "square", "rhombus"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which of these statements about a rectangle is always TRUE?",
         choices: [
-          "A square with side length 4 units and area 16 square units.",
-          "A rectangle with side lengths 4 and 5 units and area 20 square units.",
-          "A rectangle with side lengths 2 and 6 units and area 12 square units.",
-          "A square with side length 5 units and area 25 square units."
+          "A rectangle is a quadrilateral and a parallelogram.",
+          "A rectangle is a rhombus and a square.",
+          "A rectangle is a parallelogram and a square.",
+          "A rectangle is a quadrilateral and a rhombus."
         ],
         answerIndex: 0
       },
       {
-        prompt: "On the graph, point M is at (1, 3) and point N is at (1, 8). What is the vertical distance between M and N?",
+        prompt: "Which polygon could have one or more pairs of parallel sides and NO pairs of perpendicular sides?",
+        choices: ["rhombus", "triangle", "square", "pentagon"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Nick has a square piece of paper. He draws the two diagonals of the square, finds the point where they intersect, and labels that point A. Then he folds each of the four corners of the paper onto point A. What geometric shape is produced?",
+        choices: ["square", "right triangle", "isosceles triangle", "pentagon"],
+        answerIndex: 0
+      },
+      {
+        prompt:
+          "Treshun wrote these clues about a mystery shape: It is a quadrilateral. All sides are equal in length. There are two equal obtuse angles and two equal acute angles. Which shape is he describing?",
+        choices: ["rhombus", "pentagon", "square", "rectangle"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which triangle has 1 obtuse angle and 2 acute angles?",
+        choices: ["obtuse triangle", "acute triangle", "equilateral triangle", "right triangle"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which quadrilateral has four right angles?",
+        choices: ["rectangle", "parallelogram", "rhombus", "trapezoid"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Classify the quadrilateral based on its attributes (opposite sides marked with matching tick marks to show they are the same length; no right angles shown).",
         diagram: {
-          type: "coordGrid",
-          range: [0, 9],
-          points: [
-            { x: 1, y: 3, label: "M" },
-            { x: 1, y: 8, label: "N" }
+          type: "polygon",
+          viewBox: [200, 130],
+          points: [[60, 20], [170, 20], [130, 110], [20, 110]],
+          ticks: [2, 1, 2, 1]
+        },
+        choices: ["parallelogram", "rhombus", "square", "trapezoid"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Classify the triangle based on its sides.",
+        diagram: {
+          type: "polygon",
+          viewBox: [170, 130],
+          points: [[30, 20], [30, 110], [140, 110]],
+          rightAngles: [1],
+          sideLabels: [
+            { side: 0, text: "3 cm", offset: -16 },
+            { side: 1, text: "4 cm", offset: 16 },
+            { side: 2, text: "5 cm", offset: -16 }
           ]
         },
-        choices: ["5 units", "6 units", "4 units", "11 units"],
+        choices: ["scalene", "acute", "isosceles", "equilateral"],
         answerIndex: 0
       },
       {
-        prompt: "Which statement about squares and rectangles is true?",
-        choices: [
-          "Every square is a rectangle, but not every rectangle is a square.",
-          "Every rectangle is a square.",
-          "No squares are rectangles.",
-          "Every square is a rhombus, but no rectangle is a square."
-        ],
+        prompt: "Mike drew an isosceles triangle with one side that measured 5 inches and another side that measured 6 inches. What is the length of the third side?",
+        choices: ["6 inches", "8 inches", "4 inches", "3 inches"],
         answerIndex: 0
       },
       {
-        prompt: "Which property is shared by every square and every rhombus?",
-        choices: [
-          "All four sides are equal in length.",
-          "All four angles are right angles.",
-          "Opposite sides are not parallel.",
-          "It has exactly one pair of parallel sides."
-        ],
-        answerIndex: 0
-      },
-      {
-        prompt: "Is the statement \"A rhombus is a square\" always, sometimes, or never true?",
-        choices: ["Sometimes true", "Always true", "Never true", "Not enough information"],
-        answerIndex: 0
-      },
-      {
-        prompt: "This figure has 4 sides of equal length, but its angles are not right angles. What shape is it?",
-        diagram: { type: "rhombus" },
-        choices: ["Rhombus", "Square", "Rectangle", "Trapezoid"],
-        answerIndex: 0
-      },
-      {
-        prompt: "The line plot shows five length measurements, in inches. Find the total length of all five measurements.",
+        prompt: "Which set of attributes BEST describes this quadrilateral (a trapezoid with two right angles on the left side and one slanted side on the right)?",
         diagram: {
-          type: "linePlot",
-          labels: ["1 1/4", "1 1/2", "1 3/4", "2"],
-          counts: [1, 2, 1, 1],
-          note: "Each X = one measurement (inches)"
+          type: "polygon",
+          viewBox: [200, 130],
+          points: [[20, 15], [110, 15], [180, 110], [20, 110]],
+          rightAngles: [0, 3]
         },
-        choices: ["8 inches", "7 1/2 inches", "8 1/2 inches", "6 3/4 inches"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Using the same five measurements (1 1/4, 1 1/2, 1 1/2, 1 3/4, and 2 inches), find the difference between the longest and shortest measurement.",
-        diagram: {
-          type: "linePlot",
-          labels: ["1 1/4", "1 1/2", "1 3/4", "2"],
-          counts: [1, 2, 1, 1],
-          note: "Each X = one measurement (inches)"
-        },
-        choices: ["3/4 inch", "1/2 inch", "1 inch", "1/4 inch"],
+        choices: [
+          "Opposite sides may or may not be congruent. At least one pair of opposite sides is parallel.",
+          "Opposite sides are congruent and parallel.",
+          "Opposite sides are congruent and parallel. There are 4 right angles.",
+          "All four sides are congruent, and there are no parallel sides."
+        ],
         answerIndex: 0
       }
     ]
