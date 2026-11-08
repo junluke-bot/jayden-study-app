@@ -2958,7 +2958,8 @@
         setId: set.id,
         topic: set.name,
         prompt: q.prompt,
-        word: q.word
+        word: q.word,
+        def: q.def
       };
     });
   }
@@ -3035,6 +3036,7 @@
   }
 
   function renderQuestion() {
+    stopSpellingSpeech();
     var q = quizState.questions[quizState.index];
     var isShortAnswer = q.type === "reading" && !q.choices;
     var isSpellingBee = q.type === "spelling" && !q.choices;
@@ -3054,6 +3056,7 @@
     backBtn.textContent = "← Back";
     backBtn.addEventListener("click", function () {
       stopQuizTimer();
+      stopSpellingSpeech();
       quizState = null;
       renderHome();
     });
@@ -3315,6 +3318,20 @@
     return s.trim().replace(/\s+/g, " ").toLowerCase();
   }
 
+  function stopSpellingSpeech() {
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+  }
+
+  function speakSpellingWord(q) {
+    if (!window.speechSynthesis || typeof SpeechSynthesisUtterance === "undefined") return;
+    stopSpellingSpeech();
+    var utter = new SpeechSynthesisUtterance(
+      q.word + ". " + q.def + ". " + q.word + ", again."
+    );
+    utter.rate = 0.85;
+    window.speechSynthesis.speak(utter);
+  }
+
   function renderSpellingBeeInput(q) {
     var wrap = document.createElement("div");
     wrap.className = "short-answer-wrap spelling-bee-wrap";
@@ -3323,6 +3340,18 @@
     note.className = "race-note";
     note.textContent = "Type the word's spelling, then check your answer.";
     wrap.appendChild(note);
+
+    if (window.speechSynthesis) {
+      var hearBtn = document.createElement("button");
+      hearBtn.type = "button";
+      hearBtn.className = "hear-again-btn";
+      hearBtn.textContent = "🔊 Hear it again";
+      hearBtn.addEventListener("click", function () {
+        speakSpellingWord(q);
+      });
+      wrap.appendChild(hearBtn);
+      speakSpellingWord(q);
+    }
 
     var input = document.createElement("input");
     input.type = "text";
@@ -3626,6 +3655,7 @@
       ? Math.floor((Date.now() - quizState.startTime) / 1000)
       : null;
     stopQuizTimer();
+    stopSpellingSpeech();
 
     var progress = loadProgress();
     progress.history.push({
