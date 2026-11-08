@@ -411,6 +411,30 @@ html, body {
   margin-top: 16px;
 }
 
+.spelling-input {
+  font-size: 1.3rem;
+  letter-spacing: 0.04em;
+  min-height: 48px;
+}
+
+.spelling-input.correct {
+  border-color: var(--correct);
+  color: var(--correct);
+}
+
+.spelling-input.incorrect {
+  border-color: var(--incorrect);
+  color: var(--incorrect);
+}
+
+.sample-answer-label.spelling-feedback-correct {
+  color: var(--correct);
+}
+
+.sample-answer-label.spelling-feedback-incorrect {
+  color: var(--incorrect);
+}
+
 .sample-answer-label {
   font-weight: 700;
   color: var(--accent-dark);

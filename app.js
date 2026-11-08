@@ -755,7 +755,11 @@
           '<span class="missed-word missed-prompt">' +
           item.prompt +
           '</span><span class="missed-meaning">Answer: ' +
-          (item.choices ? item.choices[item.answerIndex] : item.sampleAnswer) +
+          (item.choices
+            ? item.choices[item.answerIndex]
+            : item.word != null
+            ? item.word
+            : item.sampleAnswer) +
           "</span>";
       }
       list.appendChild(li);
@@ -2954,8 +2958,7 @@
         setId: set.id,
         topic: set.name,
         prompt: q.prompt,
-        choices: q.choices,
-        answerIndex: q.answerIndex
+        word: q.word
       };
     });
   }
@@ -3034,13 +3037,15 @@
   function renderQuestion() {
     var q = quizState.questions[quizState.index];
     var isShortAnswer = q.type === "reading" && !q.choices;
-    var options = isShortAnswer
-      ? []
-      : shuffle(
-          q.choices.map(function (text, i) {
-            return { text: text, correct: i === q.answerIndex };
-          })
-        );
+    var isSpellingBee = q.type === "spelling" && !q.choices;
+    var options =
+      isShortAnswer || isSpellingBee
+        ? []
+        : shuffle(
+            q.choices.map(function (text, i) {
+              return { text: text, correct: i === q.answerIndex };
+            })
+          );
 
     clearChildren(quizScreen);
 
@@ -3136,6 +3141,11 @@
 
     if (isShortAnswer) {
       renderShortAnswer(q);
+      return;
+    }
+
+    if (isSpellingBee) {
+      renderSpellingBeeInput(q);
       return;
     }
 
@@ -3301,6 +3311,89 @@
     });
   }
 
+  function normalizeSpelling(s) {
+    return s.trim().replace(/\s+/g, " ").toLowerCase();
+  }
+
+  function renderSpellingBeeInput(q) {
+    var wrap = document.createElement("div");
+    wrap.className = "short-answer-wrap spelling-bee-wrap";
+
+    var note = document.createElement("div");
+    note.className = "race-note";
+    note.textContent = "Type the word's spelling, then check your answer.";
+    wrap.appendChild(note);
+
+    var input = document.createElement("input");
+    input.type = "text";
+    input.className = "short-answer-input spelling-input";
+    input.autocomplete = "off";
+    input.autocapitalize = "off";
+    input.spellcheck = false;
+    input.placeholder = "Type the spelling here...";
+    wrap.appendChild(input);
+
+    var checkBtn = document.createElement("button");
+    checkBtn.className = "next-btn";
+    checkBtn.textContent = "Check Spelling";
+    checkBtn.disabled = true;
+    wrap.appendChild(checkBtn);
+
+    input.addEventListener("input", function () {
+      checkBtn.disabled = input.value.trim().length === 0;
+    });
+    input.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" && !checkBtn.disabled) {
+        submit();
+      }
+    });
+
+    quizScreen.appendChild(wrap);
+    input.focus();
+
+    function submit() {
+      input.disabled = true;
+      checkBtn.remove();
+
+      var isCorrect = normalizeSpelling(input.value) === normalizeSpelling(q.word);
+      input.classList.add(isCorrect ? "correct" : "incorrect");
+
+      var feedback = document.createElement("div");
+      feedback.className = "sample-answer-box";
+      feedback.innerHTML = isCorrect
+        ? '<div class="sample-answer-label spelling-feedback-correct">Correct!</div><p>' +
+          q.word +
+          "</p>"
+        : '<div class="sample-answer-label spelling-feedback-incorrect">Not quite.</div><p>The correct spelling is: <strong>' +
+          q.word +
+          "</strong></p>";
+      wrap.appendChild(feedback);
+
+      if (isCorrect) {
+        quizState.score++;
+      } else {
+        quizState.missedThisRound.push(q);
+      }
+      updateSpellingProgressForAnswer(q, isCorrect);
+
+      var nextBtn = document.createElement("button");
+      nextBtn.className = "next-btn";
+      nextBtn.textContent =
+        quizState.index + 1 < quizState.questions.length ? "Next" : "See Results";
+      nextBtn.addEventListener("click", function () {
+        quizState.index++;
+        if (quizState.index < quizState.questions.length) {
+          renderQuestion();
+        } else {
+          finishQuiz();
+        }
+      });
+      quizScreen.appendChild(nextBtn);
+    }
+
+    checkBtn.addEventListener("click", submit);
+  }
+
   function handleAnswer(isCorrect, choicesEl, selectedBtn) {
     var q = quizState.questions[quizState.index];
     var correctText = q.choices[q.answerIndex];
@@ -3338,8 +3431,6 @@
       updateScienceProgressForAnswer(q, isCorrect);
     } else if (quizState.mode === "dol" || quizState.mode === "dolReview") {
       updateDolProgressForAnswer(q, isCorrect);
-    } else if (quizState.mode === "spelling" || quizState.mode === "spellingReview") {
-      updateSpellingProgressForAnswer(q, isCorrect);
     } else if (quizState.mode === "wordStudy" || quizState.mode === "wordStudyReview") {
       updateWordStudyProgressForAnswer(q, isCorrect);
     } else {
@@ -3626,7 +3717,11 @@
             '<span class="missed-word missed-prompt">' +
             item.prompt +
             '</span><span class="missed-meaning">Answer: ' +
-            (item.choices ? item.choices[item.answerIndex] : item.sampleAnswer) +
+            (item.choices
+              ? item.choices[item.answerIndex]
+              : item.word != null
+              ? item.word
+              : item.sampleAnswer) +
             "</span>";
         } else {
           li.innerHTML =
