@@ -1,9 +1,10 @@
-// Spelling practice sets for the Iowa Assessments practice app.
-// Mirrors every set in words.js (Word Set 1-13 and the Wonders Unit 1-6 sets):
-// each spelling set quizzes the exact same words, asking the student to pick
-// the correctly spelled word to fill the blank in its original phrase.
+// Spelling Bee practice sets for the Iowa Assessments practice app.
+// Transcribed from the 2026-2027 School Spelling Bee Study List with
+// Definitions (450 words, split into 9 sets of 50, in list order).
+// Each question gives the word's part of speech and dictionary
+// definition and asks Jayden to pick the correctly spelled word.
 // Each question has:
-//   prompt      - the phrase with the target word blanked out
+//   prompt      - the definition-based question text
 //   choices     - four spellings (choices[0] is always correct;
 //                 app.js shuffles choice order at render time)
 //   answerIndex - always 0 here, matching the words.js/dol.js convention
@@ -14,103 +15,253 @@ window.SPELLING_SETS = [
     name: "Spelling Set 1",
     questions: [
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ the question\"",
-        choices: ["evade", "eavde", "evvade", "evde"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"went by moving the legs quickly : went faster than a walk\"",
+        choices: ["ran", "rna", "rann", "raan"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ greeting\"",
-        choices: ["courteous", "cuorteous", "coourteous", "curteous"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"air that is moving\"",
+        choices: ["wind", "wnid", "win", "wiind"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"many plants ______ in winter\"",
-        choices: ["perish", "preish", "peerish", "prish"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"one of the appendages of an animal that are used chiefly in supporting the body and in moving from point to point especially by walking\"",
+        choices: ["leg", "lge", "legg", "leeg"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ mountain\"",
-        choices: ["immense", "imemnse", "immmense", "imense"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"earth, soil, or sand\"",
+        choices: ["dirt", "ditr", "diirt", "dirrt"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the magic trick will ______ you\"",
-        choices: ["astound", "atsound", "asstound", "astund"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a slender bar resembling a wand of wood\"",
+        choices: ["rod", "rodd", "rdo", "rood"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ excuse\"",
-        choices: ["feeble", "febele", "feeeble", "feble"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"correct, proper, or right\"",
+        choices: ["good", "god", "goodd", "goo"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ from the race\"",
-        choices: ["withdraw", "wtihdraw", "wiithdraw", "wthdraw"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"the greatest number of\"",
+        choices: ["most", "mots", "mot", "msot"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ worker\"",
-        choices: ["industrious", "idnustrious", "inndustrious", "indstrious"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"injured in body or spirit\"",
+        choices: ["hurt", "hutr", "hut", "hrut"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ down the street\"",
-        choices: ["saunter", "suanter", "saaunter", "sunter"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"easily frightened or scared\"",
+        choices: ["shy", "sie", "syh", "shhy"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ turtle\"",
-        choices: ["sluggish", "sulggish", "slluggish", "slugish"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a young rabbit\"",
+        choices: ["bunny", "bnuny", "bunie", "buny"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"his jokes ______ her\"",
-        choices: ["exasperate", "eaxsperate", "exxasperate", "exsperate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adverb) \"from a higher place to a lower place\"",
+        choices: ["down", "dow", "dwon", "don"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ computer\"",
-        choices: ["obsolete", "osbolete", "obbsolete", "obslete"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"things to put the foot on in moving upward or downward\"",
+        choices: ["steps", "stesp", "setps", "seps"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ someone of sleep\"",
-        choices: ["deprive", "dperive", "deeprive", "dprive"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"any natural or prepared liquid for swallowing : a beverage\"",
+        choices: ["drink", "drnk", "drinkk", "drin"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ shrug\"",
-        choices: ["nonchalant", "nnochalant", "noonchalant", "nnchalant"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"lacking importance or serious meaning\"",
+        choices: ["silly", "silyl", "slily", "sillyy"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ in victory\"",
-        choices: ["exult", "euxlt", "exxult", "exlt"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"not well or in good health\"",
+        choices: ["sick", "scik", "sck", "sikc"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ crowd\"",
-        choices: ["sparse", "saprse", "spparse", "sprse"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a track or way made for a specific use\"",
+        choices: ["path", "pah", "pathh", "pth"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ a rival\"",
-        choices: ["taunt", "tuant", "taaunt", "tunt"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a fine spray : fog\"",
+        choices: ["mist", "miist", "mistt", "mst"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ laugh\"",
-        choices: ["hearty", "haerty", "heearty", "harty"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"objects in the sky resembling luminous points and usually only bright enough to be seen at night\"",
+        choices: ["stars", "stas", "staars", "star"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ the game\"",
-        choices: ["suspend", "ssupend", "suuspend", "sspend"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a vehicle built for moving things in its own frame\"",
+        choices: ["truck", "turck", "trukc", "tuck"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ walk\"",
-        choices: ["solitary", "sloitary", "soolitary", "slitary"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"combustion as manifested in light, flame, and heat\"",
+        choices: ["fire", "fre", "firee", "fiire"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"not moving: stationary\"",
+        choices: ["still", "sitll", "stil", "stll"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (interjection) \"used as a familiar greeting or in answering the telephone or to express surprise\"",
+        choices: ["hello", "heello", "helo", "hllo"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a low densely branched woody plant\"",
+        choices: ["bush", "buh", "bushh", "buush"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"coming or doing after the due, usual, or proper time : not early\"",
+        choices: ["late", "laet", "latte", "latee"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a device that raises or transfers fluids or gases especially by suction or pressure or both\"",
+        choices: ["pump", "puump", "pumpp", "pummp"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a hard protective covering of an animal\"",
+        choices: ["shell", "sell", "sheell", "shelll"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a long, thin thread used for knitting or weaving\"",
+        choices: ["yarn", "yarrn", "yar", "yanr"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"the parts of an animal's body that it moves to fly\"",
+        choices: ["wings", "wnigs", "winngs", "wigs"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"tapering to a fine point\"",
+        choices: ["sharp", "shrap", "shar", "shaarp"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"involving little difficulty or hardship to do\"",
+        choices: ["easy", "eay", "eassy", "eays"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the physical part of human beings\"",
+        choices: ["body", "boddy", "bdy", "boy"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a building containing living quarters for one or a few families\"",
+        choices: ["house", "hose", "houe", "houuse"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"having large amounts of wealth\"",
+        choices: ["rich", "riich", "ricch", "rcih"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a scheduled period of work or duty\"",
+        choices: ["shift", "shit", "shitf", "shhift"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a hollow muscular organ of vertebrate animals that by its rhythmic contraction acts as a force pump maintaining the circulation of the blood\"",
+        choices: ["heart", "haert", "heartt", "hart"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a large, long tooth that sticks out of an animal's mouth\"",
+        choices: ["tusk", "tus", "tsuk", "tuk"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to send forth a ball or puck in a game especially toward a particular goal\"",
+        choices: ["shoot", "shhoot", "sohot", "soot"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a marine aquatic carnivorous mammal that lives near cold seacoasts or on ice floats, has webbed flippers adapted for swimming, and has been hunted for its fur, hide, and oil\"",
+        choices: ["seal", "sael", "sea", "sal"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"being any number that can be exactly divided by two\"",
+        choices: ["even", "eve", "eveen", "evenn"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to plunge into water headfirst\"",
+        choices: ["dive", "diive", "dve", "diev"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"sharp nails on the toes of animals, especially when such nails are slender and curved (as with those of a bird or cat)\"",
+        choices: ["claws", "clws", "cllaws", "clawws"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to break (something brittle or hollow) with a sharp or explosive sound\"",
+        choices: ["crack", "cracck", "crackk", "crak"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to move toward something : to approach\"",
+        choices: ["come", "com", "comme", "coome"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"all right : satisfactory, adequate\"",
+        choices: ["fine", "fie", "fnie", "fin"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the season between autumn and spring\"",
+        choices: ["winter", "winterr", "wintre", "wniter"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a round fruit that grows on trees and has crisp white flesh and red, yellow, or green skin\"",
+        choices: ["apple", "applee", "aple", "appe"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a noise or tone\"",
+        choices: ["sound", "soudn", "soud", "soundd"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"overgrown with or covered with a plant of a class of spore-producing plants or something like it\"",
+        choices: ["mossy", "mssy", "msosy", "mossyy"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a color that is like that of ripe lemons or sunflowers\"",
+        choices: ["yellow", "yelloow", "yellwo", "yelllow"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to send out rays of light\"",
+        choices: ["shine", "sine", "shien", "shhine"],
         answerIndex: 0
       }
     ]
@@ -120,103 +271,253 @@ window.SPELLING_SETS = [
     name: "Spelling Set 2",
     questions: [
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ an unfair law\"",
-        choices: ["abolish", "aoblish", "abbolish", "ablish"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"thin slices of potatoes that are deep-fried in fat\"",
+        choices: ["chips", "chip", "chpis", "chipss"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ idea\"",
-        choices: ["absurd", "asburd", "abbsurd", "absrd"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"pods containing seeds that are eaten as vegetables\"",
+        choices: ["beans", "beas", "beanns", "benas"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ a privilege\"",
-        choices: ["abuse", "aubse", "abbuse", "abse"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the opening through which food passes into the body of an animal\"",
+        choices: ["mouth", "muoth", "mouthh", "mouh"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ the files\"",
-        choices: ["access", "acecss", "acccess", "acess"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to throw a liquid upon in the form of small drops\"",
+        choices: ["spray", "sprayy", "sppray", "spry"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ a goal\"",
-        choices: ["accomplish", "acocmplish", "acccomplish", "acomplish"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a cycle in a calendar having 365 days divided into 12 months beginning with January and ending with December\"",
+        choices: ["year", "yeaar", "yea", "yera"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a proud ______\"",
-        choices: ["achievement", "ahcievement", "acchievement", "achevement"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the real state of affairs : something that is the case : a fact\"",
+        choices: ["truth", "trut", "trth", "truht"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ dog\"",
-        choices: ["aggressive", "agrgessive", "agggressive", "agressive"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a thin sheet of fibers used in many ways, including as a surface for writing\"",
+        choices: ["paper", "paer", "papper", "paepr"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ between tasks\"",
-        choices: ["alternate", "atlernate", "allternate", "altrnate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a long-eared, short-tailed, plant-eating mammal with long powerful hind legs and usually thick soft fur\"",
+        choices: ["rabbit", "rbabit", "raabbit", "rabibt"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"flying at a high ______\"",
-        choices: ["altitude", "atlitude", "alltitude", "alttude"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to give food to\"",
+        choices: ["feed", "fede", "fee", "feedd"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the story's ______\"",
-        choices: ["antagonist", "atnagonist", "anntagonist", "antgonist"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"of greater than average height among others of a kind or class\"",
+        choices: ["tallest", "talleest", "talest", "tallets"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"find the ______ for hot\"",
-        choices: ["antonym", "atnonym", "anntonym", "antnym"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an interior or internal portion : the part within\"",
+        choices: ["inside", "insside", "inisde", "inide"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"feeling ______ before the test\"",
-        choices: ["anxious", "axnious", "annxious", "anxous"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"subject to severe cold : chilly\"",
+        choices: ["frozen", "forzen", "frozeen", "frozenn"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"it was ______ that he was tired\"",
-        choices: ["apparent", "apaprent", "appparent", "aparent"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to utter words : to talk\"",
+        choices: ["speak", "speeak", "sppeak", "sepak"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ answer\"",
-        choices: ["approximate", "aprpoximate", "appproximate", "aproximate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"very steep, perpendicular or overhanging faces of rock, earth, or glacial ice of considerable height : precipices\"",
+        choices: ["cliffs", "clfifs", "clifffs", "cliffss"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the ______ of fresh bread\"",
-        choices: ["aroma", "aorma", "arroma", "arma"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an aquatic mammal that resembles a large fish\"",
+        choices: ["whale", "wahle", "whaale", "whhale"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ he was right\"",
-        choices: ["assume", "asusme", "asssume", "asume"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a formal organized coming together of buyers and sellers of goods\"",
+        choices: ["market", "markte", "markeet", "makret"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"tickets are ______\"",
-        choices: ["available", "aavilable", "avvailable", "avilable"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a company of domestic mammals (as sheep or goats) herded together\"",
+        choices: ["flock", "fock", "flocck", "folck"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ of snow\"",
-        choices: ["avalanche", "aavlanche", "avvalanche", "avlanche"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to chew with a crushing or grinding noise\"",
+        choices: ["crunch", "cruncch", "crrunch", "cruunch"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a wedding ______\"",
-        choices: ["banquet", "bnaquet", "baanquet", "bnquet"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"any relatively long-bodied reptile with legs and tapering tail\"",
+        choices: ["lizard", "lizzard", "lizadr", "lizaard"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a cold ______\"",
-        choices: ["beverage", "bveerage", "beeverage", "bverage"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to be on one's guard : to be cautious : to take care\"",
+        choices: ["beware", "beawre", "beeware", "bewarre"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a tiny glittering particle or surface or a sudden burst of reflected light\"",
+        choices: ["sparkle", "spaarkle", "sparklle", "saprkle"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a knitted or sometimes crocheted jacket or pullover made in various styles and usually having ribbing around the neck, cuffs, and lower edge\"",
+        choices: ["sweater", "sweaer", "sweate", "sweaterr"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a person skilled in caring for and waiting on the infirm, the injured, or the sick\"",
+        choices: ["nurse", "nursee", "nurs", "nusre"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"not true, correct, or right\"",
+        choices: ["wrong", "worng", "wrng", "wrongg"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"moved by a quick springy leap or in a series of leaps : jumped\"",
+        choices: ["hopped", "hpped", "hoppe", "hpoped"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"something that is used to pay for goods or services\"",
+        choices: ["money", "mnoey", "monye", "mony"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a small single-story low-roofed house of simple construction\"",
+        choices: ["cabin", "cabiin", "cabinn", "cain"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the absence in part or in whole of light\"",
+        choices: ["darkness", "darkkness", "darknes", "darknss"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adverb) \"on every occasion : at all times\"",
+        choices: ["always", "alwyas", "alwasy", "aways"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to grow, spring up, or come forth\"",
+        choices: ["sprout", "sproutt", "sprou", "sprotu"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to cut (something) with deliberate care or practiced precision\"",
+        choices: ["carve", "cave", "caarve", "carv"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"the dark figures cast upon a surface by a body intercepting the rays from a source of light\"",
+        choices: ["shadows", "sahdows", "shadowws", "shados"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the early part of the day until noon\"",
+        choices: ["morning", "mornig", "moning", "morrning"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"having life : not dead or inanimate\"",
+        choices: ["alive", "alie", "ailve", "alvie"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"soil, ground\"",
+        choices: ["earth", "eatrh", "erath", "earrth"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"one that seeks the society or welfare of another whom he or she holds in affection, respect, or esteem or whose companionship and personality are pleasurable\"",
+        choices: ["friend", "frend", "freind", "fried"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"delightful for beauty, harmony, or grace : attractive because of natural charm\"",
+        choices: ["lovely", "loveyl", "loveely", "lovley"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to go back or come back again (as to a place, person, or condition)\"",
+        choices: ["return", "rteurn", "reutrn", "reeturn"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"one of two equal parts into which a thing is divisible\"",
+        choices: ["half", "hal", "haf", "hallf"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"moving or able to move with great speed\"",
+        choices: ["swift", "swifft", "switf", "swft"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a father's or mother's father\"",
+        choices: ["grandfather", "gradfather", "grandfther", "gradnfather"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"impressions of the foot on a surface\"",
+        choices: ["footprints", "foootprints", "fooprints", "footpriints"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to be afraid of\"",
+        choices: ["fear", "fea", "fearr", "faer"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"experiencing a desire for drink\"",
+        choices: ["thirsty", "tirsty", "thirsie", "thisrty"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"one that is of the same or equal standing (as in law, rank, quality, age, ability) with another : an equal\"",
+        choices: ["peer", "pee", "peerr", "pere"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"benignly gracious or kind in manner : not harsh or stern : mild\"",
+        choices: ["gentle", "genntle", "gntle", "geentle"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a puzzling question to be guessed at\"",
+        choices: ["riddle", "ridle", "rdidle", "rddle"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the ability to speak\"",
+        choices: ["voice", "vocie", "voicee", "voiec"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a sweet juicy edible fruit which is used as a fresh or cooked fruit, in preserves or dried\"",
+        choices: ["peach", "peeach", "peachh", "pach"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a flat bread made of thin batter consisting basically of flour, liquid, and leavening and cooked on both sides on a griddle\"",
+        choices: ["pancake", "pancakee", "panake", "panacke"],
         answerIndex: 0
       }
     ]
@@ -226,103 +527,253 @@ window.SPELLING_SETS = [
     name: "Spelling Set 3",
     questions: [
       {
-        prompt: "Which is the correct spelling of the missing word? \"______ food\"",
-        choices: ["bland", "balnd", "blland", "blnd"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an unhealthy condition of the body or mind\"",
+        choices: ["illness", "illess", "illneess", "illnes"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"caught in a ______\"",
-        choices: ["blizzard", "bilzzard", "bllizzard", "blizard"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a soft metallic element that is bluish white when freshly cut but tarnishes readily in moist air to dull gray and is used often in solder, acid-resistant linings, and also shields against radioactivity\"",
+        choices: ["lead", "led", "leda", "leead"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the rock wouldn't ______\"",
-        choices: ["budge", "bduge", "buudge", "bdge"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a deep, sudden, unintentional sound that usually indicates pain, grief, or sometimes disapproval or annoyance\"",
+        choices: ["groan", "grona", "grooan", "goan"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ the job\"",
-        choices: ["bungle", "bnugle", "buungle", "bngle"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a slow-moving brownish or grayish mammal with very long front legs and long curved claws that hangs from branches and eats leaves and fruit\"",
+        choices: ["sloth", "soth", "sloh", "slot"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"she walked ______\"",
-        choices: ["cautiously", "cuatiously", "caautiously", "cutiously"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to form a fabric by the interlacing of a yarn or yarns in a series of connected loops by means of hand or machine needles\"",
+        choices: ["knit", "knitt", "knt", "kit"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a math ______\"",
-        choices: ["challenge", "cahllenge", "chhallenge", "chalenge"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a loose piece of outer clothing (such as a cape or an overcoat)\"",
+        choices: ["cloak", "cloaak", "claok", "cloa"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the story's main ______\"",
-        choices: ["character", "cahracter", "chharacter", "chracter"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a public procession : the movement of people or things in order\"",
+        choices: ["parade", "parae", "paade", "parad"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ two ingredients\"",
-        choices: ["combine", "cmobine", "coombine", "cmbine"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a small wind instrument in which sound is produced by the forcible passage of breath through a slit in a short tube (as of wood or metal)\"",
+        choices: ["whistle", "whisttle", "whiistle", "whsitle"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a loyal ______\"",
-        choices: ["companion", "cmopanion", "coompanion", "cmpanion"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"constituting an entire number or amount\"",
+        choices: ["total", "totl", "totla", "toatl"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"showing ______ for others\"",
-        choices: ["compassion", "cmopassion", "coompassion", "compasion"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adverb) \"in a building\"",
+        choices: ["indoors", "indoorrs", "indoorss", "idnoors"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ for the loss\"",
-        choices: ["compensate", "cmopensate", "coompensate", "cmpensate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a cause of disturbance, annoyance, or distress\"",
+        choices: ["trouble", "truoble", "trobule", "troubl"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ with the rules\"",
-        choices: ["comply", "cmoply", "coomply", "cmply"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to rest\"",
+        choices: ["relax", "relxa", "rellax", "relx"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ a song\"",
-        choices: ["compose", "cmopose", "coompose", "cmpose"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to arrive at the end of : to complete\"",
+        choices: ["finish", "fiinish", "finsih", "fiinsh"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a difficult ______\"",
-        choices: ["concept", "cnocept", "cooncept", "cncept"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a day on which one is free from usual everyday activity or work\"",
+        choices: ["holiday", "hoiday", "holidaay", "holidya"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"feeling ______ about the test\"",
-        choices: ["confident", "cnofident", "coonfident", "cnfident"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"freedom from exposure to danger\"",
+        choices: ["safety", "saafety", "saftey", "safetyy"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ the garage into a room\"",
-        choices: ["convert", "cnovert", "coonvert", "cnvert"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"characterized by physical or moral bravery : courageous : valiant\"",
+        choices: ["stout", "stut", "stot", "stouut"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"changed ______\"",
-        choices: ["course", "cuorse", "coourse", "curse"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"arachnids having a short, usually unsegmented abdomen, poison fangs, and two or more pairs of spinnerets at the posterior end of the abdomen for spinning threads of silk for various uses (as in making cocoons for their eggs or webs to catch prey)\"",
+        choices: ["spiders", "sppiders", "spidders", "spideers"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ chocolate\"",
-        choices: ["crave", "carve", "crrave", "crve"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"having nothing removed or left out : whole\"",
+        choices: ["entire", "entir", "enire", "entiire"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a class ______\"",
-        choices: ["debate", "dbeate", "deebate", "dbate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a room or section of a building given over to books, manuscripts, or other literary and sometimes artistic materials usually kept in some convenient order for use but not for sale\"",
+        choices: ["library", "librray", "librarry", "lbirary"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ an invitation\"",
-        choices: ["decline", "dceline", "deecline", "dcline"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to direct or supervise especially toward some desirable end, course, way, or development\"",
+        choices: ["guide", "guuide", "guie", "guid"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an institution or place where sick or injured persons are given medical or surgical care\"",
+        choices: ["hospital", "hospita", "hoospital", "hosital"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a strong yellow condiment made of crushed seeds made into a paste\"",
+        choices: ["mustard", "musatrd", "mutard", "mustadr"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an association of persons for carrying on a commercial or industrial enterprise or business\"",
+        choices: ["company", "compay", "comany", "comppany"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"an extremely pungent and aromatic rootlike plant stem that is usually dried and ground to a fine brownish powder and used as a spice\"",
+        choices: ["ginger", "ginge", "ginegr", "gingre"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"not as wide as usual or as expected\"",
+        choices: ["narrow", "narroww", "nrarow", "nrrow"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"intermediate in amount, quality, position, or degree : average\"",
+        choices: ["medium", "mediumm", "medimu", "mediium"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"cents of the U.S. or Canada\"",
+        choices: ["pennies", "pennie", "penniies", "peennies"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"marching, tramping, walking\"",
+        choices: ["hiking", "hkiing", "hiknig", "hikin"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"lacking in judgment, fit consideration, or intelligence\"",
+        choices: ["foolish", "fooolish", "fooilsh", "foolissh"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"filled with fear or alarm\"",
+        choices: ["afraid", "afaid", "afriad", "araid"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to bring to mind again : to think of again\"",
+        choices: ["remember", "remembeer", "rememebr", "rmember"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to proceed, spring, or arise as a consequence\"",
+        choices: ["result", "ressult", "resutl", "reslt"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"fascinating and delighting : extremely pleasing : marked by compelling attraction or appeal\"",
+        choices: ["charming", "chharming", "chaarming", "charimng"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a firsthand document or primary reference work\"",
+        choices: ["source", "sourec", "sourc", "suorce"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"dense concretions formed in various mollusks by deposition of thin layers of nacre about a foreign particle, that are typically round, and that exhibit various colors but are usually white or light-colored\"",
+        choices: ["pearls", "peals", "pears", "pealrs"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"having or suggestive of a sharp distinctive flavor that lingers on the tongue\"",
+        choices: ["tangy", "tang", "tanngy", "tangyy"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"wild mammals fierce by nature; especially : carnivorous wild mammals\"",
+        choices: ["beasts", "beassts", "beastts", "basts"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"trembling due to cold, fear, or physical pressure\"",
+        choices: ["shivering", "shiverring", "sihvering", "shiverin"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a roomy usually flat-bottomed boat used principally in harbors or inland waterways for the transport of goods\"",
+        choices: ["barge", "brge", "bagre", "bage"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adverb) \"in a manner that is moodily cross, surly or ill-humored\"",
+        choices: ["grumpily", "grrumpily", "grumppily", "grummpily"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adverb) \"without roughness, abruptness, or interruption\"",
+        choices: ["smoothly", "soothly", "smootly", "smootlhy"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a small house typically used in the summer\"",
+        choices: ["cottage", "cotatge", "cottge", "cottagge"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"modest or meek in spirit, manner, or appearance : not proud or haughty\"",
+        choices: ["humble", "humblee", "hummble", "humblle"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"seven tens : twice 35 : five times 14\"",
+        choices: ["seventy", "sevennty", "seveenty", "seeventy"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to hang loosely especially with a swinging or jerking motion\"",
+        choices: ["dangle", "dngle", "dangl", "danle"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the length to be traveled\"",
+        choices: ["distance", "distancce", "distaance", "disatnce"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a light, gentle soft-blowing wind\"",
+        choices: ["breeze", "breee", "brreeze", "breze"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"sailed or hovered in the air often at a great height : glided\"",
+        choices: ["soared", "soaerd", "saored", "sooared"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"reduced to a state of extreme physical or nervous fatigue\"",
+        choices: ["frazzled", "frazzeld", "farzzled", "frazzld"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a large woody plant having hollow stems that are so hard and durable as to be used for furniture and the young shoots of which are utilized as food\"",
+        choices: ["bamboo", "bamobo", "bambooo", "bmaboo"],
         answerIndex: 0
       }
     ]
@@ -332,103 +783,253 @@ window.SPELLING_SETS = [
     name: "Spelling Set 4",
     questions: [
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ time to practice\"",
-        choices: ["dedicate", "ddeicate", "deedicate", "ddicate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"disks or devices of other shapes that are used as fasteners on clothing or upholstery by passing them through a hole or loop\"",
+        choices: ["buttons", "buttosn", "btutons", "butotns"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ a problem\"",
-        choices: ["detect", "dteect", "deetect", "dtect"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to hold close for warmth or comfort or in affection : to hug\"",
+        choices: ["cuddle", "cudlde", "cudle", "cudde"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ the rules\"",
-        choices: ["dictate", "dcitate", "diictate", "dctate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"swollen or tending to swell in size : bloated\"",
+        choices: ["puffy", "pffy", "pufy", "puff"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ the results\"",
-        choices: ["document", "dcoument", "doocument", "dcument"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"proceeded quietly or cautiously walking on or as if walking on the ends of the feet\"",
+        choices: ["tiptoed", "tiptod", "titpoed", "tptoed"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ the key\"",
-        choices: ["duplicate", "dpulicate", "duuplicate", "dplicate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"having mental quickness or intelligence\"",
+        choices: ["clever", "clevre", "celver", "clveer"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"______ mushrooms\"",
-        choices: ["edible", "eidble", "eddible", "edble"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the part of a building that is either completely or partly below the ground level\"",
+        choices: ["basement", "basemment", "bsement", "baement"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ the animals\"",
-        choices: ["endanger", "ednanger", "enndanger", "endnger"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a coarse heavy plain-woven fabric typically made from hemp or jute that is used for bagging and wrapping items\"",
+        choices: ["burlap", "bulap", "burla", "buralp"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the conflict began to ______\"",
-        choices: ["escalate", "ecsalate", "esscalate", "esclate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"lands containing much soil moisture, such as a swamp or bog\"",
+        choices: ["wetlands", "wetlansd", "wetlnads", "welands"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ the ruins\"",
-        choices: ["excavate", "ecxavate", "exxcavate", "excvate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to request the presence or participation of : to solicit the company of : to ask\"",
+        choices: ["invite", "invit", "innvite", "inviet"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ herself during practice\"",
-        choices: ["exert", "eexrt", "exxert", "exrt"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"slender-bodied diurnal insects that have very large broad wings which are often strikingly colored and patterned\"",
+        choices: ["butterflies", "butteflies", "butterflis", "butterfliees"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ artwork\"",
-        choices: ["exhibit", "ehxibit", "exxhibit", "exhbit"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a mass or growth of large seaweeds\"",
+        choices: ["kelp", "klp", "kellp", "kel"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"______ temperatures\"",
-        choices: ["frigid", "firgid", "frrigid", "frgid"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"something that may be owned or possessed; specifically : a piece of real estate\"",
+        choices: ["property", "propperty", "prperty", "proerty"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ building\"",
-        choices: ["gigantic", "ggiantic", "giigantic", "ggantic"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adverb) \"with attention to precision or to details : cautiously\"",
+        choices: ["carefully", "carefullly", "careuflly", "careflly"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a deep ______\"",
-        choices: ["gorge", "groge", "goorge", "grge"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"drawing air noisily up the nose repeatedly to prevent mucus running from the nose (as in a cold)\"",
+        choices: ["sniffling", "snifflnig", "sniflfing", "snifflng"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"his legal ______\"",
-        choices: ["guardian", "gaurdian", "guuardian", "gardian"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (preposition) \"immediately under\"",
+        choices: ["beneath", "bneath", "beneathh", "beenath"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ morning\"",
-        choices: ["hazy", "hzay", "haazy", "hzy"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a usually four-wheeled vehicle used mainly on farms to pull or drive equipment\"",
+        choices: ["tractor", "tracotr", "tratcor", "tractro"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"bark can be a tricky ______\"",
-        choices: ["homonym", "hmoonym", "hoomonym", "hmonym"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to consent to expressly or formally\"",
+        choices: ["permit", "pemit", "perit", "prmit"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"______ twins\"",
-        choices: ["identical", "iedntical", "iddentical", "idntical"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a usually canvas rooflike cover extended over a place as a shelter from the sun, rain, or wind\"",
+        choices: ["awning", "awnnig", "anwing", "aning"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ the room\"",
-        choices: ["illuminate", "ilulminate", "illluminate", "iluminate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"given to ready change, inconstancy, whimsical choice, or unpredictable variability\"",
+        choices: ["fickle", "ficle", "ficklee", "fckle"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ performance\"",
-        choices: ["impressive", "ipmressive", "immpressive", "impresive"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"removal or lightening of something oppressive, painful, or distressing\"",
+        choices: ["relief", "reilef", "rlief", "relif"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"of, taking place on, or relating to the moon\"",
+        choices: ["lunar", "luanr", "lunra", "lunr"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"withholding social or business dealings from (a person, employer, or a nation) as an expression of disapproval or means of coercion\"",
+        choices: ["boycotting", "boycottinng", "boycottign", "boyctting"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"fused or liquefied by heat : melted\"",
+        choices: ["molten", "motlen", "moltenn", "moolten"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"choice, superior, select\"",
+        choices: ["elite", "eliet", "eliite", "elitte"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"formed by interlacing strands, such as cloth\"",
+        choices: ["woven", "wovenn", "woevn", "wooven"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to declare openly or publicly\"",
+        choices: ["proclaim", "proclaiim", "poclaim", "prooclaim"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a cuplike cover made usually of metal or plastic with a pitted surface and used to protect the end of a finger when pushing a needle through material\"",
+        choices: ["thimble", "thimbe", "thimblle", "thibmle"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"protection, care, maintenance, and tuition : guardianship\"",
+        choices: ["custody", "cusody", "custoyd", "custoddy"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"rolled oats mixed with other ingredients (such as brown sugar, raisins, coconut and nuts) and eaten for breakfast or as a snack\"",
+        choices: ["granola", "grnola", "granolla", "grannola"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a human engaged or experienced in battle or the close combat typical of ancient or medieval times\"",
+        choices: ["warrior", "warroir", "wrrior", "warrioor"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"very firm rather than pliant in composition or structure : lacking flexibility\"",
+        choices: ["rigid", "rgid", "rigiid", "riigd"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"violently hostile or aggressive in temperament\"",
+        choices: ["fierce", "fiierce", "fiece", "ferce"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the sound of air being expelled from the lungs in the expression of an emotion (such as joy)\"",
+        choices: ["laughter", "lauhgter", "laugther", "lughter"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"fixed compensation paid regularly for services\"",
+        choices: ["salary", "salaie", "salery", "salaary"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to cause to pass from view either suddenly or gradually\"",
+        choices: ["disappear", "disappearr", "diasppear", "disappera"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"one that runs in a track event in which artificial barriers must be leaped\"",
+        choices: ["hurdler", "hurdelr", "hurdleer", "hurder"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to act or move idly or lazily : to stand, sit, or recline indolently\"",
+        choices: ["lounge", "longe", "louge", "lougne"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"characterized by or showing marked good humor especially as exhibited in mirth, hilarity, or conviviality\"",
+        choices: ["jovial", "jovia", "joviall", "joial"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"of poor quality : second-rate\"",
+        choices: ["inferior", "inferor", "infferior", "inferir"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the 12th month\"",
+        choices: ["December", "Decemmber", "Decembre", "Dcember"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a portion of time which is measurable or during which something exists, lasts, or is in progress\"",
+        choices: ["duration", "duraion", "durasion", "duation"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a reference source in print or electronic form containing words usually alphabetically arranged along with information about their forms, pronunciations, functions, etymologies, meanings, and syntactical and idiomatic uses\"",
+        choices: ["dictionary", "dicitonary", "dcitionary", "dicctionary"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a place where a commercial or industrial enterprise is carried on\"",
+        choices: ["business", "buisness", "businesss", "businss"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to place again (as in possession or in a former position)\"",
+        choices: ["reinstate", "reinnstate", "reisntate", "reeinstate"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to look over : to inspect visually or by use of other senses\"",
+        choices: ["examine", "exaine", "exxamine", "examinee"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (preposition) \"against\"",
+        choices: ["versus", "verrsus", "versu", "vesrus"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a song to quiet children or soothe them to sleep\"",
+        choices: ["lullaby", "lullaaby", "lulllaby", "lullby"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"utterly different : contrary\"",
+        choices: ["opposite", "oppsite", "oppossite", "opposte"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"thin gauzy papers\"",
+        choices: ["tissues", "tissuess", "tssues", "tiissues"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a large oceanic game fish : a spearfish\"",
+        choices: ["marlin", "mrlin", "marin", "marliin"],
         answerIndex: 0
       }
     ]
@@ -438,103 +1039,253 @@ window.SPELLING_SETS = [
     name: "Spelling Set 5",
     questions: [
       {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ thinker\"",
-        choices: ["independent", "idnependent", "inndependent", "indpendent"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the evening of October 31 observed especially by displaying jack-o'-lanterns, dressing up in disguise, and trick-or-treating in the evening\"",
+        choices: ["Halloween", "Hallowene", "Haloween", "Hlaloween"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"______ heat\"",
-        choices: ["intense", "itnense", "inntense", "intnse"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to pay a formal expression (as by speech, gesture, or ceremony) of esteem, respect, affection, or admiration to\"",
+        choices: ["compliment", "coompliment", "complient", "complimnet"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ the pass\"",
-        choices: ["intercept", "itnercept", "inntercept", "intrcept"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to come to a settlement or agreement by mutual concession\"",
+        choices: ["compromise", "comprmise", "commpromise", "compromsie"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"shouts of ______\"",
-        choices: ["jubilation", "jbuilation", "juubilation", "jbilation"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an uncommon happening\"",
+        choices: ["incident", "incidnt", "incdient", "incidetn"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"his closest ______\"",
-        choices: ["kin", "kni", "kiin", "kn"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"characteristic of a country in eastern Asia made up of islands in the western Pacific\"",
+        choices: ["Japanese", "Japanes", "Japanee", "Japaese"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ hotel\"",
-        choices: ["luxurious", "lxuurious", "luuxurious", "lxurious"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the commitment of something other than money to a long-term interest or project\"",
+        choices: ["investment", "investmet", "investmment", "investent"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ decision\"",
-        choices: ["major", "mjaor", "maajor", "mjor"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"eyeglasses with lenses having one part that corrects for near vision and one for distant vision\"",
+        choices: ["bifocals", "bifcoals", "bifocas", "biffocals"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ model\"",
-        choices: ["miniature", "mniiature", "miiniature", "mniature"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"tools used to cut, serve, and eat food\"",
+        choices: ["cutlery", "cutleryy", "cutery", "cutler"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ injury\"",
-        choices: ["minor", "mnior", "miinor", "mnor"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a tool consisting of a metal bar with a sharpened edge at one end used for working on the surface of materials by chipping or carving\"",
+        choices: ["chisel", "chiisel", "chiesl", "chiel"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"full of ______\"",
-        choices: ["mischief", "msichief", "miischief", "mschief"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an event or campaign organized to collect or gather money\"",
+        choices: ["fundraiser", "fundriser", "fundraisre", "fundraiseer"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the reigning ______\"",
-        choices: ["monarch", "mnoarch", "moonarch", "mnarch"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a specialist in the history of Earth and its life especially as recorded in rocks\"",
+        choices: ["geologist", "goelogist", "geollogist", "gologist"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the ______ of the story\"",
-        choices: ["moral", "mroal", "mooral", "mral"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"made a loud deep hollow prolonged sound\"",
+        choices: ["bellowed", "bellowwed", "beellowed", "bellwoed"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"an ancient ______\"",
-        choices: ["myth", "mtyh", "myyth", "mith"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a living being\"",
+        choices: ["organism", "orgganism", "oragnism", "organismm"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the story's ______\"",
-        choices: ["narrator", "nrarator", "naarrator", "narator"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a migratory game bird of Europe, Asia, and Africa that is about seven inches long\"",
+        choices: ["quail", "quaill", "quali", "quial"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ the ship\"",
-        choices: ["navigate", "nvaigate", "naavigate", "nvigate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the whole mass of air surrounding the earth\"",
+        choices: ["atmosphere", "amosphere", "atmospehre", "atmospere"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ attitude\"",
-        choices: ["negative", "ngeative", "neegative", "ngative"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the act or an instance of failing to come up to expectations : the state or condition of being defeated in expectation or hope\"",
+        choices: ["disappointment", "disappointent", "disappointmeent", "diappointment"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"______ mistakes\"",
-        choices: ["numerous", "nmuerous", "nuumerous", "nmerous"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"absent from school without permission\"",
+        choices: ["truant", "truat", "truaant", "truannt"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ in the desert\"",
-        choices: ["oasis", "osais", "oaasis", "osis"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an unbound publication with a small number of pages\"",
+        choices: ["pamphlet", "pamphhlet", "paamphlet", "pamphlt"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a special ______\"",
-        choices: ["occasion", "ocacsion", "occcasion", "ocasion"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a very light colorless inert gas used for diluting oxygen, inflating balloons, and in many chemical and metallurgical processes\"",
+        choices: ["helium", "hlium", "helim", "heilum"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ the government\"",
-        choices: ["overthrow", "oevrthrow", "ovverthrow", "ovrthrow"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"put an idea or proposition into the mind\"",
+        choices: ["suggested", "suggessted", "suggesed", "sugested"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"anthropoid apes of equatorial Africa that are smaller and more arboreal than the gorillas\"",
+        choices: ["chimpanzees", "chimmpanzees", "chimpaanzees", "chimpanzeees"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"arising from or indicative of extreme need or pressure of circumstance\"",
+        choices: ["desperate", "desperat", "despertae", "deesperate"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a source of irritation\"",
+        choices: ["annoyance", "annnoyance", "annoyancee", "annooyance"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an act of preventing (one) from proceeding by intrusive or interpolated comment or action\"",
+        choices: ["interruption", "interrutpion", "interruptio", "interrupiton"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to bring or direct toward a common center or objective : to focus\"",
+        choices: ["concentrate", "concentrte", "concenntrate", "concntrate"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a decorated vessel (as of papier-mâché) filled with candies, fruits, and gifts and hung up to be broken with sticks by blindfolded persons as part of especially Latin-American festivities\"",
+        choices: ["piñata", "piñaat", "piñaata", "piata"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a geographical region that belongs to or is controlled by a political authority\"",
+        choices: ["territory", "territroy", "territoie", "territry"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"ones that depart from the company to which they belong or from the direct or proper course\"",
+        choices: ["stragglers", "strgglers", "stragglres", "straggles"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"any organism exhibiting deficient pigmentation\"",
+        choices: ["albino", "albinno", "abino", "albin"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"unworthy of serious consideration : absurd : comical : preposterous\"",
+        choices: ["ridiculous", "ridiculou", "riidiculous", "ridicuulous"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a single track for railway cars that usually sit over it or hang suspended from it\"",
+        choices: ["monorail", "monoral", "monroail", "monorrail"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"serving in or intended for an act or an instance of making a first or preliminary study of\"",
+        choices: ["exploratory", "exploratoy", "exploratoie", "expploratory"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a dark grayish blue color\"",
+        choices: ["indigo", "idigo", "idnigo", "indiggo"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"fresh pork sausage for frying or grilling\"",
+        choices: ["bratwurst", "brawurst", "bratwrust", "brtawurst"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"proceeding according to the order of the letters of a language arranged in a customary order\"",
+        choices: ["alphabetical", "alphabetial", "alphabeetical", "alphabeticcal"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"strict adherence to a code of moral values : incorruptibility\"",
+        choices: ["integrity", "integrtiy", "integity", "integriy"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a state in the northwestern part of the U.S\"",
+        choices: ["Oregon", "Orgeon", "Oergon", "Orregon"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the act of contradicting\"",
+        choices: ["rebuttal", "reebuttal", "rebutttal", "rebtutal"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an irrational attitude of animosity or hostility focused against a person, a group of people, a race, or their supposed characteristics\"",
+        choices: ["prejudice", "pejudice", "prejudicce", "prejuice"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an entire union of interests and responsibilities in a group\"",
+        choices: ["solidarity", "sloidarity", "solidariity", "solidrity"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a blotched or spotted animal\"",
+        choices: ["calico", "callico", "caico", "caalico"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a man-made object or vehicle intended to orbit Earth, the Moon, or other celestial body and usually instrumented for the transmission of space data\"",
+        choices: ["sputnik", "sputnki", "sputik", "spuntik"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a case for holding integrated circuits containing a computer program\"",
+        choices: ["cartridge", "catrridge", "carrtridge", "cartridg"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the separation of a group of people based on their race, class, or ethnic group by such means as restricting where they live, the people with whom they interact, and which schools they can attend\"",
+        choices: ["segregation", "segrregation", "segregatioon", "segregasion"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"round thin cakes of unleavened cornmeal bread usually eaten hot with a topping or filling that may include ground meat, cheese, and any of various sauces\"",
+        choices: ["tortillas", "totrillas", "trtillas", "toritllas"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a resident of a country who is not on active duty in one of the armed forces\"",
+        choices: ["civilian", "cvilian", "civilina", "civliian"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a substance used to enrich soil\"",
+        choices: ["fertilizer", "fertilzier", "fertiizer", "feertilizer"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a person who is in training to learn a trade from a skilled worker\"",
+        choices: ["apprentice", "apprenitce", "apprentiec", "apprenticce"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"produced by artificial processes : man-made\"",
+        choices: ["synthetic", "syntheitc", "syntetic", "synhtetic"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a powerful ruler : a dictator\"",
+        choices: ["Caesar", "Caesaar", "Caeesar", "Ceasar"],
         answerIndex: 0
       }
     ]
@@ -544,103 +1295,253 @@ window.SPELLING_SETS = [
     name: "Spelling Set 6",
     questions: [
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ a criminal\"",
-        choices: ["pardon", "pradon", "paardon", "prdon"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a woman who practices black magic\"",
+        choices: ["sorceress", "sorrceress", "sorcress", "sorcerress"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"cows grazing in the ______\"",
-        choices: ["pasture", "psature", "paasture", "psture"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"characterized by bewitching intangible irresistibly magnetic charm\"",
+        choices: ["glamorous", "galmorous", "glamoous", "glamoorous"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ crossing the street\"",
-        choices: ["pedestrian", "pdeestrian", "peedestrian", "pdestrian"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"small amphibians that resemble lizards, are covered with a soft moist skin, live in moist dark places, and feed on small animals such as aquatic worms and insects\"",
+        choices: ["salamanders", "slaamanders", "salamandres", "salamanderss"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the news would ______ her\"",
-        choices: ["petrify", "pterify", "peetrify", "ptrify"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"temporary forced withdrawal from the exercise of office, powers, or privileges as a member or communicant\"",
+        choices: ["suspension", "suspnsion", "suspensino", "susppension"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ radio\"",
-        choices: ["portable", "protable", "poortable", "prtable"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an unusual manifestation or eccentricity in manner or behavior\"",
+        choices: ["singularity", "singulraity", "singularrity", "sngularity"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"un- is a common ______\"",
-        choices: ["prefix", "perfix", "prrefix", "prfix"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"of, relating to, suggestive of, or being an intentional fabrication\"",
+        choices: ["fictitious", "fictitoius", "ficctitious", "ficitious"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ the forest\"",
-        choices: ["preserve", "perserve", "prreserve", "prserve"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an automobile having a top that may be folded back, lowered, or removed\"",
+        choices: ["convertible", "converrtible", "cnvertible", "convertable"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the story's ______\"",
-        choices: ["protagonist", "portagonist", "prrotagonist", "prtagonist"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"sarcastic, impertinent, or irreverent manner or tone\"",
+        choices: ["snarkiness", "snarkineess", "snarrkiness", "snarkines"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ food\"",
-        choices: ["provide", "porvide", "prrovide", "prvide"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a considerable body of troops organized to act together : an army\"",
+        choices: ["battalion", "battalionn", "battalioon", "battlaion"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ a ticket\"",
-        choices: ["purchase", "pruchase", "puurchase", "prchase"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"not resulting directly from an action or cause : indirect\"",
+        choices: ["collateral", "collaeral", "collatearl", "cllateral"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ painting\"",
-        choices: ["realistic", "raelistic", "reealistic", "ralistic"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the rites or ceremonies with which one is made a member of a sect or society or is invested with a particular function or status\"",
+        choices: ["initiation", "initiatin", "initiasion", "initiatiion"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ a worried friend\"",
-        choices: ["reassure", "raessure", "reeassure", "reasure"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a cosmetic for covering the eyelashes and eyebrows\"",
+        choices: ["mascara", "masara", "masccara", "mascarra"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the king's ______\"",
-        choices: ["reign", "riegn", "reeign", "rign"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the sum of the lengths of the line segments forming a polygon\"",
+        choices: ["perimeter", "perimeer", "perimeetr", "perimeteer"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ friend\"",
-        choices: ["reliable", "rleiable", "reeliable", "rliable"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"something done or said that may serve as an example or rule to authorize or justify a subsequent act of the same or an analogous kind\"",
+        choices: ["precedent", "precednet", "precednt", "precedeent"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ patience and skill\"",
-        choices: ["require", "rqeuire", "reequire", "rquire"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to come into actual existence\"",
+        choices: ["materialize", "materialze", "mterialize", "maaterialize"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"many children ______ their parents\"",
-        choices: ["resemble", "rseemble", "reesemble", "rsemble"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a silver-white malleable metallic element that occurs abundantly in nature\"",
+        choices: ["magnesium", "maggnesium", "mganesium", "magnseium"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ information\"",
-        choices: ["retain", "rteain", "reetain", "rtain"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"commendably thorough or precise : strict\"",
+        choices: ["meticulous", "metculous", "meticulosu", "meticuous"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ from work\"",
-        choices: ["retire", "rteire", "reetire", "rtire"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an important food fish that is usually smaller than the common cod and has a black lateral line and a dark spot just behind the gills\"",
+        choices: ["haddock", "hddock", "haddocck", "haddok"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ to old habits\"",
-        choices: ["revert", "rveert", "reevert", "rvert"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"subnormal temperature of the body\"",
+        choices: ["hypothermia", "hypotherima", "hypothermi", "hpothermia"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the fastest ______\"",
-        choices: ["route", "ruote", "rooute", "rute"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a specialist in the examination of the eye for defects and faults of refraction and the prescription of correctional lenses and exercises but not including the use of drugs or surgery\"",
+        choices: ["optometrist", "otpometrist", "optmetrist", "optometrsit"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a unit of frequency equal to one million cycles per second\"",
+        choices: ["megahertz", "megahhertz", "meaghertz", "megahetz"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a Soviet aerospace center; especially : a Soviet spacecraft launching installation\"",
+        choices: ["cosmodrome", "cosmodromee", "cosmoddrome", "cosmodroome"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"inflammation of one or more joints due to infectious, metabolic, or constitutional causes\"",
+        choices: ["arthritis", "arthrittis", "arthritsi", "arthirtis"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a dog of a breed of terriers that have a long head with small ears and heavy eyebrows, mustache, beard, and wiry coat\"",
+        choices: ["schnauzer", "schnauer", "schnuzer", "schnauuzer"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an act or instance of revolting against civil or political authority or against an established government\"",
+        choices: ["insurrection", "isurrection", "insurreection", "insurection"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"unconsolidated residual or transported material that overlies or covers the solid rock in place\"",
+        choices: ["regolith", "reggolith", "regoliht", "regolit"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"one participating in an athletic contest involving participation by each contestant in five different events\"",
+        choices: ["pentathlete", "pentathleete", "pentathlte", "pnetathlete"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"excessively meticulous : fussy\"",
+        choices: ["persnickety", "persnickey", "persnickeyt", "pesrnickety"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"any program for setting up a centralized autocratic national regime that has severely nationalistic policies, exercises rigid censorship, and forcibly suppresses opposition\"",
+        choices: ["fascism", "faascism", "fascsm", "facism"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"large, often long-tailed, and brilliantly colored birds of mostly terrestrial habits\"",
+        choices: ["pheasants", "pheasans", "pheasantss", "pheasannts"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"one who comes before in order of time; especially : a person who has previously occupied a position or office to which another has succeeded\"",
+        choices: ["predecessor", "preedcessor", "predecesosr", "predecessorr"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (geographical entry) \"country in western Africa on the Atlantic; a republic of the French Community, formerly a territory of French West Africa\"",
+        choices: ["Senegal", "Seenegal", "Seneegal", "Senegl"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a place where water is collected and kept in quantity for use when wanted\"",
+        choices: ["reservoir", "resrevoir", "reseroir", "reservior"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the power to attract through personal magnetism and charm\"",
+        choices: ["duende", "duendee", "duedne", "deunde"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"mentally active : fully possessed of one's mental faculties : awake\"",
+        choices: ["conscious", "consciosu", "consciious", "concsious"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"used for a light-polarizing material used especially in eyeglasses and lamps to prevent glare and in various optical devices\"",
+        choices: ["Polaroid", "Polarid", "Polarod", "Pollaroid"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the decaying flesh of a dead animal\"",
+        choices: ["carrion", "carrrion", "carrin", "carriion"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"relating to, based on, or tracing descent through the maternal line\"",
+        choices: ["matrilineal", "matrlineal", "matrrilineal", "mtarilineal"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adverb) \"in a manner deserving mercy or compassion\"",
+        choices: ["piteously", "piteouslyy", "piteousyl", "piteouly"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the dried flower head of any herb of a large genus of herbs of the northern hemisphere used for bruises, sprains, and swellings\"",
+        choices: ["arnica", "arnicca", "arniac", "anrica"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"of, relating to, or shaped like an elongated circle\"",
+        choices: ["elliptical", "ellipticall", "ellipitcal", "elliiptical"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a disease of the eye marked by increased pressure within the eyeball that damages the optic disk and results in gradual loss of vision and ultimate blindness\"",
+        choices: ["glaucoma", "glauoma", "glauucoma", "glaucooma"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a heavy silver-white metallic element that is used especially in hardening platinum for alloys suitable for surgical instruments and jewelry\"",
+        choices: ["iridium", "iriidum", "iriium", "iridiium"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a blood-pressure-raising hormone of the medulla of the glands adjacent to the kidneys, used chiefly as a heart stimulant\"",
+        choices: ["adrenaline", "adrenalie", "arenaline", "adernaline"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a graveyard : a burial ground\"",
+        choices: ["cemetery", "cemeteie", "ceemetery", "cemeery"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"marked by short clear-cut playing or singing of tones or chords\"",
+        choices: ["staccato", "staccaot", "staccto", "stacctao"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a meeting at an appointed place and time\"",
+        choices: ["rendezvous", "rendezvoous", "rendezvus", "rendezvouss"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a South American herb whose flower heads yield a yellow dye\"",
+        choices: ["romerillo", "romeillo", "romeerillo", "romeirllo"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a small dog of a breed of German origin having long drooping ears, commonly a short sleek coat, and the legs short in comparison with the body length\"",
+        choices: ["dachshund", "dchshund", "dachsuhnd", "dacshund"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the Greek god of the winds\"",
+        choices: ["Aeolus", "Aeouls", "Aeolsu", "Aelous"],
         answerIndex: 0
       }
     ]
@@ -650,103 +1551,253 @@ window.SPELLING_SETS = [
     name: "Spelling Set 7",
     questions: [
       {
-        prompt: "Which is the correct spelling of the missing word? \"he ______ visits\"",
-        choices: ["seldom", "sledom", "seeldom", "sldom"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"any of various small semiaquatic salamanders\"",
+        choices: ["newt", "new", "netw", "newtt"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ act\"",
-        choices: ["senseless", "sneseless", "seenseless", "senseles"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"sounded with a repeated and often monotonous hum like a vibrating string on an instrument\"",
+        choices: ["thrummed", "thrummmed", "thrmumed", "thrrummed"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ the rope\"",
-        choices: ["sever", "sveer", "seever", "sver"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a structure (as of earth or gravel) raised usually to prevent water from overflowing a level tract of country, to retain water in a reservoir or a stream in its bed, or to carry a roadway or railroad\"",
+        choices: ["embankment", "embnakment", "embankmennt", "emmbankment"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the snake began to ______\"",
-        choices: ["slither", "silther", "sllither", "slther"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"a turned-back facing usually wide and pointed at the top and tapering to nothing at the bottom that is usually one of a pair along the front edges of a jacket, dress, or coat and extends from the collar or neckline to or toward the waistline\"",
+        choices: ["lapels", "lapel", "laels", "laepls"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the eagle began to ______\"",
-        choices: ["soar", "saor", "sooar", "sar"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the quality or state of being very free or openhanded in giving\"",
+        choices: ["generosity", "generosit", "geenerosity", "genrosity"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ performance\"",
-        choices: ["solo", "sloo", "soolo", "slo"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"made shiny or lustrous : polished\"",
+        choices: ["burnished", "burnishe", "burished", "burnihed"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a sudden ______ of energy\"",
-        choices: ["spurt", "suprt", "sppurt", "sprt"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"something that binds or holds together\"",
+        choices: ["mortar", "morar", "motrar", "moratr"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a winning ______\"",
-        choices: ["strategy", "srtategy", "sttrategy", "strtegy"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"not softening, yielding, or swerving in resolution or determination\"",
+        choices: ["unrelenting", "unrelentnig", "unrelentign", "unrelentting"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"-ful is a common ______\"",
-        choices: ["suffix", "sfufix", "suuffix", "sufix"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"becoming helpless or ineffectual : losing the ability to function naturally or efficiently\"",
+        choices: ["wallowing", "walllowing", "wlalowing", "wallowin"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ without air\"",
-        choices: ["suffocate", "sfufocate", "suuffocate", "sufocate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"of or relating to a state as governing or being supreme over colonies or dependencies\"",
+        choices: ["imperial", "impperial", "impeial", "immperial"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the mountain's ______\"",
-        choices: ["summit", "smumit", "suummit", "sumit"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"continuing in a course of action without regard to opposition or previous failure\"",
+        choices: ["persistent", "presistent", "perssistent", "persistennt"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"happy and glad form a ______ pair\"",
-        choices: ["synonym", "snyonym", "syynonym", "synnym"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"people who deliberately set fire to a building or other property\"",
+        choices: ["arsonists", "arrsonists", "arsoinsts", "arsonitss"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the eagle's ______\"",
-        choices: ["talon", "tlaon", "taalon", "tlon"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"making whimpering sounds : whining\"",
+        choices: ["mewling", "melwing", "mewing", "mewlingg"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ shopper\"",
-        choices: ["thrifty", "trhifty", "thhrifty", "thrfty"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a machine by which mechanical energy is changed into electrical energy\"",
+        choices: ["generator", "gennerator", "generatoor", "generatro"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ the book\"",
-        choices: ["translate", "tarnslate", "trranslate", "trnslate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a territory or country subject to a ruler or under the control of a particular government\"",
+        choices: ["dominion", "dominoin", "dominionn", "dominio"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ island\"",
-        choices: ["tropical", "torpical", "trropical", "trpical"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"power to require and receive submission : the right to expect obedience\"",
+        choices: ["authority", "auuthority", "authroity", "auhority"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"barely ______ in the fog\"",
-        choices: ["visible", "vsiible", "viisible", "vsible"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"of, relating to, or resembling an unobstructed or complete and comprehensive view of a region in every direction\"",
+        choices: ["panoramic", "pannoramic", "panoramicc", "paonramic"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ aid\"",
-        choices: ["visual", "vsiual", "viisual", "vsual"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a short-haired German dog, typically with a black coat\"",
+        choices: ["Doberman", "Dobemran", "Dobermn", "Dobermann"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ memory\"",
-        choices: ["vivid", "vviid", "viivid", "vvid"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"small rodents that are usually colored tawny yellowish and that are notable for population fluctuations and recurrent mass migrations\"",
+        choices: ["lemmings", "lemmngs", "lemmingss", "lemmigs"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"lost in the ______\"",
-        choices: ["wilderness", "wliderness", "wiilderness", "wildernes"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adverb) \"in a manner having the power of resolving or putting an end to : conclusively\"",
+        choices: ["decisively", "decsiively", "decisivvely", "decisiveely"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"gloves designed to protect the hand from injury\"",
+        choices: ["gauntlets", "gauntets", "gantlets", "gauntletts"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"not endowed with consciousness or animal life\"",
+        choices: ["inanimate", "inannimate", "innanimate", "inanimat"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the fact or condition of occurring at short intervals : occurrence often repeated : common occurrence\"",
+        choices: ["frequency", "frequecny", "frequenccy", "freuency"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"of or relating to hearing\"",
+        choices: ["auditory", "audditory", "audtiory", "auditoyr"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"appealing to the taste especially in appearance\"",
+        choices: ["appetizing", "appetizingg", "appetizign", "apeptizing"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"ones that watch or guard : sentries\"",
+        choices: ["sentinels", "setinels", "sentines", "senitnels"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adverb) \"in a careless or inattentive manner\"",
+        choices: ["blithely", "blitehly", "bltihely", "blithelyy"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"able to maintain oneself or itself without outside aid : capable of providing for one's or its own needs\"",
+        choices: ["self-sufficient", "self-suffficient", "slef-sufficient", "self-sufficiennt"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"likely to be or become\"",
+        choices: ["prospective", "prospcetive", "prospectvie", "prospectiive"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a purchase by prepayment of the future issues of a publication usually for a fixed period (such as a year)\"",
+        choices: ["subscription", "subsrciption", "subscritpion", "subsciption"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"having little substance or strength : flimsy : weak\"",
+        choices: ["tenuous", "teuous", "tnuous", "teenuous"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"undesirably noticeable by reason of violation of good taste or sense\"",
+        choices: ["conspicuous", "conspicouus", "consppicuous", "coonspicuous"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an idea formed prior to actual knowledge or experience\"",
+        choices: ["preconception", "preconceptoin", "preconcpetion", "precconception"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a group of people moving along on a particular course especially in a continuous, orderly, often formal or ceremonial way and usually arranged in a long line\"",
+        choices: ["procession", "processsion", "processoin", "procesion"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a wind instrument that combines the reed mouthpiece of a clarinet with a usually curved conical metal tube made in various sizes\"",
+        choices: ["saxophone", "saxohpone", "saxopone", "saophone"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"being or set at right angles to a given line or plane\"",
+        choices: ["perpendicular", "perpendicularr", "perpenndicular", "perpendiclar"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a half of the terrestrial globe as divided by the equator or into halves one of which contains Europe, Asia, and Africa and the other the Americas\"",
+        choices: ["hemisphere", "hmisphere", "hemispher", "hemishere"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"having the character of an originative power, principle, or source : containing or contributing the seeds of later development\"",
+        choices: ["seminal", "semminal", "sminal", "seminl"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to move at or as if at a three-beat gait resembling but smoother and slower than the gallop\"",
+        choices: ["canter", "cante", "canetr", "cnater"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"relating to or having the character of a rushing stream of water\"",
+        choices: ["torrential", "torrentiial", "torrenital", "torrentil"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the quality or state of being hesitant from dislike, doubt, fear, or scruple\"",
+        choices: ["reluctance", "reluctace", "reluctancce", "reluctacne"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the premises or the residence of an official appointed by or with the authority of a government to reside in a foreign country to represent the interests of citizens of the appointing country\"",
+        choices: ["consulate", "cnsulate", "coonsulate", "consultae"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a manner of preparing food : a style of cooking\"",
+        choices: ["cuisine", "cuisinee", "cuuisine", "cuiine"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"walked about idly and in a leisurely manner\"",
+        choices: ["sauntered", "saunteered", "saunteerd", "saunered"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a mechanical device having one or more blades which when rotated about a central shaft produce a forward thrust due to the aerodynamic forces acting upon them\"",
+        choices: ["propeller", "popeller", "propellre", "propleler"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"fashionable\"",
+        choices: ["modish", "modih", "modsih", "moish"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an acute highly contagious infectious virus disease\"",
+        choices: ["influenza", "inlfuenza", "inffluenza", "innfluenza"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an evergreen shrub or tree having a prostrate or shrubby habit\"",
+        choices: ["juniper", "juinper", "jniper", "junper"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a medium-sized sofa with arms and a back\"",
+        choices: ["settee", "setteee", "setete", "setee"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"not knowing or perceiving : not aware\"",
+        choices: ["unconscious", "uconscious", "unconsciuos", "unconscoius"],
         answerIndex: 0
       }
     ]
@@ -756,103 +1807,253 @@ window.SPELLING_SETS = [
     name: "Spelling Set 8",
     questions: [
       {
-        prompt: "Which is the correct spelling of the missing word? \"her grades were ______\"",
-        choices: ["adequate", "aedquate", "addequate", "adquate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"emitting a scent\"",
+        choices: ["odorant", "odoran", "odorannt", "oddorant"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"he ______ his room with posters\"",
-        choices: ["adorn", "aodrn", "addorn", "adrn"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a palace or other large imposing residence\"",
+        choices: ["palazzo", "palazzoo", "palazo", "palzazo"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"her childhood was full of ______\"",
-        choices: ["adversity", "avdersity", "addversity", "advrsity"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"delicate skill : exquisite grace\"",
+        choices: ["finesse", "fineses", "fnesse", "fiesse"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the shoes have little ______ value\"",
-        choices: ["aesthetic", "asethetic", "aeesthetic", "asthetic"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"leafage\"",
+        choices: ["foliage", "foliae", "foliiage", "foilage"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"passing notes ______ their teacher\"",
-        choices: ["aggravate", "agrgavate", "agggravate", "agravate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"made of needlework consisting of the interlocking of looped stitches formed with a single thread and a hooked needle\"",
+        choices: ["crocheted", "crohceted", "crochetde", "crocheteed"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"ways to ______ stress\"",
-        choices: ["alleviate", "alelviate", "allleviate", "aleviate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"not applicable or pertinent\"",
+        choices: ["irrelevant", "irrlevant", "irreelevant", "irreevant"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ photographer\"",
-        choices: ["amateur", "aamteur", "ammateur", "amteur"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the whole body of courses offered by an educational institution or one of its branches\"",
+        choices: ["curriculum", "curriclum", "curriculm", "curriiculum"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a luxurious ______\"",
-        choices: ["ambiance", "abmiance", "ammbiance", "ambance"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adverb) \"in a questioning, curious manner\"",
+        choices: ["quizzically", "qizzically", "quizically", "quizzicaally"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the painting's ______ smile\"",
-        choices: ["ambiguous", "abmiguous", "ammbiguous", "ambguous"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"regretfully excusing or acknowledging\"",
+        choices: ["apologetic", "appologetic", "apoloogetic", "apolgetic"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"______ between the director and the actor\"",
-        choices: ["animosity", "ainmosity", "annimosity", "anmosity"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adverb) \"in a manner employing tact and the effort to establish harmony and goodwill\"",
+        choices: ["diplomatically", "diplomaticaally", "dipplomatically", "diplomaticallyy"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ in the blood test results\"",
-        choices: ["anomaly", "aonmaly", "annomaly", "anmaly"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"mysterious, puzzling\"",
+        choices: ["enigmatic", "eniggmatic", "enigmati", "enigmtic"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the desert is so ______\"",
-        choices: ["arid", "aird", "arrid", "ard"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"growths in size, number, or value\"",
+        choices: ["increments", "incremetns", "icnrements", "incremets"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"how ______ the student was\"",
-        choices: ["articulate", "atriculate", "arrticulate", "artculate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (geographical entry) \"state of the eastern U.S., capital Dover\"",
+        choices: ["Delaware", "Delaaware", "Delawre", "Delwaare"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ designer bag\"",
-        choices: ["authentic", "atuhentic", "auuthentic", "athentic"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to adjust precisely for a particular function\"",
+        choices: ["calibrate", "calibarte", "clibrate", "claibrate"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"______ by the confusing evidence\"",
-        choices: ["bemuse", "bmeuse", "beemuse", "bmuse"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a proposition tentatively assumed in order to draw out its logical or empirical consequences and so test its accord with facts that are known or may be determined\"",
+        choices: ["hypothesis", "hypothesi", "hypotehsis", "hyptohesis"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"______ by Shakespeare's language\"",
-        choices: ["bewilder", "bweilder", "beewilder", "bwilder"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the action of inspiring anew with courage, spirit, or hope or the state of being so inspired\"",
+        choices: ["reassurance", "reasurance", "reassuraance", "reassurannce"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"______ the ingredients completely\"",
-        choices: ["blend", "belnd", "bllend", "blnd"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"rising and falling in waves : fluctuating\"",
+        choices: ["undulating", "undulatng", "unndulating", "undulatiing"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a cozy chair and a good book is ______\"",
-        choices: ["bliss", "bilss", "blliss", "blis"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a sideboard, buffet, or bookcase patterned after an elaborate cupboard of the Renaissance period; especially : one without legs whose base rests flat on the floor\"",
+        choices: ["credenza", "crdenza", "credenz", "credena"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"his ______ laughter\"",
-        choices: ["boisterous", "biosterous", "booisterous", "bisterous"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"capable of being understood : intelligible, conceivable\"",
+        choices: ["comprehensible", "comprehensibe", "comprehensile", "comprehhensible"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"she ______ her sword\"",
-        choices: ["brandish", "barndish", "brrandish", "brndish"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a territory that is controlled politically by a larger, more powerful state especially for foreign relations and defense\"",
+        choices: ["protectorate", "proectorate", "proetctorate", "protctorate"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a cooking utensil in which the food to be cooked is exposed to the source of heat (as live coals or electricity) through a wire grill\"",
+        choices: ["brazier", "bazier", "braier", "brzaier"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an exceptional, unusual, or abnormal thing or occurrence\"",
+        choices: ["phenomenon", "phenomeon", "phenomneon", "pheenomenon"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"sharply perceptive : penetrating\"",
+        choices: ["trenchant", "trenchannt", "trencahnt", "tenchant"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"of, relating to, or associated with the lungs\"",
+        choices: ["pulmonary", "pulmonaie", "puulmonary", "pumlonary"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"like a figment of the imagination : illusive, spectral, unreal\"",
+        choices: ["phantasmal", "phatnasmal", "phaantasmal", "pahntasmal"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to lighten : to lessen : to relieve\"",
+        choices: ["alleviate", "alleviatee", "alelviate", "allviate"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"feeling extreme discouragement, dejection, or depression\"",
+        choices: ["despondent", "desponddent", "deespondent", "despnodent"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an approach especially to a correct estimate or to a given quantity\"",
+        choices: ["approximation", "approximatioon", "approxiamtion", "approixmation"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"one of a large class of arthropods including scorpions, spiders, and mites\"",
+        choices: ["arachnid", "arahcnid", "aracchnid", "arrachnid"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a diplomatic mission in a foreign country headed by a minister\"",
+        choices: ["legation", "leation", "legatino", "leegation"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a process of animal orientation and navigation that involves emission of high-frequency sounds that are reflected back from environing surfaces\"",
+        choices: ["echolocation", "echolcation", "ecolocation", "echolocatin"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"vessels for burning material used to produce a fragrant odor; especially : such vessels swung on chains in a religious ritual\"",
+        choices: ["censers", "censrs", "censesr", "censerrs"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"attractions to or likings for something\"",
+        choices: ["affinities", "affiities", "affiniities", "afffinities"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"distrust of oneself or of one's own powers : modest reserve\"",
+        choices: ["diffidence", "diffidenc", "diffdience", "dffidence"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a large disastrous fire involving many buildings\"",
+        choices: ["conflagration", "conflagratoin", "conflagraion", "conflagrattion"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adverb) \"in a diseased manner\"",
+        choices: ["pathologically", "pahologically", "patholgically", "pathologcially"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a thing in which something (as a soul, idea, principle or type) is made concrete by expression in perceptible form : an incarnation\"",
+        choices: ["embodiment", "embodimennt", "embodimen", "embodimnt"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"either of two flammable gaseous hydrocarbons obtained usually from petroleum or natural gas and occurring in gasoline and in liquefied petroleum gas\"",
+        choices: ["butane", "buane", "butan", "butanee"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the regulation of body temperature\"",
+        choices: ["thermotaxis", "thremotaxis", "thermotaxs", "themotaxis"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a sweet syrupy alcohol that is formed by fermentation of sugars, and used chiefly as a solvent and plasticizer, as a moistening agent, emollient, and lubricant, and as an emulsifying agent\"",
+        choices: ["glycerin", "glyycerin", "glycern", "glycerni"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"small toothed whales that tend to live in a community rather than alone\"",
+        choices: ["porpoises", "porposes", "poproises", "porpoies"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a clouding of the lens of the eye varying in degree from slight to complete opacity and obstructing the passage of light\"",
+        choices: ["cataract", "catarract", "catract", "cataarct"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (verb) \"to introduce or induct into an office with suitable ceremonies or solemnities : to invest with power or authority in a formal manner\"",
+        choices: ["inaugurate", "iaugurate", "inuagurate", "inaugrate"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"having a nearly white color and a surface that spreads out light\"",
+        choices: ["alabaster", "alaaster", "albaster", "alabastre"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"relating to, arising in, or acting through the mind especially in its affective or cognitive functions\"",
+        choices: ["psychological", "pschological", "psycholoogical", "psychologgical"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a baked custard pie usually having an added savory ingredient (as chopped ham, seafood, or vegetables)\"",
+        choices: ["quiche", "qiche", "quichhe", "quuiche"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the emission of light from living organisms (such as fireflies, dinoflagellates, and bacteria)\"",
+        choices: ["bioluminescence", "biolmuinescence", "biolumminescence", "biolminescence"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a European annual herb with many leaves and whitish yellow flowers that is grown to use in salad\"",
+        choices: ["arugula", "arrugula", "aruugula", "aruglua"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a collection of individuals or of particular things : an aggregation\"",
+        choices: ["assemblage", "assebmlage", "assemblagge", "assemblge"],
+        answerIndex: 0
+      },
+      {
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a polite, tactful, or less explicit term used to avoid the direct naming of an unpleasant, painful, or frightening reality\"",
+        choices: ["euphemism", "eupehmism", "euhemism", "euphemsim"],
         answerIndex: 0
       }
     ]
@@ -862,1389 +2063,253 @@ window.SPELLING_SETS = [
     name: "Spelling Set 9",
     questions: [
       {
-        prompt: "Which is the correct spelling of the missing word? \"her parents would not ______ to her demands\"",
-        choices: ["capitulate", "cpaitulate", "caapitulate", "cpitulate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"any of several small, crestless American birds usually having the crown of the head darker than the body plumage\"",
+        choices: ["chickadee", "cickadee", "chikcadee", "chikadee"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ hundreds of feet deep\"",
-        choices: ["chasm", "cahsm", "chhasm", "chsm"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an instrument to observe, measure, and record quivering or trembling motion\"",
+        choices: ["vibrometer", "vibrometter", "vibromteer", "vibromeer"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"read the books in ______ order\"",
-        choices: ["chronological", "crhonological", "chhronological", "chrnological"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a chronic disease characterized by the formation of nodules on the surface of the body that are accompanied by loss of sensation followed sooner or later by involvement of nerves\"",
+        choices: ["leprosy", "lperosy", "leeprosy", "leprosyy"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"______ the dangerous terrain\"",
-        choices: ["circumvent", "cricumvent", "ciircumvent", "crcumvent"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"one who attends or assists : a follower\"",
+        choices: ["acolyte", "acoolyte", "acolytee", "acolytte"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"fun to ______ with others\"",
-        choices: ["collaborate", "clolaborate", "coollaborate", "colaborate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"not characterized by balanced proportions\"",
+        choices: ["asymmetric", "asymmettric", "asmymetric", "aymmetric"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"her friendly ______\"",
-        choices: ["colleague", "cloleague", "coolleague", "coleague"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a semisolid dressing made by emulsifying a mixture of raw eggs or egg yolks, vegetable oil, and vinegar or lemon juice usually together with salt and condiments\"",
+        choices: ["mayonnaise", "myonnaise", "mayonnais", "mayonnise"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"couldn't ______ why\"",
-        choices: ["comprehend", "cmoprehend", "coomprehend", "cmprehend"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (interjection) \"used to express triumph concerning a discovery\"",
+        choices: ["eureka", "eurekka", "eurkea", "euerka"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"based on ______, not evidence\"",
-        choices: ["conjecture", "cnojecture", "coonjecture", "cnjecture"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"not likely to arouse hostility or give offense : inoffensive\"",
+        choices: ["innocuous", "innoccuous", "innoucous", "innocuus"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"his ______ style of dressing\"",
-        choices: ["conservative", "cnoservative", "coonservative", "cnservative"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"any of an ancient breed of dogs originating in China that have loose wrinkled skin especially when young, a short bristly coat, blue-black tongue, and wide blunt muzzle\"",
+        choices: ["shar-pei", "shar-ei", "shaar-pei", "shar-pie"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"Leticia ______ she was the best choice\"",
-        choices: ["contend", "cnotend", "coontend", "cntend"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"something spit out and usually consisting of saliva with or without mucus or other materials from the respiratory passages\"",
+        choices: ["sputum", "spuutm", "sptuum", "spuutum"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"had the ______ to tell him\"",
-        choices: ["courtesy", "cuortesy", "coourtesy", "curtesy"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"animals such as earthworms and leeches\"",
+        choices: ["annelids", "anenlids", "annelds", "anneilds"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"practice their ______ freely\"",
-        choices: ["creed", "cered", "crreed", "cred"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"capital city and port on the Mediterranean Sea in northwestern Libya\"",
+        choices: ["Tripoli", "Tripoil", "Tripolli", "Tirpoli"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a common ______ in Europe\"",
-        choices: ["custom", "csutom", "cuustom", "cstom"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"physiological regulation of body temperature by metabolic means; especially : the property or state of being warm-blooded\"",
+        choices: ["endothermy", "endothhermy", "endothremy", "endothery"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the ______ of information\"",
-        choices: ["dearth", "daerth", "deearth", "darth"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"somewhat resembling the blue of the sky\"",
+        choices: ["cerulean", "ceruleaan", "ceulean", "cerluean"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a major ______ for the restaurant\"",
-        choices: ["debacle", "dbeacle", "deebacle", "dbacle"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a flammable hydrocarbon oil usually obtained by distillation of petroleum and used as a fuel, solvent, and thinner\"",
+        choices: ["kerosene", "kreosene", "keosene", "kersene"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"______ $500 from her paycheck\"",
-        choices: ["deduct", "ddeuct", "deeduct", "dduct"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"of or relating to the scientific study of the nervous system\"",
+        choices: ["neurological", "neurrological", "neurologcal", "neurologiical"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"returned the ______ computer\"",
-        choices: ["defective", "dfeective", "deefective", "dfective"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a usually chocolate-frosted oblong cream puff with whipped cream or custard filling\"",
+        choices: ["éclair", "éclaiir", "éclir", "éclaair"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"it ______ Norah to hear the news\"",
-        choices: ["delight", "dleight", "deelight", "dlight"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a street or passage closed at one end\"",
+        choices: ["cul-de-sac", "cl-de-sac", "cul-dde-sac", "cul-de-saac"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"______ the old mansion\"",
-        choices: ["demolish", "dmeolish", "deemolish", "dmolish"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (geographical entry) \"state in the northeastern U.S. that has the Delaware River as its eastern border and borders on Lake Erie in the northwest\"",
+        choices: ["Pennsylvania", "Pennsylania", "Peennsylvania", "Pennsyvania"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the abandoned warehouse ______ quickly\"",
-        choices: ["deteriorate", "dteeriorate", "deeteriorate", "dteriorate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"large whales typically of colder waters that lack teeth but have baleen plates in the upper jaw which are used to filter chiefly small crustaceans (such as krill) out of large quantities of seawater\"",
+        choices: ["mysticetes", "mysticetees", "myysticetes", "mystictees"],
         answerIndex: 0
-      }
-    ]
-  },
-  {
-    id: "spelling-set10",
-    name: "Spelling Set 10",
-    questions: [
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the antelopes ______\"",
-        choices: ["disperse", "dsiperse", "diisperse", "dsperse"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the ______ sedan\"",
-        choices: ["durable", "druable", "duurable", "drable"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the rain ______ the footsteps\"",
-        choices: ["efface", "efafce", "effface", "eface"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"he felt an ______ he had never experienced\"",
-        choices: ["elation", "ealtion", "ellation", "eltion"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"Jillian ______ the idea of a break\"",
-        choices: ["embrace", "ebmrace", "emmbrace", "embrce"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"remained an ______ to her\"",
-        choices: ["enigma", "eingma", "ennigma", "engma"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"New York's ______ weather\"",
-        choices: ["erratic", "erartic", "errratic", "eratic"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"Neil Armstrong was ______ as a hero\"",
-        choices: ["exalt", "eaxlt", "exxalt", "exlt"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the defendant was ______\"",
-        choices: ["exonerate", "eoxnerate", "exxonerate", "exnerate"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ from the school\"",
-        choices: ["expel", "epxel", "exxpel", "expl"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the diamond chandelier was too ______\"",
-        choices: ["extravagant", "etxravagant", "exxtravagant", "extrvagant"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the mother bear's ______\"",
-        choices: ["ferocity", "freocity", "feerocity", "frocity"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a financial ______\"",
-        choices: ["fiasco", "faisco", "fiiasco", "fasco"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ clothing\"",
-        choices: ["flamboyant", "falmboyant", "fllamboyant", "flmboyant"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the actor's ______\"",
-        choices: ["gaffe", "gfafe", "gaaffe", "gafe"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a computer ______\"",
-        choices: ["glitch", "giltch", "gllitch", "gltch"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ on April Fools' Day\"",
-        choices: ["hoax", "haox", "hooax", "hax"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a few ______\"",
-        choices: ["idiosyncrasy", "iidosyncrasy", "iddiosyncrasy", "idosyncrasy"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"his ______ manners\"",
-        choices: ["impeccable", "ipmeccable", "immpeccable", "impecable"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ comments\"",
-        choices: ["impertinent", "ipmertinent", "immpertinent", "imprtinent"],
-        answerIndex: 0
-      }
-    ]
-  },
-  {
-    id: "spelling-set11",
-    name: "Spelling Set 11",
-    questions: [
-      {
-        prompt: "Which is the correct spelling of the missing word? \"her most recent ______\"",
-        choices: ["innovation", "inonvation", "innnovation", "inovation"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ heated arguments\"",
-        choices: ["instigate", "isntigate", "innstigate", "instgate"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ the claims\"",
-        choices: ["investigate", "ivnestigate", "innvestigate", "invstigate"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"it was ______ that the medicine made him worse\"",
-        choices: ["ironic", "iornic", "irronic", "irnic"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"years of ______ training\"",
-        choices: ["laborious", "lbaorious", "laaborious", "lborious"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"should ______ her achievements\"",
-        choices: ["laud", "luad", "laaud", "lud"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the news left her ______\"",
-        choices: ["livid", "lviid", "liivid", "lvid"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"part of our town's ______\"",
-        choices: ["lore", "lroe", "loore", "lre"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"so ______ and charming\"",
-        choices: ["loquacious", "lqouacious", "looquacious", "lquacious"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"his review was motivated by ______\"",
-        choices: ["malice", "mlaice", "maalice", "mlice"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ of snacks\"",
-        choices: ["medley", "mdeley", "meedley", "mdley"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"judged on the ______ of their arguments\"",
-        choices: ["merit", "mreit", "meerit", "mrit"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ her brother's short stature\"",
-        choices: ["mock", "mcok", "moock", "mck"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ her curriculum\"",
-        choices: ["modify", "mdoify", "moodify", "mdify"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"Aaron's inconsistent ______\"",
-        choices: ["narrative", "nrarative", "naarrative", "narative"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"defeat his ______\"",
-        choices: ["nemesis", "nmeesis", "neemesis", "nmesis"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the soccer player's ______ moves\"",
-        choices: ["nimble", "nmible", "niimble", "nmble"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the ______ boy would not follow instructions\"",
-        choices: ["obstinate", "osbtinate", "obbstinate", "obstnate"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"her ______ Jeffrey\"",
-        choices: ["opponent", "opopnent", "oppponent", "oponent"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"his ______ flirtation\"",
-        choices: ["overt", "oevrt", "ovvert", "ovrt"],
-        answerIndex: 0
-      }
-    ]
-  },
-  {
-    id: "spelling-set12",
-    name: "Spelling Set 12",
-    questions: [
-      {
-        prompt: "Which is the correct spelling of the missing word? \"made a ______ not to play catch in the house\"",
-        choices: ["pact", "pcat", "paact", "pct"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ attention to detail\"",
-        choices: ["painstaking", "pianstaking", "paainstaking", "pinstaking"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"it seemed like a ______\"",
-        choices: ["paradox", "praadox", "paaradox", "pradox"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"knew she was in ______\"",
-        choices: ["peril", "preil", "peeril", "pril"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"would constantly ______ his sister\"",
-        choices: ["pester", "pseter", "peester", "pster"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the guide was not very ______\"",
-        choices: ["practical", "parctical", "prractical", "prctical"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the ______ child\"",
-        choices: ["precocious", "percocious", "prrecocious", "prcocious"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the ______ guest at her party\"",
-        choices: ["prominent", "porminent", "prrominent", "prminent"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the ______ of the computer\"",
-        choices: ["prototype", "portotype", "prrototype", "prtotype"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"various ______ for the teacher\"",
-        choices: ["query", "qeury", "quuery", "qery"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the most ______ land animal\"",
-        choices: ["rapid", "rpaid", "raapid", "rpid"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the historic mansion was ______\"",
-        choices: ["raze", "rzae", "raaze", "rze"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"her attempts to clarify were ______\"",
-        choices: ["redundant", "rdeundant", "reedundant", "rdundant"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"no known ______ to the common cold\"",
-        choices: ["remedy", "rmeedy", "reemedy", "rmedy"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"severely ______ by his parents\"",
-        choices: ["reprimand", "rperimand", "reeprimand", "rprimand"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"Jane ______ with a stern critique\"",
-        choices: ["retort", "rteort", "reetort", "rtort"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ area surrounded by fields\"",
-        choices: ["rural", "rrual", "ruural", "rral"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the ______ poignant answer\"",
-        choices: ["sage", "sgae", "saage", "sge"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"he was being ______ about the burnt cookies\"",
-        choices: ["sarcastic", "sracastic", "saarcastic", "srcastic"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"Jessica ______ at the idea\"",
-        choices: ["scoff", "socff", "sccoff", "scof"],
-        answerIndex: 0
-      }
-    ]
-  },
-  {
-    id: "spelling-set13",
-    name: "Spelling Set 13",
-    questions: [
-      {
-        prompt: "Which is the correct spelling of the missing word? \"made him feel ______\"",
-        choices: ["secure", "sceure", "seecure", "scure"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"Angie felt ______ by the stream\"",
-        choices: ["serene", "sreene", "seerene", "srene"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a well-known ______\"",
-        choices: ["skeptic", "sekptic", "skkeptic", "skptic"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the cold weather inclined her towards ______\"",
-        choices: ["sloth", "solth", "slloth", "slth"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ bite of cake\"",
-        choices: ["sly", "syl", "slly", "cly"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the desert rainfall was ______\"",
-        choices: ["sporadic", "sopradic", "spporadic", "spradic"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"made her best effort to ______ her cough\"",
-        choices: ["stifle", "sitfle", "sttifle", "stfle"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"only ______ differences between the twins\"",
-        choices: ["subtle", "sbutle", "suubtle", "sbtle"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"not difficult to ______ with the flood victims\"",
-        choices: ["sympathize", "smypathize", "syympathize", "sympthize"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"presented his argument with such ______\"",
-        choices: ["tact", "tcat", "taact", "tct"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"made ______ plans with Jessica\"",
-        choices: ["tentative", "tnetative", "teentative", "tntative"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"very ______ in approaching his teacher\"",
-        choices: ["timid", "tmiid", "tiimid", "tmid"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a high ______ for variations in temperature\"",
-        choices: ["tolerance", "tloerance", "toolerance", "tlerance"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ hair colors\"",
-        choices: ["unconventional", "ucnonventional", "unnconventional", "uncnventional"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ width\"",
-        choices: ["uniform", "uinform", "unniform", "unform"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ rule at the school\"",
-        choices: ["universal", "uinversal", "unniversal", "unversal"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ against the Jones family\"",
-        choices: ["vendetta", "vnedetta", "veendetta", "vendeta"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"water is such a ______ resource\"",
-        choices: ["vital", "vtial", "viital", "vtal"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"one of the most ______ parts of the body\"",
-        choices: ["vulnerable", "vlunerable", "vuulnerable", "vlnerable"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the ______ witch cast spells\"",
-        choices: ["wicked", "wciked", "wiicked", "wcked"],
-        answerIndex: 0
-      }
-    ]
-  },
-  {
-    id: "spelling-u1",
-    name: "Spelling Unit 1",
-    questions: [
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ scattered across the yard\"",
-        choices: ["debris", "dberis", "deebris", "dbris"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"put ______ on the last word\"",
-        choices: ["emphasis", "epmhasis", "emmphasis", "emphsis"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ a bear on the trail\"",
-        choices: ["encounter", "ecnounter", "enncounter", "encunter"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"three ______ at the reunion\"",
-        choices: ["generations", "gneerations", "geenerations", "gnerations"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"she ______ the correct answer\"",
-        choices: ["indicated", "idnicated", "inndicated", "indcated"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the ______ studied the birds\"",
-        choices: ["naturalist", "ntauralist", "naaturalist", "nturalist"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ cliff\"",
-        choices: ["sheer", "seher", "shheer", "sher"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ fireworks show\"",
-        choices: ["spectacular", "sepctacular", "sppectacular", "spctacular"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ a new bike\"",
-        choices: ["afford", "afofrd", "affford", "aford"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"took out a ______ for the car\"",
-        choices: ["loan", "laon", "looan", "lan"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the shop's ______ grew\"",
-        choices: ["profit", "porfit", "prrofit", "prfit"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the business began to ______\"",
-        choices: ["prosper", "porsper", "prrosper", "prsper"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the ______ of getting hurt\"",
-        choices: ["risk", "rsik", "riisk", "rsk"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"spent years building her ______\"",
-        choices: ["savings", "svaings", "saavings", "svings"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"clean water was ______\"",
-        choices: ["scarce", "sacrce", "sccarce", "scrce"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"earned fair ______\"",
-        choices: ["wages", "wgaes", "waages", "wges"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ to the library\"",
-        choices: ["access", "acecss", "acccess", "acess"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ to the next round\"",
-        choices: ["advance", "avdance", "addvance", "advnce"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a careful ______ of the data\"",
-        choices: ["analysis", "aanlysis", "annalysis", "anlysis"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"In his report, Jayden should ______ evidence from the article.\"",
-        choices: ["cite", "ctie", "ciite", "cte"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"offered a ______ to the argument\"",
-        choices: ["counterpoint", "cuonterpoint", "coounterpoint", "cunterpoint"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"The class recorded ______ from the science experiment.\"",
-        choices: ["data", "dtaa", "daata", "dta"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"weighed the ______ of the plan\"",
-        choices: ["drawbacks", "darwbacks", "drrawbacks", "drwbacks"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"explained her ______\"",
-        choices: ["reasoning", "raesoning", "reeasoning", "rasoning"],
-        answerIndex: 0
-      }
-    ]
-  },
-  {
-    id: "spelling-u2",
-    name: "Spelling Unit 2",
-    questions: [
-      {
-        prompt: "Which is the correct spelling of the missing word? \"formed several ______\"",
-        choices: ["committees", "cmomittees", "coommittees", "comittees"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"attended a teachers' ______\"",
-        choices: ["convention", "cnovention", "coonvention", "cnvention"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a class ______\"",
-        choices: ["debate", "dbeate", "deebate", "dbate"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"submitted a ______\"",
-        choices: ["proposal", "porposal", "prroposal", "prposal"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"elected ______\"",
-        choices: ["representatives", "rperesentatives", "reepresentatives", "rpresentatives"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ the conflict\"",
-        choices: ["resolve", "rseolve", "reesolve", "rsolve"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a tricky ______\"",
-        choices: ["situation", "stiuation", "siituation", "stuation"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ of workers\"",
-        choices: ["union", "uinon", "unnion", "unon"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ smile\"",
-        choices: ["assuring", "asusring", "asssuring", "asuring"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ a strange smell\"",
-        choices: ["detected", "dteected", "deetected", "dtected"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the sun ______ from the clouds\"",
-        choices: ["emerging", "eemrging", "emmerging", "emrging"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"expressed her ______\"",
-        choices: ["gratitude", "gartitude", "grratitude", "grtitude"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"sought her teacher's ______\"",
-        choices: ["guidance", "giudance", "guuidance", "gidance"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the ______ of the game\"",
-        choices: ["outcome", "otucome", "ouutcome", "otcome"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the ______ chapter\"",
-        choices: ["previous", "pervious", "prrevious", "prvious"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the ______ of a dream\"",
-        choices: ["pursuit", "prusuit", "puursuit", "prsuit"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ goal\"",
-        choices: ["ambitious", "abmitious", "ammbitious", "ambtious"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ the poem\"",
-        choices: ["memorized", "mmeorized", "meemorized", "mmorized"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"felt ______ after finishing\"",
-        choices: ["satisfaction", "staisfaction", "saatisfaction", "stisfaction"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ at the scary movie\"",
-        choices: ["shuddered", "suhddered", "shhuddered", "shudered"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"wrote a personal ______\"",
-        choices: ["narrative", "nrarative", "naarrative", "narative"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"used ______ for emphasis\"",
-        choices: ["repetition", "rpeetition", "reepetition", "rpetition"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"The poet wrote ______ without a regular rhyme pattern.\"",
-        choices: ["free verse", "fere verse", "frree verse", "fre verse"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"“Light” and “night” ______.\"",
-        choices: ["rhyme", "ryhme", "rhhyme", "rhime"],
-        answerIndex: 0
-      }
-    ]
-  },
-  {
-    id: "spelling-u3",
-    name: "Spelling Unit 3",
-    questions: [
-      {
-        prompt: "Which is the correct spelling of the missing word? \"showed ______ for the gift\"",
-        choices: ["appreciation", "aprpeciation", "apppreciation", "apreciation"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ out the answer\"",
-        choices: ["blurted", "bulrted", "bllurted", "blrted"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ her artwork\"",
-        choices: ["complimenting", "cmoplimenting", "coomplimenting", "cmplimenting"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"stopped to ______ the winner\"",
-        choices: ["congratulate", "cnogratulate", "coongratulate", "cngratulate"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ his own story\"",
-        choices: ["contradicted", "cnotradicted", "coontradicted", "cntradicted"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ decision\"",
-        choices: ["critical", "cirtical", "crritical", "crtical"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ festival\"",
-        choices: ["cultural", "clutural", "cuultural", "cltural"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"cleared up the ______\"",
-        choices: ["misunderstanding", "msiunderstanding", "miisunderstanding", "msunderstanding"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ flowers\"",
-        choices: ["artificial", "atrificial", "arrtificial", "artficial"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"The students ______ to finish the group project.\"",
-        choices: ["collaborate", "clolaborate", "coollaborate", "colaborate"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ volunteer\"",
-        choices: ["dedicated", "ddeicated", "deedicated", "ddicated"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ schedule\"",
-        choices: ["flexible", "felxible", "fllexible", "flxible"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the ______ of the heart\"",
-        choices: ["function", "fnuction", "fuunction", "fnction"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the parrot can ______ sounds\"",
-        choices: ["mimic", "mmiic", "miimic", "mmic"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"overcame every ______\"",
-        choices: ["obstacle", "osbtacle", "obbstacle", "obstcle"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"learned new painting ______\"",
-        choices: ["techniques", "tcehniques", "teechniques", "tchniques"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"An ______ carefully examined the ancient pottery.\"",
-        choices: ["archaeologist", "acrhaeologist", "arrchaeologist", "archeologist"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the ______ of dinosaurs\"",
-        choices: ["era", "ear", "erra", "eraa"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ of an old vase\"",
-        choices: ["fragments", "fargments", "frragments", "frgments"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the ______ wrote a book about the war\"",
-        choices: ["historian", "hsitorian", "hiistorian", "hstorian"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the package arrived ______\"",
-        choices: ["intact", "itnact", "inntact", "intct"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ the old photographs\"",
-        choices: ["preserved", "perserved", "prreserved", "prserved"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ the ancient temple\"",
-        choices: ["reconstruct", "rceonstruct", "reeconstruct", "rconstruct"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ of the old castle\"",
-        choices: ["remnants", "rmenants", "reemnants", "rmnants"],
-        answerIndex: 0
-      }
-    ]
-  },
-  {
-    id: "spelling-u4",
-    name: "Spelling Unit 4",
-    questions: [
-      {
-        prompt: "Which is the correct spelling of the missing word? \"waited with ______\"",
-        choices: ["anticipation", "atnicipation", "annticipation", "antcipation"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"to ______ the rules\"",
-        choices: ["defy", "dfey", "deefy", "dfy"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ to a refund\"",
-        choices: ["entitled", "etnitled", "enntitled", "enttled"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"stayed ______ during the argument\"",
-        choices: ["neutral", "nuetral", "neeutral", "nutral"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ critic\"",
-        choices: ["outspoken", "otuspoken", "ouutspoken", "otspoken"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ personality\"",
-        choices: ["reserved", "rseerved", "reeserved", "rserved"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ help from a teacher\"",
-        choices: ["sought", "suoght", "soought", "sught"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ division of chores\"",
-        choices: ["unequal", "uenqual", "unnequal", "unqual"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ by the magic trick\"",
-        choices: ["astounded", "atsounded", "asstounded", "astunded"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ the gift\"",
-        choices: ["concealed", "cnocealed", "cooncealed", "cncealed"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ student\"",
-        choices: ["inquisitive", "iqnuisitive", "innquisitive", "inqisitive"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"Readers ______ clues to understand the character's feelings.\"",
-        choices: ["interpret", "itnerpret", "innterpret", "intrpret"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ by the riddle\"",
-        choices: ["perplexed", "preplexed", "peerplexed", "prplexed"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ measurements\"",
-        choices: ["precise", "percise", "prrecise", "prcise"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"asked him to ______\"",
-        choices: ["reconsider", "rceonsider", "reeconsider", "rconsider"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"felt ______ of the stranger\"",
-        choices: ["suspicious", "ssupicious", "suuspicious", "sspicious"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ desert\"",
-        choices: ["barren", "braren", "baarren", "baren"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a surprised facial ______\"",
-        choices: ["expression", "epxression", "exxpression", "expresion"],
-        answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ gift\"",
-        choices: ["meaningful", "maeningful", "meeaningful", "maningful"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the quality or state of having or showing a disposition to be easily enraged\"",
+        choices: ["irascibility", "irascibiilty", "irasciibility", "iraascibility"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the peacock's colorful ______\"",
-        choices: ["plumes", "pulmes", "pllumes", "plmes"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"substances (as acids, bases, or salts) that when dissolved in a suitable solvent (as water) or when fused become ionic conductors\"",
+        choices: ["electrolytes", "electrolyts", "electrolyte", "electorlytes"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"wrote a ______ about the sea\"",
-        choices: ["lyric", "lryic", "lyyric", "lyrc"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a vessel in which holy oil is kept\"",
+        choices: ["ampulla", "ampullla", "ammpulla", "ampull"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"“Wild winds whistle” uses ______.\"",
-        choices: ["alliteration", "alilteration", "allliteration", "aliteration"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (geographical entry) \"country of northeastern Africa; became part of Ethiopia in 1962 and then became independent in 1993\"",
+        choices: ["Eritrea", "Eritreea", "Eritra", "Eitrea"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"The poem's ______ gives it a steady beat.\"",
-        choices: ["meter", "mteer", "meeter", "mter"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adverb) \"in a style marked by the absence of instrumental accompaniment\"",
+        choices: ["a cappella", "a capeplla", "a ccappella", "a capplela"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"The poem has four lines in its first ______.\"",
-        choices: ["stanza", "satnza", "sttanza", "stnza"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"producing, involving, or being adverse effects on organs or nerves involved in hearing or balance\"",
+        choices: ["ototoxic", "ototoic", "ototoxicc", "otooxic"],
         answerIndex: 0
-      }
-    ]
-  },
-  {
-    id: "spelling-u5",
-    name: "Spelling Unit 5",
-    questions: [
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ ten miles away\"",
-        choices: ["approximately", "aprpoximately", "appproximately", "aproximately"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ price\"",
-        choices: ["astronomical", "atsronomical", "asstronomical", "astrnomical"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"double-checked her ______\"",
-        choices: ["calculation", "claculation", "caalculation", "clculation"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"met all the ______\"",
-        choices: ["criteria", "cirteria", "crriteria", "crteria"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"We measured the ______ across the center of the circle.\"",
-        choices: ["diameter", "daimeter", "diiameter", "dameter"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ the results\"",
-        choices: ["evaluate", "eavluate", "evvaluate", "evluate"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the moon's ______ around Earth\"",
-        choices: ["orbit", "obrit", "orrbit", "orbt"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the planets are ______\"",
-        choices: ["spheres", "shperes", "sppheres", "sphres"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ he was right\"",
-        choices: ["assume", "asusme", "asssume", "asume"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a money-back ______\"",
-        choices: ["guarantee", "gaurantee", "guuarantee", "guarante"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ a class president\"",
-        choices: ["nominate", "nmoinate", "noominate", "nminate"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ the answer was wrong\"",
-        choices: ["obviously", "ovbiously", "obbviously", "obvously"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ on a friend\"",
-        choices: ["rely", "rley", "reely", "rly"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ coach\"",
-        choices: ["supportive", "spuportive", "suupportive", "suportive"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"showed ______ for her loss\"",
-        choices: ["sympathy", "smypathy", "syympathy", "sympthy"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"teased for being a ______\"",
-        choices: ["weakling", "waekling", "weeakling", "wakling"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ land\"",
-        choices: ["agricultural", "argicultural", "aggricultural", "agrcultural"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"sales ______ last year\"",
-        choices: ["declined", "dcelined", "deeclined", "dclined"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"the room was in ______\"",
-        choices: ["disorder", "dsiorder", "diisorder", "dsorder"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ the bird by its song\"",
-        choices: ["identify", "iedntify", "iddentify", "idntify"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ outcome\"",
-        choices: ["probable", "porbable", "prrobable", "prbable"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"plants ______ in sunlight\"",
-        choices: ["thrive", "trhive", "thhrive", "thrve"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ visitor\"",
-        choices: ["unexpected", "uenxpected", "unnexpected", "unxpected"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ flooding\"",
-        choices: ["widespread", "wdiespread", "wiidespread", "wdespread"],
-        answerIndex: 0
-      }
-    ]
-  },
-  {
-    id: "spelling-u6",
-    name: "Spelling Unit 6",
-    questions: [
-      {
-        prompt: "Which is the correct spelling of the missing word? \"posted a ______ on the board\"",
-        choices: ["bulletin", "bluletin", "buulletin", "buletin"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"made generous ______\"",
-        choices: ["contributions", "cnotributions", "coontributions", "cntributions"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"celebrated the ______ of the class\"",
-        choices: ["diversity", "dviersity", "diiversity", "dversity"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ in the navy\"",
-        choices: ["enlisted", "elnisted", "ennlisted", "enlsted"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ the pass\"",
-        choices: ["intercept", "itnercept", "inntercept", "intrcept"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"military ______\"",
-        choices: ["operations", "oeprations", "opperations", "oprations"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"trained the new ______\"",
-        choices: ["recruits", "rceruits", "reecruits", "rcruits"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"wilderness ______ skills\"",
-        choices: ["survival", "sruvival", "suurvival", "srvival"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ for desert life\"",
-        choices: ["adaptation", "aadptation", "addaptation", "adptation"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"an ______ gymnast\"",
-        choices: ["agile", "aigle", "aggile", "agle"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"found a ______ of supplies\"",
-        choices: ["cache", "ccahe", "caache", "cche"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"a ______ volcano\"",
-        choices: ["dormant", "dromant", "doormant", "drmant"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ for berries\"",
-        choices: ["forage", "froage", "foorage", "frage"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ winter air\"",
-        choices: ["frigid", "firgid", "frrigid", "frgid"],
-        answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"Some animals ______ when winter becomes very cold.\"",
-        choices: ["hibernate", "hbiernate", "hiibernate", "hbernate"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"simple epithelial sense organs composed of one or a few cells with a nerve connection and usually taking the form of a spine, plate, rod, cone, or peg\"",
+        choices: ["sensilla", "sennsilla", "sensill", "senssilla"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"fur ______ the animal from cold\"",
-        choices: ["insulates", "isnulates", "innsulates", "inslates"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"any plant of a small genus of ornamental shrubs with opposite leaves and bright yellow bell-shaped flowers which appear before the leaves in early spring\"",
+        choices: ["forsythia", "forythia", "forsytthia", "forsythiia"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"the alarm ______\"",
-        choices: ["blares", "balres", "bllares", "blres"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the Semitic language that is the official language of Ethiopia\"",
+        choices: ["Amharic", "Amahric", "Amharci", "Amharicc"],
         answerIndex: 0
       },
       {
-        prompt: "Which is the correct spelling of the missing word? \"a strong ______ between friends\"",
-        choices: ["connection", "cnonection", "coonnection", "conection"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"the Greek goddess of love and beauty\"",
+        choices: ["Aphrodite", "Ahprodite", "Afrodite", "Aphrodiet"],
         answerIndex: 0
       },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"ran an ______ for her mom\"",
-        choices: ["errand", "erarnd", "errrand", "erand"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"______ seats with a friend\"",
-        choices: ["exchange", "ecxhange", "exxchange", "exchnge"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"“The wind whispered” is an example of ______.\"",
-        choices: ["personification", "presonification", "peersonification", "prsonification"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"The poet used ______ to create a repeated vowel sound.\"",
-        choices: ["assonance", "asosnance", "asssonance", "asonance"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"The repeated ending sounds create ______ in the line.\"",
-        choices: ["consonance", "cnosonance", "coonsonance", "cnsonance"],
-        answerIndex: 0
-      },
-      {
-        prompt: "Which is the correct spelling of the missing word? \"vivid ______ filled the poem\"",
-        choices: ["imagery", "iamgery", "immagery", "imgery"],
-        answerIndex: 0
-      }
-    ]
-  },
-  {
-    id: "spelling-phonics1",
-    name: "Phonics & Word Study 1",
-    questions: [
       {
-        prompt: "What is the vowel in the word \"snap\"?",
-        choices: ["a", "s", "n", "p"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"bearing the name of, being, or relating to one for whom or which something is named\"",
+        choices: ["eponymous", "eponyous", "epoonymous", "eponnymous"],
         answerIndex: 0
       },
       {
-        prompt: "What are the vowels in the word \"huddle\"?",
-        choices: ["u and e", "u and d", "h and e", "u and l"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a crystalline phenolic acid found in many plants that is used especially in making pharmaceuticals and dyes, and as an antiseptic and disinfectant especially in treating skin diseases\"",
+        choices: ["salicylic acid", "salicylic acdi", "salicylic aci", "saalicylic acid"],
         answerIndex: 0
       },
       {
-        prompt: "Does the vowel E in the word \"wet\" make a long or short sound?",
-        choices: ["Short vowel sound", "Long vowel sound"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a hard cheese resembling derby\"",
+        choices: ["Gloucester", "Gloucesteer", "Gloucesterr", "Glooucester"],
         answerIndex: 0
       },
       {
-        prompt: "Does the vowel U in the word \"cute\" make a long or short sound?",
-        choices: ["Long vowel sound", "Short vowel sound"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"an Australian moth that is made into a paste and eaten by the aborigines when the moths estivate in huge clusters in rocky mountains\"",
+        choices: ["bogong moth", "bgoong moth", "bogogn moth", "bogongg moth"],
         answerIndex: 0
       },
       {
-        prompt: "Does the vowel A in the word \"magic\" make a long or short sound?",
-        choices: ["Short vowel sound", "Long vowel sound"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"relating to a Protestant Christian church that is governed by a graded system of representative ecclesiastical bodies and is traditionally Calvinistic in doctrine\"",
+        choices: ["Presbyterian", "Presbyterain", "Presbyerian", "Presbyterina"],
         answerIndex: 0
       },
       {
-        prompt: "How many consonants are in the word \"trip\"?",
-        choices: ["Three", "One", "Two", "Four"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"crustaceans that burrow in mud or beneath stones in shallow water along the seashore\"",
+        choices: ["stomatopods", "stoomatopods", "stomatopos", "stomatopoods"],
         answerIndex: 0
       },
       {
-        prompt: "Which letters are the consonants in the word \"grade\"?",
-        choices: ["g, r, d", "g, r, a", "r, a, d", "g, a, d"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"dry-cured spiced ham\"",
+        choices: ["prosciutto", "procsiutto", "proosciutto", "prosciuto"],
         answerIndex: 0
       },
       {
-        prompt: "How many syllables are in the word \"holiday\"?",
-        choices: ["3", "2", "4", "1"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a Japanese member of a gang of criminals\"",
+        choices: ["yakuza", "yakua", "yakuaz", "yakzua"],
         answerIndex: 0
       },
       {
-        prompt: "How many syllables are in the word \"cake\"?",
-        choices: ["1", "2", "3", "4"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (geographical entry) \"country in western Africa on the Atlantic\"",
+        choices: ["Sierra Leone", "Sierrra Leone", "Sieerra Leone", "Sierr Leone"],
         answerIndex: 0
       },
       {
-        prompt: "How many syllables are in the word \"playful\"?",
-        choices: ["2", "1", "3", "4"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a gum resin containing oil obtained from East African or Arabian trees, valued in ancient times in worship and for embalming and scenting, and still an important resin used to produce a fragrant odor when burned\"",
+        choices: ["frankincense", "frrankincense", "fankincense", "frankincesne"],
         answerIndex: 0
       },
       {
-        prompt: "Is /ch/ a phoneme or a phonogram?",
-        choices: ["Phoneme", "Phonogram"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (adjective) \"of or like a substance that forms part of the hard outer covering of insects, crustaceans, and some other invertebrates\"",
+        choices: ["chitinous", "chtinous", "chitinus", "chtiinous"],
         answerIndex: 0
       },
       {
-        prompt: "Is the letter H a phoneme or a phonogram?",
-        choices: ["Phonogram", "Phoneme"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a pidgin English spoken in Sierra Leone\"",
+        choices: ["Krio", "Kri", "Krrio", "Kiro"],
         answerIndex: 0
       },
       {
-        prompt: "What is a phoneme?",
-        choices: ["A sound", "A symbol that represents a sound", "A syllable", "A prefix"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"the stiff hairs that grow about the nostrils or on other parts of the face in many mammals (as the whiskers of a cat or the hairs of the nostrils of humans)\"",
+        choices: ["vibrissae", "vibrisssae", "vibrrissae", "vibrissa"],
         answerIndex: 0
       },
       {
-        prompt: "What is a phonogram?",
-        choices: ["A symbol that represents a sound", "A sound", "A base word", "A suffix"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"any mammal of a small genus of rare insectivorous mammals of Cuba and Haiti that are nearly two feet long and have a long snout, hard fur, and a long scaly tail\"",
+        choices: ["solenodon", "solenoddon", "solnodon", "soenodon"],
         answerIndex: 0
       },
       {
-        prompt: "What is the base word of \"renewable\"?",
-        choices: ["new", "renew", "able", "wable"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (plural noun) \"sensory hairs on an arthropod or other invertebrate\"",
+        choices: ["trichobothria", "trrichobothria", "trcihobothria", "trichobtohria"],
         answerIndex: 0
       },
       {
-        prompt: "What is the base word of \"unexpected\"?",
-        choices: ["expect", "expected", "unexpect", "expectun"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (geographical entry) \"city and national capital, central Ethiopia\"",
+        choices: ["Addis Ababa", "Addis baba", "Addis AAbaba", "Addis Abaaba"],
         answerIndex: 0
       },
       {
-        prompt: "What is the prefix in \"dishonest\"?",
-        choices: ["dis-", "honest", "-est", "un-"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a novel about the usually early development or spiritual education of the main character\"",
+        choices: ["Bildungsroman", "Bilddungsroman", "Blidungsroman", "Biildungsroman"],
         answerIndex: 0
       },
       {
-        prompt: "What is the suffix in \"helped\"?",
-        choices: ["-ed", "help", "-ing", "-er"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a bacterium of a genus of lactic-acid-forming bacteria\"",
+        choices: ["lactobacillus", "lactboacillus", "lactobbacillus", "lactoacillus"],
         answerIndex: 0
       },
       {
-        prompt: "What is the prefix in \"pretreatment\"?",
-        choices: ["pre-", "treat", "-ment", "post-"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (geographical entry) \"ancient district of eastern Asia Minor chiefly in the valley of the upper Kızıl Irmak in modern Turkey\"",
+        choices: ["Cappadocia", "Capadocia", "Cappadoia", "Cappadoci"],
         answerIndex: 0
       },
       {
-        prompt: "What is the suffix in \"pretreatment\"?",
-        choices: ["-ment", "pre-", "treat", "-tion"],
+        prompt: "Which is the correct spelling of the word that matches this definition? (noun) \"a state of euphoria believed to occur in patients with pulmonary tuberculosis\"",
+        choices: ["spes phthisica", "spes phthissica", "spes pphthisica", "ses phthisica"],
         answerIndex: 0
       }
     ]
